@@ -48,6 +48,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
         description: 'Installation of premium aluminum systems and windows in Rethymno, Crete.',
         images: ['https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.png'],
       },
+      verification: {
+        google: 'So9Um9OAEPVqMxFHrDLEPUZgZWSMtc5Qf5Fi_y4gCjQ',
+      },
     }
   }
   return {
@@ -74,6 +77,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       title: 'Κατασκευές & Συστήματα Αλουμινίου Ρέθυμνο | Παπαδάκης',
       description: 'Κατασκευή και τοποθέτηση κουφωμάτων αλουμινίου στην Κρήτη.',
       images: ['https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.png'],
+    },
+    verification: {
+      google: 'So9Um9OAEPVqMxFHrDLEPUZgZWSMtc5Qf5Fi_y4gCjQ',
     },
   }
 }
