@@ -4,6 +4,7 @@ import '@/app/globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import CookieConsent from '@/components/CookieConsent'
+import { Analytics } from "@vercel/analytics/react"
 
 const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat' })
 
@@ -117,6 +118,7 @@ export default async function RootLayout({
         </main>
         <Footer lang={validLang} />
         <CookieConsent lang={validLang} />
+        <Analytics />
       </body>
     </html>
   )
