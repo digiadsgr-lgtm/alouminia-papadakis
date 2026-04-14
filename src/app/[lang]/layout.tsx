@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Montserrat } from 'next/font/google'
 import '@/app/globals.css'
 import Navbar from '@/components/Navbar'
@@ -6,6 +6,16 @@ import Footer from '@/components/Footer'
 import CookieConsent from '@/components/CookieConsent'
 
 const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat' })
+
+// App-like iOS viewport parameters
+export const viewport: Viewport = {
+  themeColor: '#0a192f',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: 'cover'
+}
 
 // Provide dictionary-based metadata in layout or generate Metadata dynamically
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
