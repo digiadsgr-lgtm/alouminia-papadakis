@@ -64,8 +64,8 @@ export default function HomeEL() {
             className="max-w-3xl"
           >
             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md text-white mb-8 shadow-2xl">
-              <Sparkles size={16} className="text-yellow-400" />
-              <span className="text-sm font-bold tracking-wider uppercase">Premium Εγκαταστασεις Χωρις Εκπτωσεις</span>
+              <CheckCircle2 size={16} className="text-red" />
+              <span className="text-sm font-bold tracking-wider uppercase">Εξουσιοδοτημενοι Κατασκευαστες Alumil • Κρητη</span>
             </div>
             
             <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight text-white tracking-tight">
