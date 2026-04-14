@@ -85,9 +85,32 @@ export default async function RootLayout({
 }) {
   const { lang } = await params;
   const validLang = lang as 'el' | 'en';
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Αλουμίνια Παπαδάκης",
+    "alternateName": "Papadakis Aluminium",
+    "url": "https://alouminia-papadakis.gr",
+    "logo": "https://alouminia-papadakis.gr/icon.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+302831023897",
+      "contactType": "customer service",
+      "areaServed": "GR",
+      "availableLanguage": ["Greek", "English"]
+    },
+    "sameAs": [
+      "https://www.facebook.com/alouminiapapadakis"
+    ]
+  };
+
   return (
     <html lang={lang} className="scroll-smooth">
       <body className={`${montserrat.className} bg-background text-foreground antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+        />
         <Navbar lang={validLang} />
         <main className="min-h-screen">
           {children}

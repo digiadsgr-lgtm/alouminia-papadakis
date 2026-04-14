@@ -39,15 +39,28 @@ const dict = {
 
 export default function Navbar({ lang = 'el' }: { lang?: 'el' | 'en' }) {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isHidden, setIsHidden] = useState(false)
+  const [lastScrollY, setLastScrollY] = useState(0)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   
   const t = dict[lang]
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', handleScroll)
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+      setIsScrolled(currentScrollY > 20)
+
+      if (currentScrollY > lastScrollY && currentScrollY > 150) {
+        setIsHidden(true)
+      } else {
+        setIsHidden(false)
+      }
+      setLastScrollY(currentScrollY)
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [lastScrollY])
 
   useEffect(() => {
     if (mobileMenuOpen) {
@@ -59,10 +72,12 @@ export default function Navbar({ lang = 'el' }: { lang?: 'el' | 'en' }) {
 
   return (
     <>
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${
+      <nav className={`fixed w-full z-50 transition-all duration-500 ${
+        isHidden ? '-translate-y-full opacity-0' : 'translate-y-0 opacity-100'
+      } ${
         isScrolled 
-          ? 'bg-white/95 backdrop-blur-xl border-b border-gray-200 py-3 shadow-sm text-navy' 
-          : 'bg-transparent py-5 text-white'
+          ? 'bg-white/90 backdrop-blur-2xl border-b border-gray-100 py-3 shadow-[0_4px_30px_rgba(0,0,0,0.05)] text-navy' 
+          : 'bg-gradient-to-b from-navy/60 to-transparent py-5 text-white'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
