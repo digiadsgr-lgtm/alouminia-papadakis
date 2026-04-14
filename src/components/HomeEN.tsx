@@ -58,9 +58,9 @@ export default function HomeEN() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-20">
           <motion.header 
             style={{ opacity: opacityText }}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
             className="max-w-3xl"
           >
             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md text-white mb-8 shadow-2xl">
@@ -68,7 +68,7 @@ export default function HomeEN() {
               <span className="text-sm font-bold tracking-wider uppercase">Certified Alumil Manufacturers • Crete</span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight tracking-tight drop-shadow-2xl">
+            <h1 className="text-[11vw] sm:text-7xl lg:text-8xl font-black mb-6 leading-[1.05] tracking-tighter drop-shadow-2xl">
               <span className="block text-xl md:text-2xl uppercase tracking-widest text-gray-400 font-bold mb-4 drop-shadow-md">Aluminum Systems Rethymno</span>
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-gray-400">Architectural Solutions</span> <br />
               <span className="text-red">For Luxury Developments</span>
@@ -169,8 +169,8 @@ export default function HomeEN() {
            </motion.div>
 
            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-             <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} className="md:col-span-2">
-               <Link href="/en/services/koufomata-alouminiou-rethymno" className="glass-panel p-10 lg:p-14 relative overflow-hidden group hover:border-red/30 transition-all block text-navy h-full">
+             <motion.div initial={{ opacity: 0, y: 40, filter: "blur(10px)" }} whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.8 }} className="md:col-span-2">
+               <Link href="/en/services/koufomata-alouminiou-rethymno" className="glass-panel p-10 lg:p-14 relative overflow-hidden group hover:border-red/30 transition-all duration-500 block text-navy h-full active:scale-[0.98] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)]">
                  <div className="relative z-10">
                    <div className="bg-red/10 text-red w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"><Home size={32} /></div>
                    <h3 className="text-3xl font-black mb-4 group-hover:text-red transition-colors">Energy Efficient Windows</h3>
@@ -180,8 +180,8 @@ export default function HomeEN() {
                </Link>
              </motion.div>
 
-             <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ delay: 0.1 }}>
-               <Link href="/en/services/pergoles-rethymno-kriti" className="glass-panel p-10 hover:border-red/30 hover:shadow-2xl transition-all block group text-navy flex flex-col justify-between h-full bg-white">
+             <motion.div initial={{ opacity: 0, y: 40, filter: "blur(10px)" }} whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.8, delay: 0.1 }}>
+               <Link href="/en/services/pergoles-rethymno-kriti" className="glass-panel p-10 hover:border-red/30 transition-all duration-500 block group text-navy flex flex-col justify-between h-full bg-white active:scale-[0.98] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)]">
                  <div>
                    <h3 className="text-2xl font-black mb-4 group-hover:text-red transition-colors">Pergolas & Shading</h3>
                    <p className="text-gray-600 mb-8 text-lg">Bioclimatic pergolas, modern shutters, and insect screens for smart natural light control.</p>
@@ -190,8 +190,8 @@ export default function HomeEN() {
                </Link>
              </motion.div>
 
-             <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ delay: 0.2 }}>
-               <Link href="/en/services/portes-asfaleias-rethymno" className="glass-panel p-10 hover:border-red/30 hover:shadow-2xl transition-all block group text-navy flex flex-col justify-between h-full bg-white">
+             <motion.div initial={{ opacity: 0, y: 40, filter: "blur(10px)" }} whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.8, delay: 0.2 }}>
+               <Link href="/en/services/portes-asfaleias-rethymno" className="glass-panel p-10 hover:border-red/30 transition-all duration-500 block group text-navy flex flex-col justify-between h-full bg-white active:scale-[0.98] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)]">
                  <div>
                    <h3 className="text-2xl font-black mb-4 group-hover:text-red transition-colors">Security Armored Doors</h3>
                    <p className="text-gray-600 mb-8 text-lg">Class 3/4 armoring and next-generation Defender locks ensuring zero intrusion possibilities.</p>
@@ -200,8 +200,8 @@ export default function HomeEN() {
                </Link>
              </motion.div>
 
-             <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ delay: 0.3 }} className="md:col-span-2">
-               <Link href="/en/services/sidiros-kataskeves-rethymno" className="glass-panel p-10 lg:p-14 hover:border-red/30 transition-all block group text-navy bg-white">
+             <motion.div initial={{ opacity: 0, y: 40, filter: "blur(10px)" }} whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.8, delay: 0.3 }} className="md:col-span-2">
+               <Link href="/en/services/sidiros-kataskeves-rethymno" className="glass-panel p-10 lg:p-14 hover:border-red/30 transition-all duration-500 block group text-navy bg-white active:scale-[0.98] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)]">
                  <h3 className="text-3xl font-black mb-4 group-hover:text-red transition-colors">Custom Ironworks & Design</h3>
                  <p className="text-gray-600 mb-8 max-w-xl text-lg leading-relaxed">From imposing Inox gates to minimal interior stairs. Electrostatic painting preventing oxidation and elevating your home's design without future maintenance costs.</p>
                  <span className="text-red font-bold flex items-center gap-2 group-hover:gap-4 transition-all mt-6">View Applications <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" strokeWidth={3}/></span>
@@ -241,7 +241,7 @@ export default function HomeEN() {
                <Mail className="text-red mb-6" size={32} />
                <div>
                  <p className="text-gray-400 text-sm mb-2 uppercase tracking-wide">Email Inquiries</p>
-                 <a href="mailto:gpapadakisret@gmail.com" className="font-bold text-xl group-hover:text-red transition-colors">gpapadakisret@gmail.com</a>
+                 <a href="mailto:gpapadakisret@gmail.com" className="font-bold text-lg md:text-xl group-hover:text-red transition-colors break-all">gpapadakisret@gmail.com</a>
                </div>
             </div>
           </div>
