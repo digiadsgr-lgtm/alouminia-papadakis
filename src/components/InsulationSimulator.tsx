@@ -86,16 +86,16 @@ export default function InsulationSimulator({ isEn }: { isEn?: boolean }) {
       <div className="relative z-10 text-center mb-10">
         <h3 className="text-2xl md:text-3xl font-black text-white mb-3">{isEn ? 'Experience Alumil Insulation' : 'Βιώστε την Ηχομόνωση Alumil'}</h3>
         <p className="text-gray-400 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
-          {isEn ? 'Turn up your device volume and interact with the window to literally hear and see the acoustic and thermal difference.' : 'Ανεβάστε την ένταση του ήχου στο κινητό ή τον υπολογιστή σας και διπλοπατήστε το κούφωμα για να ακούσετε τη διαφορά (45dB).'}
+          {isEn ? 'Turn up your device volume and tap the window to literally hear and see the acoustic and thermal difference.' : 'Ανεβάστε την ένταση του ήχου στη συσκευή σας και πατήστε πάνω στο κούφωμα για να βιώσετε live τη διαφορά (45dB).'}
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
         {/* Window UI */}
         <div className="flex flex-col items-center justify-center order-1 md:order-1">
             <button 
               onClick={toggleWindow}
-              className="relative w-full max-w-[280px] aspect-[3/4] bg-gray-900 border-[8px] border-gray-400 rounded-lg shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden cursor-pointer group"
+              className="relative w-full max-w-[260px] md:max-w-[280px] aspect-[3/4] bg-gray-900 border-[8px] border-gray-400 rounded-lg shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden cursor-pointer group active:scale-[0.97] transition-transform duration-300 touch-manipulation"
             >
                {/* View outside */}
                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=800&auto=format&fit=crop')] bg-cover bg-center transition-all duration-500">
