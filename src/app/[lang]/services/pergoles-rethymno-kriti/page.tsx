@@ -59,15 +59,15 @@ export default async function PergolesPage({ params }: { params: Promise<{ lang:
               <h2 className="text-3xl md:text-4xl font-black mb-6 tracking-tight">{isEn ? 'Technology Serving Relaxation' : 'Τεχνολογία στην Υπηρεσία της Χαλάρωσης'}</h2>
               <div className="w-20 h-1.5 bg-red mb-8 rounded-full"></div>
               <ul className="space-y-8 mt-12">
-                <li className="flex items-start gap-5">
-                  <div className="bg-red/10 p-4 rounded-2xl border border-red/20"><Sun className="text-red" size={28} /></div>
+                <li className="flex items-start gap-5 p-6 rounded-3xl hover:bg-gray-50 border border-transparent hover:border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group cursor-pointer active:scale-[0.98]">
+                  <div className="bg-red/10 p-4 rounded-2xl border border-red/20 group-hover:bg-red/20 group-hover:scale-110 transition-all duration-300"><Sun className="text-red" size={28} /></div>
                   <div>
                     <h3 className="font-bold text-2xl mb-2 text-navy tracking-tight">{isEn ? 'Light Control' : 'Πλήρης Έλεγχος Σκίασης'}</h3>
                     <p className="text-gray-600 text-lg">{isEn ? 'Adjustable louvers for light regulation.' : 'Περιστρεφόμενες περσίδες αλουμινίου.'}</p>
                   </div>
                 </li>
-                <li className="flex items-start gap-5">
-                  <div className="bg-red/10 p-4 rounded-2xl border border-red/20"><Wind className="text-red" size={28} /></div>
+                <li className="flex items-start gap-5 p-6 rounded-3xl hover:bg-gray-50 border border-transparent hover:border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group cursor-pointer active:scale-[0.98]">
+                  <div className="bg-red/10 p-4 rounded-2xl border border-red/20 group-hover:bg-red/20 group-hover:scale-110 transition-all duration-300"><Wind className="text-red" size={28} /></div>
                   <div>
                     <h3 className="font-bold text-2xl mb-2 text-navy tracking-tight">{isEn ? 'Wind Resistant' : 'Αξεπέραστη Αντοχή'}</h3>
                     <p className="text-gray-600 text-lg">{isEn ? 'Built to withstand severe island winds.' : 'Heavy Duty κατασκευές που δεν λυγίζουν στους βοριάδες.'}</p>

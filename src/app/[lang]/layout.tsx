@@ -125,7 +125,7 @@ export default async function RootLayout({
           `}
         </Script>
       </head>
-      <body className={`${montserrat.className} bg-background text-foreground antialiased`}>
+      <body suppressHydrationWarning className={`${montserrat.className} bg-background text-foreground antialiased`}>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-5DZRRRX5"
