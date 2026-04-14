@@ -10,6 +10,8 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  compress: true,
+  reactStrictMode: true,
   images: {
     formats: ['image/avif', 'image/webp'],
   },

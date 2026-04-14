@@ -40,9 +40,41 @@ export default function HomeEN() {
     "priceRange": "$$$"
   };
 
+  const faqSchemaEN = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you offer remote project management for foreign investors building in Crete?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We offer 100% remote management for international investors building in Crete. We provide digital CAD studies, architectural progress reports, and deliver turn-key aluminum solutions for luxury villas and boutique hotels without requiring your local presence."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What aluminum systems are best for beachfront villas in Crete?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For seaside properties, we exclusively manufacture Seaside Class certified Alumil windows and pergolas with advanced electro-coating, guaranteeing absolute rust resistance against extreme salt and humidity."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What energy class do your architectural aluminum windows provide?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our premium thermal-break profiles achieve A+ Energy Autonomy, reaching a Uw value of up to 0.9 W/m²K, which drastically decreases your building's cooling and heating operational costs."
+        }
+      }
+    ]
+  };
+
   return (
     <div className="flex flex-col w-full bg-offwhite">
       <JsonLd data={localBusinessSchema} />
+      <JsonLd data={faqSchemaEN} />
       <article ref={heroRef} className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden" aria-label="Manufacturing and Installation of Aluminum Systems in Rethymno, Crete">
         <motion.div style={{ y: yImage }} className="absolute inset-0 z-0">
           <Image 

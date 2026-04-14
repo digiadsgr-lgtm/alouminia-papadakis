@@ -40,9 +40,41 @@ export default function HomeEL() {
     "priceRange": "$$$"
   };
 
+  const faqSchemaEL = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Ποια είναι τα οφέλη των κουφωμάτων αλουμινίου Alumil;",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Τα συστήματα Alumil προσφέρουν κορυφαία θερμομόνωση (έως Uw 0.9 W/m²K), απόλυτη ηχομόνωση και ασφάλεια δοκιμασμένη σε κλάση RC3/RC4. Είναι ιδανικά για το απαιτητικό παραθαλάσσιο κλίμα της Κρήτης και πλήρως επιλέξιμα για το πρόγραμμα Εξοικονομώ."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Είναι τα κουφώματά σας επιλέξιμα για το πρόγραμμα Εξοικονομώ (Ρέθυμνο/Κρήτη);",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ναι! Η εταιρεία Αλουμίνια Παπαδάκης στο Ρέθυμνο αναλαμβάνει την προμήθεια και τοποθέτηση πιστοποιημένων ενεργειακών κουφωμάτων αλουμινίου (θερμοδιακοπτόμενα), τα οποία πληρούν στο 100% τις αυστηρότερες προδιαγραφές του προγράμματος Εξοικονομώ - Αυτονομώ."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Τι είδους σιδηροκατασκευές αναλαμβάνετε;",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Στο ιδιόκτητο εργοστάσιό μας κατασκευάζουμε βαριές βιομηχανικές κατασκευές, custom Inox αυλόπορτες, μεταλλικά κτίρια και βιοκλιματικές πέργκολες υψηλής αρχιτεκτονικής."
+        }
+      }
+    ]
+  };
+
   return (
     <div className="flex flex-col w-full bg-offwhite">
       <JsonLd data={localBusinessSchema} />
+      <JsonLd data={faqSchemaEL} />
       <article ref={heroRef} className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden" aria-label="Κατασκευή και Τοποθέτηση Κουφωμάτων και Συστημάτων Αλουμινίου στο Ρέθυμνο, Κρήτη">
         <motion.div style={{ y: yImage }} className="absolute inset-0 z-0">
           <Image 
