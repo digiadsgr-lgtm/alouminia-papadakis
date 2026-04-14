@@ -70,23 +70,23 @@ export default function HomeEN() {
             
             <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight tracking-tight drop-shadow-2xl">
               <span className="block text-xl md:text-2xl uppercase tracking-widest text-gray-400 font-bold mb-4 drop-shadow-md">Aluminum Systems Rethymno</span>
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-gray-400">Absolute Security</span> <br />
-              <span className="text-red">For Your New Home</span>
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-gray-400">Architectural Solutions</span> <br />
+              <span className="text-red">For Luxury Developments</span>
             </h1>
             
             <section className="mb-10 text-xl text-gray-300 max-w-2xl leading-relaxed">
               <p className="mb-4">
-                Engineering, manufacturing, and installation of premium certified <strong>Alumil Systems</strong> across Crete. We specialize in energy-efficient aluminum windows and armored doors that shield your home against heat, cold, and uninvited guests.
+                Engineering, manufacturing, and installation of premium certified <strong>Alumil Systems</strong> across Crete. We specialize in turn-key solutions for foreign investors, luxury villas, and boutique hotels, providing zero-compromise architectural aluminum.
               </p>
             </section>
 
             <nav className="flex flex-col sm:flex-row gap-5" aria-label="Hero Actions">
               <a href="#services" className="bg-gradient-to-r from-red to-red-700 text-white px-8 py-4 rounded-full font-bold text-center hover:shadow-[0_0_30px_rgba(200,20,20,0.4)] transition-all duration-300 border border-red-500/50 active:scale-95 flex items-center justify-center gap-2 relative overflow-hidden group">
                 <div className="absolute inset-0 bg-white/20 translate-y-12 group-hover:translate-y-0 transition-transform duration-300"></div>
-                <Home size={20} className="relative z-10" /> <span className="relative z-10">Discover Our Solutions</span>
+                <Home size={20} className="relative z-10" /> <span className="relative z-10">Discover Capabilities</span>
               </a>
-              <a href="tel:2831023897" className="bg-white/5 backdrop-blur-xl text-white border border-white/20 px-8 py-4 rounded-full font-bold text-center hover:bg-white/10 hover:border-white/40 transition-all duration-300 flex items-center justify-center gap-2 active:scale-95 shadow-2xl">
-                <PhoneCall size={20} /> Request CAD Study
+              <a href="mailto:gpapadakisret@gmail.com" className="bg-white/5 backdrop-blur-xl text-white border border-white/20 px-8 py-4 rounded-full font-bold text-center hover:bg-white/10 hover:border-white/40 transition-all duration-300 flex items-center justify-center gap-2 active:scale-95 shadow-2xl">
+                <Sparkles size={20} /> Send Architectural Plans
               </a>
             </nav>
 
@@ -97,16 +97,16 @@ export default function HomeEN() {
                className="mt-12 flex flex-wrap gap-4 items-center"
             >
                <div className="flex items-center gap-3 bg-white/5 border border-white/10 backdrop-blur-xl px-5 py-3 rounded-2xl shadow-2xl">
-                 <span className="font-black text-2xl text-red">30+</span>
-                 <span className="text-xs uppercase tracking-widest text-gray-300 font-bold leading-tight">Years<br/>Experience</span>
+                 <span className="font-black text-2xl text-red">A+</span>
+                 <span className="text-xs uppercase tracking-widest text-gray-300 font-bold leading-tight">Energy<br/>Class</span>
                </div>
                <div className="flex items-center gap-3 bg-white/5 border border-white/10 backdrop-blur-xl px-5 py-3 rounded-2xl shadow-2xl">
                  <span className="font-black text-2xl text-red">100%</span>
-                 <span className="text-xs uppercase tracking-widest text-gray-300 font-bold leading-tight">Certified<br/>Alumil</span>
+                 <span className="text-xs uppercase tracking-widest text-gray-300 font-bold leading-tight">Remote<br/>Management</span>
                </div>
                <div className="flex items-center gap-3 bg-white/5 border border-white/10 backdrop-blur-xl px-5 py-3 rounded-2xl shadow-2xl">
-                 <span className="font-black text-2xl text-red">RC3</span>
-                 <span className="text-xs uppercase tracking-widest text-gray-300 font-bold leading-tight">Security<br/>Class</span>
+                 <span className="font-black text-2xl text-red">B2B</span>
+                 <span className="text-xs uppercase tracking-widest text-gray-300 font-bold leading-tight">Turn-Key<br/>Partner</span>
                </div>
             </motion.div>
           </motion.header>
@@ -134,19 +134,19 @@ export default function HomeEN() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/5">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once:true }} transition={{ delay: 0.1 }} className="flex flex-col items-center p-4">
-              <Zap className="text-red mb-4" size={40} />
-              <h3 className="text-white font-bold text-xl mb-2">100% Energy Autonomy</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">Eliminate heating and cooling costs. Our thermal break profiles achieve a Uw value of up to 0.9 W/m²K.</p>
+              <Sparkles className="text-red mb-4" size={40} />
+              <h3 className="text-white font-bold text-xl mb-2">Remote Project Management</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">No local presence required. We provide full digital CAD studies, progress reports, and turn-key delivery for international investors building in Crete.</p>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once:true }} transition={{ delay: 0.2 }} className="flex flex-col items-center p-4">
-              <ShieldCheck className="text-red mb-4" size={40} />
-              <h3 className="text-white font-bold text-xl mb-2">Family in Absolute Safety</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">Impenetrable Class 4 armored doors and reinforced shatterproof glasses for your absolute peace of mind.</p>
+              <Zap className="text-red mb-4" size={40} />
+              <h3 className="text-white font-bold text-xl mb-2">A+ Energy Autonomy</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">Equip your commercial or residential development with thermal break profiles achieving a Uw value of up to 0.9 W/m²K, minimizing operational costs.</p>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once:true }} transition={{ delay: 0.3 }} className="flex flex-col items-center p-4">
               <CheckCircle2 className="text-red mb-4" size={40} />
-              <h3 className="text-white font-bold text-xl mb-2">A Lifetime Investment</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">No more rusted gates. Our structures come with Seaside Class certification for extreme resistance to salt.</p>
+              <h3 className="text-white font-bold text-xl mb-2">Seaside Class Durability</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">Hotels and beachfront villas require absolute rust protection. Our aluminum systems come with Seaside Class electro-coating for absolute endurance.</p>
             </motion.div>
           </div>
         </div>
@@ -161,10 +161,10 @@ export default function HomeEN() {
              viewport={{ once: true }}
              className="text-center mb-20 max-w-4xl mx-auto"
            >
-             <h2 className="text-navy font-black text-4xl md:text-5xl lg:text-6xl mb-6 tracking-tight">Manufacturing & Installation <br/>in Crete, Greece</h2>
+             <h2 className="text-navy font-black text-4xl md:text-5xl lg:text-6xl mb-6 tracking-tight">Your Manufacturing Partner <br/>in Crete, Greece</h2>
              <div className="w-24 h-2 bg-red mx-auto rounded-full mb-8"></div>
              <p className="text-gray-600 text-xl leading-relaxed">
-               We don't just do basic installations. Our factory in Rethymno designs, manufactures, and applies premium architectural systems that increase your property's value and energy efficiency.
+               We don't just do basic installations. Our factory in Rethymno partners with architects and developers to manufacture premium architectural systems that elevate your property's commercial and aesthetic value.
              </p>
            </motion.div>
 
@@ -219,8 +219,8 @@ export default function HomeEN() {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"
         >
-          <h2 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">Building or Renovating?</h2>
-          <p className="text-2xl text-gray-300 mb-16 font-light max-w-3xl mx-auto leading-relaxed">Creating a home is perhaps the biggest project of your life. Let's discuss and select together the most suitable systems that will stand the test of time.</p>
+          <h2 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">Developing in Crete?</h2>
+          <p className="text-2xl text-gray-300 mb-16 font-light max-w-3xl mx-auto leading-relaxed">Whether you are building a boutique hotel or a luxury residential complex, let's discuss your architectural plans. We ensure precision, timeline compliance, and flawless execution.</p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
             <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 flex flex-col justify-between hover:bg-white/10 hover:border-red/50 transition-all duration-300 rounded-2xl group cursor-pointer">
