@@ -68,10 +68,10 @@ export default function HomeEN() {
               <span className="text-sm font-bold tracking-wider uppercase">Certified Alumil Manufacturers • Crete</span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight text-white tracking-tight">
-              <span className="block text-xl md:text-2xl uppercase tracking-widest text-gray-300 font-bold mb-4">Aluminum Systems Rethymno</span>
-              Absolute Security <br />
-              <span className="text-red">For Your New Home</span>
+            <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight tracking-tight drop-shadow-2xl">
+              <span className="block text-xl md:text-2xl uppercase tracking-widest text-gray-400 font-bold mb-4 drop-shadow-md">Aluminum Systems Rethymno</span>
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-gray-400">Absolute Security</span> <br />
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-red via-red-600 to-red-900">For Your New Home</span>
             </h1>
             
             <section className="mb-10 text-xl text-gray-300 max-w-2xl leading-relaxed">
@@ -81,13 +81,34 @@ export default function HomeEN() {
             </section>
 
             <nav className="flex flex-col sm:flex-row gap-5" aria-label="Hero Actions">
-              <a href="#services" className="bg-red text-white px-8 py-4 rounded-full font-bold text-center hover:bg-red-700 hover:shadow-red/40 transition-all duration-300 shadow-xl shadow-red/25 active:scale-95 flex items-center justify-center gap-2">
-                <Home size={20} /> Discover Our Solutions
+              <a href="#services" className="bg-gradient-to-r from-red to-red-700 text-white px-8 py-4 rounded-full font-bold text-center hover:shadow-[0_0_30px_rgba(200,20,20,0.4)] transition-all duration-300 border border-red-500/50 active:scale-95 flex items-center justify-center gap-2 relative overflow-hidden group">
+                <div className="absolute inset-0 bg-white/20 translate-y-12 group-hover:translate-y-0 transition-transform duration-300"></div>
+                <Home size={20} className="relative z-10" /> <span className="relative z-10">Discover Our Solutions</span>
               </a>
-              <a href="tel:2831023897" className="bg-white/5 backdrop-blur-xl text-white border border-white/20 px-8 py-4 rounded-full font-bold text-center hover:bg-white/10 hover:border-white/40 transition-all duration-300 flex items-center justify-center gap-2 active:scale-95">
+              <a href="tel:2831023897" className="bg-white/5 backdrop-blur-xl text-white border border-white/20 px-8 py-4 rounded-full font-bold text-center hover:bg-white/10 hover:border-white/40 transition-all duration-300 flex items-center justify-center gap-2 active:scale-95 shadow-2xl">
                 <PhoneCall size={20} /> Request CAD Study
               </a>
             </nav>
+
+            <motion.div 
+               initial={{ opacity: 0, y: 20 }}
+               animate={{ opacity: 1, y: 0 }}
+               transition={{ delay: 0.8, duration: 0.8 }}
+               className="mt-12 flex flex-wrap gap-4 items-center"
+            >
+               <div className="flex items-center gap-3 bg-white/5 border border-white/10 backdrop-blur-xl px-5 py-3 rounded-2xl shadow-2xl">
+                 <span className="font-black text-2xl text-red">30+</span>
+                 <span className="text-xs uppercase tracking-widest text-gray-300 font-bold leading-tight">Years<br/>Experience</span>
+               </div>
+               <div className="flex items-center gap-3 bg-white/5 border border-white/10 backdrop-blur-xl px-5 py-3 rounded-2xl shadow-2xl">
+                 <span className="font-black text-2xl text-red">100%</span>
+                 <span className="text-xs uppercase tracking-widest text-gray-300 font-bold leading-tight">Certified<br/>Alumil</span>
+               </div>
+               <div className="flex items-center gap-3 bg-white/5 border border-white/10 backdrop-blur-xl px-5 py-3 rounded-2xl shadow-2xl">
+                 <span className="font-black text-2xl text-red">RC3</span>
+                 <span className="text-xs uppercase tracking-widest text-gray-300 font-bold leading-tight">Security<br/>Class</span>
+               </div>
+            </motion.div>
           </motion.header>
         </div>
 
