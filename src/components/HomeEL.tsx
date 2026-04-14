@@ -65,13 +65,13 @@ export default function HomeEL() {
           >
             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md text-white mb-8 shadow-2xl">
               <CheckCircle2 size={16} className="text-red" />
-              <span className="text-sm font-bold tracking-wider uppercase">Εξουσιοδοτημενοι Κατασκευαστες Alumil • Κρητη</span>
+              <span className="text-sm font-bold tracking-wider uppercase">Εξουσιοδοτημένοι Κατασκευαστές Alumil • Κρήτη</span>
             </div>
             
             <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight tracking-tight drop-shadow-2xl">
-              <span className="block text-xl md:text-2xl uppercase tracking-widest text-gray-400 font-bold mb-4 drop-shadow-md">Κατασκευεσ Αλουμινιου Ρεθυμνο</span>
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-gray-400">Η Απόλυτη Ασφάλεια</span> <br />
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-red via-red-600 to-red-900">Στο Νέο Σας Σπίτι</span>
+              <span className="block text-xl md:text-2xl uppercase tracking-widest text-gray-400 font-bold mb-4 drop-shadow-md">Κατασκευές Αλουμινίου Ρέθυμνο</span>
+              <span className="text-white">Η Απόλυτη Ασφάλεια</span> <br />
+              <span className="text-red">Στο Νέο Σας Σπίτι</span>
             </h1>
             
             <section className="mb-10 text-xl text-gray-300 max-w-2xl leading-relaxed">
@@ -98,15 +98,15 @@ export default function HomeEL() {
             >
                <div className="flex items-center gap-3 bg-white/5 border border-white/10 backdrop-blur-xl px-5 py-3 rounded-2xl shadow-2xl">
                  <span className="font-black text-2xl text-red">30+</span>
-                 <span className="text-xs uppercase tracking-widest text-gray-300 font-bold leading-tight">Ετη<br/>Εμπειριας</span>
+                 <span className="text-xs uppercase tracking-widest text-gray-300 font-bold leading-tight">Έτη<br/>Εμπειρίας</span>
                </div>
                <div className="flex items-center gap-3 bg-white/5 border border-white/10 backdrop-blur-xl px-5 py-3 rounded-2xl shadow-2xl">
                  <span className="font-black text-2xl text-red">100%</span>
-                 <span className="text-xs uppercase tracking-widest text-gray-300 font-bold leading-tight">Πιστοποιηση<br/>Alumil</span>
+                 <span className="text-xs uppercase tracking-widest text-gray-300 font-bold leading-tight">Πιστοποίηση<br/>Alumil</span>
                </div>
                <div className="flex items-center gap-3 bg-white/5 border border-white/10 backdrop-blur-xl px-5 py-3 rounded-2xl shadow-2xl">
                  <span className="font-black text-2xl text-red">RC3</span>
-                 <span className="text-xs uppercase tracking-widest text-gray-300 font-bold leading-tight">Κλαση<br/>Ασφαλειας</span>
+                 <span className="text-xs uppercase tracking-widest text-gray-300 font-bold leading-tight">Κλάση<br/>Ασφαλείας</span>
                </div>
             </motion.div>
           </motion.header>

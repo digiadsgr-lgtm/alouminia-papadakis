@@ -80,21 +80,21 @@ export default async function KoufomataPage({ params }: { params: Promise<{ lang
                <Thermometer className="text-red" size={32} />
                <div>
                   <div className="font-black text-xl leading-none">Uw {`<`} 1.1</div>
-                  <div className="text-xs text-gray-300 uppercase tracking-widest mt-1">{isEn ? 'Thermal Insulation' : 'Θερμομονωση'}</div>
+                  <div className="text-xs text-gray-300 uppercase tracking-widest mt-1">{isEn ? 'Thermal Insulation' : 'Θερμομόνωση'}</div>
                </div>
              </div>
              <div className="bg-white/10 backdrop-blur-md border border-white/20 p-5 rounded-2xl flex items-center gap-4 text-white">
                <VolumeX className="text-red" size={32} />
                <div>
                   <div className="font-black text-xl leading-none">Rw 45dB</div>
-                  <div className="text-xs text-gray-300 uppercase tracking-widest mt-1">{isEn ? 'Sound Reduction' : 'Ηχομειωση'}</div>
+                  <div className="text-xs text-gray-300 uppercase tracking-widest mt-1">{isEn ? 'Sound Reduction' : 'Ηχομείωση'}</div>
                </div>
              </div>
              <div className="bg-white/10 backdrop-blur-md border border-white/20 p-5 rounded-2xl flex items-center gap-4 text-white">
                <Shield className="text-red" size={32} />
                <div>
                   <div className="font-black text-xl leading-none">RC3 / E1500</div>
-                  <div className="text-xs text-gray-300 uppercase tracking-widest mt-1">{isEn ? 'Security Class' : 'Κλαση Ασφαλειας'}</div>
+                  <div className="text-xs text-gray-300 uppercase tracking-widest mt-1">{isEn ? 'Security Class' : 'Κλάση Ασφαλείας'}</div>
                </div>
              </div>
           </div>
