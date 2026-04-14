@@ -5,14 +5,14 @@ import JsonLd from '@/components/JsonLd'
 import PageTransition from '@/components/PageTransition'
 import { Factory, Cog, ChevronLeft, Building } from 'lucide-react'
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: 'el' | 'en' }> }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
   return {
     title: lang === 'en' ? 'Industrial Ironworks | Metal Buildings Crete | Papadakis' : 'Βιομηχανικές Σιδηροκατασκευές | Μεταλλικά Κτίρια Ρέθυμνο | Παπαδάκης',
   }
 }
 
-export default async function SidirosPage({ params }: { params: Promise<{ lang: 'el' | 'en' }> }) {
+export default async function SidirosPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   const isEn = lang === 'en'
 
@@ -21,7 +21,7 @@ export default async function SidirosPage({ params }: { params: Promise<{ lang: 
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-navy border-b-[6px] border-red">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/images/hero_welding_1776110934221.png" 
+            src="/images/industrial_ironworks_1776183414837.png" 
             alt="Ironworks" 
             fill 
             className="object-cover opacity-20 filter blur-sm scale-105" 
@@ -68,7 +68,7 @@ export default async function SidirosPage({ params }: { params: Promise<{ lang: 
             
             <div className="h-full relative min-h-[500px] rounded-[32px] overflow-hidden shadow-2xl group">
                <Image 
-                 src="/images/hero_welding_1776110934221.png"
+                 src="/images/industrial_ironworks_1776183414837.png"
                  alt="Iron Works"
                  fill
                  className="object-cover group-hover:scale-105 transition-transform duration-700"

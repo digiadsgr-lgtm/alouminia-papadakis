@@ -5,14 +5,14 @@ import JsonLd from '@/components/JsonLd'
 import PageTransition from '@/components/PageTransition'
 import { Sun, Wind, Move, ChevronLeft } from 'lucide-react'
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: 'el' | 'en' }> }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
   return {
     title: lang === 'en' ? 'Bioclimatic Pergolas Crete | Shading Systems | Papadakis' : 'Βιοκλιματικές Πέργκολες Ρέθυμνο | Συστήματα Σκίασης | Παπαδάκης',
   }
 }
 
-export default async function PergolesPage({ params }: { params: Promise<{ lang: 'el' | 'en' }> }) {
+export default async function PergolesPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   const isEn = lang === 'en'
 

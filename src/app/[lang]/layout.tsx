@@ -3,21 +3,66 @@ import { Montserrat } from 'next/font/google'
 import '@/app/globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import CookieConsent from '@/components/CookieConsent'
 
-const montserrat = Montserrat({ subsets: ['latin', 'greek'], variable: '--font-montserrat' })
+const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat' })
 
 // Provide dictionary-based metadata in layout or generate Metadata dynamically
-export async function generateMetadata({ params }: { params: Promise<{ lang: 'el' | 'en' }> }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
   if (lang === 'en') {
     return {
-      title: 'Papadakis Aluminium | Premium Architectural Systems in Crete',
-      description: 'Certified Alumil Manufacturer in Rethymno. High-end energy efficient windows, bioclimatic pergolas, and industrial ironworks.',
+      title: 'Aluminum Systems Rethymno & Crete | Papadakis Manufacturing',
+      description: 'Expert manufacturing and installation of premium Alumil aluminum systems, energy-efficient windows, security doors, and pergolas in Rethymno, Crete.',
+      openGraph: {
+        title: 'Aluminum Systems Rethymno | Papadakis Manufacturing',
+        description: 'Expert manufacturing and installation of premium aluminum systems, windows, and security doors across Crete. Discover absolute security for your home.',
+        url: 'https://alouminia-papadakis.gr/en',
+        siteName: 'Papadakis Aluminium',
+        images: [
+          {
+            url: 'https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.png',
+            width: 1200,
+            height: 630,
+            alt: 'Aluminum Systems Installation in Crete',
+          },
+        ],
+        locale: 'en_US',
+        type: 'website',
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Aluminum Systems Rethymno | Papadakis Manufacturing',
+        description: 'Installation of premium aluminum systems and windows in Rethymno, Crete.',
+        images: ['https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.png'],
+      },
     }
   }
   return {
-    title: 'Αλουμίνια Παπαδάκης | Κορυφαίες Κατασκευές στο Ρέθυμνο',
-    description: 'Ενεργειακά κουφώματα, βιοκλιματικές πέργκολες, σιδηροκατασκευές με έδρα το Ρέθυμνο.',
+    title: 'Κατασκευές & Συστήματα Αλουμινίου Ρέθυμνο | Παπαδάκης Κρήτη',
+    description: 'Μελέτη, κατασκευή και τοποθέτηση ενεργειακών κουφωμάτων αλουμινίου (Alumil), περγκολών και θωρακισμένων πορτών. Εξυπηρετούμε το Ρέθυμνο & όλη την Κρήτη.',
+    openGraph: {
+      title: 'Κατασκευή & Τοποθέτηση Αλουμινίων | Ρέθυμνο',
+      description: 'Κατασκευή και εγκατάσταση συστημάτων αλουμινίου, ενεργειακών κουφωμάτων και πορτών ασφαλείας. Καλύπτουμε το Ρέθυμνο και ολόκληρη την Κρήτη.',
+      url: 'https://alouminia-papadakis.gr',
+      siteName: 'Αλουμίνια Παπαδάκης',
+      images: [
+        {
+          url: 'https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.png',
+          width: 1200,
+          height: 630,
+          alt: 'Κατασκευές Συστήματων Αλουμινίου στο Ρέθυμνο, Κρήτη',
+        },
+      ],
+      locale: 'el_GR',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Κατασκευές & Συστήματα Αλουμινίου Ρέθυμνο | Παπαδάκης',
+      description: 'Κατασκευή και τοποθέτηση κουφωμάτων αλουμινίου στην Κρήτη.',
+      images: ['https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.png'],
+    },
   }
 }
 
@@ -26,17 +71,19 @@ export default async function RootLayout({
   params
 }: {
   children: React.ReactNode
-  params: Promise<{ lang: 'el' | 'en' }>
+  params: Promise<{ lang: string }>
 }) {
   const { lang } = await params;
+  const validLang = lang as 'el' | 'en';
   return (
     <html lang={lang} className="scroll-smooth">
       <body className={`${montserrat.className} bg-background text-foreground antialiased`}>
-        <Navbar lang={lang} />
+        <Navbar lang={validLang} />
         <main className="min-h-screen">
           {children}
         </main>
-        <Footer lang={lang} />
+        <Footer lang={validLang} />
+        <CookieConsent lang={validLang} />
       </body>
     </html>
   )

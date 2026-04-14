@@ -5,7 +5,7 @@ import JsonLd from '@/components/JsonLd'
 import PageTransition from '@/components/PageTransition'
 import { Shield, PenTool, CheckCircle, ChevronLeft } from 'lucide-react'
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: 'el' | 'en' }> }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
   return {
     title: lang === 'en' ? 'Aluminum Windows Crete | Alumil Systems | Papadakis' : 'Κουφώματα Αλουμινίου Ρέθυμνο | Ενεργειακά Συστήματα | Παπαδάκης',
@@ -13,16 +13,49 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: 'el
   }
 }
 
-export default async function KoufomataPage({ params }: { params: Promise<{ lang: 'el' | 'en' }> }) {
+export default async function KoufomataPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   const isEn = lang === 'en'
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": isEn ? "What is the U-value of your aluminum windows?" : "Ποιος είναι ο δείκτης θερμοπερατότητας (Uw) των κουφωμάτων;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": isEn ? "Our certified Alumil systems achieve a U-value up to 0.9 W/m²K, ensuring maximum energy efficiency and thermal insulation." : "Τα πιστοποιημένα συστήματα Alumil SMARTIA/SUPREME επιτυγχάνουν δείκτη Uw έως 0.9 W/m²K, εξασφαλίζοντας μέγιστη ενεργειακή απόδοση."
+      }
+    }, {
+      "@type": "Question",
+      "name": isEn ? "Are your frames suitable for seaside properties?" : "Είναι τα κουφώματα κατάλληλα για παραθαλάσσια σπίτια στην Κρήτη;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": isEn ? "Yes, we apply Seaside Class certification anodizing, providing extreme resistance to salt corrosion." : "Ναι, εφαρμόζουμε πιστοποιημένη επεξεργασία ανοδίωσης Seaside Class, εξασφαλίζοντας απόλυτη αντοχή στη διάβρωση από την αλμύρα."
+      }
+    }]
+  };
+
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Alumil Thermal Break Windows",
+    "description": isEn ? "Premium thermal break aluminum windows with 38mm polyamide and multi-point security locks." : "Ενεργειακά κουφώματα αλουμινίου θερμοδιακοπής (Πολυαμίδια 38mm) με περιμετρική ασφάλεια.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Alumil"
+    }
+  };
+
   return (
     <PageTransition>
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-navy border-b-[6px] border-red">
+      <JsonLd data={faqSchema} />
+      <JsonLd data={productSchema} />
+      <article className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-navy border-b-[6px] border-red">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/images/hero_aluminum_villa_1776110912532.png" 
+            src="/images/modern_aluminum_windows_1776183397754.png" 
             alt="Κουφώματα Αλουμινίου Ρέθυμνο" 
             fill 
             className="object-cover opacity-20 filter blur-sm scale-105" 
@@ -31,7 +64,7 @@ export default async function KoufomataPage({ params }: { params: Promise<{ lang
           <div className="absolute inset-0 bg-gradient-to-b from-navy/95 to-navy" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link href={`/${lang}`} className="inline-flex items-center text-gray-300 hover:text-white transition-colors mb-8 font-medium">
             <ChevronLeft size={20} /> {isEn ? 'Back to Home' : 'Επιστροφή στην Αρχική'}
           </Link>
@@ -39,10 +72,10 @@ export default async function KoufomataPage({ params }: { params: Promise<{ lang
              {isEn ? 'Energy Efficient Windows' : 'Ενεργειακά Κουφώματα'} <br/> <span className="text-red">{isEn ? 'in Crete' : 'στο Ρέθυμνο'}</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl leading-relaxed">
-             {isEn ? 'Upgrade your property with top-tier aluminum systems (Alumil). Invest in ultimate insulation and armor your space.' : 'Αναβαθμίστε την κατοικία ή την επιχείρησή σας με συστήματα αλουμινίου κορυφαίων προδιαγραφών (Alumil).'}
+             {isEn ? 'Upgrade your property with top-tier aluminum systems (Alumil). Invest in ultimate insulation and armor your space.' : 'Αναβαθμίστε την κατοικία ή την επιχείρησή σας με συστήματα αλουμινίου κορυφαίων προδιαγραφών (Alumil) με δείκτη Uw έως 0.9 W/m²K.'}
           </p>
-        </div>
-      </section>
+        </header>
+      </article>
 
       <section className="py-24 bg-white text-navy">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -56,8 +89,8 @@ export default async function KoufomataPage({ params }: { params: Promise<{ lang
                 <li className="flex items-start gap-5">
                   <div className="bg-red/10 p-4 rounded-2xl border border-red/20"><Shield className="text-red" size={28} /></div>
                   <div>
-                    <h3 className="font-bold text-2xl mb-2 text-navy tracking-tight">{isEn ? 'Thermal & Sound Insulation' : 'Κορυφαία Θερμοδιακοπή'}</h3>
-                    <p className="text-gray-600 text-lg">{isEn ? 'Certified thermal break systems. Reduce cooling costs up to 40%.' : 'Πιστοποιημένα συστήματα SMARTIA & SUPREME. Μειώστε την απώλεια ενέργειας έως και 40%.'}</p>
+                    <h3 className="font-bold text-2xl mb-2 text-navy tracking-tight">{isEn ? 'Thermal Break (38mm Polyamide)' : 'Κορυφαία Θερμοδιακοπή (Πολυαμίδια 38mm)'}</h3>
+                    <p className="text-gray-600 text-lg">{isEn ? 'Certified thermal break systems achieving extreme U-values. Reduce cooling costs up to 40%.' : 'Πιστοποιημένα συστήματα SMARTIA & SUPREME. Κυκλώματα πολυαμιδίων 38mm που εκμηδενίζουν τη μεταφορά θερμότητας.'}</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-5">

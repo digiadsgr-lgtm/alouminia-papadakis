@@ -6,9 +6,13 @@ import { Phone, Menu, X, ChevronRight, Globe } from 'lucide-react'
 
 const dict = {
   el: {
+    servicesTitle: "Υπηρεσίες",
     koufomata: "Κουφώματα",
     pergoles: "Πέργκολες",
     sidiros: "Σιδηροκατασκευές",
+    portes: "Θωρακισμένες Πόρτες",
+    smarthome: "Smart Home",
+    portfolio: "Τα Έργα Μας",
     contact: "Επικοινωνία",
     call: "ΚΑΛΕΣΤΕ ΜΑΣ",
     menu: "ΜΕΝΟΥ",
@@ -17,9 +21,13 @@ const dict = {
     langLink: "/en"
   },
   en: {
+    servicesTitle: "Services",
     koufomata: "Windows",
     pergoles: "Pergolas",
     sidiros: "Ironworks",
+    portes: "Security Doors",
+    smarthome: "Smart Home",
+    portfolio: "Our Projects",
     contact: "Contact",
     call: "CALL US",
     menu: "MENU",
@@ -65,9 +73,19 @@ export default function Navbar({ lang = 'el' }: { lang?: 'el' | 'en' }) {
             </div>
             
             <div className="hidden md:flex space-x-8 items-center">
-              <Link href={`/${lang}/services/koufomata-alouminiou-rethymno`} className={`text-sm font-semibold transition-colors ${isScrolled ? 'hover:text-red' : 'hover:text-gray-300'}`}>{t.koufomata}</Link>
-              <Link href={`/${lang}/services/pergoles-rethymno-kriti`} className={`text-sm font-semibold transition-colors ${isScrolled ? 'hover:text-red' : 'hover:text-gray-300'}`}>{t.pergoles}</Link>
-              <Link href={`/${lang}/services/sidiros-kataskeves-rethymno`} className={`text-sm font-semibold transition-colors ${isScrolled ? 'hover:text-red' : 'hover:text-gray-300'}`}>{t.sidiros}</Link>
+              <div className="relative group">
+                <button className={`text-sm font-semibold transition-colors flex items-center gap-1 ${isScrolled ? 'hover:text-red text-navy' : 'hover:text-gray-300 text-white'}`}>
+                  {t.servicesTitle}
+                </button>
+                <div className="absolute top-full left-0 mt-4 w-64 bg-white rounded-2xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 p-3 flex flex-col gap-1">
+                  <Link href={`/${lang}/services/koufomata-alouminiou-rethymno`} className="block px-4 py-3 text-sm font-bold text-navy hover:bg-gray-50 hover:text-red rounded-xl transition-colors">{t.koufomata}</Link>
+                  <Link href={`/${lang}/services/pergoles-rethymno-kriti`} className="block px-4 py-3 text-sm font-bold text-navy hover:bg-gray-50 hover:text-red rounded-xl transition-colors">{t.pergoles}</Link>
+                  <Link href={`/${lang}/services/sidiros-kataskeves-rethymno`} className="block px-4 py-3 text-sm font-bold text-navy hover:bg-gray-50 hover:text-red rounded-xl transition-colors">{t.sidiros}</Link>
+                  <Link href={`/${lang}/services/portes-asfaleias-rethymno`} className="block px-4 py-3 text-sm font-bold text-navy hover:bg-gray-50 hover:text-red rounded-xl transition-colors">{t.portes}</Link>
+                  <Link href={`/${lang}/services/smart-home-rethymno`} className="block px-4 py-3 text-sm font-bold text-navy hover:bg-gray-50 hover:text-red rounded-xl transition-colors">{t.smarthome}</Link>
+                </div>
+              </div>
+              <Link href={`/${lang}/portfolio`} className={`text-sm font-semibold transition-colors ${isScrolled ? 'hover:text-red' : 'hover:text-gray-300'}`}>{t.portfolio}</Link>
               <Link href={`/${lang}#contact`} className={`text-sm font-semibold transition-colors ${isScrolled ? 'hover:text-red' : 'hover:text-gray-300'}`}>{t.contact}</Link>
               
               <Link href={t.langLink} className={`flex items-center gap-1 text-sm font-bold transition-colors ${isScrolled ? 'text-navy hover:text-red' : 'text-white hover:text-red'}`}>
@@ -136,6 +154,9 @@ export default function Navbar({ lang = 'el' }: { lang?: 'el' | 'en' }) {
                   { name: t.koufomata, link: `/${lang}/services/koufomata-alouminiou-rethymno` },
                   { name: t.pergoles, link: `/${lang}/services/pergoles-rethymno-kriti` },
                   { name: t.sidiros, link: `/${lang}/services/sidiros-kataskeves-rethymno` },
+                  { name: t.portes, link: `/${lang}/services/portes-asfaleias-rethymno` },
+                  { name: t.smarthome, link: `/${lang}/services/smart-home-rethymno` },
+                  { name: t.portfolio, link: `/${lang}/portfolio` },
                   { name: t.contact, link: `/${lang}#contact` }
                 ].map((item, i) => (
                   <Link 
