@@ -113,7 +113,7 @@ export default function Footer({ lang = 'el' }: { lang?: 'el' | 'en' }) {
                </div>
                <div className="pt-1">
                  <p className="text-white font-bold mb-1">{t.address}</p>
-                 <p className="text-gray-400">Δρουλίσκου 8, Ρέθυμνο, 74100</p>
+                 <a href="https://maps.app.goo.gl/P7fcaFiK9mkdmUTS6" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">Δρουλίσκου 8, Ρέθυμνο, 74100</a>
                </div>
             </li>
             <li className="flex items-start gap-4">

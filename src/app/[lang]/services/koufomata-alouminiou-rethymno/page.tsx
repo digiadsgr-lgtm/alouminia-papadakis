@@ -4,6 +4,9 @@ import Link from 'next/link'
 import JsonLd from '@/components/JsonLd'
 import PageTransition from '@/components/PageTransition'
 import { Shield, PenTool, CheckCircle, ChevronLeft, Thermometer, VolumeX, PhoneCall } from 'lucide-react'
+import dynamic from 'next/dynamic'
+
+const InsulationSimulator = dynamic(() => import('@/components/InsulationSimulator'))
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -98,6 +101,7 @@ export default async function KoufomataPage({ params }: { params: Promise<{ lang
                </div>
              </div>
           </div>
+          <InsulationSimulator isEn={isEn} />
         </header>
       </article>
 

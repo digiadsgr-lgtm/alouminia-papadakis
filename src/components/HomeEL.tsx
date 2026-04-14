@@ -70,7 +70,7 @@ export default function HomeEL() {
             
             <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight tracking-tight drop-shadow-2xl">
               <span className="block text-xl md:text-2xl uppercase tracking-widest text-gray-400 font-bold mb-4 drop-shadow-md">Κατασκευές Αλουμινίου Ρέθυμνο</span>
-              <span className="text-white">Η Απόλυτη Ασφάλεια</span> <br />
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-gray-400">Η Απόλυτη Ασφάλεια</span> <br />
               <span className="text-red">Στο Νέο Σας Σπίτι</span>
             </h1>
             

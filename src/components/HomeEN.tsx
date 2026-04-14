@@ -71,7 +71,7 @@ export default function HomeEN() {
             <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight tracking-tight drop-shadow-2xl">
               <span className="block text-xl md:text-2xl uppercase tracking-widest text-gray-400 font-bold mb-4 drop-shadow-md">Aluminum Systems Rethymno</span>
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-gray-400">Absolute Security</span> <br />
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-red via-red-600 to-red-900">For Your New Home</span>
+              <span className="text-red">For Your New Home</span>
             </h1>
             
             <section className="mb-10 text-xl text-gray-300 max-w-2xl leading-relaxed">
