@@ -62,10 +62,26 @@ export default function HomeEL() {
       },
       {
         "@type": "Question",
-        "name": "Παρέχετε εγγύηση και after-sales υποστήριξη μετά την τοποθέτηση;",
+        "name": "Πώς διασφαλίζετε την τήρηση των χρονοδιαγραμμάτων και την αποφυγή καθυστερήσεων;",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Κάθε έργο συνοδεύεται από γραπτή εγγύηση κατασκευαστή Alumil και εγγύηση τοποθέτησης. Παρέχουμε τεχνική υποστήριξη μετά την παράδοση, περιοδικό σέρβις κουφωμάτων και ρύθμιση μηχανισμών. Η μακροχρόνια σχέση με τον πελάτη δεν τελειώνει στην τοποθέτηση — αρχίζει εκεί."
+          "text": "Μειώνουμε το execution risk στο μηδέν χάρη στην operational maturity της εταιρείας μας. Διαθέτουμε in-house γραμμή παραγωγής, δικά μας εκπαιδευμένα συνεργεία τοποθέτησης και αυστηρές διαδικασίες (processes) παραγγελιοληψίας. Παραδίδουμε τα έργα (από μία βίλα μέχρι ολόκληρο ξενοδοχείο) ακριβώς στον συμφωνημένο χρόνο, χωρίς καμία απόκλιση."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Διαθέτετε αποδεδειγμένο Portfolio για projects υψηλής αισθητικής;",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Βεβαίως. Το portfolio μας επικεντρώνεται σε villa-level αισθητική και έργα απαιτήσεων (όχι μεμονωμένες αλλαγές παραθύρων). Συνεργαζόμαστε με αρχιτεκτονικά γραφεία και εργολάβους προσφέροντας ολοκληρωμένες λύσεις (κουφώματα, κάγκελα inox, πέργκολες) ώστε το αισθητικό (brand fit) και λειτουργικό αποτέλεσμα να είναι ενιαίο και premium."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Τι δομή After-Sales υποστήριξης διαθέτετε;",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Δεν είμαστε 'μάστορες' που απλώς τοποθετούν και φεύγουν. Η Αλουμίνια Παπαδάκης διαθέτει οργανωμένο (structured) After-Sales τμήμα. Παρέχουμε εγγύηση Alumil, άμεση επέμβαση από το δικό μας συνεργείο service για περιοδικές ρυθμίσεις μακροχρόνια. Η συνεπής υποστήριξη του έργου είναι για εμάς αδιαπραγμάτευτη."
         }
       },
       {
@@ -215,7 +231,7 @@ export default function HomeEL() {
                Δεν κάνουμε απλώς τοποθετήσεις. Το εργοστάσιό μας στο Ρέθυμνο σχεδιάζει, κατασκευάζει και εφαρμόζει κορυφαία αρχιτεκτονικά συστήματα που αυξάνουν την αξία και την ενεργειακή απόδοση του ακινήτου σας.
              </p>
              <p className="text-gray-500 text-base mt-4 leading-relaxed max-w-2xl mx-auto">
-               Ως project-based κατασκευαστική εταιρεία, συνεργαζόμαστε σε επίπεδο έργου με αρχιτέκτονες, εργολάβους και μηχανικούς — από βίλες και boutique ξενοδοχεία μέχρι εμπορικά ακίνητα. Κάθε έργο ακολουθεί δομημένο workflow: μελέτη → προσφορά → εργοστασιακή κατασκευή → τοποθέτηση → εγγύηση & after-sales.
+               Ως οργανωμένη (scalable) κατασκευαστική εταιρεία, διαθέτουμε το operational maturity να αναλάβουμε απαιτητικά έργα. Δεν εκτελούμε μεμονωμένες επισκευές. Εστιάζουμε σε ολοκληρωμένες λύσεις με αυστηρή τήρηση χρονοδιαγραμμάτων, premium portfolio εφαρμογών και μηδενικό execution risk για τον ιδιοκτήτη.
              </p>
            </motion.div>
 
@@ -270,9 +286,9 @@ export default function HomeEL() {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"
         >
-          <h2 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">Χτίζετε ή Ανακαινίζετε;</h2>
-          <p className="text-2xl text-gray-300 mb-6 font-light max-w-3xl mx-auto leading-relaxed">Η δημιουργία ενός σπιτιού είναι ίσως το μεγαλύτερο project της ζωής σας. Ελάτε να συζητήσουμε και να επιλέξουμε μαζί τα καταλληλότερα συστήματα που θα αντέξουν στο χρόνο.</p>
-          <p className="text-base text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed">30+ χρόνια εμπειρίας · Ιδιόκτητο εργοστάσιο στο Ρέθυμνο · Πιστοποιημένος κατασκευαστής Alumil · Εγγύηση & after-sales υποστήριξη · Επαναληπτικές συνεργασίες με εργολάβους & αρχιτέκτονες</p>
+          <h2 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">Μηδενικό Execution Risk</h2>
+          <p className="text-2xl text-gray-300 mb-6 font-light max-w-3xl mx-auto leading-relaxed">Απόλυτη συνέπεια στα χρονοδιαγράμματα και Premium Αισθητική. Παραδίδουμε ολοκληρωμένες εφαρμογές που αναβαθμίζουν εμπορικά την αξία του ακινήτου σας.</p>
+          <p className="text-base text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed">Αποδεδειγμένο Portfolio · Scalable Workflow · Οργανωμένο After-Sales · Εγγύηση Alumil · Καμία Καθυστέρηση</p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
             <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 flex flex-col justify-between hover:bg-white/10 hover:border-red/50 transition-all duration-300 rounded-2xl group cursor-pointer">

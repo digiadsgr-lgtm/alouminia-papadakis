@@ -70,10 +70,26 @@ export default function HomeEN() {
       },
       {
         "@type": "Question",
-        "name": "What guarantees and after-sales support do you provide?",
+        "name": "How do you guarantee project timelines and avoid delays?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Every project includes a written manufacturer warranty from Alumil S.A. and our own installation guarantee. We provide post-handover technical support, periodic maintenance service, and mechanism adjustment. Our relationship with the client begins at handover, not ends."
+          "text": "We reduce execution risk to zero through our operational maturity. We operate our own in-house manufacturing line, employ dedicated permanent installation crews, and strictly adhere to standardized project processes. We deliver projects—from single luxury villas to entire boutique hotels—exactly on schedule, with zero compromise."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you have a proven portfolio for high-end architectural projects?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. Our extensive portfolio is heavily focused on villa-level aesthetics and complex commercial requirements, not isolated window replacements. We integrate seamlessly with architectural firms and general contractors to provide turn-key, premium solutions (aluminum systems, custom inox ironworks, bioclimatic pergolas) that ensure a unified brand fit and uncompromising performance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the structure of your After-Sales support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We are a structured construction firm, not independent handymen. Papadakis Aluminium features an organized After-Sales department providing the official Alumil manufacturer guarantee alongside dedicated long-term service. Consistent, reliable support after handover is a fundamental part of our scalable operations."
         }
       },
       {
@@ -215,7 +231,7 @@ export default function HomeEN() {
                We don't just do basic installations. Our factory in Rethymno partners with architects and developers to manufacture premium architectural systems that elevate your property's commercial and aesthetic value.
              </p>
              <p className="text-gray-500 text-base mt-4 leading-relaxed max-w-2xl mx-auto">
-               As a project-based manufacturing company, we collaborate at project level with architects, general contractors, and civil engineers — from luxury villas and boutique hotels to commercial developments. Every project follows our structured workflow: consultation → CAD study → factory manufacturing → installation → warranty & after-sales support.
+               As a scalable manufacturing company, we possess the operational maturity to handle demanding architectural projects. We do not execute single repairs. We focus on complete project solutions with strict timeline adherence, a premium application portfolio, and zero execution risk for investors and contractors.
              </p>
            </motion.div>
 
@@ -270,9 +286,9 @@ export default function HomeEN() {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"
         >
-          <h2 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">Developing in Crete?</h2>
-          <p className="text-2xl text-gray-300 mb-6 font-light max-w-3xl mx-auto leading-relaxed">Whether you are building a boutique hotel or a luxury residential complex, let's discuss your architectural plans. We ensure precision, timeline compliance, and flawless execution.</p>
-          <p className="text-base text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed">30+ years of operation · Own manufacturing facility · Certified Alumil partner · Written warranty & after-sales support · Repeat partnerships with contractors & architects across Crete</p>
+          <h2 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">Zero Execution Risk</h2>
+          <p className="text-2xl text-gray-300 mb-6 font-light max-w-3xl mx-auto leading-relaxed">Absolute adherence to project timelines and Premium Aesthetics. We deliver turn-key applications that commercially elevate your property's value.</p>
+          <p className="text-base text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed">Proven Track Record · Scalable Workflow · Structured After-Sales · Alumil Warranty · Zero Delays</p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
             <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 flex flex-col justify-between hover:bg-white/10 hover:border-red/50 transition-all duration-300 rounded-2xl group cursor-pointer">

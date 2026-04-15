@@ -102,7 +102,7 @@ export default async function RootLayout({
     "url": "https://alouminia-papadakis.gr",
     "logo": "https://alouminia-papadakis.gr/icon.png",
     "image": "https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.png",
-    "description": "Certified Alumil manufacturer specializing in project-based aluminum solutions for luxury villas, boutique hotels, and high-end residential developments across Crete. Full workflow: architectural study → CAD design → factory manufacturing → on-site installation → after-sales support.",
+    "description": "Certified Alumil manufacturer specializing in project-based aluminum solutions for luxury villas, boutique hotels, and high-end residential developments across Crete. Uncompromised operational maturity, scalable manufacturing processes with zero delays, and a proven extensive portfolio. Full workflow: architectural study → CAD design → factory manufacturing → on-site installation by permanent crews → structured after-sales guarantee.",
     "foundingDate": "1993",
     "numberOfEmployees": {
       "@type": "QuantitativeValue",
