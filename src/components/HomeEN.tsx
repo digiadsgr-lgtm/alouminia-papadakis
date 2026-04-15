@@ -46,26 +46,42 @@ export default function HomeEN() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Do you offer remote project management for foreign investors building in Crete?",
+        "name": "What is the project workflow when working with Papadakis Aluminium in Crete?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. We offer 100% remote management for international investors building in Crete. We provide digital CAD studies, architectural progress reports, and deliver turn-key aluminum solutions for luxury villas and boutique hotels without requiring your local presence."
+          "text": "We operate as a structured construction company, not a repair service. Our workflow: 1) On-site survey & architectural consultation, 2) CAD technical drawings & detailed quote, 3) Factory manufacturing in our own 300m² facility in Rethymno, 4) Professional installation by our permanent crews, 5) Turn-key handover, 6) After-sales service & guarantee. We manage the entire project lifecycle from design to delivery."
         }
       },
       {
         "@type": "Question",
-        "name": "What aluminum systems are best for beachfront villas in Crete?",
+        "name": "What types of projects does Papadakis Aluminium specialize in?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "For seaside properties, we exclusively manufacture Seaside Class certified Alumil windows and pergolas with advanced electro-coating, guaranteeing absolute rust resistance against extreme salt and humidity."
+          "text": "We specialize in premium project-based work: luxury villas, boutique hotels, high-end residential developments, and commercial properties across Crete. We partner at project level with architects, civil engineers, and general contractors — we do not handle individual repairs. Our focus is architectural precision and design-driven aluminum solutions for developments that demand villa-level execution quality."
         }
       },
       {
         "@type": "Question",
-        "name": "What energy class do your architectural aluminum windows provide?",
+        "name": "Do you work with architects and contractors on large developments in Crete?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Our premium thermal-break profiles achieve A+ Energy Autonomy, reaching a Uw value of up to 0.9 W/m²K, which drastically decreases your building's cooling and heating operational costs."
+          "text": "Yes. A significant portion of our work comes from repeat partnerships with architects, civil engineers, and construction companies across Crete. We integrate seamlessly into larger construction timelines, providing factory-grade manufacturing and on-schedule installation. For foreign investors, we also offer complete remote project management with digital progress reports and CAD documentation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What guarantees and after-sales support do you provide?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Every project includes a written manufacturer warranty from Alumil S.A. and our own installation guarantee. We provide post-handover technical support, periodic maintenance service, and mechanism adjustment. Our relationship with the client begins at handover, not ends."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why choose Papadakis over independent aluminum installers in Rethymno?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The difference is structural: we are a certified manufacturing company with our own factory, dedicated engineering department, permanent installation crews, and 30+ years of continuous operation. We hold direct Alumil certification, use Seaside Class anti-corrosion coatings for coastal properties, and have completed hundreds of villa and hotel projects across Crete. We are a project partner, not a handyman."
         }
       }
     ]
@@ -198,6 +214,9 @@ export default function HomeEN() {
              <p className="text-gray-600 text-xl leading-relaxed">
                We don't just do basic installations. Our factory in Rethymno partners with architects and developers to manufacture premium architectural systems that elevate your property's commercial and aesthetic value.
              </p>
+             <p className="text-gray-500 text-base mt-4 leading-relaxed max-w-2xl mx-auto">
+               As a project-based manufacturing company, we collaborate at project level with architects, general contractors, and civil engineers — from luxury villas and boutique hotels to commercial developments. Every project follows our structured workflow: consultation → CAD study → factory manufacturing → installation → warranty & after-sales support.
+             </p>
            </motion.div>
 
            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -252,7 +271,8 @@ export default function HomeEN() {
           className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"
         >
           <h2 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">Developing in Crete?</h2>
-          <p className="text-2xl text-gray-300 mb-16 font-light max-w-3xl mx-auto leading-relaxed">Whether you are building a boutique hotel or a luxury residential complex, let's discuss your architectural plans. We ensure precision, timeline compliance, and flawless execution.</p>
+          <p className="text-2xl text-gray-300 mb-6 font-light max-w-3xl mx-auto leading-relaxed">Whether you are building a boutique hotel or a luxury residential complex, let's discuss your architectural plans. We ensure precision, timeline compliance, and flawless execution.</p>
+          <p className="text-base text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed">30+ years of operation · Own manufacturing facility · Certified Alumil partner · Written warranty & after-sales support · Repeat partnerships with contractors & architects across Crete</p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
             <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 flex flex-col justify-between hover:bg-white/10 hover:border-red/50 transition-all duration-300 rounded-2xl group cursor-pointer">

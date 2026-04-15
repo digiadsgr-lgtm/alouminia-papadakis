@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   if (lang === 'en') {
     return {
       title: 'Aluminum Systems Rethymno & Crete | Papadakis Manufacturing',
-      description: 'Expert manufacturing and installation of premium Alumil aluminum systems, energy-efficient windows, security doors, and pergolas in Rethymno, Crete.',
+      description: 'Certified Alumil manufacturer in Rethymno with own factory. Project-based aluminum solutions for luxury villas, boutique hotels, and commercial developments. Structured workflow: architectural study → CAD design → manufacturing → installation → after-sales guarantee. Partnering with architects and contractors across Crete.',
       openGraph: {
         title: 'Aluminum Systems Rethymno | Papadakis Manufacturing',
         description: 'Expert manufacturing and installation of premium aluminum systems, windows, and security doors across Crete. Discover absolute security for your home.',
@@ -55,7 +55,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   }
   return {
     title: 'Κατασκευές & Συστήματα Αλουμινίου Ρέθυμνο | Παπαδάκης Κρήτη',
-    description: 'Μελέτη, κατασκευή και τοποθέτηση ενεργειακών κουφωμάτων αλουμινίου (Alumil), περγκολών και θωρακισμένων πορτών. Εξυπηρετούμε το Ρέθυμνο & όλη την Κρήτη.',
+    description: 'Πιστοποιημένος κατασκευαστής Alumil στο Ρέθυμνο με ιδιόκτητο εργοστάσιο. Εξειδίκευση σε πολυτελείς βίλες, ξενοδοχεία και κατασκευαστικά έργα. Δομημένο workflow: μελέτη → σχεδιασμός CAD → εργοστασιακή κατασκευή → τοποθέτηση → εγγύηση & after-sales. Πιστοποιημένα κουφώματα για Εξοικονομώ.',
     openGraph: {
       title: 'Κατασκευή & Τοποθέτηση Αλουμινίων | Ρέθυμνο',
       description: 'Κατασκευή και εγκατάσταση συστημάτων αλουμινίου, ενεργειακών κουφωμάτων και πορτών ασφαλείας. Καλύπτουμε το Ρέθυμνο και ολόκληρη την Κρήτη.',
@@ -95,15 +95,110 @@ export default async function RootLayout({
   const validLang = lang as 'el' | 'en';
   const orgSchema = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "HomeAndConstructionBusiness",
     "name": "Αλουμίνια Παπαδάκης",
-    "alternateName": "Papadakis Aluminium",
+    "alternateName": ["Papadakis Aluminium", "Papadakis Aluminum Systems", "Κατασκευές Αλουμινίου Παπαδάκης Ι. Γεώργιος"],
+    "legalName": "Κατασκευές Αλουμινίου Παπαδάκης Ι. Γεώργιος",
     "url": "https://alouminia-papadakis.gr",
     "logo": "https://alouminia-papadakis.gr/icon.png",
+    "image": "https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.png",
+    "description": "Certified Alumil manufacturer specializing in project-based aluminum solutions for luxury villas, boutique hotels, and high-end residential developments across Crete. Full workflow: architectural study → CAD design → factory manufacturing → on-site installation → after-sales support.",
+    "foundingDate": "1993",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "minValue": 10,
+      "maxValue": 25
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Δρουλίσκου 8",
+      "addressLocality": "Ρέθυμνο",
+      "addressRegion": "Κρήτη",
+      "postalCode": "74100",
+      "addressCountry": "GR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 35.366667,
+      "longitude": 24.483333
+    },
+    "telephone": "+302831023897",
+    "email": "gpapadakisret@gmail.com",
+    "priceRange": "$$$",
+    "areaServed": [
+      { "@type": "City", "name": "Ρέθυμνο" },
+      { "@type": "City", "name": "Χανιά" },
+      { "@type": "City", "name": "Ηράκλειο" },
+      { "@type": "AdministrativeArea", "name": "Κρήτη" }
+    ],
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Manufacturer Certification",
+        "recognizedBy": { "@type": "Organization", "name": "Alumil S.A." }
+      }
+    ],
+    "knowsAbout": [
+      "Θερμοδιακοπτόμενα κουφώματα αλουμινίου",
+      "Thermal break aluminum windows",
+      "Alumil SMARTIA & SUPREME systems",
+      "Seaside Class anti-corrosion coating",
+      "RC3/RC4 security doors",
+      "Bioclimatic pergolas",
+      "Luxury villa aluminum installations",
+      "Hotel renovation aluminum systems",
+      "Πρόγραμμα Εξοικονομώ - Αυτονομώ",
+      "CAD architectural studies",
+      "Electrostatic powder coating",
+      "Custom Inox ironworks"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Αρχιτεκτονικές Λύσεις Αλουμινίου",
+      "itemListElement": [
+        {
+          "@type": "OfferCatalog",
+          "name": "Ενεργειακά Κουφώματα Alumil",
+          "description": "Μελέτη, κατασκευή και τοποθέτηση θερμοδιακοπτόμενων κουφωμάτων με δείκτη θερμοπερατότητας Uw έως 0.9 W/m²K. Πιστοποιημένα για Εξοικονομώ.",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Συρόμενα Κουφώματα SMARTIA S560", "description": "Premium θερμοδιακοπτόμενα συρόμενα συστήματα για μεγάλα ανοίγματα βιλών" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ανοιγόμενα Κουφώματα SUPREME S77", "description": "Κορυφαίο σύστημα ηχομόνωσης και θερμομόνωσης για κατοικίες" } }
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Θωρακισμένες Πόρτες Ασφαλείας RC3",
+          "description": "Πιστοποιημένες πόρτες ασφαλείας κλάσης 3 και 4 με κλειδαριές Defender νέας γενιάς."
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Βιοκλιματικές Πέργκολες",
+          "description": "Heavy-duty πέργκολες αλουμινίου σχεδιασμένες για τους ισχυρούς ανέμους της Κρήτης."
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Σιδηροκατασκευές & Ironworks",
+          "description": "Custom αυλόπορτες, μεταλλικά κτίρια, σκάλες Inox με ηλεκτροστατική βαφή Seaside Class."
+        }
+      ]
+    },
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Ολοκληρωμένη Διαχείριση Έργου Αλουμινίου",
+          "description": "Structured project workflow: αρχιτεκτονική μελέτη → τεχνική προσφορά → εργοστασιακή κατασκευή → τοποθέτηση → παράδοση με το κλειδί στο χέρι → εγγύηση & after-sales υποστήριξη. Εξειδίκευση σε πολυτελείς κατοικίες, βίλες και ξενοδοχειακές μονάδες.",
+          "provider": { "@type": "HomeAndConstructionBusiness", "name": "Αλουμίνια Παπαδάκης" },
+          "areaServed": "Κρήτη",
+          "serviceType": "Project-based aluminum construction"
+        }
+      }
+    ],
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+302831023897",
-      "contactType": "customer service",
+      "contactType": "Technical Department",
       "areaServed": "GR",
       "availableLanguage": ["Greek", "English"]
     },
