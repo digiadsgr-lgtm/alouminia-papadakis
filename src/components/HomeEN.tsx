@@ -49,7 +49,7 @@ export default function HomeEN() {
         "name": "What is the project workflow when working with Papadakis Aluminium in Crete?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We operate as a structured construction company, not a repair service. Our workflow: 1) On-site survey & architectural consultation, 2) CAD technical drawings & detailed quote, 3) Factory manufacturing in our own 300m² facility in Rethymno, 4) Professional installation by our permanent crews, 5) Turn-key handover, 6) After-sales service & guarantee. We manage the entire project lifecycle from design to delivery."
+          "text": "We operate as a structured construction company, not a repair service. Our workflow: 1) On-site survey & architectural consultation, 2) CAD technical drawings & detailed quote, 3) In-house manufacturing in our own 300m² facility in Rethymno, 4) Professional installation by our permanent crews, 5) Turn-key handover, 6) After-sales service & guarantee. We manage the entire project lifecycle from design to delivery."
         }
       },
       {
@@ -65,7 +65,7 @@ export default function HomeEN() {
         "name": "Do you work with architects and contractors on large developments in Crete?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. A significant portion of our work comes from repeat partnerships with architects, civil engineers, and construction companies across Crete. We integrate seamlessly into larger construction timelines, providing factory-grade manufacturing and on-schedule installation. For foreign investors, we also offer complete remote project management with digital progress reports and CAD documentation."
+          "text": "Yes. A significant portion of our work comes from repeat partnerships with architects, civil engineers, and construction companies across Crete. We integrate seamlessly into larger construction timelines, providing high-precision manufacturing and on-schedule installation. For foreign investors, we also offer complete remote project management with digital progress reports and CAD documentation."
         }
       },
       {
@@ -97,7 +97,7 @@ export default function HomeEN() {
         "name": "Why choose Papadakis over independent aluminum installers in Rethymno?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The difference is structural: we are a certified manufacturing company with our own factory, dedicated engineering department, permanent installation crews, and 30+ years of continuous operation. We hold direct Alumil certification, use Seaside Class anti-corrosion coatings for coastal properties, and have completed hundreds of villa and hotel projects across Crete. We are a project partner, not a handyman."
+          "text": "The difference is structural: we are a certified manufacturing company with our own production facility, dedicated engineering department, permanent installation crews, and 30+ years of continuous operation. We hold direct Alumil certification, use Seaside Class anti-corrosion coatings for coastal properties, and have completed hundreds of villa and hotel projects across Crete. We are a project partner, not a handyman."
         }
       }
     ]
@@ -228,7 +228,7 @@ export default function HomeEN() {
              <h2 className="text-navy font-black text-4xl md:text-5xl lg:text-6xl mb-6 tracking-tight">Your Manufacturing Partner <br/>in Crete, Greece</h2>
              <div className="w-24 h-2 bg-red mx-auto rounded-full mb-8"></div>
              <p className="text-gray-600 text-xl leading-relaxed">
-               We don't just do basic installations. Our factory in Rethymno partners with architects and developers to manufacture premium architectural systems that elevate your property's commercial and aesthetic value.
+               We don't just do basic installations. Our manufacturing unit in Rethymno partners with architects and developers to manufacture premium architectural systems that elevate your property's commercial and aesthetic value.
              </p>
              <p className="text-gray-500 text-base mt-4 leading-relaxed max-w-2xl mx-auto">
                As a scalable manufacturing company, we possess the operational maturity to handle demanding architectural projects. We do not execute single repairs. We focus on complete project solutions with strict timeline adherence, a premium application portfolio, and zero execution risk for investors and contractors.
@@ -301,7 +301,7 @@ export default function HomeEN() {
             <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 flex flex-col justify-between hover:bg-white/10 hover:border-red/50 transition-all duration-300 rounded-2xl group cursor-pointer">
                <MapPin className="text-red mb-6" size={32} />
                <div>
-                 <p className="text-gray-400 text-sm mb-2 uppercase tracking-wide">Factory Address</p>
+                 <p className="text-gray-400 text-sm mb-2 uppercase tracking-wide">Facility Address</p>
                  <p className="font-bold text-xl">Drouliskou 8, Rethymno</p>
                </div>
             </div>

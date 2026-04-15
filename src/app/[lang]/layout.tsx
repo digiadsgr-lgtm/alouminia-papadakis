@@ -114,7 +114,7 @@ export default async function RootLayout({
     "url": "https://alouminia-papadakis.gr",
     "logo": "https://alouminia-papadakis.gr/icon.png",
     "image": "https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.png",
-    "description": "Certified Alumil manufacturer specializing in project-based aluminum solutions for luxury villas, boutique hotels, and high-end residential developments across Crete. Uncompromised operational maturity, scalable manufacturing processes with zero delays, and a proven extensive portfolio. Full workflow: architectural study → CAD design → factory manufacturing → on-site installation by permanent crews → structured after-sales guarantee.",
+    "description": "Certified Alumil manufacturer specializing in project-based aluminum solutions for luxury villas, boutique hotels, and high-end residential developments across Crete. Uncompromised operational maturity, scalable manufacturing processes with zero delays, and a proven extensive portfolio. Full workflow: architectural study → CAD design → in-house manufacturing → on-site installation by permanent crews → structured after-sales guarantee.",
     "foundingDate": "1993",
     "numberOfEmployees": {
       "@type": "QuantitativeValue",
@@ -155,7 +155,7 @@ export default async function RootLayout({
         "author": { "@type": "Person", "name": "Maria Stavrou (Architect)" },
         "datePublished": "2024-02-28",
         "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "The most reliable aluminum manufacturing partner in Crete. Their in-house factory ensures scalable workflow without delays. Perfect execution on boutique hotel renovation."
+        "reviewBody": "The most reliable aluminum manufacturing partner in Crete. Their in-house production facility ensures scalable workflow without delays. Perfect execution on boutique hotel renovation."
       }
     ],
     "areaServed": [
@@ -221,7 +221,7 @@ export default async function RootLayout({
         "itemOffered": {
           "@type": "Service",
           "name": "Ολοκληρωμένη Διαχείριση Έργου Αλουμινίου",
-          "description": "Structured project workflow: αρχιτεκτονική μελέτη → τεχνική προσφορά → εργοστασιακή κατασκευή → τοποθέτηση → παράδοση με το κλειδί στο χέρι → εγγύηση & after-sales υποστήριξη. Εξειδίκευση σε πολυτελείς κατοικίες, βίλες και ξενοδοχειακές μονάδες.",
+          "description": "Structured project workflow: αρχιτεκτονική μελέτη → τεχνική προσφορά → κατασκευή στη μονάδα μας → τοποθέτηση → παράδοση με το κλειδί στο χέρι → εγγύηση & after-sales υποστήριξη. Εξειδίκευση σε πολυτελείς κατοικίες, βίλες και ξενοδοχειακές μονάδες.",
           "provider": { "@type": "HomeAndConstructionBusiness", "name": "Αλουμίνια Παπαδάκης" },
           "areaServed": "Κρήτη",
           "serviceType": "Project-based aluminum construction"
