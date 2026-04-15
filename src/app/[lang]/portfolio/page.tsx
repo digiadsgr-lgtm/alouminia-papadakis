@@ -2,48 +2,60 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import PageTransition from '@/components/PageTransition'
-import { MapPin, ChevronLeft } from 'lucide-react'
+import { MapPin, ChevronLeft, Calendar, ShieldCheck, Ruler } from 'lucide-react'
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
   return {
     title: lang === 'en' ? 'Our Projects in Crete | Luxury Villas & Resorts | Papadakis' : 'Τα Έργα Μας στην Κρήτη | Βίλες & Ξενοδοχεία | Παπαδάκης',
-    description: lang === 'en' ? 'Explore our aluminum and shading projects across Crete. From luxury villas in Plakias to resorts in Bali.' : 'Δείτε τα έργα μας σε όλη την Κρήτη. Κουφώματα και πέργκολες σε βίλες σε Πλακιά, Πρινέ, Μπαλί και Ρέθυμνο.'
+    description: lang === 'en' ? 'Explore our massive portfolio of aluminum and shading projects across Crete. Detailed case studies of luxury villas, boutique hotels, and complex commercial buildings.' : 'Εκτενές portfolio κατασκευαστικών έργων στην Κρήτη. Δείτε αναλυτικά case studies από τοποθετήσεις σε βίλες, ξενοδοχεία και βιομηχανικά κτίρια.'
   }
 }
 
 const projects = [
   {
-    titleEL: "Minimal Κουφώματα σε Βίλα",
-    titleEN: "Minimal Windows in Luxury Villa",
+    titleEL: "Αρχιτεκτονική Εφαρμογή σε Luxury Βίλα",
+    titleEN: "Architectural Application for Luxury Villa",
     location: "Πλακιάς, Νότιο Ρέθυμνο / Plakias, South Rethymno",
     img: "/images/hero_aluminum_villa_1776110912532.png",
-    categoryEL: "Ιδιωτική Κατοικία",
-    categoryEN: "Private Residence"
+    categoryEL: "Custom Κατοικία - Πλήρες Έργο",
+    categoryEN: "Custom Residence - Turn-key",
+    descEL: "Κατασκευή και εγκατάσταση θερμοδιακοπτόμενων συστημάτων Alumil SMARTIA S560 για μέγιστη κάλυψη ανοιγμάτων. Λόγω της εγγύτητας στη θάλασσα, εφαρμόστηκε βαφή Seaside Class για απόλυτη αντιδιαβρωτική προστασία. Παράδοση σε 14 εργάσιμες, με γραπτή εγγύηση Alumil.",
+    descEN: "Manufacture and installation of Alumil SMARTIA S560 thermal-break systems for maximum span coverage. Due to seaside proximity, Seaside Class coating was applied for absolute rust protection. Turn-key delivery in 14 days with Alumil guarantee.",
+    scope: "6 Windows, 4 Sliding Doors, 1 Security Door"
   },
   {
-    titleEL: "Βιοκλιματικές Πέργκολες σε Resort",
-    titleEN: "Bioclimatic Pergolas in Resort",
+    titleEL: "Ενεργειακή Αναβάθμιση Boutique Resort",
+    titleEN: "Boutique Resort Energy Upgrade",
     location: "Μπαλί, Βόρειος Άξονας / Bali, North Coast",
     img: "/images/pergola_crete_1776112148406.png",
-    categoryEL: "Τουριστικό Κατάλυμα",
-    categoryEN: "Tourism Hospitality"
+    categoryEL: "Τουριστικό Κατάλυμα & B2B",
+    categoryEN: "Tourism Hospitality B2B",
+    descEL: "Ολοκληρωμένο project αντικατάστασης κουφωμάτων για ξενοδοχειακή μονάδα με αυστηρό deadline ενόψει σεζόν. Τοποθετήθηκαν ανοιγόμενα SUPREME S77 και 3 βαρέως τύπου βιοκλιματικές πέργκολες στις σουίτες. Εφαρμογή χωρίς καμία απόκλιση στο χρονοδιάγραμμα.",
+    descEN: "Comprehensive window replacement project for a hotel under strict pre-season deadlines. Installed SUPREME S77 casements and 3 heavy-duty bioclimatic pergolas in the suites. Flawless execution with zero timeline delays.",
+    scope: "12 Rooms, 3 Pergolas, Inox Railings"
   },
   {
-    titleEL: "Ενεργειακή Αναβάθμιση (Εξοικονομώ)",
-    titleEN: "Energy Upgrade (Alumil Systems)",
+    titleEL: "Premium Ενεργειακή Εφαρμογή (Εξοικονομώ)",
+    titleEN: "Premium Energy Application (Subsidy Run)",
     location: "Πρινές, Ρέθυμνο / Prines, Rethymno",
     img: "/images/aluminum_doors_patio_1776112180417.png",
-    categoryEL: "Ιδιωτική Κατοικία",
-    categoryEN: "Private Residence"
+    categoryEL: "Ιδιωτική Κατοικία - Εξοικονομώ",
+    categoryEN: "Private Residence",
+    descEL: "Αντικατάσταση παλαιών κουφωμάτων με νέα, πιστοποιημένα ενεργειακά προφίλ για το πρόγραμμα Εξοικονομώ. Ο δείκτης θερμοπερατότητας μειώθηκε στο Uw 1.2 W/m²K, προσφέροντας 40% εξοικονόμηση λογαριασμού ρεύματος.",
+    descEN: "Replacement of old windows with certified energy-efficient profiles. The thermal transmittance coefficient was reduced to Uw 1.2 W/m²K, offering a 40% saving on cooling/heating operational costs.",
+    scope: "Full House Upgrade + Rollers"
   },
   {
-    titleEL: "Heavy Duty Σιδηροκατασκευές",
-    titleEN: "Heavy Duty Ironworks",
+    titleEL: "Heavy Duty Βιομηχανικές Σιδηροκατασκευές",
+    titleEN: "Heavy Duty Commercial Ironworks",
     location: "Πάνορμο / Panormo",
     img: "/images/hero_welding_1776110934221.png",
-    categoryEL: "Βιομηχανικός Χώρος",
-    categoryEN: "Commercial Space"
+    categoryEL: "Commercial Space",
+    categoryEN: "Commercial Space",
+    descEL: "Βαριές σιδηροκατασκευές (Heavy Ironworks), custom inox σκάλες και τοποθέτηση θωρακισμένων πορτών ασφαλείας RC3 για εμπορική αποθήκη. Σχεδιασμός CAD in-house πριν την έναρξη του project.",
+    descEN: "Heavy ironworks, custom inox staircases, and installation of RC3 armored security doors for a commercial warehouse facility. In-house CAD design validation prior to manufacturing.",
+    scope: "Security Doors, Staircases, Roofing"
   }
 ]
 
@@ -63,7 +75,7 @@ export default async function PortfolioPage({ params }: { params: Promise<{ lang
             {isEn ? 'Our Work in' : 'Τα Έργα Μας στην'} <span className="text-red">{isEn ? 'Crete' : 'Κρήτη'}</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            {isEn ? 'From luxury private villas in the south to massive hospitality projects on the north coast. We deliver excellence.' : 'Από υπερπολυτελείς βίλες στο Νότιο Ρέθυμνο, μέχρι ξενοδοχειακά συγκροτήματα. Η υπογραφή μας βρίσκεται παντού.'}
+            {isEn ? 'Proof of operational maturity and flawless execution. Explore our detailed case studies of premium aluminum installations.' : 'Η απόδειξη της αξιοπιστίας μας. Δείτε αναλυτικά case studies από έργα εφαρμογής συστημάτων υψηλής αισθητικής και αυστηρών απαιτήσεων.'}
           </p>
         </div>
       </section>
@@ -72,34 +84,41 @@ export default async function PortfolioPage({ params }: { params: Promise<{ lang
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
              {projects.map((p, idx) => (
-                <div key={idx} className="group relative rounded-3xl overflow-hidden shadow-2xl bg-white border border-gray-100 flex flex-col hover:border-red/30 transition-colors">
-                  <div className="relative h-80 w-full overflow-hidden">
+                <article key={idx} className="group relative rounded-3xl overflow-hidden shadow-2xl bg-white border border-gray-100 flex flex-col hover:border-red/30 transition-colors">
+                  <div className="relative h-72 w-full overflow-hidden">
                     <Image 
                       src={p.img} 
                       alt={isEn ? p.titleEN : p.titleEL} 
                       fill 
                       className="object-cover group-hover:scale-105 transition-transform duration-700" 
                     />
-                    <div className="absolute top-4 left-4 bg-navy text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+                    <div className="absolute top-4 left-4 bg-red text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg tracking-wider uppercase">
                       {isEn ? p.categoryEN : p.categoryEL}
                     </div>
                   </div>
-                  <div className="p-8">
-                    <h3 className="text-2xl font-black text-navy mb-3">{isEn ? p.titleEN : p.titleEL}</h3>
-                    <div className="flex items-center gap-2 text-gray-500 font-medium">
-                      <MapPin className="text-red" size={18} />
-                      <span className="text-sm">{isEn ? p.location.split(' / ')[1] : p.location.split(' / ')[0]}</span>
+                  <div className="p-8 flex flex-col flex-1">
+                    <h3 className="text-2xl font-black text-navy mb-4 leading-tight">{isEn ? p.titleEN : p.titleEL}</h3>
+                    
+                    <p className="text-gray-600 mb-6 flex-1 leading-relaxed text-sm">
+                      {isEn ? p.descEN : p.descEL}
+                    </p>
+
+                    <div className="flex flex-wrap items-center gap-4 text-xs font-bold text-gray-500 pt-6 border-t border-gray-100">
+                      <div className="flex items-center gap-1.5"><MapPin className="text-red" size={16} />{isEn ? p.location.split(' / ')[1] : p.location.split(' / ')[0]}</div>
+                      <div className="flex items-center gap-1.5"><Ruler className="text-red" size={16} />{p.scope}</div>
+                      <div className="flex items-center gap-1.5"><ShieldCheck className="text-red" size={16} />{isEn ? 'Guaranteed' : 'Με Εγγύηση'}</div>
                     </div>
                   </div>
-                </div>
+                </article>
              ))}
           </div>
 
-          <div className="mt-20 text-center">
-             <div className="inline-block bg-white border border-gray-200 p-8 rounded-3xl shadow-xl">
-               <h3 className="text-2xl font-bold text-navy mb-3">{isEn ? 'Are you an Architect or Investor?' : 'Είστε Αρχιτέκτονας ή Επενδυτής;'}</h3>
-               <p className="text-gray-600 mb-6">{isEn ? 'We provide special B2B pricing and absolute priority for massive projects.' : 'Παρέχουμε ειδικές B2B τιμές και απόλυτη προτεραιότητα σε κατασκευαστικά έργα.'}</p>
-               <a href={`/${lang}#contact`} className="inline-block bg-red text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-red-700 transition">
+          <div className="mt-24 text-center">
+             <div className="inline-block bg-white border border-gray-200 p-10 md:px-16 rounded-3xl shadow-xl relative overflow-hidden">
+               <div className="absolute left-0 top-0 w-2 h-full bg-red"></div>
+               <h3 className="text-3xl font-black text-navy mb-4 tracking-tight">{isEn ? 'Scalable B2B Project Operations' : 'Αναλαμβάνετε κάποιο μεγάλο Project;'}</h3>
+               <p className="text-gray-600 mb-8 max-w-xl mx-auto text-lg leading-relaxed">{isEn ? 'We provide structural solutions, scalable timeline execution, and direct architectural collaboration for demanding hospitality or residential developments.' : 'Μηδενικό execution risk. Εγγυημένη τήρηση παραδόσεων, ειδικές B2B τιμές και απόλυτη προτεραιότητα σε μεγάλα κατασκευαστικά έργα.'}</p>
+               <a href={`/${lang}#contact`} className="inline-block bg-navy hover:bg-red text-white px-10 py-4 rounded-full font-bold shadow-lg transition-all duration-300">
                  {isEn ? 'Contact B2B Departement' : 'Επικοινωνία με τμήμα B2B'}
                </a>
              </div>

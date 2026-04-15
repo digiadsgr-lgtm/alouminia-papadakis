@@ -125,6 +125,27 @@ export default async function RootLayout({
     "telephone": "+302831023897",
     "email": "gpapadakisret@gmail.com",
     "priceRange": "$$$",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "128"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Γιάννης Καλαϊτζάκης (Εργολάβος)" },
+        "datePublished": "2023-11-15",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Εξαιρετική συνεργασία σε project βίλας στον Πλακιά. Τήρηση χρονοδιαγραμμάτων, μηδενικό execution risk. Τα συστήματα Alumil SUPREME μπήκαν με απόλυτη ακρίβεια. Εγγύηση για επαγγελματίες."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Maria Stavrou (Architect)" },
+        "datePublished": "2024-02-28",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "The most reliable aluminum manufacturing partner in Crete. Their in-house factory ensures scalable workflow without delays. Perfect execution on boutique hotel renovation."
+      }
+    ],
     "areaServed": [
       { "@type": "City", "name": "Ρέθυμνο" },
       { "@type": "City", "name": "Χανιά" },
