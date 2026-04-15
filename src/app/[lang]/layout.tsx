@@ -24,8 +24,14 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang } = await params;
   if (lang === 'en') {
     return {
-      title: 'Aluminum Systems Rethymno & Crete | Papadakis Manufacturing',
-      description: 'Certified Alumil manufacturer in Rethymno with own factory. Project-based aluminum solutions for luxury villas, boutique hotels, and commercial developments. Structured workflow: architectural study → CAD design → manufacturing → installation → after-sales guarantee. Partnering with architects and contractors across Crete.',
+      title: 'Aluminum Systems Rethymno | Papadakis Crete',
+      description: 'Certified Alumil manufacturer in Rethymno. Precision aluminum solutions for luxury villas & hotels. Structured workflow & after-sales guarantee.',
+      alternates: {
+        languages: {
+          'el': '/el',
+          'en': '/en',
+        },
+      },
       openGraph: {
         title: 'Aluminum Systems Rethymno | Papadakis Manufacturing',
         description: 'Expert manufacturing and installation of premium aluminum systems, windows, and security doors across Crete. Discover absolute security for your home.',
@@ -54,8 +60,14 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     }
   }
   return {
-    title: 'Κατασκευές & Συστήματα Αλουμινίου Ρέθυμνο | Παπαδάκης Κρήτη',
-    description: 'Πιστοποιημένος κατασκευαστής Alumil στο Ρέθυμνο με ιδιόκτητο εργοστάσιο. Εξειδίκευση σε πολυτελείς βίλες, ξενοδοχεία και κατασκευαστικά έργα. Δομημένο workflow: μελέτη → σχεδιασμός CAD → εργοστασιακή κατασκευή → τοποθέτηση → εγγύηση & after-sales. Πιστοποιημένα κουφώματα για Εξοικονομώ.',
+    title: 'Κατασκευές Αλουμινίου Ρέθυμνο | Παπαδάκης Κρήτη',
+    description: 'Πιστοποιημένος κατασκευαστής Alumil στο Ρέθυμνο. Εξειδίκευση σε πολυτελείς βίλες και κατασκευαστικά έργα. Μηδενικό execution risk με πιστοποιημένα συστήματα.',
+    alternates: {
+      languages: {
+        'el': '/el',
+        'en': '/en',
+      },
+    },
     openGraph: {
       title: 'Κατασκευή & Τοποθέτηση Αλουμινίων | Ρέθυμνο',
       description: 'Κατασκευή και εγκατάσταση συστημάτων αλουμινίου, ενεργειακών κουφωμάτων και πορτών ασφαλείας. Καλύπτουμε το Ρέθυμνο και ολόκληρη την Κρήτη.',

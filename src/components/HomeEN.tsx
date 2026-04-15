@@ -140,7 +140,7 @@ export default function HomeEN() {
             
             <section className="mb-10 text-xl text-gray-300 max-w-2xl leading-relaxed">
               <p className="mb-4">
-                Engineering, manufacturing, and installation of premium certified <strong>Alumil Systems</strong> across Crete. We specialize in turn-key solutions for foreign investors, luxury villas, and boutique hotels, providing zero-compromise architectural aluminum.
+                Engineering, manufacturing, and installation of premium certified <strong>Alumil Systems</strong>. As the leading provider of <strong>Aluminum Systems in Rethymno</strong>, we deliver zero-compromise <strong>architectural solutions for luxury developments</strong> across Crete.
               </p>
             </section>
 
