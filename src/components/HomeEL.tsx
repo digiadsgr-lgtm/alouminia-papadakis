@@ -115,6 +115,8 @@ export default function HomeEL() {
             fill 
             className="object-cover scale-110"
             priority
+            quality={60}
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-transparent"></div>
         </motion.div>
@@ -199,17 +201,17 @@ export default function HomeEL() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/5">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once:true }} transition={{ delay: 0.1 }} className="flex flex-col items-center p-4">
               <Zap className="text-red mb-4" size={40} />
-              <h3 className="text-white font-bold text-xl mb-2">100% Ενεργειακή Αυτονομία</h3>
+              <h2 className="text-white font-bold text-xl mb-2">100% Ενεργειακή Αυτονομία</h2>
               <p className="text-gray-400 text-sm leading-relaxed">Μηδενίστε το κόστος θέρμανσης και ψύξης. Τα θερμοδιακοπτόμενα προφίλ μας επιτυγχάνουν δείκτη Uw έως 0.9 W/m²K.</p>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once:true }} transition={{ delay: 0.2 }} className="flex flex-col items-center p-4">
               <ShieldCheck className="text-red mb-4" size={40} />
-              <h3 className="text-white font-bold text-xl mb-2">Οικογένεια σε Απόλυτη Ασφάλεια</h3>
+              <h2 className="text-white font-bold text-xl mb-2">Οικογένεια σε Απόλυτη Ασφάλεια</h2>
               <p className="text-gray-400 text-sm leading-relaxed">Απόρθητες θωρακισμένες πόρτες Class 4 και ενισχυμένα αλεξίσφαιρα τζάμια για την απόλυτη ξεγνοιασιά σας.</p>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once:true }} transition={{ delay: 0.3 }} className="flex flex-col items-center p-4">
               <CheckCircle2 className="text-red mb-4" size={40} />
-              <h3 className="text-white font-bold text-xl mb-2">Μια Επένδυση Εφ' Όρου Ζωής</h3>
+              <h2 className="text-white font-bold text-xl mb-2">Μια Επένδυση Εφ' Όρου Ζωής</h2>
               <p className="text-gray-400 text-sm leading-relaxed">Οξειδωμένα κάγκελα και χαλασμένα ράουλα τέλος. Οι κατασκευές μας έρχονται με πιστοποίηση Seaside Class για αντοχή στην αλμύρα.</p>
             </motion.div>
           </div>

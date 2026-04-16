@@ -115,6 +115,8 @@ export default function HomeEN() {
             fill 
             className="object-cover scale-110"
             priority
+            quality={60}
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-transparent"></div>
         </motion.div>
@@ -199,17 +201,17 @@ export default function HomeEN() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/5">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once:true }} transition={{ delay: 0.1 }} className="flex flex-col items-center p-4">
               <Sparkles className="text-red mb-4" size={40} />
-              <h3 className="text-white font-bold text-xl mb-2">Remote Project Management</h3>
+              <h2 className="text-white font-bold text-xl mb-2">Remote Project Management</h2>
               <p className="text-gray-400 text-sm leading-relaxed">No local presence required. We provide full digital CAD studies, progress reports, and turn-key delivery for international investors building in Crete.</p>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once:true }} transition={{ delay: 0.2 }} className="flex flex-col items-center p-4">
               <Zap className="text-red mb-4" size={40} />
-              <h3 className="text-white font-bold text-xl mb-2">A+ Energy Autonomy</h3>
+              <h2 className="text-white font-bold text-xl mb-2">A+ Energy Autonomy</h2>
               <p className="text-gray-400 text-sm leading-relaxed">Equip your commercial or residential development with thermal break profiles achieving a Uw value of up to 0.9 W/m²K, minimizing operational costs.</p>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once:true }} transition={{ delay: 0.3 }} className="flex flex-col items-center p-4">
               <CheckCircle2 className="text-red mb-4" size={40} />
-              <h3 className="text-white font-bold text-xl mb-2">Seaside Class Durability</h3>
+              <h2 className="text-white font-bold text-xl mb-2">Seaside Class Durability</h2>
               <p className="text-gray-400 text-sm leading-relaxed">Hotels and beachfront villas require absolute rust protection. Our aluminum systems come with Seaside Class electro-coating for absolute endurance.</p>
             </motion.div>
           </div>

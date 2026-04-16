@@ -14,19 +14,19 @@ export const viewport: Viewport = {
   themeColor: '#0a192f',
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
   viewportFit: 'cover'
 }
 
 // Provide dictionary-based metadata in layout or generate Metadata dynamically
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
-  if (lang === 'en') {
+    if (lang === 'en') {
     return {
-      title: 'Aluminum Systems Rethymno | Papadakis Crete',
-      description: 'Certified Alumil manufacturer in Rethymno. Precision aluminum solutions for luxury villas & hotels. Structured workflow & after-sales guarantee.',
+      metadataBase: new URL('https://alouminia-papadakis.gr'),
+      title: 'Premium Aluminum Systems Rethymno | Papadakis Crete',
+      description: 'Certified Alumil manufacturer in Rethymno, Crete. Premium aluminum systems for luxury residences and hotels. Uncompromised quality.',
       alternates: {
+        canonical: '/en',
         languages: {
           'el': '/el',
           'en': '/en',
@@ -60,9 +60,11 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     }
   }
   return {
-    title: 'Κατασκευές Αλουμινίου Ρέθυμνο | Παπαδάκης Κρήτη',
-    description: 'Πιστοποιημένος κατασκευαστής Alumil στο Ρέθυμνο. Εξειδίκευση σε πολυτελείς βίλες και κατασκευαστικά έργα. Μηδενικό execution risk με πιστοποιημένα συστήματα.',
+    metadataBase: new URL('https://alouminia-papadakis.gr'),
+    title: 'Κατασκευές Αλουμινίου Ρέθυμνο & Κρήτη | Κορυφαία Κουφώματα',
+    description: 'Πιστοποιημένος κατασκευαστής συστημάτων Alumil στο Ρέθυμνο. Κουφώματα υψηλής αισθητικής και ασφάλειας για απαιτητικά έργα.',
     alternates: {
+      canonical: '/el',
       languages: {
         'el': '/el',
         'en': '/en',

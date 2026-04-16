@@ -141,8 +141,8 @@ export default function Footer({ lang = 'el' }: { lang?: 'el' | 'en' }) {
 
       {/* Bottom Bar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium">
-        <p className="text-gray-500">&copy; {new Date().getFullYear()} {t.rights}</p>
-        <p className="text-gray-500 tracking-wider">
+        <p className="text-gray-400">&copy; {new Date().getFullYear()} {t.rights}</p>
+        <p className="text-gray-400 tracking-wider">
           ENGINEERED BY <a href="https://digiads.gr" target="_blank" rel="noopener noreferrer" className="text-red font-bold hover:text-white transition-colors ml-1 uppercase">DIGIADS</a>
         </p>
       </div>
