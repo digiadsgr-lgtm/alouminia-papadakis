@@ -245,6 +245,7 @@ export default async function RootLayout({
   return (
     <html lang={lang} className="scroll-smooth">
       <head>
+        <link rel="alternate" type="text/markdown" href="/llms.txt" title="Alouminia Papadakis AI Context" />
         <Script id="google-tag-manager" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
