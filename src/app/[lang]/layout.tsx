@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import CookieConsent from '@/components/CookieConsent'
 import { Analytics } from "@vercel/analytics/react"
 import Script from 'next/script'
+import { notFound } from 'next/navigation'
 
 const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat' })
 
@@ -106,6 +107,11 @@ export default async function RootLayout({
   params: Promise<{ lang: string }>
 }) {
   const { lang } = await params;
+  
+  if (lang !== 'el' && lang !== 'en') {
+    notFound();
+  }
+  
   const validLang = lang as 'el' | 'en';
   const orgSchema = {
     "@context": "https://schema.org",
