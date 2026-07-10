@@ -15,10 +15,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     : 'Βιοκλιματικές Πέργκολες Ρέθυμνο | Συστήματα Σκίασης';
     
   const description = isEn 
-    ? 'Heavy duty bioclimatic pergolas and advanced shading systems for severe island winds. Custom design and installation in Crete.'
-    : 'Βιοκλιματικές πέργκολες αλουμινίου και συστήματα σκίασης στο Ρέθυμνο. Heavy duty κατασκευές με αντοχή στους ισχυρούς ανέμους της Κρήτης.';
+    ? 'Bioclimatic aluminum pergolas in Rethymno, Crete. Heavy-duty construction built for strong winds and humidity. Custom design and installation.'
+    : 'Βιοκλιματικές πέργκολες αλουμινίου στο Ρέθυμνο, ανθεκτικές σε ισχυρούς ανέμους & υγρασία. Σχεδιασμός & τοποθέτηση για τον δικό σας χώρο.';
     
   const url = `https://alouminia-papadakis.gr/${lang}/services/pergoles-rethymno-kriti`;
+  const imageUrl = 'https://alouminia-papadakis.gr/images/pergola_crete_1776112148406.png';
+  const imageAlt = isEn ? 'Bioclimatic aluminum pergola in Crete' : 'Βιοκλιματική πέργκολα αλουμινίου στην Κρήτη';
 
   return {
     title,
@@ -35,14 +37,23 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       title,
       description,
       url,
+      siteName: isEn ? 'Papadakis Aluminium' : 'Αλουμίνια Παπαδάκης',
       images: [
         {
-          url: 'https://alouminia-papadakis.gr/images/pergola_crete_1776112148406.png',
+          url: imageUrl,
           width: 1200,
           height: 630,
-          alt: title,
+          alt: imageAlt,
         },
       ],
+      locale: isEn ? 'en_US' : 'el_GR',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [imageUrl],
     },
   }
 }
@@ -75,8 +86,63 @@ export default async function PergolesPage({ params }: { params: Promise<{ lang:
     }
   ];
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": isEn ? "Home" : "Αρχική",
+        "item": `https://alouminia-papadakis.gr/${lang}`
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": isEn ? "Services" : "Υπηρεσίες",
+        "item": `https://alouminia-papadakis.gr/${lang}/#services`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": isEn ? "Bioclimatic Pergolas" : "Βιοκλιματικές Πέργκολες",
+        "item": `https://alouminia-papadakis.gr/${lang}/services/pergoles-rethymno-kriti`
+      }
+    ]
+  };
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": isEn ? "Bioclimatic Pergola Installation" : "Κατασκευή Βιοκλιματικών Περγκολών",
+    "provider": {
+      "@type": "HomeAndConstructionBusiness",
+      "name": "Αλουμίνια Παπαδάκης",
+      "url": "https://alouminia-papadakis.gr"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Crete"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": isEn ? "Shading Systems" : "Συστήματα Σκίασης",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": isEn ? "Bioclimatic Pergolas" : "Βιοκλιματικές Πέργκολες"
+          }
+        }
+      ]
+    }
+  };
+
   return (
     <PageTransition>
+      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={serviceSchema} />
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-navy border-b-[6px] border-red">
         <div className="absolute inset-0 z-0">
           <Image 

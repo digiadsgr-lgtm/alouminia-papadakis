@@ -17,7 +17,9 @@ const dict = {
     home: "Αρχική",
     portfolio: "Portfolio - Έργα Μας",
     smarthome: "Λύσεις Smart Home",
+    blog: "To Blog Μας",
     terms: "Όροι Χρήσης",
+    privacy: "Πολιτική Απορρήτου",
     rights: "Αλουμίνια Παπαδάκης. All rights reserved."
   },
   en: {
@@ -35,7 +37,9 @@ const dict = {
     home: "Home",
     portfolio: "Our Portfolio",
     smarthome: "Smart Home Solutions",
+    blog: "Our Blog",
     terms: "Terms of Use",
+    privacy: "Privacy Policy",
     rights: "Papadakis Aluminium. All rights reserved."
   }
 }
@@ -94,11 +98,19 @@ export default function Footer({ lang = 'el' }: { lang?: 'el' | 'en' }) {
             </li>
             <li className="flex items-center gap-2 group cursor-pointer">
               <ChevronRight size={14} className="text-gray-600 group-hover:translate-x-1 transition-transform" /> 
+              <Link href={`/${lang}/blog`} className="group-hover:text-white transition-colors">{t.blog}</Link>
+            </li>
+            <li className="flex items-center gap-2 group cursor-pointer">
+              <ChevronRight size={14} className="text-gray-600 group-hover:translate-x-1 transition-transform" /> 
               <Link href={`/${lang}/services/smart-home-rethymno`} className="group-hover:text-white transition-colors">{t.smarthome}</Link>
             </li>
             <li className="flex items-center gap-2 group cursor-pointer">
               <ChevronRight size={14} className="text-gray-600 group-hover:translate-x-1 transition-transform" /> 
-              <span className="group-hover:text-white transition-colors">{t.terms}</span>
+              <Link href={lang === 'el' ? '/el/oroi-xrisis' : '/en/terms-of-use'} className="group-hover:text-white transition-colors">{t.terms}</Link>
+            </li>
+            <li className="flex items-center gap-2 group cursor-pointer">
+              <ChevronRight size={14} className="text-gray-600 group-hover:translate-x-1 transition-transform" /> 
+              <Link href={lang === 'el' ? '/el/politiki-aporritou' : '/en/privacy-policy'} className="group-hover:text-white transition-colors">{t.privacy}</Link>
             </li>
           </ul>
         </div>

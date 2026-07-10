@@ -24,7 +24,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: route === '' ? 1.0 : (route === '/blog' ? 0.9 : 0.8),
       alternates: {
-        languages: {
+        languages: route === '/blog' ? {
+          el: `${baseUrl}/el${route}`,
+          'x-default': `${baseUrl}/el${route}`,
+        } : {
           el: `${baseUrl}/el${route}`,
           en: `${baseUrl}/en${route}`,
           'x-default': `${baseUrl}/el${route}`,
@@ -32,19 +35,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       },
     })
     
-    sitemapEntries.push({
-      url: `${baseUrl}/en${route}`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: route === '' ? 0.9 : (route === '/blog' ? 0.8 : 0.8),
-      alternates: {
-        languages: {
-          el: `${baseUrl}/el${route}`,
-          en: `${baseUrl}/en${route}`,
-          'x-default': `${baseUrl}/el${route}`,
+    if (route !== '/blog') {
+      sitemapEntries.push({
+        url: `${baseUrl}/en${route}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: route === '' ? 0.9 : 0.8,
+        alternates: {
+          languages: {
+            el: `${baseUrl}/el${route}`,
+            en: `${baseUrl}/en${route}`,
+            'x-default': `${baseUrl}/el${route}`,
+          },
         },
-      },
-    })
+      })
+    }
   })
 
   // Add Blog Articles dynamically
@@ -59,21 +64,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: {
         languages: {
           el: `${baseUrl}/el${route}`,
-          en: `${baseUrl}/en${route}`,
-          'x-default': `${baseUrl}/el${route}`,
-        },
-      },
-    })
-    
-    sitemapEntries.push({
-      url: `${baseUrl}/en${route}`,
-      lastModified: new Date(article.date),
-      changeFrequency: 'yearly',
-      priority: 0.7,
-      alternates: {
-        languages: {
-          el: `${baseUrl}/el${route}`,
-          en: `${baseUrl}/en${route}`,
           'x-default': `${baseUrl}/el${route}`,
         },
       },

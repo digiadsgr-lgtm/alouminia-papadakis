@@ -15,10 +15,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     : 'Θωρακισμένες Πόρτες Ασφαλείας Ρέθυμνο | Τοποθέτηση';
     
   const description = isEn 
-    ? 'Certified security doors with Class 3 & 4 anti-burglary protection. Professional sales and installation in Rethymno, Crete.'
-    : 'Πιστοποιημένες πόρτες ασφαλείας (Κλάση 3 & 4) στο Ρέθυμνο. Ολοκληρωμένες λύσεις πώλησης και τοποθέτησης με απόλυτη εγγύηση διάρρηξης.';
+    ? 'Certified security doors (Class 3 & 4) in Rethymno, Crete. Maximum burglary resistance, premium aesthetics, and top-tier sound insulation.'
+    : 'Πιστοποιημένες πόρτες ασφαλείας και θωρακισμένες πόρτες (Class 3 & 4) στο Ρέθυμνο. Μέγιστη αντοχή σε διαρρήξεις, κορυφαία αισθητική και ηχομόνωση.';
     
   const url = `https://alouminia-papadakis.gr/${lang}/services/portes-asfaleias-rethymno`;
+  const imageUrl = 'https://alouminia-papadakis.gr/images/security_door_armored_1776183382427.png';
+  const imageAlt = isEn ? 'Armored security door in Crete' : 'Θωρακισμένη πόρτα ασφαλείας στο Ρέθυμνο';
 
   return {
     title,
@@ -35,14 +37,23 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       title,
       description,
       url,
+      siteName: isEn ? 'Papadakis Aluminium' : 'Αλουμίνια Παπαδάκης',
       images: [
         {
-          url: 'https://alouminia-papadakis.gr/images/security_door_armored_1776183382427.png',
+          url: imageUrl,
           width: 1200,
           height: 630,
-          alt: title,
+          alt: imageAlt,
         },
       ],
+      locale: isEn ? 'en_US' : 'el_GR',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [imageUrl],
     },
   }
 }
@@ -99,8 +110,34 @@ export default async function SecurityDoorsPage({ params }: { params: Promise<{ 
     }]
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": isEn ? "Home" : "Αρχική",
+        "item": `https://alouminia-papadakis.gr/${lang}`
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": isEn ? "Services" : "Υπηρεσίες",
+        "item": `https://alouminia-papadakis.gr/${lang}/#services`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": isEn ? "Security Doors" : "Πόρτες Ασφαλείας",
+        "item": `https://alouminia-papadakis.gr/${lang}/services/portes-asfaleias-rethymno`
+      }
+    ]
+  };
+
   return (
     <PageTransition>
+      <JsonLd data={breadcrumbSchema} />
       <JsonLd data={serviceSchema} />
       <JsonLd data={faqSchema} />
       <article className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-navy border-b-[6px] border-red">

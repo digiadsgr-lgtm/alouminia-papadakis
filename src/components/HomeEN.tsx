@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { ShieldCheck, Zap, CheckCircle2, ChevronRight, PhoneCall, MapPin, Mail, Sparkles, Home } from 'lucide-react'
+import { ShieldCheck, Zap, CheckCircle2, ChevronRight, PhoneCall, MapPin, Mail, Sparkles, Home, BookOpen } from 'lucide-react'
 import JsonLd from '@/components/JsonLd'
 import { useRef } from 'react'
 
@@ -146,7 +146,7 @@ export default function HomeEN() {
               </p>
             </section>
 
-            <nav className="flex flex-col sm:flex-row gap-5" aria-label="Hero Actions">
+            <nav className="flex flex-col sm:flex-row flex-wrap gap-5" aria-label="Hero Actions">
               <a href="#services" className="bg-gradient-to-r from-red to-red-700 text-white px-8 py-4 rounded-full font-bold text-center hover:shadow-[0_0_30px_rgba(200,20,20,0.4)] transition-all duration-300 border border-red-500/50 active:scale-95 flex items-center justify-center gap-2 relative overflow-hidden group">
                 <div className="absolute inset-0 bg-white/20 translate-y-12 group-hover:translate-y-0 transition-transform duration-300"></div>
                 <Home size={20} className="relative z-10" /> <span className="relative z-10">Discover Capabilities</span>
@@ -154,6 +154,9 @@ export default function HomeEN() {
               <a href="mailto:gpapadakisret@gmail.com" className="bg-white/5 backdrop-blur-xl text-white border border-white/20 px-8 py-4 rounded-full font-bold text-center hover:bg-white/10 hover:border-white/40 transition-all duration-300 flex items-center justify-center gap-2 active:scale-95 shadow-2xl">
                 <Sparkles size={20} /> Send Architectural Plans
               </a>
+              <Link href="/en/blog" className="bg-white/5 backdrop-blur-xl text-white border border-white/20 px-8 py-4 rounded-full font-bold text-center hover:bg-white/10 hover:border-white/40 transition-all duration-300 flex items-center justify-center gap-2 active:scale-95 shadow-2xl">
+                <BookOpen size={20} /> Read our Blog
+              </Link>
             </nav>
 
             <motion.div 

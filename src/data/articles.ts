@@ -2,11 +2,100 @@ export const articles = [
   {
     slug: 'exoikonomo-2026-koufomata-kriti',
     titleEL: 'Εξοικονομώ 2026: Τι ισχύει για Κουφώματα Αλουμινίου στην Κρήτη (Οδηγός)',
-    titleEN: 'Exoikonomo 2026: Guide for Aluminum Windows in Crete',
-    descriptionEL: 'Πώς να αξιοποιήσετε τη νέα επιδότηση για αλλαγή κουφωμάτων, ποια είναι τα κριτήρια επιλεξιμότητας και τα βήματα για έγκριση.',
-    descriptionEN: 'How to utilize the new subsidy for window replacement, eligibility criteria, and steps for approval.',
+    titleEN: 'Exoikonomo 2026 & Aluminium Windows in Crete: The Complete Guide',
+    descriptionEL: 'Πότε ανοίγει το Εξοικονομώ 2026, ποια κουφώματα αλουμινίου επιδοτούνται έως 80% και πώς να προετοιμαστείτε στο Ρέθυμνο & την Κρήτη.',
+    descriptionEN: 'When the Exoikonomo 2026 subsidy opens, which aluminium windows qualify for up to 80% funding, and how property owners in Rethymno & Crete should prepare.',
     date: '2024-03-15',
     image: '/images/modern_aluminum_windows_1776183397754.png',
+    contentEL: `
+      <h2>Πότε ανοίγει το Εξοικονομώ 2026;</h2>
+      <p>Το νέο πρόγραμμα αναμένεται το δεύτερο εξάμηνο του 2026. Η αξιολόγηση γίνεται με σύστημα μοριοδότησης, οπότε χρειάζεστε έναν πλήρως προετοιμασμένο φάκελο, όχι απαραίτητα ταχύτητα στην υποβολή.</p>
+      <h2>Πόση είναι η επιδότηση;</h2>
+      <p>Η επιδότηση κλιμακώνεται ανάλογα με εισοδηματικά κριτήρια και αναμένεται να φτάσει έως το 80%. Πρακτικά, αυτό σημαίνει δραστική μείωση του αρχικού κόστους συν τη μόνιμη μείωση στους λογαριασμούς ρεύματος.</p>
+      <h2>Ποια κουφώματα είναι επιλέξιμα</h2>
+      <ul>
+        <li>Μόνο <strong>θερμοδιακοπτόμενα συστήματα αλουμινίου</strong>.</li>
+        <li>Απαιτείται <strong>ενεργειακός υαλοπίνακας</strong>.</li>
+        <li>Πρέπει να επιτυγχάνεται ο απαιτούμενος συντελεστής θερμοπερατότητας (Uw).</li>
+      </ul>
+      <p>Τα συστήματα Alumil SMARTIA και SUPREME που κατασκευάζουμε υπερκαλύπτουν αυτές τις προδιαγραφές, φτάνοντας Uw έως 0.9 W/m²K.</p>
+    `,
+    contentEN: `
+      <h2>When does Exoikonomo 2026 open?</h2>
+      <p>Based on official announcements to date, the new round is expected to open in the second half of 2026, funded by the EU Social Climate Fund with a budget in the region of €1.2 billion. The exact date will be announced by the Ministry of Environment and Energy. One important detail: applications are ranked by a points system, not first-come-first-served — you don't need to race the clock, but you do need a complete, well-prepared file.</p>
+      <h2>How much is the subsidy?</h2>
+      <p>Subsidy rates vary with household income criteria and are expected to reach up to 80% for the lowest income brackets. For a typical window replacement project on a Cretan home, that translates into thousands of euros off the initial investment — on top of a permanent 30–50% reduction in heating and cooling costs.</p>
+      <h2>Which windows qualify (and which don't)</h2>
+      <p>This is the point most owners miss:</p>
+      <ul>
+      <li>Only <strong>thermal-break aluminium systems</strong> are eligible — profiles with a polyamide insulator that interrupts heat transfer between the inner and outer aluminium shells.</li>
+      <li><strong>Energy glazing</strong> is required: at least double glazing with a low-emissivity (low-e) coating.</li>
+      <li>The window must achieve a specified <strong>thermal transmittance value</strong> (in recent rounds, U ≤ 1.8 W/m²K).</li>
+      <li><strong>Shading systems</strong> (roller shutters, exterior shutters) and <strong>insect screens</strong> are also eligible as complementary costs.</li>
+      </ul>
+      <p>The Alumil SMARTIA and SUPREME systems we fabricate and install comfortably exceed these specifications — with polyamides up to 38mm we achieve Uw values as low as 0.9 W/m²K, roughly twice the performance the programme's minimum requires.</p>
+      <h2>Who is eligible — a note for foreign owners</h2>
+      <p>Eligibility applies to owners of a <strong>primary residence in Greece</strong> (full ownership or usufruct), and recent rounds also allow long-term tenants with the owner's consent. The upgrade must be documented with an Energy Performance Certificate (ΠΕΑ) before and after the works. If your Cretan property is a <strong>holiday home</strong>, it will generally not qualify — but the energy, comfort and property-value arguments for thermal-break aluminium remain just as strong, and we frequently deliver such projects for international owners outside the subsidy framework.</p>
+      <h2>Four preparation steps — start now</h2>
+      <ol>
+      <li><strong>Energy inspection:</strong> A certified energy inspector issues the initial Energy Performance Certificate documenting the current state.</li>
+      <li><strong>Paperwork:</strong> Property title data, tax documents (E9, income statement), co-owner consents where applicable.</li>
+      <li><strong>A technical quotation with full specifications:</strong> The window quote must explicitly state the profile series, glazing build-up, U-value, and removal/installation works. Vague quotes cause problems at the payout stage.</li>
+      <li><strong>A fabricator experienced with subsidised projects:</strong> Correct documentation (system certificates, CE declarations of performance) matters as much as the installation itself.</li>
+      </ol>
+      <h2>Why Crete has an extra reason for energy windows</h2>
+      <p>In the Cretan climate the real enemy isn't winter — it's the summer heatwave. Old cold-series frames act like radiators in July, conducting heat straight indoors and inflating air-conditioning bills. And in coastal areas like Rethymno, salt air corrodes any frame without the proper coating treatment — which is why all our fabrications carry Seaside Class certification.</p>
+    `
+  },
+  {
+    slug: 'energeiaka-koufomata-alouminiou-ti-na-prosexete',
+    titleEL: 'Ενεργειακά Κουφώματα Αλουμινίου: 7 Πράγματα που πρέπει να προσέξετε',
+    titleEN: 'Energy-Efficient Aluminium Windows: 7 Things to Check Before You Buy',
+    descriptionEL: 'Τι σημαίνει Uw, θερμοδιακοπή, low-e και κλάση ασφαλείας; Οδηγός αγοράς για ενεργειακά κουφώματα αλουμινίου στην Κρήτη.',
+    descriptionEN: 'What do Uw, thermal break, low-e glazing and security class actually mean? A buyer\'s guide to energy-efficient aluminium windows for homes in Rethymno & Crete.',
+    date: '2024-04-02',
+    image: '/images/hero_aluminum_villa_1776110912532.png',
+    contentEL: `
+      <h2>1. Ο συντελεστής Uw</h2>
+      <p>Μετράει την απώλεια θερμότητας. Όσο χαμηλότερος, τόσο καλύτερα. Απαιτήστε τον εγγράφως.</p>
+      <h2>2. Θερμοδιακοπή: ρωτήστε ΠΟΣΑ χιλιοστά</h2>
+      <p>Το πλάτος του πολυαμιδίου κάνει τη διαφορά. Στα premium συστήματα φτάνει τα 38mm, εξαλείφοντας τη θερμογέφυρα.</p>
+      <h2>3. Υαλοπίνακας: Το 70% της επιφάνειας</h2>
+      <p>Απαιτείται low-e επίστρωση και ιδανικά αέριο argon. Στην Κρήτη, τα ενεργειακά τζάμια 4 εποχών (solar control) είναι ιδιαίτερα χρήσιμα στα νότια ανοίγματα.</p>
+      <h2>4. Ηχομόνωση</h2>
+      <p>Ένα σωστό ενεργειακό κούφωμα με τα κατάλληλα κρύσταλλα φτάνει σε ηχομείωση Rw 45dB, εξαφανίζοντας τον θόρυβο του δρόμου.</p>
+      <h2>5. Ασφάλεια: μηχανισμοί πολλαπλού κλειδώματος</h2>
+      <p>Το κούφωμα είναι το πρώτο σημείο δοκιμής ενός διαρρήκτη. Ζητήστε μηχανισμούς περιμετρικού πολλαπλού κλειδώματος (RC2/RC3).</p>
+      <h2>6. Βαφή Seaside Class — υποχρεωτική κοντά στη θάλασσα</h2>
+      <p>Στην Κρήτη, κούφωμα χωρίς πιστοποιημένη επεξεργασία για παραθαλάσσια χρήση σημαίνει οξείδωση και ξεφλούδισμα βαφής μέσα σε λίγα χρόνια.</p>
+      <h2>7. Ποιος το κατασκευάζει και ποιος το τοποθετεί</h2>
+      <p>Το καλύτερο προφίλ αχρηστεύεται από πρόχειρη συναρμολόγηση ή τοποθέτηση. Επιλέξτε εξουσιοδοτημένο κατασκευαστή (Alumil) με δική του μονάδα παραγωγής.</p>
+    `,
+    contentEN: `
+      <h2>1. The Uw value — the only number that matters</h2>
+      <p>Uw (W/m²K) measures how much heat the complete window loses — frame and glazing together. The lower, the better.</p>
+      <h2>2. Thermal break: ask HOW MANY millimetres</h2>
+      <p>"Thermal break" alone doesn't guarantee performance. What matters is the width of the polyamide insulator: a profile with a 20mm polyamide is a world apart from one with 38mm.</p>
+      <h2>3. Glazing: 70% of the surface</h2>
+      <p>Energy glazing needs a low-e coating and, ideally, argon gas in the cavity. In the Cretan climate it's also worth discussing solar-control glass on south-facing openings, blocking summer heat gain without sacrificing daylight.</p>
+      <h2>4. Acoustic insulation — experience the 45dB difference</h2>
+      <p>A properly built energy window with the right glazing achieves sound reduction of up to Rw 45dB. In practice: a busy street fades to a whisper.</p>
+      <h2>5. Security: multi-point locking</h2>
+      <p>The window is a burglar's first test. Ask for perimeter multi-point locking mechanisms and check the burglar-resistance class (RC2/RC3).</p>
+      <h2>6. Seaside Class coating — non-negotiable near the sea</h2>
+      <p>In Crete, a frame without certified seaside-grade treatment means oxidation and peeling paint within a few years. Electrostatic Seaside Class coating with reinforced pre-treatment is mandatory for properties within reach of sea air.</p>
+      <h2>7. Who fabricates it — and who installs it</h2>
+      <p>The best profile on the market is wasted by careless assembly or installation without proper sealing. Choose a certified fabricator (we are authorised Alumil fabricators) with its own production facility — not a reseller of ready-made units.</p>
+    `
+  },
+  {
+    slug: 'times-koufomata-alouminiou-odigos-kostous',
+    titleEL: 'Τιμές Κουφωμάτων Αλουμινίου 2026: Τι καθορίζει πραγματικά το κόστος',
+    titleEN: 'Aluminium Window Prices in 2026: What Really Drives the Cost (An Honest Guide)',
+    descriptionEL: 'Τι καθορίζει τις τιμές στα κουφώματα αλουμινίου; Σειρά προφίλ, τζάμια, διαστάσεις, τοποθέτηση. Πώς να συγκρίνετε σωστά προσφορές στο Ρέθυμνο.',
+    descriptionEN: 'What determines aluminium window prices? Profile series, glazing, dimensions, installation. How to compare quotes properly in Rethymno & Crete.',
+    date: '2024-05-10',
+    image: '/images/pergola_crete_1776112148406.png',
     contentEL: `
       <h2>Οι 6 παράγοντες που καθορίζουν την τιμή</h2>
       <h3>1. Σειρά προφίλ</h3>
@@ -23,52 +112,31 @@ export const articles = [
       <p>Η σωστή τοποθέτηση (αλφάδιασμα, αφρός χαμηλής διόγκωσης, στεγανωτικές ταινίες, σιλικόνες) είναι το 50% του τελικού αποτελέσματος. Οι «φθηνές» προσφορές συνήθως κόβουν από εδώ — και το πληρώνετε σε αέρα και υγρασία για 20 χρόνια.</p>
       <h2>Ενδεικτικό εύρος κόστους</h2>
       <p>Πανελλαδικά, η πλήρης αντικατάσταση κουφωμάτων σε τυπική κατοικία κινείται ενδεικτικά στα 4.000–7.500 €, ανάλογα με τα τετραγωνικά των ανοιγμάτων, τη σειρά και τον υαλοπίνακα. Με το Εξοικονομώ 2026, που αναμένεται με επιδότηση έως 80%, η τελική επιβάρυνση είναι κλάσμα του κόστους.</p>
-    `
-  },
-  {
-    slug: 'ti-einai-ta-thermodiakoptomena-koufomata-alouminiou',
-    titleEL: 'Τι είναι τα Θερμοδιακοπτόμενα Κουφώματα Αλουμινίου & Αξίζουν τα Λεφτά τους;',
-    titleEN: 'What Are Thermal Break Aluminum Windows & Are They Worth It?',
-    descriptionEL: 'Μάθετε πώς λειτουργεί η θερμοδιακοπή στα κουφώματα αλουμινίου, πώς εξοικονομεί ενέργεια και γιατί αποτελεί μονόδρομο για σύγχρονες κατασκευές.',
-    descriptionEN: 'Learn how thermal break technology works in aluminum windows, how it saves energy, and why it is essential for modern construction.',
-    date: '2024-04-02',
-    image: '/images/hero_aluminum_villa_1776110912532.png',
-    contentEL: `
-      <h2>Πώς Λειτουργεί η Θερμοδιακοπή;</h2>
-      <p>Το αλουμίνιο, από τη φύση του, είναι άριστος αγωγός της θερμότητας. Αυτό σημαίνει ότι ένα "ψυχρό" κούφωμα μεταφέρει το κρύο ή τη ζέστη από το εξωτερικό περιβάλλον μέσα στο σπίτι. Η θερμοδιακοπή τοποθετεί ένα μονωτικό υλικό (πολυαμίδιο) ανάμεσα στο εσωτερικό και το εξωτερικό προφίλ, σπάζοντας έτσι τη θερμική γέφυρα.</p>
-      <h2>Τα Οφέλη</h2>
-      <ul>
-        <li><strong>Εξοικονόμηση Ενέργειας:</strong> Μειώνει την απώλεια θερμότητας το χειμώνα και την είσοδο της ζέστης το καλοκαίρι, ρίχνοντας τον λογαριασμό ρεύματος έως και 40%.</li>
-        <li><strong>Εξάλειψη Συμπυκνωμάτων:</strong> Αποτρέπει την εμφάνιση υγρασίας (ιδρώτα) στην εσωτερική πλευρά του τζαμιού και στο προφίλ.</li>
-        <li><strong>Ηχομόνωση:</strong> Το πολυαμίδιο συμβάλλει στη μείωση της μεταφοράς του ήχου από τους εξωτερικούς χώρους.</li>
-      </ul>
-      <h2>Αξίζουν τα Επιπλέον Χρήματα;</h2>
-      <p>Απολύτως. Μάλιστα, τα θερμοδιακοπτόμενα κουφώματα αποτελούν βασική απαίτηση του ΚΕΝΑΚ και όλων των προγραμμάτων "Εξοικονομώ". Η απόσβεση της επένδυσης γίνεται σε λίγα μόλις χρόνια μέσω των μειωμένων λογαριασμών θέρμανσης και ψύξης, ενώ η αύξηση της άνεσης είναι άμεση.</p>
-    `
-  },
-  {
-    slug: 'odigos-epilogis-koufomaton-gia-ktiria-konta-sti-thalassa',
-    titleEL: 'Οδηγός Επιλογής Κουφωμάτων για Κτίρια Κοντά στη Θάλασσα (Κρήτη)',
-    titleEN: 'Guide to Choosing Windows for Seaside Buildings (Crete)',
-    descriptionEL: 'Ιδανικές λύσεις για σπίτια και ξενοδοχεία κοντά στη θάλασσα. Μάθετε για την προανοδίωση, τη βαφή Seaside Class και τα συστήματα Alumil που αντέχουν στην αλμύρα.',
-    descriptionEN: 'Ideal solutions for homes and hotels near the sea. Learn about pre-anodizing, Seaside Class coating, and Alumil systems that withstand salt.',
-    date: '2024-05-10',
-    image: '/images/pergola_crete_1776112148406.png',
-    contentEL: `
-      <h2>5. Ασφάλεια: μηχανισμοί πολλαπλού κλειδώματος</h2>
-      <p>Το κούφωμα είναι το πρώτο σημείο δοκιμής ενός διαρρήκτη. Ζητήστε μηχανισμούς περιμετρικού πολλαπλού κλειδώματος και ρωτήστε για την κλάση αντιδιαρρηκτικής προστασίας (RC2/RC3). Συνδυαστικά με θωρακισμένη πόρτα εισόδου, η κατοικία θωρακίζεται ολοκληρωμένα.</p>
-      <h2>6. Βαφή Seaside Class — υποχρεωτική κοντά στη θάλασσα</h2>
-      <p>Στην Κρήτη, κούφωμα χωρίς πιστοποιημένη επεξεργασία για παραθαλάσσια χρήση σημαίνει οξείδωση και ξεφλούδισμα βαφής μέσα σε λίγα χρόνια. Η ηλεκτροστατική βαφή Seaside Class με ενισχυμένη προεργασία είναι αδιαπραγμάτευτη για ακίνητα σε απόσταση αναπνοής από τη θάλασσα.</p>
-      <h2>7. Ποιος το κατασκευάζει και ποιος το τοποθετεί</h2>
-      <p>Το καλύτερο προφίλ της αγοράς αχρηστεύεται από πρόχειρη συναρμολόγηση ή τοποθέτηση χωρίς σωστή στεγάνωση. Προτιμήστε πιστοποιημένο κατασκευαστή (εμείς είμαστε εξουσιοδοτημένοι κατασκευαστές Alumil) με δική του μονάδα παραγωγής — όχι μεταπωλητή που «παίρνει έτοιμα» — και ρωτήστε ποιος αναλαμβάνει το after-sales.</p>
+    `,
+    contentEN: `
+      <h2>The 6 factors that determine price</h2>
+      <h3>1. Profile series</h3>
+      <p>The biggest differentiator. A cold series (no thermal break) costs less but is ineligible for subsidies and leaks energy. Thermal-break series scale with polyamide width, sealing levels and certifications — from the mid-range SMARTIA to the flagship SUPREME systems.</p>
+      <h3>2. Glazing</h3>
+      <p>Double low-e glazing with argon is today's standard. Triple glazing, laminated acoustic interlayers or security glass add 15–35% per unit — but for specific cases (noise, ground floors) they're worth every euro.</p>
+      <h3>3. Opening typology</h3>
+      <p>Lift-and-slide overlapping units are the most economical; tilt-and-turn carries a pricier mechanism; pocket (concealed) sliders and oversized minimal-frame units are premium builds. Special shapes and oversizes are costed separately.</p>
+      <h3>4. Colour & coating</h3>
+      <p>Standard RAL colours carry the base price. Special finishes, wood-effect coatings and — essential near the coast — Seaside Class treatment add a small but critical percentage.</p>
+      <h3>5. Hardware & accessories</h3>
+      <p>Multi-point locking, concealed hinges, key-lockable handles: small price differences, large differences in security and lifespan.</p>
+      <h3>6. Removal & installation</h3>
+      <p>Correct installation (levelling, low-expansion foam, sealing tapes, silicone finishing) is 50% of the final result. "Cheap" quotes usually cut corners here — and you pay for it in draughts and damp for 20 years.</p>
+      <h2>Indicative cost range</h2>
+      <p>Nationally, full window replacement on a typical home ranges indicatively between €4,000–7,500, depending on opening area, series and glazing. Under Exoikonomo 2026, expected with subsidies of up to 80%, the net cost can fall to a fraction of that.</p>
     `
   },
   {
     slug: 'antikatastasi-koufomaton-rethymno-vimata',
     titleEL: 'Αντικατάσταση Κουφωμάτων στο Ρέθυμνο: Η Διαδικασία Βήμα-Βήμα',
-    titleEN: 'Replacing Windows in Rethymno: Step-by-Step Guide',
+    titleEN: 'Window Replacement in Rethymno: The Step-by-Step Process',
     descriptionEL: 'Πώς γίνεται η αντικατάσταση κουφωμάτων από την επιμέτρηση ως την παράδοση: χρόνοι, στάδια, τι να περιμένετε. Οδηγός για κατοικίες στο Ρέθυμνο & την Κρήτη.',
-    descriptionEN: 'How window replacement works from measurement to delivery. Guide for homes in Rethymno & Crete.',
+    descriptionEN: 'How window replacement works, from survey to handover: timelines, stages, what to expect. A guide for homes in Rethymno & Crete.',
     date: '2024-06-22',
     image: '/images/aluminum_doors_patio_1776112180417.png',
     contentEL: `
@@ -84,6 +152,20 @@ export const articles = [
       <p>Η τοποθέτηση κρίνει τα πάντα. Αλφάδιασμα και ζύγισμα κάθε κάσας, στερέωση με τα προβλεπόμενα βύσματα, πλήρωση με αφρό χαμηλής διόγκωσης, στεγανωτικές ταινίες και τελικές σιλικονώσεις. Ένα κορυφαίο προφίλ με πρόχειρη τοποθέτηση χάνει έως και το μισό της απόδοσής του — γι' αυτό δεν χρησιμοποιούμε εξωτερικά συνεργεία.</p>
       <h2>Βήμα 6 — Ρυθμίσεις, έλεγχος & παράδοση</h2>
       <p>Ρυθμίζουμε μηχανισμούς και πίεση φύλλων, ελέγχουμε λειτουργία και στεγάνωση κάθε κουφώματος μαζί σας, και σας παραδίδουμε οδηγίες συντήρησης και εγγυήσεις. Το after-sales δεν σταματά στην παράδοση — είμαστε ένα τηλέφωνο μακριά για ρυθμίσεις.</p>
+    `,
+    contentEN: `
+      <h2>Step 1 — Survey & technical assessment (free)</h2>
+      <p>We visit your property in Rethymno or anywhere in Crete, measure every opening to the millimetre and record the specifics: frames, shutter boxes, sills, marble thresholds, opening direction, orientation. We discuss your priorities — thermal insulation, acoustics, security, aesthetics — and propose the right series per room, not "one system for everything."</p>
+      <h2>Step 2 — Itemised quotation</h2>
+      <p>You receive a written, per-unit quotation stating profile series, glazing, Uw value, hardware, coating and a full description of works. No small print, and no "extras" appearing at the end.</p>
+      <h2>Step 3 — Fabrication at our facility in Rethymno</h2>
+      <p>This is our essential difference: we don't resell ready-made windows. Every unit is cut, assembled and quality-checked at our own production facility on Drouliskou Street, as authorised Alumil fabricators. Fabrication time: typically 2–4 weeks depending on project size and profile orders.</p>
+      <h2>Step 4 — Removal with full protection of your home</h2>
+      <p>On installation day we protect floors and furniture, remove the old frames carefully (avoiding plaster damage wherever possible) and take the old materials away for recycling. In occupied homes we work room by room, so the house is never left "open."</p>
+      <h2>Step 5 — Installation & sealing</h2>
+      <p>Installation decides everything. Levelling and squaring of every frame, anchoring with the specified fixings, low-expansion foam filling, sealing tapes and final silicone work. A top-tier profile with careless installation loses up to half its performance — which is why we never use subcontracted crews.</p>
+      <h2>Step 6 — Adjustment, inspection & handover</h2>
+      <p>We fine-tune mechanisms and sash pressure, walk through the operation and sealing of every window with you, and hand over maintenance instructions and warranties. After-sales doesn't end at handover — we're one phone call away for adjustments.</p>
     `
   }
 ];

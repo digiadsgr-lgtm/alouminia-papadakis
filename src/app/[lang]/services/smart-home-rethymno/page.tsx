@@ -15,10 +15,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     : 'Αυτοματισμοί & Smart Home Ρέθυμνο | Somfy';
     
   const description = isEn 
-    ? 'Advanced Somfy automations for shutters, doors, and pergolas. Seamless smart home integration for your property in Crete.'
-    : 'Έξυπνο σπίτι και αυτοματισμοί ρολών & πέργκολας στο Ρέθυμνο. Απομακρυσμένος έλεγχος με αξιόπιστους μηχανισμούς Somfy.';
+    ? 'Smart Home automations in Rethymno, Crete. Remote control for shutters, doors, and pergolas via smartphone. Official Somfy partners.'
+    : 'Αυτοματισμοί και Smart Home λύσεις στο Ρέθυμνο. Απομακρυσμένος έλεγχος για ρολά και πέργκολες μέσω κινητού. Επίσημοι συνεργάτες Somfy.';
     
   const url = `https://alouminia-papadakis.gr/${lang}/services/smart-home-rethymno`;
+  const imageUrl = 'https://alouminia-papadakis.gr/images/smart_home_automation_1776183365365.png';
+  const imageAlt = isEn ? 'Somfy smart home automation in Crete' : 'Αυτοματισμοί smart home Somfy στο Ρέθυμνο';
 
   return {
     title,
@@ -35,14 +37,23 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       title,
       description,
       url,
+      siteName: isEn ? 'Papadakis Aluminium' : 'Αλουμίνια Παπαδάκης',
       images: [
         {
-          url: 'https://alouminia-papadakis.gr/images/smart_home_automation_1776183365365.png',
+          url: imageUrl,
           width: 1200,
           height: 630,
-          alt: title,
+          alt: imageAlt,
         },
       ],
+      locale: isEn ? 'en_US' : 'el_GR',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [imageUrl],
     },
   }
 }
@@ -75,8 +86,63 @@ export default async function SmartHomePage({ params }: { params: Promise<{ lang
     }
   ];
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": isEn ? "Home" : "Αρχική",
+        "item": `https://alouminia-papadakis.gr/${lang}`
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": isEn ? "Services" : "Υπηρεσίες",
+        "item": `https://alouminia-papadakis.gr/${lang}/#services`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": isEn ? "Smart Home & Automations" : "Έξυπνο Σπίτι & Αυτοματισμοί",
+        "item": `https://alouminia-papadakis.gr/${lang}/services/smart-home-rethymno`
+      }
+    ]
+  };
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": isEn ? "Smart Home Automation" : "Αυτοματισμοί Smart Home",
+    "provider": {
+      "@type": "HomeAndConstructionBusiness",
+      "name": "Αλουμίνια Παπαδάκης",
+      "url": "https://alouminia-papadakis.gr"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Crete"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": isEn ? "Home Automation" : "Αυτοματισμοί Κατοικίας",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": isEn ? "Somfy Motors" : "Μοτέρ Somfy"
+          }
+        }
+      ]
+    }
+  };
+
   return (
     <PageTransition>
+      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={serviceSchema} />
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-navy border-b-[6px] border-red">
         <div className="absolute inset-0 z-0">
           <Image 

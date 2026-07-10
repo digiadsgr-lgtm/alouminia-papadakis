@@ -17,6 +17,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     : 'Εκτενές portfolio κατασκευαστικών έργων στην Κρήτη. Δείτε αναλυτικά case studies από τοποθετήσεις σε βίλες, ξενοδοχεία και βιομηχανικά κτίρια.';
     
   const url = `https://alouminia-papadakis.gr/${lang}/portfolio`;
+  const imageUrl = 'https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.png';
+  const imageAlt = isEn ? 'Aluminum systems in a Crete luxury villa' : 'Συστήματα αλουμινίου σε βίλα στην Κρήτη';
 
   return {
     title,
@@ -33,14 +35,23 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       title,
       description,
       url,
+      siteName: isEn ? 'Papadakis Aluminium' : 'Αλουμίνια Παπαδάκης',
       images: [
         {
-          url: 'https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.png',
+          url: imageUrl,
           width: 1200,
           height: 630,
-          alt: title,
+          alt: imageAlt,
         },
       ],
+      locale: isEn ? 'en_US' : 'el_GR',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [imageUrl],
     },
   }
 }

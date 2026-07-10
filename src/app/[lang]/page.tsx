@@ -15,6 +15,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     : 'Πιστοποιημένος κατασκευαστής συστημάτων Alumil στο Ρέθυμνο. Κουφώματα υψηλής αισθητικής και ασφάλειας για απαιτητικά έργα.';
     
   const url = lang === 'en' ? 'https://alouminia-papadakis.gr/en' : 'https://alouminia-papadakis.gr/el';
+  const imageUrl = 'https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.png';
+  const imageAlt = isEn ? 'Aluminum Systems Installation in Crete' : 'Κατασκευές Συστημάτων Αλουμινίου στο Ρέθυμνο, Κρήτη';
 
   return {
     title,
@@ -31,14 +33,23 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       title,
       description,
       url,
+      siteName: isEn ? 'Papadakis Aluminium' : 'Αλουμίνια Παπαδάκης',
       images: [
         {
-          url: 'https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.png',
+          url: imageUrl,
           width: 1200,
           height: 630,
-          alt: title,
+          alt: imageAlt,
         },
       ],
+      locale: isEn ? 'en_US' : 'el_GR',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [imageUrl],
     },
   }
 }

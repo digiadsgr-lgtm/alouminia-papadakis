@@ -15,10 +15,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     : 'Βιομηχανικές Σιδηροκατασκευές | Μεταλλικά Κτίρια Ρέθυμνο';
     
   const description = isEn 
-    ? 'Precision construction of metal buildings, heavy duty gates, and custom ironworks across Crete. Certified manufacturing process.'
-    : 'Βαριές σιδηροκατασκευές, μεταλλικά κτίρια, αυλόπορτες και custom Inox εφαρμογές στο Ρέθυμνο. Κατασκευές απόλυτης ακρίβειας.';
+    ? 'Custom ironworks and metal structures in Rethymno. Specializing in railings, stairs, and heavy-duty fabrications with anti-corrosion protection.'
+    : 'Σιδηροκατασκευές στο Ρέθυμνο με εξειδίκευση σε κάγκελα, σκάλες και ειδικές κατασκευές. Γαλβάνισμα και ηλεκτροστατική βαφή για αντοχή στη φθορά.';
     
   const url = `https://alouminia-papadakis.gr/${lang}/services/sidiros-kataskeves-rethymno`;
+  const imageUrl = 'https://alouminia-papadakis.gr/images/industrial_ironworks_1776183414837.png';
+  const imageAlt = isEn ? 'Industrial ironworks and metal building in Crete' : 'Βιομηχανική σιδηροκατασκευή και μεταλλικό κτίριο στην Κρήτη';
 
   return {
     title,
@@ -35,14 +37,23 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       title,
       description,
       url,
+      siteName: isEn ? 'Papadakis Aluminium' : 'Αλουμίνια Παπαδάκης',
       images: [
         {
-          url: 'https://alouminia-papadakis.gr/images/industrial_ironworks_1776183414837.png',
+          url: imageUrl,
           width: 1200,
           height: 630,
-          alt: title,
+          alt: imageAlt,
         },
       ],
+      locale: isEn ? 'en_US' : 'el_GR',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [imageUrl],
     },
   }
 }
@@ -75,8 +86,63 @@ export default async function SidirosPage({ params }: { params: Promise<{ lang: 
     }
   ];
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": isEn ? "Home" : "Αρχική",
+        "item": `https://alouminia-papadakis.gr/${lang}`
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": isEn ? "Services" : "Υπηρεσίες",
+        "item": `https://alouminia-papadakis.gr/${lang}/#services`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": isEn ? "Industrial Ironworks" : "Σιδηροκατασκευές",
+        "item": `https://alouminia-papadakis.gr/${lang}/services/sidiros-kataskeves-rethymno`
+      }
+    ]
+  };
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": isEn ? "Custom Ironworks" : "Σιδηροκατασκευές",
+    "provider": {
+      "@type": "HomeAndConstructionBusiness",
+      "name": "Αλουμίνια Παπαδάκης",
+      "url": "https://alouminia-papadakis.gr"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Crete"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": isEn ? "Ironworks" : "Σιδηροκατασκευές",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": isEn ? "Metal Buildings & Gates" : "Μεταλλικά Κτίρια και Αυλόπορτες"
+          }
+        }
+      ]
+    }
+  };
+
   return (
     <PageTransition>
+      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={serviceSchema} />
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-navy border-b-[6px] border-red">
         <div className="absolute inset-0 z-0">
           <Image 

@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { ShieldCheck, Zap, Factory, CheckCircle2, ChevronRight, PhoneCall, MapPin, Mail, Sparkles, Home } from 'lucide-react'
+import { ShieldCheck, Zap, Factory, CheckCircle2, ChevronRight, PhoneCall, MapPin, Mail, Sparkles, Home, BookOpen } from 'lucide-react'
 import JsonLd from '@/components/JsonLd'
 import { useRef } from 'react'
 
@@ -81,7 +81,7 @@ export default function HomeEL() {
         "name": "Τι δομή After-Sales υποστήριξης διαθέτετε;",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Δεν είμαστε 'μάστορες' που απλώς τοποθετούν και φεύγουν. Η Αλουμίνια Παπαδάκης διαθέτει οργανωμένο (structured) After-Sales τμήμα. Παρέχουμε εγγύηση Alumil, άμεση επέμβαση από το δικό μας συνεργείο service για περιοδικές ρυθμίσεις μακροχρόνια. Η συνεπής υποστήριξη του έργου είναι για εμάς αδιαπραγμάτευτη."
+          "text": "Λειτουργούμε ως δομημένη κατασκευαστική εταιρεία. Η Αλουμίνια Παπαδάκης διαθέτει οργανωμένο (structured) After-Sales τμήμα. Παρέχουμε εγγύηση Alumil, άμεση επέμβαση από το δικό μας συνεργείο service για περιοδικές ρυθμίσεις μακροχρόνια. Η συνεπής υποστήριξη του έργου είναι για εμάς αδιαπραγμάτευτη."
         }
       },
       {
@@ -142,11 +142,11 @@ export default function HomeEL() {
             
             <section className="mb-10 text-xl text-gray-300 max-w-2xl leading-relaxed">
               <p className="mb-4">
-                Μελέτη, κατασκευή και τοποθέτηση ενεργειακών <strong>Συστημάτων Alumil</strong> για την <strong>απόλυτη ασφάλεια στο νέο σας σπίτι</strong>. Εξειδικευόμαστε σε πιστοποιημένες <strong>Κατασκευές Αλουμινίου στο Ρέθυμνο</strong>, θωρακισμένες πόρτες και συστήματα που αναβαθμίζουν την κατοικία σας.
+                Μελέτη, κατασκευή και τοποθέτηση ενεργειακών <strong>Συστημάτων Alumil</strong> για <strong>μέγιστη προστασία στο νέο σας σπίτι</strong>. Εξειδικευόμαστε σε πιστοποιημένες <strong>Κατασκευές Αλουμινίου στο Ρέθυμνο</strong>, θωρακισμένες πόρτες και συστήματα που αναβαθμίζουν την κατοικία σας.
               </p>
             </section>
 
-            <nav className="flex flex-col sm:flex-row gap-5" aria-label="Hero Actions">
+            <nav className="flex flex-col sm:flex-row flex-wrap gap-5" aria-label="Hero Actions">
               <a href="#services" className="bg-gradient-to-r from-red to-red-700 text-white px-8 py-4 rounded-full font-bold text-center hover:shadow-[0_0_30px_rgba(200,20,20,0.4)] transition-all duration-300 border border-red-500/50 active:scale-95 flex items-center justify-center gap-2 relative overflow-hidden group">
                 <div className="absolute inset-0 bg-white/20 translate-y-12 group-hover:translate-y-0 transition-transform duration-300"></div>
                 <Home size={20} className="relative z-10" /> <span className="relative z-10">Ανακαλύψτε τις Λύσεις μας</span>
@@ -154,6 +154,9 @@ export default function HomeEL() {
               <a href="tel:2831023897" className="bg-white/5 backdrop-blur-xl text-white border border-white/20 px-8 py-4 rounded-full font-bold text-center hover:bg-white/10 hover:border-white/40 transition-all duration-300 flex items-center justify-center gap-2 active:scale-95 shadow-2xl">
                 <PhoneCall size={20} /> Συμβουλευτική Μελέτη
               </a>
+              <Link href="/el/blog" className="bg-white/5 backdrop-blur-xl text-white border border-white/20 px-8 py-4 rounded-full font-bold text-center hover:bg-white/10 hover:border-white/40 transition-all duration-300 flex items-center justify-center gap-2 active:scale-95 shadow-2xl">
+                <BookOpen size={20} /> Διαβάστε το Blog
+              </Link>
             </nav>
 
             <motion.div 
@@ -206,8 +209,8 @@ export default function HomeEL() {
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once:true }} transition={{ delay: 0.2 }} className="flex flex-col items-center p-4">
               <ShieldCheck className="text-red mb-4" size={40} />
-              <h2 className="text-white font-bold text-xl mb-2">Οικογένεια σε Απόλυτη Ασφάλεια</h2>
-              <p className="text-gray-400 text-sm leading-relaxed">Απόρθητες θωρακισμένες πόρτες Class 4 και ενισχυμένα αλεξίσφαιρα τζάμια για την απόλυτη ξεγνοιασιά σας.</p>
+              <h2 className="text-white font-bold text-xl mb-2">Οικογένεια σε Πλήρη Ασφάλεια</h2>
+              <p className="text-gray-400 text-sm leading-relaxed">Απόρθητες θωρακισμένες πόρτες Class 4 και ενισχυμένα αλεξίσφαιρα τζάμια για την πλήρη ξεγνοιασιά σας.</p>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once:true }} transition={{ delay: 0.3 }} className="flex flex-col items-center p-4">
               <CheckCircle2 className="text-red mb-4" size={40} />
@@ -243,7 +246,7 @@ export default function HomeEL() {
                  <div className="relative z-10">
                    <div className="bg-red/10 text-red w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"><Home size={32} /></div>
                    <h3 className="text-3xl font-black mb-4 group-hover:text-red transition-colors">Ενεργειακά Κουφώματα</h3>
-                   <p className="text-gray-600 mb-8 max-w-lg text-lg leading-relaxed">Απόλυτη ηχομόνωση και θερμομόνωση. Ως πιστοποιημένοι κατασκευαστές της Alumil, εγκαθιστούμε τα κορυφαία συστήματα SMARTIA & SUPREME εξασφαλίζοντας ένα "σφραγισμένο" και αθόρυβο σπίτι.</p>
+                   <p className="text-gray-600 mb-8 max-w-lg text-lg leading-relaxed">Κορυφαία ηχομόνωση και θερμομόνωση. Ως πιστοποιημένοι κατασκευαστές της Alumil, εγκαθιστούμε τα προηγμένα συστήματα SMARTIA & SUPREME εξασφαλίζοντας ένα "σφραγισμένο" και αθόρυβο σπίτι.</p>
                    <span className="text-red font-bold flex items-center gap-2 group-hover:gap-4 transition-all">Δείτε τα Συστήματα <ChevronRight size={20} strokeWidth={3}/></span>
                  </div>
                </Link>
@@ -289,7 +292,7 @@ export default function HomeEL() {
           className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"
         >
           <h2 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">Μηδενικό Execution Risk</h2>
-          <p className="text-2xl text-gray-300 mb-6 font-light max-w-3xl mx-auto leading-relaxed">Απόλυτη συνέπεια στα χρονοδιαγράμματα και Premium Αισθητική. Παραδίδουμε ολοκληρωμένες εφαρμογές που αναβαθμίζουν εμπορικά την αξία του ακινήτου σας.</p>
+          <p className="text-2xl text-gray-300 mb-6 font-light max-w-3xl mx-auto leading-relaxed">Αυστηρή συνέπεια στα χρονοδιαγράμματα και Premium Αισθητική. Παραδίδουμε ολοκληρωμένες εφαρμογές που αναβαθμίζουν εμπορικά την αξία του ακινήτου σας.</p>
           <p className="text-base text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed">Αποδεδειγμένο Portfolio · Scalable Workflow · Οργανωμένο After-Sales · Εγγύηση Alumil · Καμία Καθυστέρηση</p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">

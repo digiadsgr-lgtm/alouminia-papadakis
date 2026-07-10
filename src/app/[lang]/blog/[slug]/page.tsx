@@ -43,6 +43,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       title,
       description,
       url,
+      siteName: isEn ? 'Papadakis Aluminium' : 'Αλουμίνια Παπαδάκης',
       images: [
         {
           url: `https://alouminia-papadakis.gr${article.image}`,
@@ -51,8 +52,15 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
           alt: title,
         },
       ],
+      locale: isEn ? 'en_US' : 'el_GR',
       type: 'article',
       publishedTime: article.date,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [`https://alouminia-papadakis.gr${article.image}`],
     },
   }
 }

@@ -13,6 +13,7 @@ const dict = {
     portes: "Θωρακισμένες Πόρτες",
     smarthome: "Smart Home",
     portfolio: "Τα Έργα Μας",
+    blog: "Blog",
     contact: "Επικοινωνία",
     call: "ΚΑΛΕΣΤΕ ΜΑΣ",
     menu: "ΜΕΝΟΥ",
@@ -28,6 +29,7 @@ const dict = {
     portes: "Security Doors",
     smarthome: "Smart Home",
     portfolio: "Our Projects",
+    blog: "Blog",
     contact: "Contact",
     call: "CALL US",
     menu: "MENU",
@@ -101,6 +103,7 @@ export default function Navbar({ lang = 'el' }: { lang?: 'el' | 'en' }) {
                 </div>
               </div>
               <Link href={`/${lang}/portfolio`} className={`text-sm font-semibold transition-colors ${isScrolled ? 'hover:text-red' : 'hover:text-gray-300'}`}>{t.portfolio}</Link>
+              <Link href={`/${lang}/blog`} className={`text-sm font-semibold transition-colors ${isScrolled ? 'hover:text-red' : 'hover:text-gray-300'}`}>{t.blog}</Link>
               <Link href={`/${lang}#contact`} className={`text-sm font-semibold transition-colors ${isScrolled ? 'hover:text-red' : 'hover:text-gray-300'}`}>{t.contact}</Link>
               
               <Link href={t.langLink} className={`flex items-center gap-1 text-sm font-bold transition-colors ${isScrolled ? 'text-navy hover:text-red' : 'text-white hover:text-red'}`}>
@@ -172,6 +175,7 @@ export default function Navbar({ lang = 'el' }: { lang?: 'el' | 'en' }) {
                   { name: t.portes, link: `/${lang}/services/portes-asfaleias-rethymno` },
                   { name: t.smarthome, link: `/${lang}/services/smart-home-rethymno` },
                   { name: t.portfolio, link: `/${lang}/portfolio` },
+                  { name: t.blog, link: `/${lang}/blog` },
                   { name: t.contact, link: `/${lang}#contact` }
                 ].map((item, i) => (
                   <Link 

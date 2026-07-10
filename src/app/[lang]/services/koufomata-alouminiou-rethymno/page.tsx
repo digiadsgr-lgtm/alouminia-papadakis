@@ -18,10 +18,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     : 'Ενεργειακά Κουφώματα Αλουμινίου Ρέθυμνο | Alumil';
     
   const description = isEn 
-    ? 'Premium energy-efficient aluminum windows in Rethymno, Crete. High thermal insulation and security. Official Alumil partners.'
-    : 'Ενεργειακά κουφώματα αλουμινίου Alumil στο Ρέθυμνο με Uw έως 0,9 W/m²K. Κατασκευή & τοποθέτηση από πιστοποιημένο συνεργείο. Δωρεάν μελέτη & κοστολόγηση.';
+    ? 'Premium energy-efficient aluminum windows in Rethymno, Crete. High thermal insulation (Uw up to 0.9 W/m²K) and certified security. Official Alumil partners.'
+    : 'Ενεργειακά κουφώματα αλουμινίου Alumil στο Ρέθυμνο με δείκτη Uw έως 0,9 W/m²K. Κατασκευή & τοποθέτηση από πιστοποιημένο συνεργείο. Ζητήστε δωρεάν μελέτη.';
     
   const url = `https://alouminia-papadakis.gr/${lang}/services/koufomata-alouminiou-rethymno`;
+  const imageUrl = 'https://alouminia-papadakis.gr/images/modern_aluminum_windows_1776183397754.png';
+  const imageAlt = isEn ? 'Energy efficient Alumil aluminum balcony doors in Rethymno residence' : 'Ενεργειακές μπαλκονόπορτες αλουμινίου Alumil σε κατοικία στο Ρέθυμνο';
 
   return {
     title,
@@ -38,14 +40,23 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       title,
       description,
       url,
+      siteName: isEn ? 'Papadakis Aluminium' : 'Αλουμίνια Παπαδάκης',
       images: [
         {
-          url: 'https://alouminia-papadakis.gr/images/modern_aluminum_windows_1776183397754.png',
+          url: imageUrl,
           width: 1200,
           height: 630,
-          alt: title,
+          alt: imageAlt,
         },
       ],
+      locale: isEn ? 'en_US' : 'el_GR',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [imageUrl],
     },
   }
 }
@@ -99,9 +110,64 @@ export default async function KoufomataPage({ params }: { params: Promise<{ lang
     }
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": isEn ? "Home" : "Αρχική",
+        "item": `https://alouminia-papadakis.gr/${lang}`
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": isEn ? "Services" : "Υπηρεσίες",
+        "item": `https://alouminia-papadakis.gr/${lang}/#services`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": isEn ? "Aluminum Windows" : "Κουφώματα Αλουμινίου",
+        "item": `https://alouminia-papadakis.gr/${lang}/services/koufomata-alouminiou-rethymno`
+      }
+    ]
+  };
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": isEn ? "Aluminum Windows Installation" : "Τοποθέτηση Κουφωμάτων Αλουμινίου",
+    "provider": {
+      "@type": "HomeAndConstructionBusiness",
+      "name": "Αλουμίνια Παπαδάκης",
+      "url": "https://alouminia-papadakis.gr"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Crete"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": isEn ? "Aluminum Windows Services" : "Υπηρεσίες Κουφωμάτων Αλουμινίου",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": isEn ? "Energy Efficient Windows" : "Ενεργειακά Κουφώματα"
+          }
+        }
+      ]
+    }
+  };
+
   return (
     <PageTransition>
       <JsonLd data={productSchema} />
+      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={serviceSchema} />
       <article className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-navy border-b-[6px] border-red">
         <div className="absolute inset-0 z-0">
           <Image 
