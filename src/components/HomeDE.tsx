@@ -200,7 +200,7 @@ export default function HomeDE() {
         </motion.div>
       </article>
 
-      <TrustBadges lang="en" className="relative z-30 -mt-12 mb-12" />
+      <TrustBadges lang="en" className="relative z-30 mt-8 mb-12" />
 
       <section className="bg-navy py-12 relative z-20 shadow-2xl border-t border-b border-navy-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

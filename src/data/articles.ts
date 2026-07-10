@@ -5,7 +5,7 @@ export const articles = [
     titleEN: 'Exoikonomo 2026 & Aluminium Windows in Crete: The Complete Guide',
     descriptionEL: 'Πότε ανοίγει το Εξοικονομώ 2026, ποια κουφώματα αλουμινίου επιδοτούνται έως 80% και πώς να προετοιμαστείτε στο Ρέθυμνο & την Κρήτη.',
     descriptionEN: 'When the Exoikonomo 2026 subsidy opens, which aluminium windows qualify for up to 80% funding, and how property owners in Rethymno & Crete should prepare.',
-    date: '2024-03-15',
+    date: '2026-07-01',
     image: '/images/modern_aluminum_windows_1776183397754.png',
     contentEL: `
       <h2>Πότε ανοίγει το Εξοικονομώ 2026;</h2>
@@ -53,7 +53,7 @@ export const articles = [
     titleEN: 'Energy-Efficient Aluminium Windows: 7 Things to Check Before You Buy',
     descriptionEL: 'Τι σημαίνει Uw, θερμοδιακοπή, low-e και κλάση ασφαλείας; Οδηγός αγοράς για ενεργειακά κουφώματα αλουμινίου στην Κρήτη.',
     descriptionEN: 'What do Uw, thermal break, low-e glazing and security class actually mean? A buyer\'s guide to energy-efficient aluminium windows for homes in Rethymno & Crete.',
-    date: '2024-04-02',
+    date: '2026-07-01',
     image: '/images/hero_aluminum_villa_1776110912532.png',
     contentEL: `
       <h2>1. Ο συντελεστής Uw</h2>
@@ -94,7 +94,7 @@ export const articles = [
     titleEN: 'Aluminium Window Prices in 2026: What Really Drives the Cost (An Honest Guide)',
     descriptionEL: 'Τι καθορίζει τις τιμές στα κουφώματα αλουμινίου; Σειρά προφίλ, τζάμια, διαστάσεις, τοποθέτηση. Πώς να συγκρίνετε σωστά προσφορές στο Ρέθυμνο.',
     descriptionEN: 'What determines aluminium window prices? Profile series, glazing, dimensions, installation. How to compare quotes properly in Rethymno & Crete.',
-    date: '2024-05-10',
+    date: '2026-07-01',
     image: '/images/pergola_crete_1776112148406.png',
     contentEL: `
       <h2>Οι 6 παράγοντες που καθορίζουν την τιμή</h2>
@@ -137,7 +137,7 @@ export const articles = [
     titleEN: 'Window Replacement in Rethymno: The Step-by-Step Process',
     descriptionEL: 'Πώς γίνεται η αντικατάσταση κουφωμάτων από την επιμέτρηση ως την παράδοση: χρόνοι, στάδια, τι να περιμένετε. Οδηγός για κατοικίες στο Ρέθυμνο & την Κρήτη.',
     descriptionEN: 'How window replacement works, from survey to handover: timelines, stages, what to expect. A guide for homes in Rethymno & Crete.',
-    date: '2024-06-22',
+    date: '2026-07-01',
     image: '/images/aluminum_doors_patio_1776112180417.png',
     contentEL: `
       <h2>Βήμα 1 — Επιμέτρηση & τεχνική μελέτη (δωρεάν)</h2>
