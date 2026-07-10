@@ -6,9 +6,42 @@ import { MapPin, ChevronLeft, Calendar, ShieldCheck, Ruler } from 'lucide-react'
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
+  const isEn = lang === 'en';
+  
+  const title = isEn 
+    ? 'Our Projects in Crete | Luxury Villas & Resorts' 
+    : 'Τα Έργα Μας στην Κρήτη | Βίλες & Ξενοδοχεία';
+    
+  const description = isEn 
+    ? 'Explore our massive portfolio of aluminum and shading projects across Crete. Detailed case studies of luxury villas, boutique hotels, and complex commercial buildings.'
+    : 'Εκτενές portfolio κατασκευαστικών έργων στην Κρήτη. Δείτε αναλυτικά case studies από τοποθετήσεις σε βίλες, ξενοδοχεία και βιομηχανικά κτίρια.';
+    
+  const url = `https://alouminia-papadakis.gr/${lang}/portfolio`;
+
   return {
-    title: lang === 'en' ? 'Our Projects in Crete | Luxury Villas & Resorts | Papadakis' : 'Τα Έργα Μας στην Κρήτη | Βίλες & Ξενοδοχεία | Παπαδάκης',
-    description: lang === 'en' ? 'Explore our massive portfolio of aluminum and shading projects across Crete. Detailed case studies of luxury villas, boutique hotels, and complex commercial buildings.' : 'Εκτενές portfolio κατασκευαστικών έργων στην Κρήτη. Δείτε αναλυτικά case studies από τοποθετήσεις σε βίλες, ξενοδοχεία και βιομηχανικά κτίρια.'
+    title,
+    description,
+    alternates: {
+      canonical: url,
+      languages: {
+        'el': 'https://alouminia-papadakis.gr/el/portfolio',
+        'en': 'https://alouminia-papadakis.gr/en/portfolio',
+        'x-default': 'https://alouminia-papadakis.gr/el/portfolio',
+      },
+    },
+    openGraph: {
+      title,
+      description,
+      url,
+      images: [
+        {
+          url: 'https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.png',
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
   }
 }
 

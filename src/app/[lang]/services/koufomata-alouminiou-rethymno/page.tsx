@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import FaqAccordion from '@/components/FaqAccordion'
 import Image from 'next/image'
 import Link from 'next/link'
 import JsonLd from '@/components/JsonLd'
@@ -10,9 +11,42 @@ const InsulationSimulator = dynamic(() => import('@/components/InsulationSimulat
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
+  const isEn = lang === 'en';
+  
+  const title = isEn 
+    ? 'Aluminum Windows Crete | Alumil Systems' 
+    : 'Ενεργειακά Κουφώματα Αλουμινίου Ρέθυμνο | Alumil';
+    
+  const description = isEn 
+    ? 'Premium energy-efficient aluminum windows in Rethymno, Crete. High thermal insulation and security. Official Alumil partners.'
+    : 'Ενεργειακά κουφώματα αλουμινίου Alumil στο Ρέθυμνο με Uw έως 0,9 W/m²K. Κατασκευή & τοποθέτηση από πιστοποιημένο συνεργείο. Δωρεάν μελέτη & κοστολόγηση.';
+    
+  const url = `https://alouminia-papadakis.gr/${lang}/services/koufomata-alouminiou-rethymno`;
+
   return {
-    title: lang === 'en' ? 'Aluminum Windows Crete | Alumil Systems | Papadakis' : 'Κουφώματα Αλουμινίου Ρέθυμνο | Ενεργειακά Συστήματα | Παπαδάκης',
-    description: lang === 'en' ? 'Premium energy-efficient aluminum windows in Rethymno, Crete. High thermal insulation and security. Official Alumil partners.' : 'Κορυφαία ενεργειακά κουφώματα αλουμινίου στο Ρέθυμνο.',
+    title,
+    description,
+    alternates: {
+      canonical: url,
+      languages: {
+        'el': 'https://alouminia-papadakis.gr/el/services/koufomata-alouminiou-rethymno',
+        'en': 'https://alouminia-papadakis.gr/en/services/koufomata-alouminiou-rethymno',
+        'x-default': 'https://alouminia-papadakis.gr/el/services/koufomata-alouminiou-rethymno',
+      },
+    },
+    openGraph: {
+      title,
+      description,
+      url,
+      images: [
+        {
+          url: 'https://alouminia-papadakis.gr/images/modern_aluminum_windows_1776183397754.png',
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
   }
 }
 
@@ -20,25 +54,39 @@ export default async function KoufomataPage({ params }: { params: Promise<{ lang
   const { lang } = await params;
   const isEn = lang === 'en'
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [{
-      "@type": "Question",
-      "name": isEn ? "What is the U-value of your aluminum windows?" : "Ποιος είναι ο δείκτης θερμοπερατότητας (Uw) των κουφωμάτων;",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": isEn ? "Our certified Alumil systems achieve a U-value up to 0.9 W/m²K, ensuring maximum energy efficiency and thermal insulation." : "Τα πιστοποιημένα συστήματα Alumil SMARTIA/SUPREME επιτυγχάνουν δείκτη Uw έως 0.9 W/m²K, εξασφαλίζοντας μέγιστη ενεργειακή απόδοση."
-      }
-    }, {
-      "@type": "Question",
-      "name": isEn ? "Are your frames suitable for seaside properties?" : "Είναι τα κουφώματα κατάλληλα για παραθαλάσσια σπίτια στην Κρήτη;",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": isEn ? "Yes, we apply Seaside Class certification anodizing, providing extreme resistance to salt corrosion." : "Ναι, εφαρμόζουμε πιστοποιημένη επεξεργασία ανοδίωσης Seaside Class, εξασφαλίζοντας απόλυτη αντοχή στη διάβρωση από την αλμύρα."
-      }
-    }]
-  };
+  const faqs = isEn ? [
+    {
+      question: "How much do aluminum windows cost in Rethymno?",
+      answer: "The cost depends on the profile series, the glazing, and dimensions. For example, an energy-efficient balcony door with a thermal break starts from the standard Alumil series and scales up to the premium SUPREME. Every project is priced after a free measurement.",
+      textAnswer: "The cost depends on the profile series, the glazing, and dimensions. For example, an energy-efficient balcony door with a thermal break starts from the standard Alumil series and scales up to the premium SUPREME. Every project is priced after a free measurement."
+    },
+    {
+      question: "What is the U-value of your aluminum windows?",
+      answer: "Our certified Alumil systems achieve a U-value up to 0.9 W/m²K, ensuring maximum energy efficiency and thermal insulation.",
+      textAnswer: "Our certified Alumil systems achieve a U-value up to 0.9 W/m²K, ensuring maximum energy efficiency and thermal insulation."
+    },
+    {
+      question: "Are your frames suitable for seaside properties?",
+      answer: "Yes, we apply Seaside Class certification anodizing, providing extreme resistance to salt corrosion.",
+      textAnswer: "Yes, we apply Seaside Class certification anodizing, providing extreme resistance to salt corrosion."
+    }
+  ] : [
+    {
+      question: "Πόσο κοστίζουν τα κουφώματα αλουμινίου στο Ρέθυμνο;",
+      answer: "Το κόστος εξαρτάται από τη σειρά προφίλ, τον υαλοπίνακα και τις διαστάσεις. Ενδεικτικά, μια ενεργειακή μπαλκονόπορτα με θερμοδιακοπή ξεκινά από τα επίπεδα των μεσαίων σειρών Alumil και κλιμακώνεται στις premium SUPREME. Κάθε έργο κοστολογείται μετά από δωρεάν επιμέτρηση.",
+      textAnswer: "Το κόστος εξαρτάται από τη σειρά προφίλ, τον υαλοπίνακα και τις διαστάσεις. Ενδεικτικά, μια ενεργειακή μπαλκονόπορτα με θερμοδιακοπή ξεκινά από τα επίπεδα των μεσαίων σειρών Alumil και κλιμακώνεται στις premium SUPREME. Κάθε έργο κοστολογείται μετά από δωρεάν επιμέτρηση."
+    },
+    {
+      question: "Ποιος είναι ο δείκτης θερμοπερατότητας (Uw) των κουφωμάτων;",
+      answer: "Τα πιστοποιημένα συστήματα Alumil SMARTIA/SUPREME επιτυγχάνουν δείκτη Uw έως 0.9 W/m²K, εξασφαλίζοντας μέγιστη ενεργειακή απόδοση.",
+      textAnswer: "Τα πιστοποιημένα συστήματα Alumil SMARTIA/SUPREME επιτυγχάνουν δείκτη Uw έως 0.9 W/m²K, εξασφαλίζοντας μέγιστη ενεργειακή απόδοση."
+    },
+    {
+      question: "Είναι τα κουφώματα κατάλληλα για παραθαλάσσια σπίτια στην Κρήτη;",
+      answer: "Ναι, εφαρμόζουμε πιστοποιημένη επεξεργασία ανοδίωσης Seaside Class, εξασφαλίζοντας απόλυτη αντοχή στη διάβρωση από την αλμύρα.",
+      textAnswer: "Ναι, εφαρμόζουμε πιστοποιημένη επεξεργασία ανοδίωσης Seaside Class, εξασφαλίζοντας απόλυτη αντοχή στη διάβρωση από την αλμύρα."
+    }
+  ];
 
   const productSchema = {
     "@context": "https://schema.org",
@@ -53,7 +101,6 @@ export default async function KoufomataPage({ params }: { params: Promise<{ lang
 
   return (
     <PageTransition>
-      <JsonLd data={faqSchema} />
       <JsonLd data={productSchema} />
       <article className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-navy border-b-[6px] border-red">
         <div className="absolute inset-0 z-0">
@@ -152,6 +199,10 @@ export default async function KoufomataPage({ params }: { params: Promise<{ lang
                </div>
             </div>
          </div>
+      </section>
+      
+      <section className="bg-gray-50 border-t border-gray-100">
+        <FaqAccordion items={faqs} title={isEn ? "Frequently Asked Questions" : "Συχνές Ερωτήσεις"} />
       </section>
     </PageTransition>
   )

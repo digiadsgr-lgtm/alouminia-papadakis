@@ -1,19 +1,79 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import JsonLd from '@/components/JsonLd'
+import FaqAccordion from '@/components/FaqAccordion'
 import PageTransition from '@/components/PageTransition'
 import { Cpu, Smartphone, ShieldCheck, ChevronLeft } from 'lucide-react'
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
+  const isEn = lang === 'en';
+  
+  const title = isEn 
+    ? 'Smart Home Automations Crete | Somfy Motors' 
+    : 'Αυτοματισμοί & Smart Home Ρέθυμνο | Somfy';
+    
+  const description = isEn 
+    ? 'Advanced Somfy automations for shutters, doors, and pergolas. Seamless smart home integration for your property in Crete.'
+    : 'Έξυπνο σπίτι και αυτοματισμοί ρολών & πέργκολας στο Ρέθυμνο. Απομακρυσμένος έλεγχος με αξιόπιστους μηχανισμούς Somfy.';
+    
+  const url = `https://alouminia-papadakis.gr/${lang}/services/smart-home-rethymno`;
+
   return {
-    title: lang === 'en' ? 'Smart Home Automations Crete | Somfy Motors | Papadakis' : 'Αυτοματισμοί & Smart Home Ρέθυμνο | Somfy | Παπαδάκης',
+    title,
+    description,
+    alternates: {
+      canonical: url,
+      languages: {
+        'el': 'https://alouminia-papadakis.gr/el/services/smart-home-rethymno',
+        'en': 'https://alouminia-papadakis.gr/en/services/smart-home-rethymno',
+        'x-default': 'https://alouminia-papadakis.gr/el/services/smart-home-rethymno',
+      },
+    },
+    openGraph: {
+      title,
+      description,
+      url,
+      images: [
+        {
+          url: 'https://alouminia-papadakis.gr/images/smart_home_automation_1776183365365.png',
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
   }
 }
 
 export default async function SmartHomePage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   const isEn = lang === 'en'
+
+  const faqs = isEn ? [
+    {
+      question: "Can I upgrade my existing aluminum windows to a smart home system?",
+      answer: "In most cases, yes! We can retrofit Somfy or other compatible smart motors to your existing rolling shutters, awnings, and pergolas without replacing the entire system.",
+      textAnswer: "In most cases, yes! We can retrofit Somfy or other compatible smart motors to your existing rolling shutters, awnings, and pergolas without replacing the entire system."
+    },
+    {
+      question: "Is it difficult to use?",
+      answer: "Not at all. The systems are designed to be user-friendly, allowing you to control everything from your smartphone, tablet, or via voice commands with Google Assistant / Alexa.",
+      textAnswer: "Not at all. The systems are designed to be user-friendly, allowing you to control everything from your smartphone, tablet, or via voice commands with Google Assistant / Alexa."
+    }
+  ] : [
+    {
+      question: "Μπορώ να κάνω έξυπνα τα ήδη υπάρχοντα κουφώματά μου;",
+      answer: "Στις περισσότερες περιπτώσεις, ναι! Μπορούμε να τοποθετήσουμε μοτέρ Somfy ή άλλους συμβατούς αυτοματισμούς στα υπάρχοντα ρολά, τις τέντες ή τις πέργκολές σας χωρίς να χρειαστεί πλήρης αντικατάσταση.",
+      textAnswer: "Στις περισσότερες περιπτώσεις, ναι! Μπορούμε να τοποθετήσουμε μοτέρ Somfy ή άλλους συμβατούς αυτοματισμούς στα υπάρχοντα ρολά, τις τέντες ή τις πέργκολές σας χωρίς να χρειαστεί πλήρης αντικατάσταση."
+    },
+    {
+      question: "Είναι δύσκολο στη χρήση;",
+      answer: "Καθόλου. Τα συστήματα έχουν σχεδιαστεί για να είναι απόλυτα φιλικά προς τον χρήστη. Μπορείτε να ελέγχετε τα πάντα από το κινητό, το tablet ή με φωνητικές εντολές μέσω Google Assistant / Alexa.",
+      textAnswer: "Καθόλου. Τα συστήματα έχουν σχεδιαστεί για να είναι απόλυτα φιλικά προς τον χρήστη. Μπορείτε να ελέγχετε τα πάντα από το κινητό, το tablet ή με φωνητικές εντολές μέσω Google Assistant / Alexa."
+    }
+  ];
 
   return (
     <PageTransition>
@@ -82,6 +142,10 @@ export default async function SmartHomePage({ params }: { params: Promise<{ lang
               </ul>
             </div>
          </div>
+      </section>
+      
+      <section className="bg-gray-50 border-t border-gray-100">
+        <FaqAccordion items={faqs} title={isEn ? "Frequently Asked Questions" : "Συχνές Ερωτήσεις"} />
       </section>
     </PageTransition>
   )

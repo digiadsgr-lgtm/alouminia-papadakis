@@ -2,19 +2,78 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import JsonLd from '@/components/JsonLd'
+import FaqAccordion from '@/components/FaqAccordion'
 import PageTransition from '@/components/PageTransition'
 import { Sun, Wind, Move, ChevronLeft } from 'lucide-react'
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
+  const isEn = lang === 'en';
+  
+  const title = isEn 
+    ? 'Bioclimatic Pergolas Crete | Shading Systems' 
+    : 'Βιοκλιματικές Πέργκολες Ρέθυμνο | Συστήματα Σκίασης';
+    
+  const description = isEn 
+    ? 'Heavy duty bioclimatic pergolas and advanced shading systems for severe island winds. Custom design and installation in Crete.'
+    : 'Βιοκλιματικές πέργκολες αλουμινίου και συστήματα σκίασης στο Ρέθυμνο. Heavy duty κατασκευές με αντοχή στους ισχυρούς ανέμους της Κρήτης.';
+    
+  const url = `https://alouminia-papadakis.gr/${lang}/services/pergoles-rethymno-kriti`;
+
   return {
-    title: lang === 'en' ? 'Bioclimatic Pergolas Crete | Shading Systems | Papadakis' : 'Βιοκλιματικές Πέργκολες Ρέθυμνο | Συστήματα Σκίασης | Παπαδάκης',
+    title,
+    description,
+    alternates: {
+      canonical: url,
+      languages: {
+        'el': 'https://alouminia-papadakis.gr/el/services/pergoles-rethymno-kriti',
+        'en': 'https://alouminia-papadakis.gr/en/services/pergoles-rethymno-kriti',
+        'x-default': 'https://alouminia-papadakis.gr/el/services/pergoles-rethymno-kriti',
+      },
+    },
+    openGraph: {
+      title,
+      description,
+      url,
+      images: [
+        {
+          url: 'https://alouminia-papadakis.gr/images/pergola_crete_1776112148406.png',
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
   }
 }
 
 export default async function PergolesPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   const isEn = lang === 'en'
+
+  const faqs = isEn ? [
+    {
+      question: "Are bioclimatic pergolas suitable for windy areas like Crete?",
+      answer: "Absolutely. Our heavy-duty bioclimatic pergolas are specifically engineered and tested to withstand severe winds. The robust aluminum profiles ensure maximum stability.",
+      textAnswer: "Absolutely. Our heavy-duty bioclimatic pergolas are specifically engineered and tested to withstand severe winds. The robust aluminum profiles ensure maximum stability."
+    },
+    {
+      question: "Can I add lighting or heating to the pergola?",
+      answer: "Yes, our systems support integrated LED lighting, infrared heaters, and even side screens for complete weather protection and year-round usage.",
+      textAnswer: "Yes, our systems support integrated LED lighting, infrared heaters, and even side screens for complete weather protection and year-round usage."
+    }
+  ] : [
+    {
+      question: "Αντέχουν οι πέργκολες στους δυνατούς αέρηδες της Κρήτης;",
+      answer: "Απόλυτα. Οι βιοκλιματικές πέργκολες βαρέως τύπου που κατασκευάζουμε είναι μελετημένες για ακραίες ανεμοπιέσεις, διασφαλίζοντας απόλυτη σταθερότητα.",
+      textAnswer: "Απόλυτα. Οι βιοκλιματικές πέργκολες βαρέως τύπου που κατασκευάζουμε είναι μελετημένες για ακραίες ανεμοπιέσεις, διασφαλίζοντας απόλυτη σταθερότητα."
+    },
+    {
+      question: "Μπορώ να προσθέσω φωτισμό ή θέρμανση;",
+      answer: "Ναι, τα συστήματά μας υποστηρίζουν ενσωματωμένο LED φωτισμό, θερμάστρες υπερύθρων και κάθετες σίτες ή τζάμια για χρήση όλο τον χρόνο.",
+      textAnswer: "Ναι, τα συστήματά μας υποστηρίζουν ενσωματωμένο LED φωτισμό, θερμάστρες υπερύθρων και κάθετες σίτες ή τζάμια για χρήση όλο τον χρόνο."
+    }
+  ];
 
   return (
     <PageTransition>
@@ -76,6 +135,10 @@ export default async function PergolesPage({ params }: { params: Promise<{ lang:
               </ul>
             </div>
          </div>
+      </section>
+      
+      <section className="bg-gray-50 border-t border-gray-100">
+        <FaqAccordion items={faqs} title={isEn ? "Frequently Asked Questions" : "Συχνές Ερωτήσεις"} />
       </section>
     </PageTransition>
   )

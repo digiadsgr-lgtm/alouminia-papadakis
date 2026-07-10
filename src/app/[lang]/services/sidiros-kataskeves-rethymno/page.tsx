@@ -2,19 +2,78 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import JsonLd from '@/components/JsonLd'
+import FaqAccordion from '@/components/FaqAccordion'
 import PageTransition from '@/components/PageTransition'
 import { Factory, Cog, ChevronLeft, Building } from 'lucide-react'
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
+  const isEn = lang === 'en';
+  
+  const title = isEn 
+    ? 'Industrial Ironworks | Metal Buildings Crete' 
+    : 'Βιομηχανικές Σιδηροκατασκευές | Μεταλλικά Κτίρια Ρέθυμνο';
+    
+  const description = isEn 
+    ? 'Precision construction of metal buildings, heavy duty gates, and custom ironworks across Crete. Certified manufacturing process.'
+    : 'Βαριές σιδηροκατασκευές, μεταλλικά κτίρια, αυλόπορτες και custom Inox εφαρμογές στο Ρέθυμνο. Κατασκευές απόλυτης ακρίβειας.';
+    
+  const url = `https://alouminia-papadakis.gr/${lang}/services/sidiros-kataskeves-rethymno`;
+
   return {
-    title: lang === 'en' ? 'Industrial Ironworks | Metal Buildings Crete | Papadakis' : 'Βιομηχανικές Σιδηροκατασκευές | Μεταλλικά Κτίρια Ρέθυμνο | Παπαδάκης',
+    title,
+    description,
+    alternates: {
+      canonical: url,
+      languages: {
+        'el': 'https://alouminia-papadakis.gr/el/services/sidiros-kataskeves-rethymno',
+        'en': 'https://alouminia-papadakis.gr/en/services/sidiros-kataskeves-rethymno',
+        'x-default': 'https://alouminia-papadakis.gr/el/services/sidiros-kataskeves-rethymno',
+      },
+    },
+    openGraph: {
+      title,
+      description,
+      url,
+      images: [
+        {
+          url: 'https://alouminia-papadakis.gr/images/industrial_ironworks_1776183414837.png',
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
   }
 }
 
 export default async function SidirosPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   const isEn = lang === 'en'
+
+  const faqs = isEn ? [
+    {
+      question: "Do iron structures rust near the sea?",
+      answer: "We use hot-dip galvanizing and electrostatic painting to protect iron structures from corrosion, making them highly durable even in coastal areas.",
+      textAnswer: "We use hot-dip galvanizing and electrostatic painting to protect iron structures from corrosion, making them highly durable even in coastal areas."
+    },
+    {
+      question: "Can you create custom designs?",
+      answer: "Yes, we specialize in custom ironworks, including traditional and modern gates, railings, and industrial structures tailored to your specifications.",
+      textAnswer: "Yes, we specialize in custom ironworks, including traditional and modern gates, railings, and industrial structures tailored to your specifications."
+    }
+  ] : [
+    {
+      question: "Σκουριάζουν οι σιδηροκατασκευές κοντά στη θάλασσα;",
+      answer: "Χρησιμοποιούμε θερμό γαλβάνισμα και ηλεκτροστατική βαφή που θωρακίζουν τον σίδηρο, καθιστώντας τις κατασκευές μας εξαιρετικά ανθεκτικές ακόμα και σε παραθαλάσσιες περιοχές.",
+      textAnswer: "Χρησιμοποιούμε θερμό γαλβάνισμα και ηλεκτροστατική βαφή που θωρακίζουν τον σίδηρο, καθιστώντας τις κατασκευές μας εξαιρετικά ανθεκτικές ακόμα και σε παραθαλάσσιες περιοχές."
+    },
+    {
+      question: "Κατασκευάζετε ειδικά σχέδια κατά παραγγελία;",
+      answer: "Ναι, εξειδικευόμαστε σε custom σιδηροκατασκευές, από παραδοσιακά κάγκελα έως μοντέρνες αυλόπορτες και βιομηχανικά υπόστεγα, ακριβώς στα μέτρα σας.",
+      textAnswer: "Ναι, εξειδικευόμαστε σε custom σιδηροκατασκευές, από παραδοσιακά κάγκελα έως μοντέρνες αυλόπορτες και βιομηχανικά υπόστεγα, ακριβώς στα μέτρα σας."
+    }
+  ];
 
   return (
     <PageTransition>
@@ -76,6 +135,10 @@ export default async function SidirosPage({ params }: { params: Promise<{ lang: 
                <div className="absolute inset-0 bg-gradient-to-tr from-navy/80 to-transparent"></div>
             </div>
          </div>
+      </section>
+      
+      <section className="bg-gray-50 border-t border-gray-100">
+        <FaqAccordion items={faqs} title={isEn ? "Frequently Asked Questions" : "Συχνές Ερωτήσεις"} />
       </section>
     </PageTransition>
   )

@@ -18,25 +18,17 @@ export const viewport: Viewport = {
   viewportFit: 'cover'
 }
 
-// Provide dictionary-based metadata in layout or generate Metadata dynamically
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
-    if (lang === 'en') {
+  if (lang === 'en') {
     return {
       metadataBase: new URL('https://alouminia-papadakis.gr'),
-      title: 'Premium Aluminum Systems Rethymno | Papadakis Crete',
-      description: 'Certified Alumil manufacturer in Rethymno, Crete. Premium aluminum systems for luxury residences and hotels. Uncompromised quality.',
-      alternates: {
-        canonical: '/en',
-        languages: {
-          'el': '/el',
-          'en': '/en',
-        },
+      title: {
+        template: '%s | Papadakis Aluminium',
+        default: 'Premium Aluminum Systems Rethymno | Papadakis Crete',
       },
+      description: 'Certified Alumil manufacturer in Rethymno, Crete. Premium aluminum systems for luxury residences and hotels. Uncompromised quality.',
       openGraph: {
-        title: 'Aluminum Systems Rethymno | Papadakis Manufacturing',
-        description: 'Expert manufacturing and installation of premium aluminum systems, windows, and security doors across Crete. Discover absolute security for your home.',
-        url: 'https://alouminia-papadakis.gr/en',
         siteName: 'Papadakis Aluminium',
         images: [
           {
@@ -51,8 +43,6 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       },
       twitter: {
         card: 'summary_large_image',
-        title: 'Aluminum Systems Rethymno | Papadakis Manufacturing',
-        description: 'Installation of premium aluminum systems and windows in Rethymno, Crete.',
         images: ['https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.png'],
       },
       verification: {
@@ -62,19 +52,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   }
   return {
     metadataBase: new URL('https://alouminia-papadakis.gr'),
-    title: 'Κατασκευές Αλουμινίου Ρέθυμνο & Κρήτη | Κορυφαία Κουφώματα',
-    description: 'Πιστοποιημένος κατασκευαστής συστημάτων Alumil στο Ρέθυμνο. Κουφώματα υψηλής αισθητικής και ασφάλειας για απαιτητικά έργα.',
-    alternates: {
-      canonical: '/el',
-      languages: {
-        'el': '/el',
-        'en': '/en',
-      },
+    title: {
+      template: '%s | Αλουμίνια Παπαδάκης',
+      default: 'Κατασκευές Αλουμινίου Ρέθυμνο & Κρήτη | Κορυφαία Κουφώματα',
     },
+    description: 'Πιστοποιημένος κατασκευαστής συστημάτων Alumil στο Ρέθυμνο. Κουφώματα υψηλής αισθητικής και ασφάλειας για απαιτητικά έργα.',
     openGraph: {
-      title: 'Κατασκευή & Τοποθέτηση Αλουμινίων | Ρέθυμνο',
-      description: 'Κατασκευή και εγκατάσταση συστημάτων αλουμινίου, ενεργειακών κουφωμάτων και πορτών ασφαλείας. Καλύπτουμε το Ρέθυμνο και ολόκληρη την Κρήτη.',
-      url: 'https://alouminia-papadakis.gr',
       siteName: 'Αλουμίνια Παπαδάκης',
       images: [
         {
@@ -89,8 +72,6 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Κατασκευές & Συστήματα Αλουμινίου Ρέθυμνο | Παπαδάκης',
-      description: 'Κατασκευή και τοποθέτηση κουφωμάτων αλουμινίου στην Κρήτη.',
       images: ['https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.png'],
     },
     verification: {

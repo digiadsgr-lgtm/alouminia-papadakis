@@ -2,20 +2,78 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import JsonLd from '@/components/JsonLd'
+import FaqAccordion from '@/components/FaqAccordion'
 import PageTransition from '@/components/PageTransition'
 import { ShieldCheck, Lock, Award, ChevronLeft } from 'lucide-react'
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
+  const isEn = lang === 'en';
+  
+  const title = isEn 
+    ? 'Armored Security Doors Crete | Premium Installation' 
+    : 'Θωρακισμένες Πόρτες Ασφαλείας Ρέθυμνο | Τοποθέτηση';
+    
+  const description = isEn 
+    ? 'Certified security doors with Class 3 & 4 anti-burglary protection. Professional sales and installation in Rethymno, Crete.'
+    : 'Πιστοποιημένες πόρτες ασφαλείας (Κλάση 3 & 4) στο Ρέθυμνο. Ολοκληρωμένες λύσεις πώλησης και τοποθέτησης με απόλυτη εγγύηση διάρρηξης.';
+    
+  const url = `https://alouminia-papadakis.gr/${lang}/services/portes-asfaleias-rethymno`;
+
   return {
-    title: lang === 'en' ? 'Armored Security Doors Crete | Premium Installation | Papadakis' : 'Θωρακισμένες Πόρτες Ασφαλείας Ρέθυμνο | Τοποθέτηση & Πώληση | Παπαδάκης',
-    description: lang === 'en' ? 'Certified security doors with Class 3 & 4 anti-burglary protection. Professional sales and installation in Rethymno, Crete.' : 'Πιστοποιημένες πόρτες ασφαλείας (Κλάση 3 & 4) στο Ρέθυμνο. Ολοκληρωμένες λύσεις πώλησης και τοποθέτησης με απόλυτη εγγύηση διάρρηξης.',
+    title,
+    description,
+    alternates: {
+      canonical: url,
+      languages: {
+        'el': 'https://alouminia-papadakis.gr/el/services/portes-asfaleias-rethymno',
+        'en': 'https://alouminia-papadakis.gr/en/services/portes-asfaleias-rethymno',
+        'x-default': 'https://alouminia-papadakis.gr/el/services/portes-asfaleias-rethymno',
+      },
+    },
+    openGraph: {
+      title,
+      description,
+      url,
+      images: [
+        {
+          url: 'https://alouminia-papadakis.gr/images/security_door_armored_1776183382427.png',
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
   }
 }
 
 export default async function SecurityDoorsPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   const isEn = lang === 'en'
+
+  const faqs = isEn ? [
+    {
+      question: "Are your doors certified for security?",
+      answer: "Yes, all our security doors meet RC3/RC4 anti-burglary standards and are constructed with reinforced steel sheets and multi-point locking mechanisms.",
+      textAnswer: "Yes, all our security doors meet RC3/RC4 anti-burglary standards and are constructed with reinforced steel sheets and multi-point locking mechanisms."
+    },
+    {
+      question: "Can I choose the design of the door?",
+      answer: "Absolutely! We offer a wide range of external linings (wood, aluminum, glass, modern colors) to match the aesthetics of your home.",
+      textAnswer: "Absolutely! We offer a wide range of external linings (wood, aluminum, glass, modern colors) to match the aesthetics of your home."
+    }
+  ] : [
+    {
+      question: "Τι κλάση ασφαλείας έχουν οι πόρτες σας;",
+      answer: "Οι θωρακισμένες πόρτες μας διαθέτουν πιστοποίηση αντιδιαρρηκτικής προστασίας RC3 και RC4, με πολλαπλά σημεία κλειδώματος και ενισχυμένα ατσάλινα φύλλα.",
+      textAnswer: "Οι θωρακισμένες πόρτες μας διαθέτουν πιστοποίηση αντιδιαρρηκτικής προστασίας RC3 και RC4, με πολλαπλά σημεία κλειδώματος και ενισχυμένα ατσάλινα φύλλα."
+    },
+    {
+      question: "Μπορώ να επιλέξω το σχέδιο της πόρτας;",
+      answer: "Φυσικά. Η εξωτερική επένδυση μπορεί να προσαρμοστεί πλήρως (ξύλο, αλουμίνιο, τζάμι, μοντέρνα χρώματα) ώστε να ταιριάζει με την αισθητική της κατοικίας σας.",
+      textAnswer: "Φυσικά. Η εξωτερική επένδυση μπορεί να προσαρμοστεί πλήρως (ξύλο, αλουμίνιο, τζάμι, μοντέρνα χρώματα) ώστε να ταιριάζει με την αισθητική της κατοικίας σας."
+    }
+  ];
 
   const serviceSchema = {
     "@context": "https://schema.org",
@@ -112,6 +170,10 @@ export default async function SecurityDoorsPage({ params }: { params: Promise<{ 
               </ul>
             </div>
          </div>
+      </section>
+      
+      <section className="bg-gray-50 border-t border-gray-100">
+        <FaqAccordion items={faqs} title={isEn ? "Frequently Asked Questions" : "Συχνές Ερωτήσεις"} />
       </section>
     </PageTransition>
   )

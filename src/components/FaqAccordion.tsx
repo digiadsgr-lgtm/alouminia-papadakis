@@ -1,0 +1,74 @@
+'use client';
+
+import { useState } from 'react';
+import { ChevronDown } from 'lucide-react';
+import JsonLd from '@/components/JsonLd';
+
+interface FaqItem {
+  question: string;
+  answer: React.ReactNode;
+  textAnswer: string;
+}
+
+interface FaqAccordionProps {
+  items: FaqItem[];
+  title?: string;
+}
+
+export default function FaqAccordion({ items, title = 'Συχνές Ερωτήσεις' }: FaqAccordionProps) {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleOpen = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": items.map((item) => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.textAnswer
+      }
+    }))
+  };
+
+  return (
+    <div className="w-full max-w-4xl mx-auto py-12 px-4">
+      <JsonLd data={schema} />
+      {title && (
+        <h2 className="text-3xl font-black text-navy mb-8 text-center">{title}</h2>
+      )}
+      <div className="space-y-4">
+        {items.map((item, index) => (
+          <div 
+            key={index} 
+            className="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow"
+          >
+            <button
+              onClick={() => toggleOpen(index)}
+              className="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none"
+            >
+              <span className="font-bold text-navy text-lg pr-4">{item.question}</span>
+              <ChevronDown 
+                className={`text-red transition-transform duration-300 flex-shrink-0 ${openIndex === index ? 'rotate-180' : ''}`} 
+                size={24} 
+              />
+            </button>
+            <div 
+              className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${
+                openIndex === index ? 'max-h-[500px] pb-5 opacity-100' : 'max-h-0 opacity-0'
+              }`}
+            >
+              <div className="text-gray-600 prose prose-a:text-red hover:prose-a:text-red-700">
+                {item.answer}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
