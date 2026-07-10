@@ -4,55 +4,88 @@ import Link from 'next/link'
 import JsonLd from '@/components/JsonLd'
 import FaqAccordion from '@/components/FaqAccordion'
 import PageTransition from '@/components/PageTransition'
+import TrustBadges from '@/components/TrustBadges'
 import { ShieldCheck, Lock, Award, ChevronLeft } from 'lucide-react'
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
-  const isEn = lang === 'en';
   
-  const title = isEn 
-    ? 'Armored Security Doors Crete | Premium Installation' 
-    : 'Θωρακισμένες Πόρτες Ασφαλείας Ρέθυμνο | Τοποθέτηση';
-    
-  const description = isEn 
-    ? 'Certified security doors (Class 3 & 4) in Rethymno, Crete. Maximum burglary resistance, premium aesthetics, and top-tier sound insulation.'
-    : 'Πιστοποιημένες πόρτες ασφαλείας και θωρακισμένες πόρτες (Class 3 & 4) στο Ρέθυμνο. Μέγιστη αντοχή σε διαρρήξεις, κορυφαία αισθητική και ηχομόνωση.';
-    
+  const content = {
+    el: {
+      title: 'Θωρακισμένες Πόρτες Ασφαλείας Ρέθυμνο | Τοποθέτηση',
+      description: 'Πιστοποιημένες πόρτες ασφαλείας και θωρακισμένες πόρτες (Class 3 & 4) στο Ρέθυμνο. Μέγιστη αντοχή σε διαρρήξεις, κορυφαία αισθητική και ηχομόνωση.',
+      siteName: 'Αλουμίνια Παπαδάκης',
+      imageAlt: 'Θωρακισμένη πόρτα ασφαλείας στο Ρέθυμνο',
+      locale: 'el_GR'
+    },
+    en: {
+      title: 'Armored Security Doors Crete | Premium Installation',
+      description: 'Certified security doors (Class 3 & 4) in Rethymno, Crete. Maximum burglary resistance, premium aesthetics, and top-tier sound insulation.',
+      siteName: 'Papadakis Aluminium',
+      imageAlt: 'Armored security door in Crete',
+      locale: 'en_US'
+    },
+    de: {
+      title: 'Sicherheitstüren Kreta | Gepanzerte Installation',
+      description: 'Zertifizierte Sicherheitstüren (Klasse 3 & 4) in Rethymno, Kreta. Maximale Einbruchhemmung, erstklassige Ästhetik und hervorragende Schalldämmung.',
+      siteName: 'Papadakis Aluminium',
+      imageAlt: 'Gepanzerte Sicherheitstür auf Kreta',
+      locale: 'de_DE'
+    },
+    fr: {
+      title: 'Portes Blindées Crète | Installation Premium',
+      description: 'Portes de sécurité certifiées (Classe 3 & 4) à Réthymnon, Crète. Résistance maximale à l\'effraction, esthétique premium et isolation phonique.',
+      siteName: 'Papadakis Aluminium',
+      imageAlt: 'Porte blindée de sécurité en Crète',
+      locale: 'fr_FR'
+    },
+    nl: {
+      title: 'Veiligheidsdeuren Kreta | Gepantserde Installatie',
+      description: 'Gecertificeerde veiligheidsdeuren (Klasse 3 & 4) in Rethymnon, Kreta. Maximale inbraakwerendheid, premium esthetiek en geluidsisolatie.',
+      siteName: 'Papadakis Aluminium',
+      imageAlt: 'Gepantserde veiligheidsdeur op Kreta',
+      locale: 'nl_NL'
+    }
+  }
+
+  const l = content[lang as keyof typeof content] || content['en'];
   const url = `https://alouminia-papadakis.gr/${lang}/services/portes-asfaleias-rethymno`;
   const imageUrl = 'https://alouminia-papadakis.gr/images/security_door_armored_1776183382427.png';
-  const imageAlt = isEn ? 'Armored security door in Crete' : 'Θωρακισμένη πόρτα ασφαλείας στο Ρέθυμνο';
 
   return {
-    title,
-    description,
+    title: l.title,
+    description: l.description,
     alternates: {
       canonical: url,
       languages: {
         'el': 'https://alouminia-papadakis.gr/el/services/portes-asfaleias-rethymno',
         'en': 'https://alouminia-papadakis.gr/en/services/portes-asfaleias-rethymno',
+        'de': 'https://alouminia-papadakis.gr/de/services/portes-asfaleias-rethymno',
+        'fr': 'https://alouminia-papadakis.gr/fr/services/portes-asfaleias-rethymno',
+        'nl': 'https://alouminia-papadakis.gr/nl/services/portes-asfaleias-rethymno',
         'x-default': 'https://alouminia-papadakis.gr/el/services/portes-asfaleias-rethymno',
       },
     },
     openGraph: {
-      title,
-      description,
+      title: l.title,
+      description: l.description,
       url,
-      siteName: isEn ? 'Papadakis Aluminium' : 'Αλουμίνια Παπαδάκης',
+      siteName: l.siteName,
       images: [
         {
           url: imageUrl,
           width: 1200,
           height: 630,
-          alt: imageAlt,
+          alt: l.imageAlt,
         },
       ],
-      locale: isEn ? 'en_US' : 'el_GR',
+      locale: l.locale,
       type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
-      title,
-      description,
+      title: l.title,
+      description: l.description,
       images: [imageUrl],
     },
   }
@@ -62,29 +95,45 @@ export default async function SecurityDoorsPage({ params }: { params: Promise<{ 
   const { lang } = await params;
   const isEn = lang === 'en'
 
-  const faqs = isEn ? [
-    {
-      question: "Are your doors certified for security?",
-      answer: "Yes, all our security doors meet RC3/RC4 anti-burglary standards and are constructed with reinforced steel sheets and multi-point locking mechanisms.",
-      textAnswer: "Yes, all our security doors meet RC3/RC4 anti-burglary standards and are constructed with reinforced steel sheets and multi-point locking mechanisms."
-    },
-    {
-      question: "Can I choose the design of the door?",
-      answer: "Absolutely! We offer a wide range of external linings (wood, aluminum, glass, modern colors) to match the aesthetics of your home.",
-      textAnswer: "Absolutely! We offer a wide range of external linings (wood, aluminum, glass, modern colors) to match the aesthetics of your home."
-    }
-  ] : [
-    {
-      question: "Τι κλάση ασφαλείας έχουν οι πόρτες σας;",
-      answer: "Οι θωρακισμένες πόρτες μας διαθέτουν πιστοποίηση αντιδιαρρηκτικής προστασίας RC3 και RC4, με πολλαπλά σημεία κλειδώματος και ενισχυμένα ατσάλινα φύλλα.",
-      textAnswer: "Οι θωρακισμένες πόρτες μας διαθέτουν πιστοποίηση αντιδιαρρηκτικής προστασίας RC3 και RC4, με πολλαπλά σημεία κλειδώματος και ενισχυμένα ατσάλινα φύλλα."
-    },
-    {
-      question: "Μπορώ να επιλέξω το σχέδιο της πόρτας;",
-      answer: "Φυσικά. Η εξωτερική επένδυση μπορεί να προσαρμοστεί πλήρως (ξύλο, αλουμίνιο, τζάμι, μοντέρνα χρώματα) ώστε να ταιριάζει με την αισθητική της κατοικίας σας.",
-      textAnswer: "Φυσικά. Η εξωτερική επένδυση μπορεί να προσαρμοστεί πλήρως (ξύλο, αλουμίνιο, τζάμι, μοντέρνα χρώματα) ώστε να ταιριάζει με την αισθητική της κατοικίας σας."
-    }
-  ];
+  const faqsContent = {
+    el: [
+      {
+        question: "Τι κλάση ασφαλείας έχουν οι πόρτες σας;",
+        answer: "Οι θωρακισμένες πόρτες μας διαθέτουν πιστοποίηση αντιδιαρρηκτικής προστασίας RC3 και RC4, με πολλαπλά σημεία κλειδώματος και ενισχυμένα ατσάλινα φύλλα.",
+        textAnswer: "Οι θωρακισμένες πόρτες μας διαθέτουν πιστοποίηση αντιδιαρρηκτικής προστασίας RC3 και RC4, με πολλαπλά σημεία κλειδώματος και ενισχυμένα ατσάλινα φύλλα."
+      },
+      {
+        question: "Μπορώ να επιλέξω το σχέδιο της πόρτας;",
+        answer: "Φυσικά. Η εξωτερική επένδυση μπορεί να προσαρμοστεί πλήρως (ξύλο, αλουμίνιο, τζάμι, μοντέρνα χρώματα) ώστε να ταιριάζει με την αισθητική της κατοικίας σας.",
+        textAnswer: "Φυσικά. Η εξωτερική επένδυση μπορεί να προσαρμοστεί πλήρως (ξύλο, αλουμίνιο, τζάμι, μοντέρνα χρώματα) ώστε να ταιριάζει με την αισθητική της κατοικίας σας."
+      }
+    ],
+    en: [
+      {
+        question: "Are your doors certified for security?",
+        answer: "Yes, all our security doors meet RC3/RC4 anti-burglary standards and are constructed with reinforced steel sheets and multi-point locking mechanisms.",
+        textAnswer: "Yes, all our security doors meet RC3/RC4 anti-burglary standards and are constructed with reinforced steel sheets and multi-point locking mechanisms."
+      },
+      {
+        question: "Can I choose the design of the door?",
+        answer: "Absolutely! We offer a wide range of external linings (wood, aluminum, glass, modern colors) to match the aesthetics of your home.",
+        textAnswer: "Absolutely! We offer a wide range of external linings (wood, aluminum, glass, modern colors) to match the aesthetics of your home."
+      }
+    ],
+    de: [
+      { question: "Sind Ihre Türen sicherheitszertifiziert?", answer: "Ja, alle unsere Sicherheitstüren erfüllen die Einbruchschutznormen RC3/RC4.", textAnswer: "Ja, alle unsere Sicherheitstüren erfüllen die Einbruchschutznormen RC3/RC4." },
+      { question: "Kann ich das Design der Tür wählen?", answer: "Absolut! Wir bieten eine große Auswahl an Außenverkleidungen.", textAnswer: "Absolut! Wir bieten eine große Auswahl an Außenverkleidungen." }
+    ],
+    fr: [
+      { question: "Vos portes sont-elles certifiées pour la sécurité ?", answer: "Oui, toutes nos portes de sécurité répondent aux normes anti-effraction RC3/RC4.", textAnswer: "Oui, toutes nos portes de sécurité répondent aux normes anti-effraction RC3/RC4." },
+      { question: "Puis-je choisir le design de la porte ?", answer: "Absolument ! Nous proposons une large gamme de revêtements extérieurs.", textAnswer: "Absolument ! Nous proposons une large gamme de revêtements extérieurs." }
+    ],
+    nl: [
+      { question: "Zijn uw deuren gecertificeerd voor veiligheid?", answer: "Ja, al onze veiligheidsdeuren voldoen aan de RC3/RC4-inbraaknormen.", textAnswer: "Ja, al onze veiligheidsdeuren voldoen aan de RC3/RC4-inbraaknormen." },
+      { question: "Kan ik het ontwerp van de deur kiezen?", answer: "Absoluut! We bieden een breed scala aan buitenbekledingen.", textAnswer: "Absoluut! We bieden een breed scala aan buitenbekledingen." }
+    ]
+  };
+  const faqs = faqsContent[lang as keyof typeof faqsContent] || faqsContent['en'];
 
   const serviceSchema = {
     "@context": "https://schema.org",
@@ -164,6 +213,8 @@ export default async function SecurityDoorsPage({ params }: { params: Promise<{ 
           </p>
         </header>
       </article>
+
+      <TrustBadges lang={lang as any} badges={['security', 'alumil']} className="relative z-30 -mt-12 bg-white" />
 
       <section className="py-24 bg-white text-navy">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16">

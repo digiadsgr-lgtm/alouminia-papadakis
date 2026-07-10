@@ -4,55 +4,88 @@ import Link from 'next/link'
 import JsonLd from '@/components/JsonLd'
 import FaqAccordion from '@/components/FaqAccordion'
 import PageTransition from '@/components/PageTransition'
+import TrustBadges from '@/components/TrustBadges'
 import { Sun, Wind, Move, ChevronLeft } from 'lucide-react'
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
-  const isEn = lang === 'en';
   
-  const title = isEn 
-    ? 'Bioclimatic Pergolas Crete | Shading Systems' 
-    : 'Βιοκλιματικές Πέργκολες Ρέθυμνο | Συστήματα Σκίασης';
-    
-  const description = isEn 
-    ? 'Bioclimatic aluminum pergolas in Rethymno, Crete. Heavy-duty construction built for strong winds and humidity. Custom design and installation.'
-    : 'Βιοκλιματικές πέργκολες αλουμινίου στο Ρέθυμνο, ανθεκτικές σε ισχυρούς ανέμους & υγρασία. Σχεδιασμός & τοποθέτηση για τον δικό σας χώρο.';
-    
+  const content = {
+    el: {
+      title: 'Βιοκλιματικές Πέργκολες Ρέθυμνο | Συστήματα Σκίασης',
+      description: 'Βιοκλιματικές πέργκολες αλουμινίου στο Ρέθυμνο, ανθεκτικές σε ισχυρούς ανέμους & υγρασία. Σχεδιασμός & τοποθέτηση για τον δικό σας χώρο.',
+      siteName: 'Αλουμίνια Παπαδάκης',
+      imageAlt: 'Βιοκλιματική πέργκολα αλουμινίου στην Κρήτη',
+      locale: 'el_GR'
+    },
+    en: {
+      title: 'Bioclimatic Pergolas Crete | Shading Systems',
+      description: 'Bioclimatic aluminum pergolas in Rethymno, Crete. Heavy-duty construction built for strong winds and humidity. Custom design and installation.',
+      siteName: 'Papadakis Aluminium',
+      imageAlt: 'Bioclimatic aluminum pergola in Crete',
+      locale: 'en_US'
+    },
+    de: {
+      title: 'Bioklimatische Pergolen Kreta | Beschattungssysteme',
+      description: 'Bioklimatische Aluminium-Pergolen in Rethymno, Kreta. Hochleistungskonstruktion für starken Wind und Feuchtigkeit. Maßgeschneidertes Design.',
+      siteName: 'Papadakis Aluminium',
+      imageAlt: 'Bioklimatische Aluminium-Pergola auf Kreta',
+      locale: 'de_DE'
+    },
+    fr: {
+      title: 'Pergolas Bioclimatiques Crète | Systèmes Ombrage',
+      description: 'Pergolas bioclimatiques en aluminium à Réthymnon, Crète. Construction robuste pour vents forts et humidité. Conception et installation sur mesure.',
+      siteName: 'Papadakis Aluminium',
+      imageAlt: 'Pergola bioclimatique en aluminium en Crète',
+      locale: 'fr_FR'
+    },
+    nl: {
+      title: 'Bioklimatische Pergola\'s Kreta | Schaduwsystemen',
+      description: 'Bioklimatische aluminium pergola\'s in Rethymnon, Kreta. Zware constructie voor harde wind en vocht. Ontwerp en installatie op maat.',
+      siteName: 'Papadakis Aluminium',
+      imageAlt: 'Bioklimatische aluminium pergola op Kreta',
+      locale: 'nl_NL'
+    }
+  }
+
+  const l = content[lang as keyof typeof content] || content['en'];
   const url = `https://alouminia-papadakis.gr/${lang}/services/pergoles-rethymno-kriti`;
   const imageUrl = 'https://alouminia-papadakis.gr/images/pergola_crete_1776112148406.png';
-  const imageAlt = isEn ? 'Bioclimatic aluminum pergola in Crete' : 'Βιοκλιματική πέργκολα αλουμινίου στην Κρήτη';
 
   return {
-    title,
-    description,
+    title: l.title,
+    description: l.description,
     alternates: {
       canonical: url,
       languages: {
         'el': 'https://alouminia-papadakis.gr/el/services/pergoles-rethymno-kriti',
         'en': 'https://alouminia-papadakis.gr/en/services/pergoles-rethymno-kriti',
+        'de': 'https://alouminia-papadakis.gr/de/services/pergoles-rethymno-kriti',
+        'fr': 'https://alouminia-papadakis.gr/fr/services/pergoles-rethymno-kriti',
+        'nl': 'https://alouminia-papadakis.gr/nl/services/pergoles-rethymno-kriti',
         'x-default': 'https://alouminia-papadakis.gr/el/services/pergoles-rethymno-kriti',
       },
     },
     openGraph: {
-      title,
-      description,
+      title: l.title,
+      description: l.description,
       url,
-      siteName: isEn ? 'Papadakis Aluminium' : 'Αλουμίνια Παπαδάκης',
+      siteName: l.siteName,
       images: [
         {
           url: imageUrl,
           width: 1200,
           height: 630,
-          alt: imageAlt,
+          alt: l.imageAlt,
         },
       ],
-      locale: isEn ? 'en_US' : 'el_GR',
+      locale: l.locale,
       type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
-      title,
-      description,
+      title: l.title,
+      description: l.description,
       images: [imageUrl],
     },
   }
@@ -62,29 +95,45 @@ export default async function PergolesPage({ params }: { params: Promise<{ lang:
   const { lang } = await params;
   const isEn = lang === 'en'
 
-  const faqs = isEn ? [
-    {
-      question: "Are bioclimatic pergolas suitable for windy areas like Crete?",
-      answer: "Absolutely. Our heavy-duty bioclimatic pergolas are specifically engineered and tested to withstand severe winds. The robust aluminum profiles ensure maximum stability.",
-      textAnswer: "Absolutely. Our heavy-duty bioclimatic pergolas are specifically engineered and tested to withstand severe winds. The robust aluminum profiles ensure maximum stability."
-    },
-    {
-      question: "Can I add lighting or heating to the pergola?",
-      answer: "Yes, our systems support integrated LED lighting, infrared heaters, and even side screens for complete weather protection and year-round usage.",
-      textAnswer: "Yes, our systems support integrated LED lighting, infrared heaters, and even side screens for complete weather protection and year-round usage."
-    }
-  ] : [
-    {
-      question: "Αντέχουν οι πέργκολες στους δυνατούς αέρηδες της Κρήτης;",
-      answer: "Απόλυτα. Οι βιοκλιματικές πέργκολες βαρέως τύπου που κατασκευάζουμε είναι μελετημένες για ακραίες ανεμοπιέσεις, διασφαλίζοντας απόλυτη σταθερότητα.",
-      textAnswer: "Απόλυτα. Οι βιοκλιματικές πέργκολες βαρέως τύπου που κατασκευάζουμε είναι μελετημένες για ακραίες ανεμοπιέσεις, διασφαλίζοντας απόλυτη σταθερότητα."
-    },
-    {
-      question: "Μπορώ να προσθέσω φωτισμό ή θέρμανση;",
-      answer: "Ναι, τα συστήματά μας υποστηρίζουν ενσωματωμένο LED φωτισμό, θερμάστρες υπερύθρων και κάθετες σίτες ή τζάμια για χρήση όλο τον χρόνο.",
-      textAnswer: "Ναι, τα συστήματά μας υποστηρίζουν ενσωματωμένο LED φωτισμό, θερμάστρες υπερύθρων και κάθετες σίτες ή τζάμια για χρήση όλο τον χρόνο."
-    }
-  ];
+  const faqsContent = {
+    el: [
+      {
+        question: "Αντέχουν οι πέργκολες στους δυνατούς αέρηδες της Κρήτης;",
+        answer: "Απόλυτα. Οι βιοκλιματικές πέργκολες βαρέως τύπου που κατασκευάζουμε είναι μελετημένες για ακραίες ανεμοπιέσεις, διασφαλίζοντας απόλυτη σταθερότητα.",
+        textAnswer: "Απόλυτα. Οι βιοκλιματικές πέργκολες βαρέως τύπου που κατασκευάζουμε είναι μελετημένες για ακραίες ανεμοπιέσεις, διασφαλίζοντας απόλυτη σταθερότητα."
+      },
+      {
+        question: "Μπορώ να προσθέσω φωτισμό ή θέρμανση;",
+        answer: "Ναι, τα συστήματά μας υποστηρίζουν ενσωματωμένο LED φωτισμό, θερμάστρες υπερύθρων και κάθετες σίτες ή τζάμια για χρήση όλο τον χρόνο.",
+        textAnswer: "Ναι, τα συστήματά μας υποστηρίζουν ενσωματωμένο LED φωτισμό, θερμάστρες υπερύθρων και κάθετες σίτες ή τζάμια για χρήση όλο τον χρόνο."
+      }
+    ],
+    en: [
+      {
+        question: "Are bioclimatic pergolas suitable for windy areas like Crete?",
+        answer: "Absolutely. Our heavy-duty bioclimatic pergolas are specifically engineered and tested to withstand severe winds. The robust aluminum profiles ensure maximum stability.",
+        textAnswer: "Absolutely. Our heavy-duty bioclimatic pergolas are specifically engineered and tested to withstand severe winds. The robust aluminum profiles ensure maximum stability."
+      },
+      {
+        question: "Can I add lighting or heating to the pergola?",
+        answer: "Yes, our systems support integrated LED lighting, infrared heaters, and even side screens for complete weather protection and year-round usage.",
+        textAnswer: "Yes, our systems support integrated LED lighting, infrared heaters, and even side screens for complete weather protection and year-round usage."
+      }
+    ],
+    de: [
+      { question: "Sind bioklimatische Pergolen für windige Gebiete wie Kreta geeignet?", answer: "Absolut. Unsere robusten bioklimatischen Pergolen sind speziell dafür ausgelegt, starken Winden standzuhalten.", textAnswer: "Absolut. Unsere robusten bioklimatischen Pergolen sind speziell dafür ausgelegt, starken Winden standzuhalten." },
+      { question: "Kann ich der Pergola Beleuchtung oder Heizung hinzufügen?", answer: "Ja, unsere Systeme unterstützen integrierte LED-Beleuchtung und Infrarotstrahler.", textAnswer: "Ja, unsere Systeme unterstützen integrierte LED-Beleuchtung und Infrarotstrahler." }
+    ],
+    fr: [
+      { question: "Les pergolas bioclimatiques sont-elles adaptées aux zones ventées comme la Crète ?", answer: "Absolument. Nos pergolas bioclimatiques robustes sont spécialement conçues pour résister aux vents violents.", textAnswer: "Absolument. Nos pergolas bioclimatiques robustes sont spécialement conçues pour résister aux vents violents." },
+      { question: "Puis-je ajouter un éclairage ou un chauffage à la pergola ?", answer: "Oui, nos systèmes prennent en charge l'éclairage LED intégré et les chauffages infrarouges.", textAnswer: "Oui, nos systèmes prennent en charge l'éclairage LED intégré et les chauffages infrarouges." }
+    ],
+    nl: [
+      { question: "Zijn bioklimatische pergola's geschikt voor winderige gebieden zoals Kreta?", answer: "Absoluut. Onze robuuste bioklimatische pergola's zijn speciaal ontworpen om zware wind te weerstaan.", textAnswer: "Absoluut. Onze robuuste bioklimatische pergola's zijn speciaal ontworpen om zware wind te weerstaan." },
+      { question: "Kan ik verlichting of verwarming toevoegen aan de pergola?", answer: "Ja, onze systemen ondersteunen geïntegreerde LED-verlichting en infraroodverwarmers.", textAnswer: "Ja, onze systemen ondersteunen geïntegreerde LED-verlichting en infraroodverwarmers." }
+    ]
+  };
+  const faqs = faqsContent[lang as keyof typeof faqsContent] || faqsContent['en'];
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -167,6 +216,8 @@ export default async function PergolesPage({ params }: { params: Promise<{ lang:
           </p>
         </div>
       </section>
+
+      <TrustBadges lang={lang as any} badges={['seaside', 'alumil']} className="relative z-30 -mt-12 bg-white" />
 
       <section className="py-24 bg-white text-navy">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16">

@@ -6,51 +6,83 @@ import { MapPin, ChevronLeft, Calendar, ShieldCheck, Ruler } from 'lucide-react'
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
-  const isEn = lang === 'en';
   
-  const title = isEn 
-    ? 'Our Projects in Crete | Luxury Villas & Resorts' 
-    : 'Τα Έργα Μας στην Κρήτη | Βίλες & Ξενοδοχεία';
-    
-  const description = isEn 
-    ? 'Explore our massive portfolio of aluminum and shading projects across Crete. Detailed case studies of luxury villas, boutique hotels, and complex commercial buildings.'
-    : 'Εκτενές portfolio κατασκευαστικών έργων στην Κρήτη. Δείτε αναλυτικά case studies από τοποθετήσεις σε βίλες, ξενοδοχεία και βιομηχανικά κτίρια.';
-    
+  const content = {
+    el: {
+      title: 'Τα Έργα Μας στην Κρήτη | Βίλες & Ξενοδοχεία',
+      description: 'Εκτενές portfolio κατασκευαστικών έργων στην Κρήτη. Δείτε αναλυτικά case studies από τοποθετήσεις σε βίλες, ξενοδοχεία και βιομηχανικά κτίρια.',
+      siteName: 'Αλουμίνια Παπαδάκης',
+      imageAlt: 'Συστήματα αλουμινίου σε βίλα στην Κρήτη',
+      locale: 'el_GR'
+    },
+    en: {
+      title: 'Our Projects in Crete | Luxury Villas & Resorts',
+      description: 'Explore our massive portfolio of aluminum and shading projects across Crete. Detailed case studies of luxury villas, boutique hotels, and complex commercial buildings.',
+      siteName: 'Papadakis Aluminium',
+      imageAlt: 'Aluminum systems in a Crete luxury villa',
+      locale: 'en_US'
+    },
+    de: {
+      title: 'Unsere Projekte auf Kreta | Luxusvillen & Resorts',
+      description: 'Entdecken Sie unser riesiges Portfolio an Aluminium- und Beschattungsprojekten auf Kreta. Detaillierte Fallstudien zu Luxusvillen und komplexen Gewerbegebäuden.',
+      siteName: 'Papadakis Aluminium',
+      imageAlt: 'Aluminiumsysteme in einer Luxusvilla auf Kreta',
+      locale: 'de_DE'
+    },
+    fr: {
+      title: 'Nos Projets en Crète | Villas de Luxe & Hôtels',
+      description: 'Découvrez notre vaste portfolio de projets en aluminium et ombrage en Crète. Études de cas détaillées de villas de luxe et bâtiments commerciaux complexes.',
+      siteName: 'Papadakis Aluminium',
+      imageAlt: 'Systèmes en aluminium dans une villa de luxe en Crète',
+      locale: 'fr_FR'
+    },
+    nl: {
+      title: 'Onze Projecten op Kreta | Luxe Villa\'s & Resorts',
+      description: 'Ontdek ons uitgebreide portfolio van aluminium- en schaduwprojecten op Kreta. Gedetailleerde casestudies van luxe villa\'s en complexe commerciële gebouwen.',
+      siteName: 'Papadakis Aluminium',
+      imageAlt: 'Aluminium systemen in een luxe villa op Kreta',
+      locale: 'nl_NL'
+    }
+  }
+
+  const l = content[lang as keyof typeof content] || content['en'];
   const url = `https://alouminia-papadakis.gr/${lang}/portfolio`;
   const imageUrl = 'https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.png';
-  const imageAlt = isEn ? 'Aluminum systems in a Crete luxury villa' : 'Συστήματα αλουμινίου σε βίλα στην Κρήτη';
 
   return {
-    title,
-    description,
+    title: l.title,
+    description: l.description,
     alternates: {
       canonical: url,
       languages: {
         'el': 'https://alouminia-papadakis.gr/el/portfolio',
         'en': 'https://alouminia-papadakis.gr/en/portfolio',
+        'de': 'https://alouminia-papadakis.gr/de/portfolio',
+        'fr': 'https://alouminia-papadakis.gr/fr/portfolio',
+        'nl': 'https://alouminia-papadakis.gr/nl/portfolio',
         'x-default': 'https://alouminia-papadakis.gr/el/portfolio',
       },
     },
     openGraph: {
-      title,
-      description,
+      title: l.title,
+      description: l.description,
       url,
-      siteName: isEn ? 'Papadakis Aluminium' : 'Αλουμίνια Παπαδάκης',
+      siteName: l.siteName,
       images: [
         {
           url: imageUrl,
           width: 1200,
           height: 630,
-          alt: imageAlt,
+          alt: l.imageAlt,
         },
       ],
-      locale: isEn ? 'en_US' : 'el_GR',
+      locale: l.locale,
       type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
-      title,
-      description,
+      title: l.title,
+      description: l.description,
       images: [imageUrl],
     },
   }
@@ -105,7 +137,7 @@ const projects = [
 
 export default async function PortfolioPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
-  const isEn = lang === 'en'
+  const isEn = lang !== 'el';
 
   return (
     <PageTransition>

@@ -1,11 +1,32 @@
 "use client"
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Check, X } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 export default function CookieConsent({ lang }: { lang: 'el' | 'en' }) {
   const [show, setShow] = useState(false)
+  const bannerRef = useRef<HTMLDivElement>(null)
+  
+  useEffect(() => {
+    if (show && bannerRef.current) {
+      const h = bannerRef.current.offsetHeight
+      document.documentElement.style.setProperty('--consent-h', `${h}px`)
+      
+      const observer = new ResizeObserver((entries) => {
+        for (const entry of entries) {
+          document.documentElement.style.setProperty('--consent-h', `${entry.target.clientHeight}px`)
+        }
+      })
+      observer.observe(bannerRef.current)
+      return () => {
+        observer.disconnect()
+        document.documentElement.style.setProperty('--consent-h', '0px')
+      }
+    } else {
+      document.documentElement.style.setProperty('--consent-h', '0px')
+    }
+  }, [show])
   const pathname = usePathname()
 
   const content = {
@@ -58,7 +79,7 @@ export default function CookieConsent({ lang }: { lang: 'el' | 'en' }) {
   if (!show) return null
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-[100] p-4 sm:p-6 md:max-w-2xl">
+    <div ref={bannerRef} className="fixed bottom-0 left-0 right-0 z-[100] p-4 sm:p-6 md:max-w-2xl">
       <div className="bg-navy/95 backdrop-blur-xl border border-navy-800 shadow-2xl rounded-3xl p-6 sm:p-8 flex flex-col gap-6 transform translate-y-0 text-white relative">
         <div>
           <h3 className="font-bold text-xl mb-2 flex items-center gap-2 tracking-tight">

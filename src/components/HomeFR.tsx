@@ -7,7 +7,7 @@ import TrustBadges from './TrustBadges'
 import JsonLd from '@/components/JsonLd'
 import { useRef } from 'react'
 
-export default function HomeEN() {
+export default function HomeFR() {
   const heroRef = useRef(null)
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -294,7 +294,7 @@ export default function HomeEN() {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"
         >
-          <h2 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">Zero Execution Risk</h2>
+          <h2 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">Zéro Risque d'Exécution</h2>
           <p className="text-2xl text-gray-300 mb-6 font-light max-w-3xl mx-auto leading-relaxed">Absolute adherence to project timelines and Premium Aesthetics. We deliver turn-key applications that commercially elevate your property's value.</p>
           <p className="text-base text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed">Proven Track Record · Scalable Workflow · Structured After-Sales · Alumil Warranty · Zero Delays</p>
           
@@ -302,7 +302,7 @@ export default function HomeEN() {
             <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 flex flex-col justify-between hover:bg-white/10 hover:border-red/50 transition-all duration-300 rounded-2xl group cursor-pointer">
                <PhoneCall className="text-red mb-6" size={32} />
                <div>
-                 <p className="text-gray-400 text-sm mb-2 uppercase tracking-wide">Call Us</p>
+                 <p className="text-gray-400 text-sm mb-2 uppercase tracking-wide">Appelez-nous</p>
                  <a href="tel:2831023897" className="font-bold text-2xl group-hover:text-[var(--color-red-light)] transition-colors">+30 28310 23897</a>
                </div>
             </div>
@@ -316,7 +316,7 @@ export default function HomeEN() {
             <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 flex flex-col justify-between hover:bg-white/10 hover:border-red/50 transition-all duration-300 rounded-2xl group cursor-pointer">
                <Mail className="text-red mb-6" size={32} />
                <div>
-                 <p className="text-gray-400 text-sm mb-2 uppercase tracking-wide">Email Inquiries</p>
+                 <p className="text-gray-400 text-sm mb-2 uppercase tracking-wide">Demandes par E-mail</p>
                  <a href="mailto:gpapadakisret@gmail.com" className="font-bold text-lg md:text-xl group-hover:text-[var(--color-red-light)] transition-colors break-all">gpapadakisret@gmail.com</a>
                </div>
             </div>

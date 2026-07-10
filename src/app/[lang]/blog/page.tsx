@@ -7,50 +7,78 @@ import { articles } from '@/data/articles'
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
-  const isEn = lang === 'en';
   
-  const title = isEn 
-    ? 'Blog & Articles | Papadakis Aluminium' 
-    : 'Blog & Ενημερώσεις | Αλουμίνια Παπαδάκης';
-    
-  const description = isEn 
-    ? 'Read the latest news, guides, and tips regarding aluminum systems, energy efficiency, and modern architecture.'
-    : 'Διαβάστε τα τελευταία νέα, οδηγούς και συμβουλές για τα συστήματα αλουμινίου, την εξοικονόμηση ενέργειας και τη σύγχρονη δόμηση.';
-    
+  const content = {
+    el: {
+      title: 'Blog & Ενημερώσεις | Αλουμίνια Παπαδάκης',
+      description: 'Διαβάστε τα τελευταία νέα, οδηγούς και συμβουλές για τα συστήματα αλουμινίου, την εξοικονόμηση ενέργειας και τη σύγχρονη δόμηση.',
+      siteName: 'Αλουμίνια Παπαδάκης',
+      locale: 'el_GR'
+    },
+    en: {
+      title: 'Blog & Articles | Papadakis Aluminium',
+      description: 'Read the latest news, guides, and tips regarding aluminum systems, energy efficiency, and modern architecture.',
+      siteName: 'Papadakis Aluminium',
+      locale: 'en_US'
+    },
+    de: {
+      title: 'Blog & Artikel | Papadakis Aluminium',
+      description: 'Lesen Sie die neuesten Nachrichten, Leitfäden und Tipps zu Aluminiumsystemen, Energieeffizienz und moderner Architektur.',
+      siteName: 'Papadakis Aluminium',
+      locale: 'de_DE'
+    },
+    fr: {
+      title: 'Blog & Articles | Papadakis Aluminium',
+      description: 'Lisez les dernières nouvelles, guides et conseils concernant les systèmes en aluminium, l\'efficacité énergétique et l\'architecture moderne.',
+      siteName: 'Papadakis Aluminium',
+      locale: 'fr_FR'
+    },
+    nl: {
+      title: 'Blog & Artikelen | Papadakis Aluminium',
+      description: 'Lees het laatste nieuws, gidsen en tips over aluminiumsystemen, energie-efficiëntie en moderne architectuur.',
+      siteName: 'Papadakis Aluminium',
+      locale: 'nl_NL'
+    }
+  }
+
+  const l = content[lang as keyof typeof content] || content['en'];
   const url = `https://alouminia-papadakis.gr/${lang}/blog`;
   const imageUrl = 'https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.png';
 
   return {
-    title,
-    description,
+    title: l.title,
+    description: l.description,
     alternates: {
       canonical: url,
       languages: {
         'el': 'https://alouminia-papadakis.gr/el/blog',
         'en': 'https://alouminia-papadakis.gr/en/blog',
+        'de': 'https://alouminia-papadakis.gr/de/blog',
+        'fr': 'https://alouminia-papadakis.gr/fr/blog',
+        'nl': 'https://alouminia-papadakis.gr/nl/blog',
         'x-default': 'https://alouminia-papadakis.gr/el/blog',
       },
     },
     openGraph: {
-      title,
-      description,
+      title: l.title,
+      description: l.description,
       url,
-      siteName: isEn ? 'Papadakis Aluminium' : 'Αλουμίνια Παπαδάκης',
+      siteName: l.siteName,
       images: [
         {
           url: imageUrl,
           width: 1200,
           height: 630,
-          alt: title,
+          alt: l.title,
         },
       ],
-      locale: isEn ? 'en_US' : 'el_GR',
+      locale: l.locale,
       type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
-      title,
-      description,
+      title: l.title,
+      description: l.description,
       images: [imageUrl],
     },
   }
@@ -58,7 +86,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
 export default async function BlogIndexPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
-  const isEn = lang === 'en';
+  const isEn = lang !== 'el';
 
   return (
     <PageTransition>

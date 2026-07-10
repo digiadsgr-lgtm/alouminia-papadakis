@@ -4,6 +4,8 @@ import '@/app/globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import CookieConsent from '@/components/CookieConsent'
+import StickyCallButton from '@/components/StickyCallButton'
+import LanguageSuggestion from '@/components/LanguageSuggestion'
 import { Analytics } from "@vercel/analytics/react"
 import Script from 'next/script'
 import { notFound } from 'next/navigation'
@@ -55,11 +57,12 @@ export default async function RootLayout({
 }) {
   const { lang } = await params;
   
-  if (lang !== 'el' && lang !== 'en') {
+  const validLocales = ['el', 'en', 'de', 'fr', 'nl'];
+  if (!validLocales.includes(lang)) {
     notFound();
   }
-  
-  const validLang = lang as 'el' | 'en';
+
+  const validLang = lang as 'el' | 'en' | 'de' | 'fr' | 'nl';
   const orgSchema = {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
@@ -218,6 +221,7 @@ export default async function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+        <LanguageSuggestion />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
@@ -226,8 +230,9 @@ export default async function RootLayout({
         <main className="min-h-screen">
           {children}
         </main>
-        <Footer lang={validLang} />
-        <CookieConsent lang={validLang} />
+        <Footer lang={validLang as any} />
+        <CookieConsent lang={validLang as any} />
+        <StickyCallButton lang={validLang} />
         <Analytics />
       </body>
     </html>

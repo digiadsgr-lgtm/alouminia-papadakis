@@ -9,7 +9,7 @@ import JsonLd from '@/components/JsonLd'
 
 export async function generateStaticParams() {
   const paths = [];
-  for (const lang of ['el', 'en']) {
+  for (const lang of ['el', 'en', 'de', 'fr', 'nl']) {
     for (const article of articles) {
       paths.push({ lang, slug: article.slug });
     }
@@ -24,8 +24,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const article = articles.find(a => a.slug === slug);
   if (!article) return {};
   
-  const title = isEn ? article.titleEN : article.titleEL;
-  const description = isEn ? article.descriptionEN : article.descriptionEL;
+  const title = lang !== 'el' ? article.titleEN : article.titleEL;
+  const description = lang !== 'el' ? article.descriptionEN : article.descriptionEL;
   const url = `https://alouminia-papadakis.gr/${lang}/blog/${slug}`;
 
   return {
@@ -36,6 +36,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       languages: {
         'el': `https://alouminia-papadakis.gr/el/blog/${slug}`,
         'en': `https://alouminia-papadakis.gr/en/blog/${slug}`,
+        'de': `https://alouminia-papadakis.gr/de/blog/${slug}`,
+        'fr': `https://alouminia-papadakis.gr/fr/blog/${slug}`,
+        'nl': `https://alouminia-papadakis.gr/nl/blog/${slug}`,
         'x-default': `https://alouminia-papadakis.gr/el/blog/${slug}`,
       },
     },
@@ -43,7 +46,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       title,
       description,
       url,
-      siteName: isEn ? 'Papadakis Aluminium' : 'Αλουμίνια Παπαδάκης',
+      siteName: lang !== 'el' ? 'Papadakis Aluminium' : 'Αλουμίνια Παπαδάκης',
       images: [
         {
           url: `https://alouminia-papadakis.gr${article.image}`,
@@ -52,7 +55,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
           alt: title,
         },
       ],
-      locale: isEn ? 'en_US' : 'el_GR',
+      locale: lang === 'el' ? 'el_GR' : (lang === 'de' ? 'de_DE' : (lang === 'fr' ? 'fr_FR' : (lang === 'nl' ? 'nl_NL' : 'en_US'))),
       type: 'article',
       publishedTime: article.date,
     },
@@ -67,7 +70,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
 export default async function BlogPostPage({ params }: { params: Promise<{ lang: string, slug: string }> }) {
   const { lang, slug } = await params;
-  const isEn = lang === 'en';
+  const isEn = lang !== 'el';
   
   const article = articles.find(a => a.slug === slug);
   

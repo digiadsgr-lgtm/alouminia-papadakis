@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { ShieldCheck, Zap, Factory, CheckCircle2, ChevronRight, PhoneCall, MapPin, Mail, Sparkles, Home, BookOpen } from 'lucide-react'
+import TrustBadges from './TrustBadges'
 import JsonLd from '@/components/JsonLd'
 import { useRef } from 'react'
 
@@ -199,6 +200,8 @@ export default function HomeEL() {
         </motion.div>
       </article>
 
+      <TrustBadges lang="el" className="relative z-30 -mt-12 mb-12" />
+
       <section className="bg-navy py-12 relative z-20 shadow-2xl border-t border-b border-navy-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/5">
@@ -300,7 +303,7 @@ export default function HomeEL() {
                <PhoneCall className="text-red mb-6" size={32} />
                <div>
                  <p className="text-gray-400 text-sm mb-2 uppercase tracking-wide">Καλεστε Μας</p>
-                 <a href="tel:2831023897" className="font-bold text-2xl group-hover:text-red transition-colors">28310 23897</a>
+                 <a href="tel:2831023897" className="font-bold text-2xl group-hover:text-[var(--color-red-light)] transition-colors">28310 23897</a>
                </div>
             </div>
             <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 flex flex-col justify-between hover:bg-white/10 hover:border-red/50 transition-all duration-300 rounded-2xl group cursor-pointer">
@@ -314,7 +317,7 @@ export default function HomeEL() {
                <Mail className="text-red mb-6" size={32} />
                <div>
                  <p className="text-gray-400 text-sm mb-2 uppercase tracking-wide">Email Επικοινωνιας</p>
-                 <a href="mailto:gpapadakisret@gmail.com" className="font-bold text-lg md:text-xl group-hover:text-red transition-colors break-all">gpapadakisret@gmail.com</a>
+                 <a href="mailto:gpapadakisret@gmail.com" className="font-bold text-lg md:text-xl group-hover:text-[var(--color-red-light)] transition-colors break-all">gpapadakisret@gmail.com</a>
                </div>
             </div>
           </div>

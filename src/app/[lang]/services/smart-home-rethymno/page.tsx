@@ -4,55 +4,88 @@ import Link from 'next/link'
 import JsonLd from '@/components/JsonLd'
 import FaqAccordion from '@/components/FaqAccordion'
 import PageTransition from '@/components/PageTransition'
+import TrustBadges from '@/components/TrustBadges'
 import { Cpu, Smartphone, ShieldCheck, ChevronLeft } from 'lucide-react'
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
-  const isEn = lang === 'en';
   
-  const title = isEn 
-    ? 'Smart Home Automations Crete | Somfy Motors' 
-    : 'Αυτοματισμοί & Smart Home Ρέθυμνο | Somfy';
-    
-  const description = isEn 
-    ? 'Smart Home automations in Rethymno, Crete. Remote control for shutters, doors, and pergolas via smartphone. Official Somfy partners.'
-    : 'Αυτοματισμοί και Smart Home λύσεις στο Ρέθυμνο. Απομακρυσμένος έλεγχος για ρολά και πέργκολες μέσω κινητού. Επίσημοι συνεργάτες Somfy.';
-    
+  const content = {
+    el: {
+      title: 'Smart Home Ρέθυμνο | Αυτοματισμοί Κουφωμάτων',
+      description: 'Λύσεις Smart Home για κουφώματα Alumil στο Ρέθυμνο. Απομακρυσμένος έλεγχος ρολών, βιοκλιματικών περγκολών και έξυπνες κλειδαριές ασφαλείας.',
+      siteName: 'Αλουμίνια Παπαδάκης',
+      imageAlt: 'Έξυπνο σπίτι και αυτοματισμοί κουφωμάτων στην Κρήτη',
+      locale: 'el_GR'
+    },
+    en: {
+      title: 'Smart Home Crete | Window Automations',
+      description: 'Smart home integration for Alumil windows in Rethymno. Remote-controlled rolling shutters, bioclimatic pergolas, and smart security locks.',
+      siteName: 'Papadakis Aluminium',
+      imageAlt: 'Smart home window automations in Crete',
+      locale: 'en_US'
+    },
+    de: {
+      title: 'Smart Home Kreta | Fensterautomatisierungen',
+      description: 'Integration von Smart Home für Alumil-Fenster in Rethymno. Ferngesteuerte Rollläden, bioklimatische Pergolen und intelligente Sicherheitsschlösser.',
+      siteName: 'Papadakis Aluminium',
+      imageAlt: 'Smart Home Fensterautomatisierungen auf Kreta',
+      locale: 'de_DE'
+    },
+    fr: {
+      title: 'Maison Intelligente Crète | Automatisations Fenêtres',
+      description: 'Intégration de maison intelligente pour fenêtres Alumil à Réthymnon. Volets roulants contrôlés à distance, pergolas bioclimatiques et serrures connectées.',
+      siteName: 'Papadakis Aluminium',
+      imageAlt: 'Automatisations de fenêtres intelligentes en Crète',
+      locale: 'fr_FR'
+    },
+    nl: {
+      title: 'Smart Home Kreta | Raamautomatisering',
+      description: 'Smart home integratie voor Alumil ramen in Rethymnon. Op afstand bedienbare rolluiken, bioklimatische pergola\'s en slimme veiligheidssloten.',
+      siteName: 'Papadakis Aluminium',
+      imageAlt: 'Smart home raamautomatisering op Kreta',
+      locale: 'nl_NL'
+    }
+  }
+
+  const l = content[lang as keyof typeof content] || content['en'];
   const url = `https://alouminia-papadakis.gr/${lang}/services/smart-home-rethymno`;
-  const imageUrl = 'https://alouminia-papadakis.gr/images/smart_home_automation_1776183365365.png';
-  const imageAlt = isEn ? 'Somfy smart home automation in Crete' : 'Αυτοματισμοί smart home Somfy στο Ρέθυμνο';
+  const imageUrl = 'https://alouminia-papadakis.gr/images/smart_home_automation_1776183424168.png';
 
   return {
-    title,
-    description,
+    title: l.title,
+    description: l.description,
     alternates: {
       canonical: url,
       languages: {
         'el': 'https://alouminia-papadakis.gr/el/services/smart-home-rethymno',
         'en': 'https://alouminia-papadakis.gr/en/services/smart-home-rethymno',
+        'de': 'https://alouminia-papadakis.gr/de/services/smart-home-rethymno',
+        'fr': 'https://alouminia-papadakis.gr/fr/services/smart-home-rethymno',
+        'nl': 'https://alouminia-papadakis.gr/nl/services/smart-home-rethymno',
         'x-default': 'https://alouminia-papadakis.gr/el/services/smart-home-rethymno',
       },
     },
     openGraph: {
-      title,
-      description,
+      title: l.title,
+      description: l.description,
       url,
-      siteName: isEn ? 'Papadakis Aluminium' : 'Αλουμίνια Παπαδάκης',
+      siteName: l.siteName,
       images: [
         {
           url: imageUrl,
           width: 1200,
           height: 630,
-          alt: imageAlt,
+          alt: l.imageAlt,
         },
       ],
-      locale: isEn ? 'en_US' : 'el_GR',
+      locale: l.locale,
       type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
-      title,
-      description,
+      title: l.title,
+      description: l.description,
       images: [imageUrl],
     },
   }
@@ -62,29 +95,45 @@ export default async function SmartHomePage({ params }: { params: Promise<{ lang
   const { lang } = await params;
   const isEn = lang === 'en'
 
-  const faqs = isEn ? [
-    {
-      question: "Can I upgrade my existing aluminum windows to a smart home system?",
-      answer: "In most cases, yes! We can retrofit Somfy or other compatible smart motors to your existing rolling shutters, awnings, and pergolas without replacing the entire system.",
-      textAnswer: "In most cases, yes! We can retrofit Somfy or other compatible smart motors to your existing rolling shutters, awnings, and pergolas without replacing the entire system."
-    },
-    {
-      question: "Is it difficult to use?",
-      answer: "Not at all. The systems are designed to be user-friendly, allowing you to control everything from your smartphone, tablet, or via voice commands with Google Assistant / Alexa.",
-      textAnswer: "Not at all. The systems are designed to be user-friendly, allowing you to control everything from your smartphone, tablet, or via voice commands with Google Assistant / Alexa."
-    }
-  ] : [
-    {
-      question: "Μπορώ να κάνω έξυπνα τα ήδη υπάρχοντα κουφώματά μου;",
-      answer: "Στις περισσότερες περιπτώσεις, ναι! Μπορούμε να τοποθετήσουμε μοτέρ Somfy ή άλλους συμβατούς αυτοματισμούς στα υπάρχοντα ρολά, τις τέντες ή τις πέργκολές σας χωρίς να χρειαστεί πλήρης αντικατάσταση.",
-      textAnswer: "Στις περισσότερες περιπτώσεις, ναι! Μπορούμε να τοποθετήσουμε μοτέρ Somfy ή άλλους συμβατούς αυτοματισμούς στα υπάρχοντα ρολά, τις τέντες ή τις πέργκολές σας χωρίς να χρειαστεί πλήρης αντικατάσταση."
-    },
-    {
-      question: "Είναι δύσκολο στη χρήση;",
-      answer: "Καθόλου. Τα συστήματα έχουν σχεδιαστεί για να είναι απόλυτα φιλικά προς τον χρήστη. Μπορείτε να ελέγχετε τα πάντα από το κινητό, το tablet ή με φωνητικές εντολές μέσω Google Assistant / Alexa.",
-      textAnswer: "Καθόλου. Τα συστήματα έχουν σχεδιαστεί για να είναι απόλυτα φιλικά προς τον χρήστη. Μπορείτε να ελέγχετε τα πάντα από το κινητό, το tablet ή με φωνητικές εντολές μέσω Google Assistant / Alexa."
-    }
-  ];
+  const faqsContent = {
+    el: [
+      {
+        question: "Μπορώ να κάνω έξυπνα τα ήδη υπάρχοντα κουφώματά μου;",
+        answer: "Στις περισσότερες περιπτώσεις, ναι! Μπορούμε να τοποθετήσουμε μοτέρ Somfy ή άλλους συμβατούς αυτοματισμούς στα υπάρχοντα ρολά, τις τέντες ή τις πέργκολές σας χωρίς να χρειαστεί πλήρης αντικατάσταση.",
+        textAnswer: "Στις περισσότερες περιπτώσεις, ναι! Μπορούμε να τοποθετήσουμε μοτέρ Somfy ή άλλους συμβατούς αυτοματισμούς στα υπάρχοντα ρολά, τις τέντες ή τις πέργκολές σας χωρίς να χρειαστεί πλήρης αντικατάσταση."
+      },
+      {
+        question: "Είναι δύσκολο στη χρήση;",
+        answer: "Καθόλου. Τα συστήματα έχουν σχεδιαστεί για να είναι απόλυτα φιλικά προς τον χρήστη. Μπορείτε να ελέγχετε τα πάντα από το κινητό, το tablet ή με φωνητικές εντολές μέσω Google Assistant / Alexa.",
+        textAnswer: "Καθόλου. Τα συστήματα έχουν σχεδιαστεί για να είναι απόλυτα φιλικά προς τον χρήστη. Μπορείτε να ελέγχετε τα πάντα από το κινητό, το tablet ή με φωνητικές εντολές μέσω Google Assistant / Alexa."
+      }
+    ],
+    en: [
+      {
+        question: "Can I upgrade my existing aluminum windows to a smart home system?",
+        answer: "In most cases, yes! We can retrofit Somfy or other compatible smart motors to your existing rolling shutters, awnings, and pergolas without replacing the entire system.",
+        textAnswer: "In most cases, yes! We can retrofit Somfy or other compatible smart motors to your existing rolling shutters, awnings, and pergolas without replacing the entire system."
+      },
+      {
+        question: "Is it difficult to use?",
+        answer: "Not at all. The systems are designed to be user-friendly, allowing you to control everything from your smartphone, tablet, or via voice commands with Google Assistant / Alexa.",
+        textAnswer: "Not at all. The systems are designed to be user-friendly, allowing you to control everything from your smartphone, tablet, or via voice commands with Google Assistant / Alexa."
+      }
+    ],
+    de: [
+      { question: "Kann ich meine bestehenden Aluminiumfenster auf ein Smart-Home-System aufrüsten?", answer: "In den meisten Fällen ja! Wir können Somfy-Motoren an Ihren bestehenden Rollläden nachrüsten, ohne das gesamte System austauschen zu müssen.", textAnswer: "In den meisten Fällen ja! Wir können Somfy-Motoren an Ihren bestehenden Rollläden nachrüsten." },
+      { question: "Ist es schwierig zu bedienen?", answer: "Ganz und gar nicht. Die Systeme sind benutzerfreundlich gestaltet.", textAnswer: "Ganz und gar nicht. Die Systeme sind benutzerfreundlich gestaltet." }
+    ],
+    fr: [
+      { question: "Puis-je mettre à niveau mes fenêtres existantes vers un système de maison intelligente ?", answer: "Dans la plupart des cas, oui ! Nous pouvons installer des moteurs Somfy sur vos volets roulants existants sans avoir à remplacer l'ensemble du système.", textAnswer: "Dans la plupart des cas, oui ! Nous pouvons installer des moteurs Somfy sur vos volets roulants existants sans avoir à remplacer l'ensemble du système." },
+      { question: "Est-ce difficile à utiliser ?", answer: "Pas du tout. Les systèmes sont conçus pour être conviviaux.", textAnswer: "Pas du tout. Les systèmes sont conçus pour être conviviaux." }
+    ],
+    nl: [
+      { question: "Kan ik mijn bestaande aluminium ramen upgraden naar een smart home-systeem?", answer: "In de meeste gevallen wel! We kunnen Somfy-motoren op uw bestaande rolluiken achteraf monteren zonder het hele systeem te hoeven vervangen.", textAnswer: "In de meeste gevallen wel! We kunnen Somfy-motoren op uw bestaande rolluiken achteraf monteren zonder het hele systeem te hoeven vervangen." },
+      { question: "Is het moeilijk te gebruiken?", answer: "Helemaal niet. De systemen zijn ontworpen om gebruiksvriendelijk te zijn.", textAnswer: "Helemaal niet. De systemen zijn ontworpen om gebruiksvriendelijk te zijn." }
+    ]
+  };
+  const faqs = faqsContent[lang as keyof typeof faqsContent] || faqsContent['en'];
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -167,6 +216,8 @@ export default async function SmartHomePage({ params }: { params: Promise<{ lang
           </p>
         </div>
       </section>
+
+      <TrustBadges lang={lang as any} badges={['alumil']} className="relative z-30 -mt-12 bg-white" />
 
       <section className="py-24 bg-white text-navy">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16">

@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import JsonLd from '@/components/JsonLd'
 import PageTransition from '@/components/PageTransition'
+import TrustBadges from '@/components/TrustBadges'
 import { Shield, PenTool, CheckCircle, ChevronLeft, Thermometer, VolumeX, PhoneCall } from 'lucide-react'
 import dynamic from 'next/dynamic'
 
@@ -11,51 +12,83 @@ const InsulationSimulator = dynamic(() => import('@/components/InsulationSimulat
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
-  const isEn = lang === 'en';
   
-  const title = isEn 
-    ? 'Aluminum Windows Crete | Alumil Systems' 
-    : 'Ενεργειακά Κουφώματα Αλουμινίου Ρέθυμνο | Alumil';
-    
-  const description = isEn 
-    ? 'Premium energy-efficient aluminum windows in Rethymno, Crete. High thermal insulation (Uw up to 0.9 W/m²K) and certified security. Official Alumil partners.'
-    : 'Ενεργειακά κουφώματα αλουμινίου Alumil στο Ρέθυμνο με δείκτη Uw έως 0,9 W/m²K. Κατασκευή & τοποθέτηση από πιστοποιημένο συνεργείο. Ζητήστε δωρεάν μελέτη.';
-    
+  const content = {
+    el: {
+      title: 'Ενεργειακά Κουφώματα Αλουμινίου Ρέθυμνο | Alumil',
+      description: 'Ενεργειακά κουφώματα αλουμινίου Alumil στο Ρέθυμνο με δείκτη Uw έως 0,9 W/m²K. Κατασκευή & τοποθέτηση από πιστοποιημένο συνεργείο. Ζητήστε δωρεάν μελέτη.',
+      siteName: 'Αλουμίνια Παπαδάκης',
+      imageAlt: 'Ενεργειακές μπαλκονόπορτες αλουμινίου Alumil σε κατοικία στο Ρέθυμνο',
+      locale: 'el_GR'
+    },
+    en: {
+      title: 'Aluminum Windows Crete | Alumil Systems',
+      description: 'Premium energy-efficient aluminum windows in Rethymno, Crete. High thermal insulation (Uw up to 0.9 W/m²K) and certified security. Official Alumil partners.',
+      siteName: 'Papadakis Aluminium',
+      imageAlt: 'Energy efficient Alumil aluminum balcony doors in Rethymno residence',
+      locale: 'en_US'
+    },
+    de: {
+      title: 'Aluminiumfenster Kreta | Alumil Systeme',
+      description: 'Premium energieeffiziente Aluminiumfenster in Rethymno. Hohe Wärmedämmung (Uw bis 0,9 W/m²K) und zertifizierte Sicherheit. Offizielle Alumil-Partner.',
+      siteName: 'Papadakis Aluminium',
+      imageAlt: 'Energieeffiziente Alumil-Balkontüren in Residenz auf Kreta',
+      locale: 'de_DE'
+    },
+    fr: {
+      title: 'Fenêtres Aluminium Crète | Systèmes Alumil',
+      description: 'Fenêtres écoénergétiques premium à Réthymnon. Isolation thermique élevée (Uw 0,9 W/m²K) et sécurité certifiée. Partenaires officiels Alumil.',
+      siteName: 'Papadakis Aluminium',
+      imageAlt: 'Portes-fenêtres en aluminium Alumil en Crète',
+      locale: 'fr_FR'
+    },
+    nl: {
+      title: 'Aluminium Ramen Kreta | Alumil Systemen',
+      description: 'Premium energiezuinige ramen in Rethymnon. Hoge thermische isolatie (Uw tot 0,9 W/m²K) en gecertificeerde veiligheid. Alumil partner.',
+      siteName: 'Papadakis Aluminium',
+      imageAlt: 'Energiezuinige Alumil aluminium deuren in Kreta',
+      locale: 'nl_NL'
+    }
+  }
+
+  const l = content[lang as keyof typeof content] || content['en'];
   const url = `https://alouminia-papadakis.gr/${lang}/services/koufomata-alouminiou-rethymno`;
   const imageUrl = 'https://alouminia-papadakis.gr/images/modern_aluminum_windows_1776183397754.png';
-  const imageAlt = isEn ? 'Energy efficient Alumil aluminum balcony doors in Rethymno residence' : 'Ενεργειακές μπαλκονόπορτες αλουμινίου Alumil σε κατοικία στο Ρέθυμνο';
 
   return {
-    title,
-    description,
+    title: l.title,
+    description: l.description,
     alternates: {
       canonical: url,
       languages: {
         'el': 'https://alouminia-papadakis.gr/el/services/koufomata-alouminiou-rethymno',
         'en': 'https://alouminia-papadakis.gr/en/services/koufomata-alouminiou-rethymno',
+        'de': 'https://alouminia-papadakis.gr/de/services/koufomata-alouminiou-rethymno',
+        'fr': 'https://alouminia-papadakis.gr/fr/services/koufomata-alouminiou-rethymno',
+        'nl': 'https://alouminia-papadakis.gr/nl/services/koufomata-alouminiou-rethymno',
         'x-default': 'https://alouminia-papadakis.gr/el/services/koufomata-alouminiou-rethymno',
       },
     },
     openGraph: {
-      title,
-      description,
+      title: l.title,
+      description: l.description,
       url,
-      siteName: isEn ? 'Papadakis Aluminium' : 'Αλουμίνια Παπαδάκης',
+      siteName: l.siteName,
       images: [
         {
           url: imageUrl,
           width: 1200,
           height: 630,
-          alt: imageAlt,
+          alt: l.imageAlt,
         },
       ],
-      locale: isEn ? 'en_US' : 'el_GR',
+      locale: l.locale,
       type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
-      title,
-      description,
+      title: l.title,
+      description: l.description,
       images: [imageUrl],
     },
   }
@@ -65,39 +98,58 @@ export default async function KoufomataPage({ params }: { params: Promise<{ lang
   const { lang } = await params;
   const isEn = lang === 'en'
 
-  const faqs = isEn ? [
-    {
-      question: "How much do aluminum windows cost in Rethymno?",
-      answer: "The cost depends on the profile series, the glazing, and dimensions. For example, an energy-efficient balcony door with a thermal break starts from the standard Alumil series and scales up to the premium SUPREME. Every project is priced after a free measurement.",
-      textAnswer: "The cost depends on the profile series, the glazing, and dimensions. For example, an energy-efficient balcony door with a thermal break starts from the standard Alumil series and scales up to the premium SUPREME. Every project is priced after a free measurement."
-    },
-    {
-      question: "What is the U-value of your aluminum windows?",
-      answer: "Our certified Alumil systems achieve a U-value up to 0.9 W/m²K, ensuring maximum energy efficiency and thermal insulation.",
-      textAnswer: "Our certified Alumil systems achieve a U-value up to 0.9 W/m²K, ensuring maximum energy efficiency and thermal insulation."
-    },
-    {
-      question: "Are your frames suitable for seaside properties?",
-      answer: "Yes, we apply Seaside Class certification anodizing, providing extreme resistance to salt corrosion.",
-      textAnswer: "Yes, we apply Seaside Class certification anodizing, providing extreme resistance to salt corrosion."
-    }
-  ] : [
-    {
-      question: "Πόσο κοστίζουν τα κουφώματα αλουμινίου στο Ρέθυμνο;",
-      answer: "Το κόστος εξαρτάται από τη σειρά προφίλ, τον υαλοπίνακα και τις διαστάσεις. Ενδεικτικά, μια ενεργειακή μπαλκονόπορτα με θερμοδιακοπή ξεκινά από τα επίπεδα των μεσαίων σειρών Alumil και κλιμακώνεται στις premium SUPREME. Κάθε έργο κοστολογείται μετά από δωρεάν επιμέτρηση.",
-      textAnswer: "Το κόστος εξαρτάται από τη σειρά προφίλ, τον υαλοπίνακα και τις διαστάσεις. Ενδεικτικά, μια ενεργειακή μπαλκονόπορτα με θερμοδιακοπή ξεκινά από τα επίπεδα των μεσαίων σειρών Alumil και κλιμακώνεται στις premium SUPREME. Κάθε έργο κοστολογείται μετά από δωρεάν επιμέτρηση."
-    },
-    {
-      question: "Ποιος είναι ο δείκτης θερμοπερατότητας (Uw) των κουφωμάτων;",
-      answer: "Τα πιστοποιημένα συστήματα Alumil SMARTIA/SUPREME επιτυγχάνουν δείκτη Uw έως 0.9 W/m²K, εξασφαλίζοντας μέγιστη ενεργειακή απόδοση.",
-      textAnswer: "Τα πιστοποιημένα συστήματα Alumil SMARTIA/SUPREME επιτυγχάνουν δείκτη Uw έως 0.9 W/m²K, εξασφαλίζοντας μέγιστη ενεργειακή απόδοση."
-    },
-    {
-      question: "Είναι τα κουφώματα κατάλληλα για παραθαλάσσια σπίτια στην Κρήτη;",
-      answer: "Ναι, εφαρμόζουμε πιστοποιημένη επεξεργασία ανοδίωσης Seaside Class, εξασφαλίζοντας απόλυτη αντοχή στη διάβρωση από την αλμύρα.",
-      textAnswer: "Ναι, εφαρμόζουμε πιστοποιημένη επεξεργασία ανοδίωσης Seaside Class, εξασφαλίζοντας απόλυτη αντοχή στη διάβρωση από την αλμύρα."
-    }
-  ];
+  const faqsContent = {
+    el: [
+      {
+        question: 'Πόσο κοστίζουν τα κουφώματα αλουμινίου στο Ρέθυμνο;',
+        answer: 'Το κόστος εξαρτάται από τη σειρά προφίλ, τον υαλοπίνακα και τις διαστάσεις. Ενδεικτικά, μια ενεργειακή μπαλκονόπορτα με θερμοδιακοπή ξεκινά από τα επίπεδα των μεσαίων σειρών Alumil και κλιμακώνεται στις premium SUPREME. Κάθε έργο κοστολογείται μετά από δωρεάν επιμέτρηση.',
+        textAnswer: 'Το κόστος εξαρτάται από τη σειρά προφίλ, τον υαλοπίνακα και τις διαστάσεις.'
+      },
+      {
+        question: 'Ποιος είναι ο δείκτης θερμοπερατότητας (Uw) των κουφωμάτων;',
+        answer: 'Τα πιστοποιημένα συστήματα Alumil SMARTIA/SUPREME επιτυγχάνουν δείκτη Uw έως 0.9 W/m²K, εξασφαλίζοντας μέγιστη ενεργειακή απόδοση.',
+        textAnswer: 'Τα πιστοποιημένα συστήματα Alumil επιτυγχάνουν δείκτη Uw έως 0.9 W/m²K.'
+      },
+      {
+        question: 'Είναι τα κουφώματα κατάλληλα για παραθαλάσσια σπίτια στην Κρήτη;',
+        answer: 'Ναι, εφαρμόζουμε πιστοποιημένη επεξεργασία ανοδίωσης Seaside Class, εξασφαλίζοντας απόλυτη αντοχή στη διάβρωση από την αλμύρα.',
+        textAnswer: 'Ναι, εφαρμόζουμε πιστοποιημένη επεξεργασία ανοδίωσης Seaside Class.'
+      }
+    ],
+    en: [
+      {
+        question: 'How much do aluminum windows cost in Rethymno?',
+        answer: 'The cost depends on the profile series, the glazing, and dimensions. Every project is priced after a free measurement.',
+        textAnswer: 'The cost depends on the profile series, the glazing, and dimensions.'
+      },
+      {
+        question: 'What is the U-value of your aluminum windows?',
+        answer: 'Our certified Alumil systems achieve a U-value up to 0.9 W/m²K, ensuring maximum energy efficiency.',
+        textAnswer: 'Our certified Alumil systems achieve a U-value up to 0.9 W/m²K.'
+      },
+      {
+        question: 'Are your frames suitable for seaside properties?',
+        answer: 'Yes, we apply Seaside Class certification anodizing, providing extreme resistance to salt corrosion.',
+        textAnswer: 'Yes, we apply Seaside Class certification anodizing.'
+      }
+    ],
+    de: [
+      { question: 'Wie viel kosten Aluminiumfenster in Rethymno?', answer: 'Die Kosten hängen von der Profilserie, Verglasung und den Abmessungen ab. Jedes Projekt wird nach kostenlosem Aufmaß berechnet.', textAnswer: 'Die Kosten hängen von der Profilserie, Verglasung und den Abmessungen ab.' },
+      { question: 'Wie hoch ist der U-Wert Ihrer Fenster?', answer: 'Unsere zertifizierten Alumil-Systeme erreichen einen U-Wert von bis zu 0,9 W/m²K.', textAnswer: 'Unsere zertifizierten Alumil-Systeme erreichen einen U-Wert von bis zu 0,9 W/m²K.' },
+      { question: 'Sind Ihre Rahmen für Immobilien am Meer geeignet?', answer: 'Ja, wir verwenden die Seaside Class-Zertifizierungseloxierung, die extreme Beständigkeit gegen Salzkorrosion bietet.', textAnswer: 'Ja, wir verwenden die Seaside Class-Zertifizierung.' }
+    ],
+    fr: [
+      { question: 'Combien coûtent les fenêtres en aluminium à Réthymnon?', answer: 'Le coût dépend de la série de profils, du vitrage et des dimensions. Chaque projet est chiffré après mesure gratuite.', textAnswer: 'Le coût dépend de la série de profils, du vitrage et des dimensions.' },
+      { question: 'Quelle est la valeur U de vos fenêtres?', answer: 'Nos systèmes Alumil certifiés atteignent une valeur U de 0,9 W/m²K.', textAnswer: 'Nos systèmes Alumil certifiés atteignent une valeur U de 0,9 W/m²K.' },
+      { question: 'Vos cadres sont-ils adaptés aux propriétés en bord de mer?', answer: 'Oui, nous appliquons une anodisation certifiée Seaside Class, offrant une résistance extrême à la corrosion saline.', textAnswer: 'Oui, nous appliquons une anodisation certifiée Seaside Class.' }
+    ],
+    nl: [
+      { question: 'Hoeveel kosten aluminium ramen in Rethymnon?', answer: 'De kosten zijn afhankelijk van de profielserie, de beglazing en de afmetingen. Elk project wordt geprijsd na een gratis meting.', textAnswer: 'De kosten zijn afhankelijk van de profielserie, de beglazing en de afmetingen.' },
+      { question: 'Wat is de U-waarde van uw ramen?', answer: 'Onze gecertificeerde Alumil-systemen bereiken een U-waarde tot 0,9 W/m²K.', textAnswer: 'Onze gecertificeerde Alumil-systemen bereiken een U-waarde tot 0,9 W/m²K.' },
+      { question: 'Zijn uw kozijnen geschikt voor woningen aan zee?', answer: 'Ja, we passen Seaside Class-certificering anodisatie toe, voor extreme weerstand tegen zoutcorrosie.', textAnswer: 'Ja, we passen Seaside Class-certificering anodisatie toe.' }
+    ]
+  };
+  const faqs = faqsContent[lang as keyof typeof faqsContent] || faqsContent['en'];
 
   const productSchema = {
     "@context": "https://schema.org",
@@ -217,6 +269,8 @@ export default async function KoufomataPage({ params }: { params: Promise<{ lang
           <InsulationSimulator isEn={isEn} />
         </header>
       </article>
+
+      <TrustBadges lang={lang as any} badges={['insulation', 'thermal', 'alumil']} className="relative z-30 -mt-12 bg-white" />
 
       <section className="py-24 bg-white text-navy">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16">

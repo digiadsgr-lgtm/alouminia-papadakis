@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Phone, Menu, X, ChevronRight, Globe } from 'lucide-react'
+import LanguageSwitcher from './LanguageSwitcher'
 
 const dict = {
   el: {
@@ -17,9 +18,7 @@ const dict = {
     contact: "Επικοινωνία",
     call: "ΚΑΛΕΣΤΕ ΜΑΣ",
     menu: "ΜΕΝΟΥ",
-    home: "Αρχική",
-    langSwitch: "EN",
-    langLink: "/en"
+    home: "Αρχική"
   },
   en: {
     servicesTitle: "Services",
@@ -33,13 +32,53 @@ const dict = {
     contact: "Contact",
     call: "CALL US",
     menu: "MENU",
-    home: "Home",
-    langSwitch: "EL",
-    langLink: "/el"
+    home: "Home"
+  },
+  de: {
+    servicesTitle: "Dienstleistungen",
+    koufomata: "Fenster",
+    pergoles: "Pergolen",
+    sidiros: "Eisenarbeiten",
+    portes: "Sicherheitstüren",
+    smarthome: "Smart Home",
+    portfolio: "Unsere Projekte",
+    blog: "Blog",
+    contact: "Kontakt",
+    call: "ANRUFEN",
+    menu: "MENÜ",
+    home: "Startseite"
+  },
+  fr: {
+    servicesTitle: "Services",
+    koufomata: "Fenêtres",
+    pergoles: "Pergolas",
+    sidiros: "Ferronnerie",
+    portes: "Portes Blindées",
+    smarthome: "Maison Intelligente",
+    portfolio: "Nos Projets",
+    blog: "Blog",
+    contact: "Contact",
+    call: "APPELEZ-NOUS",
+    menu: "MENU",
+    home: "Accueil"
+  },
+  nl: {
+    servicesTitle: "Diensten",
+    koufomata: "Ramen",
+    pergoles: "Pergola's",
+    sidiros: "Smeedwerk",
+    portes: "Veiligheidsdeuren",
+    smarthome: "Smart Home",
+    portfolio: "Onze Projecten",
+    blog: "Blog",
+    contact: "Contact",
+    call: "BEL ONS",
+    menu: "MENU",
+    home: "Home"
   }
 }
 
-export default function Navbar({ lang = 'el' }: { lang?: 'el' | 'en' }) {
+export default function Navbar({ lang = 'el' }: { lang?: 'el' | 'en' | 'de' | 'fr' | 'nl' }) {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isHidden, setIsHidden] = useState(false)
   const [lastScrollY, setLastScrollY] = useState(0)
@@ -106,9 +145,7 @@ export default function Navbar({ lang = 'el' }: { lang?: 'el' | 'en' }) {
               <Link href={`/${lang}/blog`} className={`text-sm font-semibold transition-colors ${isScrolled ? 'hover:text-red' : 'hover:text-gray-300'}`}>{t.blog}</Link>
               <Link href={`/${lang}#contact`} className={`text-sm font-semibold transition-colors ${isScrolled ? 'hover:text-red' : 'hover:text-gray-300'}`}>{t.contact}</Link>
               
-              <Link href={t.langLink} className={`flex items-center gap-1 text-sm font-bold transition-colors ${isScrolled ? 'text-navy hover:text-red' : 'text-white hover:text-red'}`}>
-                 <Globe size={16} /> {t.langSwitch}
-              </Link>
+              <LanguageSwitcher currentLang={lang} isScrolled={isScrolled} />
 
               <a href="tel:2831023897" className="flex items-center gap-2 bg-red text-white px-6 py-3 rounded-full font-bold hover:bg-red-700 transition-colors active:scale-95 shadow-lg shadow-red/25">
                 <Phone size={18} />
@@ -117,9 +154,7 @@ export default function Navbar({ lang = 'el' }: { lang?: 'el' | 'en' }) {
             </div>
 
             <div className="md:hidden flex items-center gap-4">
-               <Link href={t.langLink} className={`font-bold text-sm ${isScrolled ? 'text-navy' : 'text-white'}`}>
-                 {t.langSwitch}
-               </Link>
+               <LanguageSwitcher currentLang={lang} isScrolled={isScrolled} />
                <button 
                  onClick={() => setMobileMenuOpen(true)}
                  className={`p-2 -mr-2 active:scale-90 transform transition-transform ${isScrolled ? 'text-navy' : 'text-white'}`}

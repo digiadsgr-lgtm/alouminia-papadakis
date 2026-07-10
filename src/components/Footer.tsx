@@ -41,10 +41,70 @@ const dict = {
     terms: "Terms of Use",
     privacy: "Privacy Policy",
     rights: "Papadakis Aluminium. All rights reserved."
+  },
+  de: {
+    title: "PAPADAKIS",
+    surname: "ALUMINIUM",
+    desc: "Der Inbegriff moderner Architektur. Zertifizierte Alumil-Aluminiumsysteme mit Fokus auf absolute Sicherheit, Wärmedämmung und minimalistische Ästhetik für Ihre Luxusresidenz.",
+    contact: "HEUTE KONTAKTIEREN",
+    address: "Adresse",
+    expertise: "KERNLEISTUNGEN",
+    exp1: "Energiefenster",
+    exp2: "Bioklimatische Pergolen",
+    exp3: "Design-Eisenarbeiten",
+    exp4: "RC3 Sicherheitstüren",
+    links: "SCHNELLLINKS",
+    home: "Startseite",
+    portfolio: "Unser Portfolio",
+    smarthome: "Smart Home Lösungen",
+    blog: "Unser Blog",
+    terms: "Nutzungsbedingungen",
+    privacy: "Datenschutzrichtlinie",
+    rights: "Papadakis Aluminium. Alle Rechte vorbehalten."
+  },
+  fr: {
+    title: "PAPADAKIS",
+    surname: "ALUMINIUM",
+    desc: "Le summum de l'architecture moderne. Systèmes en aluminium certifiés Alumil, axés sur la sécurité absolue, l'isolation thermique et l'esthétique minimaliste pour votre résidence de luxe.",
+    contact: "NOUS CONTACTER",
+    address: "Adresse",
+    expertise: "SERVICES CLÉS",
+    exp1: "Fenêtres Écoénergétiques",
+    exp2: "Pergolas Bioclimatiques",
+    exp3: "Ferronnerie Design",
+    exp4: "Portes Blindées RC3",
+    links: "LIENS RAPIDES",
+    home: "Accueil",
+    portfolio: "Notre Portfolio",
+    smarthome: "Solutions Smart Home",
+    blog: "Notre Blog",
+    terms: "Conditions d'Utilisation",
+    privacy: "Politique de Confidentialité",
+    rights: "Papadakis Aluminium. Tous droits réservés."
+  },
+  nl: {
+    title: "PAPADAKIS",
+    surname: "ALUMINIUM",
+    desc: "Het toppunt van moderne architectuur. Gecertificeerde Alumil aluminiumsystemen, met focus op absolute veiligheid, thermische isolatie en minimalistische esthetiek voor uw luxe residentie.",
+    contact: "NEEM CONTACT OP",
+    address: "Adres",
+    expertise: "KERN DIENSTEN",
+    exp1: "Energiezuinige Ramen",
+    exp2: "Bioklimatische Pergola's",
+    exp3: "Design Smeedwerk",
+    exp4: "RC3 Veiligheidsdeuren",
+    links: "SNELKOPPELINGEN",
+    home: "Home",
+    portfolio: "Ons Portfolio",
+    smarthome: "Smart Home Oplossingen",
+    blog: "Onze Blog",
+    terms: "Gebruiksvoorwaarden",
+    privacy: "Privacybeleid",
+    rights: "Papadakis Aluminium. Alle rechten voorbehouden."
   }
 }
 
-export default function Footer({ lang = 'el' }: { lang?: 'el' | 'en' }) {
+export default function Footer({ lang = 'el' }: { lang?: 'el' | 'en' | 'de' | 'fr' | 'nl' }) {
   const t = dict[lang]
 
   return (
@@ -89,27 +149,27 @@ export default function Footer({ lang = 'el' }: { lang?: 'el' | 'en' }) {
           <h4 className="text-md font-black mb-6 tracking-widest text-white uppercase">{t.links}</h4>
           <ul className="space-y-4 text-sm text-gray-400 font-medium">
             <li className="flex items-center gap-2 group cursor-pointer">
-              <ChevronRight size={14} className="text-gray-600 group-hover:translate-x-1 transition-transform" /> 
+              <ChevronRight size={14} className="text-gray-400 group-hover:translate-x-1 transition-transform" /> 
               <Link href={`/${lang}`} className="group-hover:text-white transition-colors">{t.home}</Link>
             </li>
             <li className="flex items-center gap-2 group cursor-pointer">
-              <ChevronRight size={14} className="text-gray-600 group-hover:translate-x-1 transition-transform" /> 
+              <ChevronRight size={14} className="text-gray-400 group-hover:translate-x-1 transition-transform" /> 
               <Link href={`/${lang}/portfolio`} className="group-hover:text-white transition-colors">{t.portfolio}</Link>
             </li>
             <li className="flex items-center gap-2 group cursor-pointer">
-              <ChevronRight size={14} className="text-gray-600 group-hover:translate-x-1 transition-transform" /> 
+              <ChevronRight size={14} className="text-gray-400 group-hover:translate-x-1 transition-transform" /> 
               <Link href={`/${lang}/blog`} className="group-hover:text-white transition-colors">{t.blog}</Link>
             </li>
             <li className="flex items-center gap-2 group cursor-pointer">
-              <ChevronRight size={14} className="text-gray-600 group-hover:translate-x-1 transition-transform" /> 
+              <ChevronRight size={14} className="text-gray-400 group-hover:translate-x-1 transition-transform" /> 
               <Link href={`/${lang}/services/smart-home-rethymno`} className="group-hover:text-white transition-colors">{t.smarthome}</Link>
             </li>
             <li className="flex items-center gap-2 group cursor-pointer">
-              <ChevronRight size={14} className="text-gray-600 group-hover:translate-x-1 transition-transform" /> 
+              <ChevronRight size={14} className="text-gray-400 group-hover:translate-x-1 transition-transform" /> 
               <Link href={lang === 'el' ? '/el/oroi-xrisis' : '/en/terms-of-use'} className="group-hover:text-white transition-colors">{t.terms}</Link>
             </li>
             <li className="flex items-center gap-2 group cursor-pointer">
-              <ChevronRight size={14} className="text-gray-600 group-hover:translate-x-1 transition-transform" /> 
+              <ChevronRight size={14} className="text-gray-400 group-hover:translate-x-1 transition-transform" /> 
               <Link href={lang === 'el' ? '/el/politiki-aporritou' : '/en/privacy-policy'} className="group-hover:text-white transition-colors">{t.privacy}</Link>
             </li>
           </ul>

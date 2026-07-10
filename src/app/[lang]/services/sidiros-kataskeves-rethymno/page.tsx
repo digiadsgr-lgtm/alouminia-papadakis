@@ -4,55 +4,88 @@ import Link from 'next/link'
 import JsonLd from '@/components/JsonLd'
 import FaqAccordion from '@/components/FaqAccordion'
 import PageTransition from '@/components/PageTransition'
+import TrustBadges from '@/components/TrustBadges'
 import { Factory, Cog, ChevronLeft, Building } from 'lucide-react'
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
-  const isEn = lang === 'en';
   
-  const title = isEn 
-    ? 'Industrial Ironworks | Metal Buildings Crete' 
-    : 'Βιομηχανικές Σιδηροκατασκευές | Μεταλλικά Κτίρια Ρέθυμνο';
-    
-  const description = isEn 
-    ? 'Custom ironworks and metal structures in Rethymno. Specializing in railings, stairs, and heavy-duty fabrications with anti-corrosion protection.'
-    : 'Σιδηροκατασκευές στο Ρέθυμνο με εξειδίκευση σε κάγκελα, σκάλες και ειδικές κατασκευές. Γαλβάνισμα και ηλεκτροστατική βαφή για αντοχή στη φθορά.';
-    
+  const content = {
+    el: {
+      title: 'Σιδηροκατασκευές Ρέθυμνο | Custom Ειδικές Κατασκευές',
+      description: 'Εξειδικευμένες σιδηροκατασκευές στο Ρέθυμνο. Κατασκευή περιφράξεων, κάγκελων, στεγάστρων και βαρέων μεταλλικών κατασκευών με αντισκωριακή προστασία.',
+      siteName: 'Αλουμίνια Παπαδάκης',
+      imageAlt: 'Μεταλλικές κατασκευές και σιδηροκατασκευές στην Κρήτη',
+      locale: 'el_GR'
+    },
+    en: {
+      title: 'Ironworks Crete | Custom Metal Fabrications',
+      description: 'Specialized ironworks in Rethymno, Crete. Custom fences, railings, and heavy metal structures with marine-grade rust protection.',
+      siteName: 'Papadakis Aluminium',
+      imageAlt: 'Custom metal fabrications in Crete',
+      locale: 'en_US'
+    },
+    de: {
+      title: 'Eisenarbeiten Kreta | Metallkonstruktionen',
+      description: 'Spezialisierte Eisenarbeiten in Rethymno, Kreta. Maßgeschneiderte Zäune, Geländer und schwere Metallkonstruktionen mit Rostschutz.',
+      siteName: 'Papadakis Aluminium',
+      imageAlt: 'Maßgeschneiderte Metallkonstruktionen auf Kreta',
+      locale: 'de_DE'
+    },
+    fr: {
+      title: 'Ferronnerie Crète | Fabrications Métalliques',
+      description: 'Ferronnerie spécialisée à Réthymnon, Crète. Clôtures, rampes et structures métalliques lourdes sur mesure avec protection antirouille.',
+      siteName: 'Papadakis Aluminium',
+      imageAlt: 'Fabrications métalliques sur mesure en Crète',
+      locale: 'fr_FR'
+    },
+    nl: {
+      title: 'Smeedwerk Kreta | Metaalconstructies',
+      description: 'Gespecialiseerd smeedwerk in Rethymnon, Kreta. Op maat gemaakte hekken, leuningen en zware metaalconstructies met roestbescherming.',
+      siteName: 'Papadakis Aluminium',
+      imageAlt: 'Op maat gemaakte metaalconstructies op Kreta',
+      locale: 'nl_NL'
+    }
+  }
+
+  const l = content[lang as keyof typeof content] || content['en'];
   const url = `https://alouminia-papadakis.gr/${lang}/services/sidiros-kataskeves-rethymno`;
-  const imageUrl = 'https://alouminia-papadakis.gr/images/industrial_ironworks_1776183414837.png';
-  const imageAlt = isEn ? 'Industrial ironworks and metal building in Crete' : 'Βιομηχανική σιδηροκατασκευή και μεταλλικό κτίριο στην Κρήτη';
+  const imageUrl = 'https://alouminia-papadakis.gr/images/ironworks_metal_crete_1776183416209.png';
 
   return {
-    title,
-    description,
+    title: l.title,
+    description: l.description,
     alternates: {
       canonical: url,
       languages: {
         'el': 'https://alouminia-papadakis.gr/el/services/sidiros-kataskeves-rethymno',
         'en': 'https://alouminia-papadakis.gr/en/services/sidiros-kataskeves-rethymno',
+        'de': 'https://alouminia-papadakis.gr/de/services/sidiros-kataskeves-rethymno',
+        'fr': 'https://alouminia-papadakis.gr/fr/services/sidiros-kataskeves-rethymno',
+        'nl': 'https://alouminia-papadakis.gr/nl/services/sidiros-kataskeves-rethymno',
         'x-default': 'https://alouminia-papadakis.gr/el/services/sidiros-kataskeves-rethymno',
       },
     },
     openGraph: {
-      title,
-      description,
+      title: l.title,
+      description: l.description,
       url,
-      siteName: isEn ? 'Papadakis Aluminium' : 'Αλουμίνια Παπαδάκης',
+      siteName: l.siteName,
       images: [
         {
           url: imageUrl,
           width: 1200,
           height: 630,
-          alt: imageAlt,
+          alt: l.imageAlt,
         },
       ],
-      locale: isEn ? 'en_US' : 'el_GR',
+      locale: l.locale,
       type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
-      title,
-      description,
+      title: l.title,
+      description: l.description,
       images: [imageUrl],
     },
   }
@@ -62,29 +95,45 @@ export default async function SidirosPage({ params }: { params: Promise<{ lang: 
   const { lang } = await params;
   const isEn = lang === 'en'
 
-  const faqs = isEn ? [
-    {
-      question: "Do iron structures rust near the sea?",
-      answer: "We use hot-dip galvanizing and electrostatic painting to protect iron structures from corrosion, making them highly durable even in coastal areas.",
-      textAnswer: "We use hot-dip galvanizing and electrostatic painting to protect iron structures from corrosion, making them highly durable even in coastal areas."
-    },
-    {
-      question: "Can you create custom designs?",
-      answer: "Yes, we specialize in custom ironworks, including traditional and modern gates, railings, and industrial structures tailored to your specifications.",
-      textAnswer: "Yes, we specialize in custom ironworks, including traditional and modern gates, railings, and industrial structures tailored to your specifications."
-    }
-  ] : [
-    {
-      question: "Σκουριάζουν οι σιδηροκατασκευές κοντά στη θάλασσα;",
-      answer: "Χρησιμοποιούμε θερμό γαλβάνισμα και ηλεκτροστατική βαφή που θωρακίζουν τον σίδηρο, καθιστώντας τις κατασκευές μας εξαιρετικά ανθεκτικές ακόμα και σε παραθαλάσσιες περιοχές.",
-      textAnswer: "Χρησιμοποιούμε θερμό γαλβάνισμα και ηλεκτροστατική βαφή που θωρακίζουν τον σίδηρο, καθιστώντας τις κατασκευές μας εξαιρετικά ανθεκτικές ακόμα και σε παραθαλάσσιες περιοχές."
-    },
-    {
-      question: "Κατασκευάζετε ειδικά σχέδια κατά παραγγελία;",
-      answer: "Ναι, εξειδικευόμαστε σε custom σιδηροκατασκευές, από παραδοσιακά κάγκελα έως μοντέρνες αυλόπορτες και βιομηχανικά υπόστεγα, ακριβώς στα μέτρα σας.",
-      textAnswer: "Ναι, εξειδικευόμαστε σε custom σιδηροκατασκευές, από παραδοσιακά κάγκελα έως μοντέρνες αυλόπορτες και βιομηχανικά υπόστεγα, ακριβώς στα μέτρα σας."
-    }
-  ];
+  const faqsContent = {
+    el: [
+      {
+        question: "Σκουριάζουν οι σιδηροκατασκευές κοντά στη θάλασσα;",
+        answer: "Χρησιμοποιούμε θερμό γαλβάνισμα και ηλεκτροστατική βαφή που θωρακίζουν τον σίδηρο, καθιστώντας τις κατασκευές μας εξαιρετικά ανθεκτικές ακόμα και σε παραθαλάσσιες περιοχές.",
+        textAnswer: "Χρησιμοποιούμε θερμό γαλβάνισμα και ηλεκτροστατική βαφή που θωρακίζουν τον σίδηρο, καθιστώντας τις κατασκευές μας εξαιρετικά ανθεκτικές ακόμα και σε παραθαλάσσιες περιοχές."
+      },
+      {
+        question: "Κατασκευάζετε ειδικά σχέδια κατά παραγγελία;",
+        answer: "Ναι, εξειδικευόμαστε σε custom σιδηροκατασκευές, από παραδοσιακά κάγκελα έως μοντέρνες αυλόπορτες και βιομηχανικά υπόστεγα, ακριβώς στα μέτρα σας.",
+        textAnswer: "Ναι, εξειδικευόμαστε σε custom σιδηροκατασκευές, από παραδοσιακά κάγκελα έως μοντέρνες αυλόπορτες και βιομηχανικά υπόστεγα, ακριβώς στα μέτρα σας."
+      }
+    ],
+    en: [
+      {
+        question: "Do iron structures rust near the sea?",
+        answer: "We use hot-dip galvanizing and electrostatic painting to protect iron structures from corrosion, making them highly durable even in coastal areas.",
+        textAnswer: "We use hot-dip galvanizing and electrostatic painting to protect iron structures from corrosion, making them highly durable even in coastal areas."
+      },
+      {
+        question: "Can you create custom designs?",
+        answer: "Yes, we specialize in custom ironworks, including traditional and modern gates, railings, and industrial structures tailored to your specifications.",
+        textAnswer: "Yes, we specialize in custom ironworks, including traditional and modern gates, railings, and industrial structures tailored to your specifications."
+      }
+    ],
+    de: [
+      { question: "Rosten Eisenstrukturen in Meeresnähe?", answer: "Wir verwenden Feuerverzinkung und elektrostatische Lackierung, um Eisenstrukturen vor Korrosion zu schützen.", textAnswer: "Wir verwenden Feuerverzinkung und elektrostatische Lackierung, um Eisenstrukturen vor Korrosion zu schützen." },
+      { question: "Können Sie maßgeschneiderte Designs erstellen?", answer: "Ja, wir sind auf maßgeschneiderte Eisenarbeiten spezialisiert.", textAnswer: "Ja, wir sind auf maßgeschneiderte Eisenarbeiten spezialisiert." }
+    ],
+    fr: [
+      { question: "Les structures en fer rouillent-elles près de la mer ?", answer: "Nous utilisons la galvanisation à chaud et la peinture électrostatique pour protéger les structures en fer de la corrosion.", textAnswer: "Nous utilisons la galvanisation à chaud et la peinture électrostatique pour protéger les structures en fer de la corrosion." },
+      { question: "Pouvez-vous créer des designs personnalisés ?", answer: "Oui, nous nous spécialisons dans la ferronnerie sur mesure.", textAnswer: "Oui, nous nous spécialisons dans la ferronnerie sur mesure." }
+    ],
+    nl: [
+      { question: "Roesten ijzeren structuren bij de zee?", answer: "We gebruiken thermisch verzinken en elektrostatisch schilderen om ijzeren structuren tegen corrosie te beschermen.", textAnswer: "We gebruiken thermisch verzinken en elektrostatisch schilderen om ijzeren structuren tegen corrosie te beschermen." },
+      { question: "Kunt u op maat gemaakte ontwerpen maken?", answer: "Ja, we zijn gespecialiseerd in op maat gemaakt smeedwerk.", textAnswer: "Ja, we zijn gespecialiseerd in op maat gemaakt smeedwerk." }
+    ]
+  };
+  const faqs = faqsContent[lang as keyof typeof faqsContent] || faqsContent['en'];
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -167,6 +216,8 @@ export default async function SidirosPage({ params }: { params: Promise<{ lang: 
           </p>
         </div>
       </section>
+
+      <TrustBadges lang={lang as any} badges={['seaside', 'alumil']} className="relative z-30 -mt-12 bg-white" />
 
       <section className="py-24 bg-white text-navy">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16">
