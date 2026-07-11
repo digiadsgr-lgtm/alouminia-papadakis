@@ -30,7 +30,7 @@ const articles = [
       <p>Η βασική διαφορά έγκειται στην τεχνολογία και το κόστος. Αναγνωρίζουμε ότι η απόφαση δεν είναι εύκολη. Στο παρόν άρθρο αναλύουμε με απόλυτη ειλικρίνεια τα υπέρ, τα κατά, το κόστος και τη διάρκεια ζωής της κάθε επιλογής, ώστε να κάνετε την καλύτερη επένδυση για το ακίνητό σας.</p>
 
       <h2>Τι είναι το καθένα;</h2>
-      <p>Η <strong><a href="/el/systimata-alumil/smartia-pergoles">βιοκλιματική πέργκολα</a></strong> κατασκευάζεται 100% από αλουμίνιο (πλαίσιο και κινητές περσίδες). Οι περσίδες περιστρέφονται προσφέροντας φυσικό εξαερισμό (βιοκλιματική δράση) και όταν κλείνουν σφραγίζουν στεγανά, με το οποίο απορρέει μέσα από κρυφές υδρορροές στις κολώνες.</p>
+      <p>Η <strong><a href="/el/systimata-alumil/smartia-pergoles">βιοκλιματική πέργκολα</a></strong> κατασκευάζεται εξ ολοκλήρου από αλουμίνιο (πλαίσιο και κινητές περσίδες). Οι περσίδες περιστρέφονται προσφέροντας φυσικό εξαερισμό (βιοκλιματική δράση) και όταν κλείνουν σφραγίζουν στεγανά, με το οποίο απορρέει μέσα από κρυφές υδρορροές στις κολώνες.</p>
       <p>Η <strong>τεντοπέργκολα</strong> αποτελείται συνήθως από μεταλλικό ή αλουμινένιο σκελετό, ενώ η οροφή της καλύπτεται από ανθεκτικό ύφασμα (PVC) που ανοιγοκλείνει μέσω ηλεκτρικού μοτέρ, μαζεύοντας σε «κύματα» (πτυσσόμενη).</p>
 
       <h2>Πίνακας Σύγκρισης 8 Κρίσιμων Κριτηρίων</h2>
@@ -82,7 +82,7 @@ const articles = [
       <p>The main difference lies in technology and cost. We recognize that the decision is not easy. In this article, we honestly analyze the pros, cons, costs, and lifespan of each option, so you can make the best investment for your property.</p>
 
       <h2>What is each one?</h2>
-      <p>The <strong><a href="/en/systimata-alumil/smartia-pergoles">bioclimatic pergola</a></strong> is made 100% of aluminum (frame and movable louvers). The louvers rotate to offer natural ventilation (bioclimatic action) and when closed, they seal watertight, with water draining through hidden gutters in the columns.</p>
+      <p>The <strong><a href="/en/systimata-alumil/smartia-pergoles">bioclimatic pergola</a></strong> is made entirely of aluminum (frame and movable louvers). The louvers rotate to offer natural ventilation (bioclimatic action) and when closed, they seal watertight, with water draining through hidden gutters in the columns.</p>
       <p>The <strong>tent pergola</strong> usually consists of a metal or aluminum frame, while its roof is covered by durable fabric (PVC) that opens and closes via an electric motor, folding in "waves" (retractable).</p>
 
       <h2>8 Critical Criteria Comparison Table</h2>

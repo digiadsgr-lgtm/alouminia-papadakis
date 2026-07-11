@@ -17,11 +17,6 @@ export function middleware(request: NextRequest) {
   }
 
 
-  // Redirect the new blog post from any non-el locale to /el
-  if (pathname.match(/^\/(en|de|fr|nl)\/blog\/vioklimatiki-pergola-i-tentopergola/)) {
-    request.nextUrl.pathname = '/el/blog/vioklimatiki-pergola-i-tentopergola'
-    return NextResponse.redirect(request.nextUrl, 308)
-  }
 
   // Redirect unsupported blog locales to /en/blog
   if (pathname.match(/^\/(de|fr|nl)\/blog/)) {
