@@ -7,7 +7,7 @@ export const articles = [
     descriptionEL: 'Αναλυτική σύγκριση ανάμεσα σε βιοκλιματική πέργκολα αλουμινίου και τεντοπέργκολα. Μάθετε τις διαφορές σε τιμή, αντοχή σε ανέμους/αλμύρα, στεγανότητα και συντήρηση.',
     descriptionEN: 'Detailed comparison between aluminum bioclimatic pergolas and tent pergolas. Learn the differences in price, wind/salt resistance, watertightness, and maintenance.',
     date: '2026-07-11',
-    image: '/images/pergola-1.jpg',
+    image: '/images/blog_pergola.webp',
     contentEL: `
       <p>Η επιλογή του κατάλληλου συστήματος σκίασης στην Κρήτη είναι συχνά ένα μεγάλο δίλημμα. Το έντονο ηλιακό φως, οι δυνατοί άνεμοι και η αλμύρα της θάλασσας απαιτούν λύσεις που αντέχουν. Οι περισσότεροι ιδιοκτήτες κατοικιών και ξενοδοχείων στο Ρέθυμνο και σε όλο το νησί αναρωτιούνται: <strong>βιοκλιματική πέργκολα ή τεντοπέργκολα;</strong></p>
       
