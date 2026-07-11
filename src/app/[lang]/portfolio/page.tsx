@@ -193,7 +193,7 @@ export default async function PortfolioPage({ params }: { params: Promise<{ lang
              <div className="inline-block bg-white border border-gray-200 p-10 md:px-16 rounded-3xl shadow-xl relative overflow-hidden">
                <div className="absolute left-0 top-0 w-2 h-full bg-red"></div>
                <h3 className="text-3xl font-black text-navy mb-4 tracking-tight">{isEn ? 'structured B2B Project Operations' : 'Αναλαμβάνετε κάποιο μεγάλο Project;'}</h3>
-               <p className="text-gray-600 mb-8 max-w-xl mx-auto text-lg leading-relaxed">{isEn ? 'We provide structural solutions, πλήρως οργανωμένη timeline execution, and direct architectural collaboration for demanding hospitality or residential developments.' : 'Μηδενικό καθυστέρηση. Εγγυημένη τήρηση παραδόσεων, ειδικές B2B τιμές και άμεση προτεραιότητα σε μεγάλα κατασκευαστικά έργα.'}</p>
+               <p className="text-gray-600 mb-8 max-w-xl mx-auto text-lg leading-relaxed">{isEn ? 'We provide structural solutions, structured timeline execution, and direct architectural collaboration for demanding hospitality or residential developments.' : 'Μηδενικές καθυστερήσεις. Εγγυημένη τήρηση παραδόσεων, ειδικές B2B τιμές και άμεση προτεραιότητα σε μεγάλα κατασκευαστικά έργα.'}</p>
                <a href={`/${lang}#contact`} className="inline-block bg-navy hover:bg-red text-white px-10 py-4 rounded-full font-bold shadow-lg transition-all duration-300">
                  {isEn ? 'Contact B2B Departement' : 'Επικοινωνία με τμήμα B2B'}
                </a>

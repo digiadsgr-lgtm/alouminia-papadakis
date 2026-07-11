@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Όροι Χρήσης | Αλουμίνια Παπαδάκης',
+  title: 'Όροι Χρήσης',
   description: 'Όροι χρήσης της ιστοσελίδας alouminia-papadakis.gr',
   alternates: {
     canonical: 'https://alouminia-papadakis.gr/el/oroi-xrisis',

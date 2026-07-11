@@ -213,7 +213,7 @@ export default function HomeEL() {
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once:true }} transition={{ delay: 0.2 }} className="flex flex-col items-center p-4">
               <ShieldCheck className="text-red mb-4" size={40} />
               <h2 className="text-white font-bold text-xl mb-2">Οικογένεια σε Πλήρη Ασφάλεια</h2>
-              <p className="text-gray-400 text-sm leading-relaxed">Ασφαλείς θωρακισμένες πόρτες Class 4 και ενισχυμένα ενισχυμένα τζάμια για την πλήρη ξεγνοιασιά σας.</p>
+              <p className="text-gray-400 text-sm leading-relaxed">Ασφαλείς θωρακισμένες πόρτες Class 4 και ενισχυμένα τζάμια για την πλήρη ξεγνοιασιά σας.</p>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once:true }} transition={{ delay: 0.3 }} className="flex flex-col items-center p-4">
               <CheckCircle2 className="text-red mb-4" size={40} />
@@ -238,9 +238,9 @@ export default function HomeEL() {
              <p className="text-gray-600 text-xl leading-relaxed">
                Δεν κάνουμε απλώς τοποθετήσεις. Η μονάδα παραγωγής μας στο Ρέθυμνο σχεδιάζει, κατασκευάζει και εφαρμόζει κορυφαία αρχιτεκτονικά συστήματα που αυξάνουν την αξία και την ενεργειακή απόδοση του ακινήτου σας.
              </p>
-             <p className="text-gray-500 text-base mt-4 leading-relaxed max-w-2xl mx-auto">
-               Ως οργανωμένη (πλήρως οργανωμένη) κατασκευαστική εταιρεία, διαθέτουμε το πολυετή εμπειρία να αναλάβουμε απαιτητικά έργα. Δεν εκτελούμε μεμονωμένες επισκευές. Εστιάζουμε σε ολοκληρωμένες λύσεις με αυστηρή τήρηση χρονοδιαγραμμάτων, premium portfolio εφαρμογών και μηδενικό καθυστέρηση για τον ιδιοκτήτη.
-             </p>
+              <p className="text-gray-500 text-base mt-4 leading-relaxed max-w-2xl mx-auto">
+               Με δική μας μονάδα παραγωγής και σταθερές διαδικασίες, αναλαμβάνουμε απαιτητικά έργα από τη μελέτη έως την παράδοση. Εστιάζουμε σε ολοκληρωμένες λύσεις με αυστηρή τήρηση χρονοδιαγραμμάτων και χωρίς εκπλήξεις για τον ιδιοκτήτη.
+              </p>
            </motion.div>
 
            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

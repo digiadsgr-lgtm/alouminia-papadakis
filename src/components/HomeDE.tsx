@@ -90,7 +90,7 @@ export default function HomeDE() {
         "name": "What is the structure of your After-Sales support?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We are a structured construction firm, not independent handymen. Papadakis Aluminium features an organized After-Sales department providing the official Alumil manufacturer guarantee alongside dedicated long-term service. Consistent, reliable support after handover is a fundamental part of our πλήρως οργανωμένη operations."
+          "text": "We are a structured construction firm, not independent handymen. Papadakis Aluminium features an organized After-Sales department providing the official Alumil manufacturer guarantee alongside dedicated long-term service. Consistent, reliable support after handover is a fundamental part of our structured operations."
         }
       },
       {
@@ -239,7 +239,7 @@ export default function HomeDE() {
                We don't just do basic installations. Our manufacturing unit in Rethymno partners with architects and developers to manufacture premium architectural systems that elevate your property's commercial and aesthetic value.
              </p>
              <p className="text-gray-500 text-base mt-4 leading-relaxed max-w-2xl mx-auto">
-               As a πλήρως οργανωμένη manufacturing company, we possess the πολυετή εμπειρία to handle demanding architectural projects. We do not execute single repairs. We focus on complete project solutions with strict timeline adherence, a premium application portfolio, and zero καθυστέρηση for investors and contractors.
+               As a structured manufacturing company, we possess the proven expertise to handle demanding architectural projects. We do not execute single repairs. We focus on complete project solutions with strict timeline adherence, a premium application portfolio, and zero delays for investors and contractors.
              </p>
            </motion.div>
 

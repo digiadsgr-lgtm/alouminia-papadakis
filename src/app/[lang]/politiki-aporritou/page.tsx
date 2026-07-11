@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Πολιτική Απορρήτου & Cookies | Αλουμίνια Παπαδάκης',
+  title: 'Πολιτική Απορρήτου & Cookies',
   description: 'Πολιτική προστασίας προσωπικών δεδομένων και χρήσης cookies.',
   alternates: {
     canonical: 'https://alouminia-papadakis.gr/el/politiki-aporritou',

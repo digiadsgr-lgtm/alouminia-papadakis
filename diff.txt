@@ -1,0 +1,596 @@
+﻿diff --git a/src/app/[lang]/blog/[slug]/page.tsx b/src/app/[lang]/blog/[slug]/page.tsx
+index 88f91bb..215450d 100644
+--- a/src/app/[lang]/blog/[slug]/page.tsx
++++ b/src/app/[lang]/blog/[slug]/page.tsx
+@@ -36,9 +36,6 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
+       languages: {
+         'el': `https://alouminia-papadakis.gr/el/blog/${slug}`,
+         'en': `https://alouminia-papadakis.gr/en/blog/${slug}`,
+-        'de': `https://alouminia-papadakis.gr/de/blog/${slug}`,
+-        'fr': `https://alouminia-papadakis.gr/fr/blog/${slug}`,
+-        'nl': `https://alouminia-papadakis.gr/nl/blog/${slug}`,
+         'x-default': `https://alouminia-papadakis.gr/el/blog/${slug}`,
+       },
+     },
+@@ -87,6 +84,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
+     ],
+     "datePublished": article.date,
+     "dateModified": article.date,
++    "inLanguage": lang === 'en' ? 'en-US' : 'el-GR',
+     "author": [{
+         "@type": "Organization",
+         "name": "╬æ╬╗╬┐╧à╬╝╬»╬╜╬╣╬▒ ╬á╬▒╧Ç╬▒╬┤╬¼╬║╬╖╧é",
+diff --git a/src/app/[lang]/blog/page.tsx b/src/app/[lang]/blog/page.tsx
+index 1c68f41..44c7a60 100644
+--- a/src/app/[lang]/blog/page.tsx
++++ b/src/app/[lang]/blog/page.tsx
+@@ -53,9 +53,6 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
+       languages: {
+         'el': 'https://alouminia-papadakis.gr/el/blog',
+         'en': 'https://alouminia-papadakis.gr/en/blog',
+-        'de': 'https://alouminia-papadakis.gr/de/blog',
+-        'fr': 'https://alouminia-papadakis.gr/fr/blog',
+-        'nl': 'https://alouminia-papadakis.gr/nl/blog',
+         'x-default': 'https://alouminia-papadakis.gr/el/blog',
+       },
+     },
+diff --git a/src/app/[lang]/layout.tsx b/src/app/[lang]/layout.tsx
+index 19ef288..e3f8e86 100644
+--- a/src/app/[lang]/layout.tsx
++++ b/src/app/[lang]/layout.tsx
+@@ -72,7 +72,7 @@ export default async function RootLayout({
+     "url": "https://alouminia-papadakis.gr",
+     "logo": "https://alouminia-papadakis.gr/icon.png",
+     "image": "https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.png",
+-    "description": "Certified Alumil manufacturer specializing in project-based aluminum solutions for luxury villas, boutique hotels, and high-end residential developments across Crete. Uncompromised operational maturity, scalable manufacturing processes with zero delays, and a proven extensive portfolio. Full workflow: architectural study ΓåÆ CAD design ΓåÆ in-house manufacturing ΓåÆ on-site installation by permanent crews ΓåÆ structured after-sales guarantee.",
++    "description": "Certified Alumil manufacturer specializing in project-based aluminum solutions for luxury villas, boutique hotels, and high-end residential developments across Crete. Uncompromised ╧Ç╬┐╬╗╧à╬╡╧ä╬« ╬╡╬╝╧Ç╬╡╬╣╧ü╬»╬▒, ╧Ç╬╗╬«╧ü╧ë╧é ╬┐╧ü╬│╬▒╬╜╧ë╬╝╬¡╬╜╬╖ manufacturing processes with zero delays, and a proven extensive portfolio. Full workflow: architectural study ΓåÆ CAD design ΓåÆ in-house manufacturing ΓåÆ on-site installation by permanent crews ΓåÆ structured after-sales guarantee.",
+     "foundingDate": "1993",
+     "numberOfEmployees": {
+       "@type": "QuantitativeValue",
+@@ -106,14 +106,14 @@ export default async function RootLayout({
+         "author": { "@type": "Person", "name": "╬ô╬╣╬¼╬╜╬╜╬╖╧é ╬Ü╬▒╬╗╬▒╧è╧ä╬╢╬¼╬║╬╖╧é (╬ò╧ü╬│╬┐╬╗╬¼╬▓╬┐╧é)" },
+         "datePublished": "2023-11-15",
+         "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+-        "reviewBody": "╬ò╬╛╬▒╬╣╧ü╬╡╧ä╬╣╬║╬« ╧â╧à╬╜╬╡╧ü╬│╬▒╧â╬»╬▒ ╧â╬╡ project ╬▓╬»╬╗╬▒╧é ╧â╧ä╬┐╬╜ ╬á╬╗╬▒╬║╬╣╬¼. ╬ñ╬«╧ü╬╖╧â╬╖ ╧ç╧ü╬┐╬╜╬┐╬┤╬╣╬▒╬│╧ü╬▒╬╝╬╝╬¼╧ä╧ë╬╜, ╬╝╬╖╬┤╬╡╬╜╬╣╬║╧î execution risk. ╬ñ╬▒ ╧â╧à╧â╧ä╬«╬╝╬▒╧ä╬▒ Alumil SUPREME ╬╝╧Ç╬«╬║╬▒╬╜ ╬╝╬╡ ╬▒╧Ç╧î╬╗╧à╧ä╬╖ ╬▒╬║╧ü╬»╬▓╬╡╬╣╬▒. ╬ò╬│╬│╧ì╬╖╧â╬╖ ╬│╬╣╬▒ ╬╡╧Ç╬▒╬│╬│╬╡╬╗╬╝╬▒╧ä╬»╬╡╧é."
++        "reviewBody": "╬ò╬╛╬▒╬╣╧ü╬╡╧ä╬╣╬║╬« ╧â╧à╬╜╬╡╧ü╬│╬▒╧â╬»╬▒ ╧â╬╡ project ╬▓╬»╬╗╬▒╧é ╧â╧ä╬┐╬╜ ╬á╬╗╬▒╬║╬╣╬¼. ╬ñ╬«╧ü╬╖╧â╬╖ ╧ç╧ü╬┐╬╜╬┐╬┤╬╣╬▒╬│╧ü╬▒╬╝╬╝╬¼╧ä╧ë╬╜, ╬╝╬╖╬┤╬╡╬╜╬╣╬║╧î ╬║╬▒╬╕╧à╧â╧ä╬¡╧ü╬╖╧â╬╖. ╬ñ╬▒ ╧â╧à╧â╧ä╬«╬╝╬▒╧ä╬▒ Alumil SUPREME ╬╝╧Ç╬«╬║╬▒╬╜ ╬╝╬╡ ╬╝╬╡╬│╬¼╬╗╬╖ ╬▒╬║╧ü╬»╬▓╬╡╬╣╬▒. ╬ò╬│╬│╧ì╬╖╧â╬╖ ╬│╬╣╬▒ ╬╡╧Ç╬▒╬│╬│╬╡╬╗╬╝╬▒╧ä╬»╬╡╧é."
+       },
+       {
+         "@type": "Review",
+         "author": { "@type": "Person", "name": "Maria Stavrou (Architect)" },
+         "datePublished": "2024-02-28",
+         "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+-        "reviewBody": "The most reliable aluminum manufacturing partner in Crete. Their in-house production facility ensures scalable workflow without delays. Perfect execution on boutique hotel renovation."
++        "reviewBody": "The most reliable aluminum manufacturing partner in Crete. Their in-house production facility ensures ╧Ç╬╗╬«╧ü╧ë╧é ╬┐╧ü╬│╬▒╬╜╧ë╬╝╬¡╬╜╬╖ workflow without delays. Perfect execution on boutique hotel renovation."
+       }
+     ],
+     "areaServed": [
+@@ -202,6 +202,20 @@ export default async function RootLayout({
+     <html lang={lang} className="scroll-smooth">
+       <head>
+         <link rel="alternate" type="text/markdown" href="/llms.txt" title="Alouminia Papadakis AI Context" />
++        <script
++          dangerouslySetInnerHTML={{
++            __html: `
++              window.dataLayer = window.dataLayer || [];
++              function gtag(){dataLayer.push(arguments);}
++              gtag('consent', 'default', {
++                'ad_storage': 'denied',
++                'analytics_storage': 'denied',
++                'ad_user_data': 'denied',
++                'ad_personalization': 'denied'
++              });
++            `
++          }}
++        />
+         <Script id="google-tag-manager" strategy="afterInteractive">
+           {`
+             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+diff --git a/src/app/[lang]/portfolio/page.tsx b/src/app/[lang]/portfolio/page.tsx
+index 9328dbd..40dda9d 100644
+--- a/src/app/[lang]/portfolio/page.tsx
++++ b/src/app/[lang]/portfolio/page.tsx
+@@ -151,7 +151,7 @@ export default async function PortfolioPage({ params }: { params: Promise<{ lang
+             {isEn ? 'Our Work in' : '╬ñ╬▒ ╬ê╧ü╬│╬▒ ╬£╬▒╧é ╧â╧ä╬╖╬╜'} <span className="text-red">{isEn ? 'Crete' : '╬Ü╧ü╬«╧ä╬╖'}</span>
+           </h1>
+           <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+-            {isEn ? 'Proof of operational maturity and flawless execution. Explore our detailed case studies of premium aluminum installations.' : '╬ù ╬▒╧Ç╧î╬┤╬╡╬╣╬╛╬╖ ╧ä╬╖╧é ╬▒╬╛╬╣╬┐╧Ç╬╣╧â╧ä╬»╬▒╧é ╬╝╬▒╧é. ╬ö╬╡╬»╧ä╬╡ ╬▒╬╜╬▒╬╗╧à╧ä╬╣╬║╬¼ case studies ╬▒╧Ç╧î ╬¡╧ü╬│╬▒ ╬╡╧å╬▒╧ü╬╝╬┐╬│╬«╧é ╧â╧à╧â╧ä╬╖╬╝╬¼╧ä╧ë╬╜ ╧à╧ê╬╖╬╗╬«╧é ╬▒╬╣╧â╬╕╬╖╧ä╬╣╬║╬«╧é ╬║╬▒╬╣ ╬▒╧à╧â╧ä╬╖╧ü╧Ä╬╜ ╬▒╧Ç╬▒╬╣╧ä╬«╧â╬╡╧ë╬╜.'}
++            {isEn ? 'Proof of ╧Ç╬┐╬╗╧à╬╡╧ä╬« ╬╡╬╝╧Ç╬╡╬╣╧ü╬»╬▒ and flawless execution. Explore our detailed case studies of premium aluminum installations.' : '╬ù ╬▒╧Ç╧î╬┤╬╡╬╣╬╛╬╖ ╧ä╬╖╧é ╬▒╬╛╬╣╬┐╧Ç╬╣╧â╧ä╬»╬▒╧é ╬╝╬▒╧é. ╬ö╬╡╬»╧ä╬╡ ╬▒╬╜╬▒╬╗╧à╧ä╬╣╬║╬¼ case studies ╬▒╧Ç╧î ╬¡╧ü╬│╬▒ ╬╡╧å╬▒╧ü╬╝╬┐╬│╬«╧é ╧â╧à╧â╧ä╬╖╬╝╬¼╧ä╧ë╬╜ ╧à╧ê╬╖╬╗╬«╧é ╬▒╬╣╧â╬╕╬╖╧ä╬╣╬║╬«╧é ╬║╬▒╬╣ ╬▒╧à╧â╧ä╬╖╧ü╧Ä╬╜ ╬▒╧Ç╬▒╬╣╧ä╬«╧â╬╡╧ë╬╜.'}
+           </p>
+         </div>
+       </section>
+@@ -192,8 +192,8 @@ export default async function PortfolioPage({ params }: { params: Promise<{ lang
+           <div className="mt-24 text-center">
+              <div className="inline-block bg-white border border-gray-200 p-10 md:px-16 rounded-3xl shadow-xl relative overflow-hidden">
+                <div className="absolute left-0 top-0 w-2 h-full bg-red"></div>
+-               <h3 className="text-3xl font-black text-navy mb-4 tracking-tight">{isEn ? 'Scalable B2B Project Operations' : '╬æ╬╜╬▒╬╗╬▒╬╝╬▓╬¼╬╜╬╡╧ä╬╡ ╬║╬¼╧Ç╬┐╬╣╬┐ ╬╝╬╡╬│╬¼╬╗╬┐ Project;'}</h3>
+-               <p className="text-gray-600 mb-8 max-w-xl mx-auto text-lg leading-relaxed">{isEn ? 'We provide structural solutions, scalable timeline execution, and direct architectural collaboration for demanding hospitality or residential developments.' : '╬£╬╖╬┤╬╡╬╜╬╣╬║╧î execution risk. ╬ò╬│╬│╧à╬╖╬╝╬¡╬╜╬╖ ╧ä╬«╧ü╬╖╧â╬╖ ╧Ç╬▒╧ü╬▒╬┤╧î╧â╬╡╧ë╬╜, ╬╡╬╣╬┤╬╣╬║╬¡╧é B2B ╧ä╬╣╬╝╬¡╧é ╬║╬▒╬╣ ╬▒╧Ç╧î╬╗╧à╧ä╬╖ ╧Ç╧ü╬┐╧ä╬╡╧ü╬▒╬╣╧î╧ä╬╖╧ä╬▒ ╧â╬╡ ╬╝╬╡╬│╬¼╬╗╬▒ ╬║╬▒╧ä╬▒╧â╬║╬╡╧à╬▒╧â╧ä╬╣╬║╬¼ ╬¡╧ü╬│╬▒.'}</p>
++               <h3 className="text-3xl font-black text-navy mb-4 tracking-tight">{isEn ? 'structured B2B Project Operations' : '╬æ╬╜╬▒╬╗╬▒╬╝╬▓╬¼╬╜╬╡╧ä╬╡ ╬║╬¼╧Ç╬┐╬╣╬┐ ╬╝╬╡╬│╬¼╬╗╬┐ Project;'}</h3>
++               <p className="text-gray-600 mb-8 max-w-xl mx-auto text-lg leading-relaxed">{isEn ? 'We provide structural solutions, ╧Ç╬╗╬«╧ü╧ë╧é ╬┐╧ü╬│╬▒╬╜╧ë╬╝╬¡╬╜╬╖ timeline execution, and direct architectural collaboration for demanding hospitality or residential developments.' : '╬£╬╖╬┤╬╡╬╜╬╣╬║╧î ╬║╬▒╬╕╧à╧â╧ä╬¡╧ü╬╖╧â╬╖. ╬ò╬│╬│╧à╬╖╬╝╬¡╬╜╬╖ ╧ä╬«╧ü╬╖╧â╬╖ ╧Ç╬▒╧ü╬▒╬┤╧î╧â╬╡╧ë╬╜, ╬╡╬╣╬┤╬╣╬║╬¡╧é B2B ╧ä╬╣╬╝╬¡╧é ╬║╬▒╬╣ ╬¼╬╝╬╡╧â╬╖ ╧Ç╧ü╬┐╧ä╬╡╧ü╬▒╬╣╧î╧ä╬╖╧ä╬▒ ╧â╬╡ ╬╝╬╡╬│╬¼╬╗╬▒ ╬║╬▒╧ä╬▒╧â╬║╬╡╧à╬▒╧â╧ä╬╣╬║╬¼ ╬¡╧ü╬│╬▒.'}</p>
+                <a href={`/${lang}#contact`} className="inline-block bg-navy hover:bg-red text-white px-10 py-4 rounded-full font-bold shadow-lg transition-all duration-300">
+                  {isEn ? 'Contact B2B Departement' : '╬ò╧Ç╬╣╬║╬┐╬╣╬╜╧ë╬╜╬»╬▒ ╬╝╬╡ ╧ä╬╝╬«╬╝╬▒ B2B'}
+                </a>
+diff --git a/src/app/[lang]/services/koufomata-alouminiou-rethymno/page.tsx b/src/app/[lang]/services/koufomata-alouminiou-rethymno/page.tsx
+index d9b6ed7..6bedf13 100644
+--- a/src/app/[lang]/services/koufomata-alouminiou-rethymno/page.tsx
++++ b/src/app/[lang]/services/koufomata-alouminiou-rethymno/page.tsx
+@@ -102,8 +102,8 @@ export default async function KoufomataPage({ params }: { params: Promise<{ lang
+     el: [
+       {
+         question: '╬á╧î╧â╬┐ ╬║╬┐╧â╧ä╬»╬╢╬┐╧à╬╜ ╧ä╬▒ ╬║╬┐╧à╧å╧Ä╬╝╬▒╧ä╬▒ ╬▒╬╗╬┐╧à╬╝╬╣╬╜╬»╬┐╧à ╧â╧ä╬┐ ╬í╬¡╬╕╧à╬╝╬╜╬┐;',
+-        answer: '╬ñ╬┐ ╬║╧î╧â╧ä╬┐╧é ╬╡╬╛╬▒╧ü╧ä╬¼╧ä╬▒╬╣ ╬▒╧Ç╧î ╧ä╬╖ ╧â╬╡╬╣╧ü╬¼ ╧Ç╧ü╬┐╧å╬»╬╗, ╧ä╬┐╬╜ ╧à╬▒╬╗╬┐╧Ç╬»╬╜╬▒╬║╬▒ ╬║╬▒╬╣ ╧ä╬╣╧é ╬┤╬╣╬▒╧â╧ä╬¼╧â╬╡╬╣╧é. ╬ò╬╜╬┤╬╡╬╣╬║╧ä╬╣╬║╬¼, ╬╝╬╣╬▒ ╬╡╬╜╬╡╧ü╬│╬╡╬╣╬▒╬║╬« ╬╝╧Ç╬▒╬╗╬║╬┐╬╜╧î╧Ç╬┐╧ü╧ä╬▒ ╬╝╬╡ ╬╕╬╡╧ü╬╝╬┐╬┤╬╣╬▒╬║╬┐╧Ç╬« ╬╛╬╡╬║╬╣╬╜╬¼ ╬▒╧Ç╧î ╧ä╬▒ ╬╡╧Ç╬»╧Ç╬╡╬┤╬▒ ╧ä╧ë╬╜ ╬╝╬╡╧â╬▒╬»╧ë╬╜ ╧â╬╡╬╣╧ü╧Ä╬╜ Alumil ╬║╬▒╬╣ ╬║╬╗╬╣╬╝╬▒╬║╧Ä╬╜╬╡╧ä╬▒╬╣ ╧â╧ä╬╣╧é premium SUPREME. ╬Ü╬¼╬╕╬╡ ╬¡╧ü╬│╬┐ ╬║╬┐╧â╧ä╬┐╬╗╬┐╬│╬╡╬»╧ä╬▒╬╣ ╬╝╬╡╧ä╬¼ ╬▒╧Ç╧î ╬┤╧ë╧ü╬╡╬¼╬╜ ╬╡╧Ç╬╣╬╝╬¡╧ä╧ü╬╖╧â╬╖.',
+-        textAnswer: '╬ñ╬┐ ╬║╧î╧â╧ä╬┐╧é ╬╡╬╛╬▒╧ü╧ä╬¼╧ä╬▒╬╣ ╬▒╧Ç╧î ╧ä╬╖ ╧â╬╡╬╣╧ü╬¼ ╧Ç╧ü╬┐╧å╬»╬╗, ╧ä╬┐╬╜ ╧à╬▒╬╗╬┐╧Ç╬»╬╜╬▒╬║╬▒ ╬║╬▒╬╣ ╧ä╬╣╧é ╬┤╬╣╬▒╧â╧ä╬¼╧â╬╡╬╣╧é.'
++        answer: '╬ñ╬┐ ╬║╧î╧â╧ä╬┐╧é ╬╡╬╛╬▒╧ü╧ä╬¼╧ä╬▒╬╣ ╬▒╧Ç╧î ╧ä╬╖ ╧â╬╡╬╣╧ü╬¼ ╧Ç╧ü╬┐╧å╬»╬╗ (╧Ç.╧ç. ╧Ç╧ü╬┐╧â╬╕╬«╬║╬╖ ╧Ç╬┐╬╗╧à╬▒╬╝╬╣╬┤╬»╬┐╧à ╬│╬╣╬▒ ╬╕╬╡╧ü╬╝╬┐╬┤╬╣╬▒╬║╬┐╧Ç╬«), ╧ä╬┐╬╜ ╧à╬▒╬╗╬┐╧Ç╬»╬╜╬▒╬║╬▒ ╬║╬▒╬╣ ╧ä╬╣╧é ╬┤╬╣╬▒╧â╧ä╬¼╧â╬╡╬╣╧é. ╬ò╬╜╬┤╬╡╬╣╬║╧ä╬╣╬║╬¼, ╬╝╬╣╬▒ ╬╡╬╜╬╡╧ü╬│╬╡╬╣╬▒╬║╬« ╬╝╧Ç╬▒╬╗╬║╬┐╬╜╧î╧Ç╬┐╧ü╧ä╬▒ ╬╝╬╡ ╬╕╬╡╧ü╬╝╬┐╬┤╬╣╬▒╬║╬┐╧Ç╬« (╬╡╬╣╬┤╬╣╬║╧î ╧Ç╬┐╬╗╧à╬▒╬╝╬»╬┤╬╣╬┐) ╬╛╬╡╬║╬╣╬╜╬¼ ╬▒╧Ç╧î ╧ä╬▒ ╬╡╧Ç╬»╧Ç╬╡╬┤╬▒ ╧ä╧ë╬╜ ╬╝╬╡╧â╬▒╬»╧ë╬╜ ╧â╬╡╬╣╧ü╧Ä╬╜ Alumil ╬║╬▒╬╣ ╬║╬╗╬╣╬╝╬▒╬║╧Ä╬╜╬╡╧ä╬▒╬╣ ╧â╧ä╬╣╧é premium SUPREME. ╬Ü╬¼╬╕╬╡ ╬¡╧ü╬│╬┐ ╬║╬┐╧â╧ä╬┐╬╗╬┐╬│╬╡╬»╧ä╬▒╬╣ ╬╝╬╡╧ä╬¼ ╬▒╧Ç╧î ╬┤╧ë╧ü╬╡╬¼╬╜ ╬╡╧Ç╬╣╬╝╬¡╧ä╧ü╬╖╧â╬╖.',
++        textAnswer: '╬ñ╬┐ ╬║╧î╧â╧ä╬┐╧é ╬╡╬╛╬▒╧ü╧ä╬¼╧ä╬▒╬╣ ╬▒╧Ç╧î ╧ä╬╖ ╧â╬╡╬╣╧ü╬¼ ╧Ç╧ü╬┐╧å╬»╬╗ (╧Ç╬┐╬╗╧à╬▒╬╝╬»╬┤╬╣╬┐ ╬╕╬╡╧ü╬╝╬┐╬┤╬╣╬▒╬║╬┐╧Ç╬«╧é), ╧ä╬┐╬╜ ╧à╬▒╬╗╬┐╧Ç╬»╬╜╬▒╬║╬▒ ╬║╬▒╬╣ ╧ä╬╣╧é ╬┤╬╣╬▒╧â╧ä╬¼╧â╬╡╬╣╧é.'
+       },
+       {
+         question: '╬á╬┐╬╣╬┐╧é ╬╡╬»╬╜╬▒╬╣ ╬┐ ╬┤╬╡╬»╬║╧ä╬╖╧é ╬╕╬╡╧ü╬╝╬┐╧Ç╬╡╧ü╬▒╧ä╧î╧ä╬╖╧ä╬▒╧é (Uw) ╧ä╧ë╬╜ ╬║╬┐╧à╧å╧ë╬╝╬¼╧ä╧ë╬╜;',
+@@ -112,7 +112,7 @@ export default async function KoufomataPage({ params }: { params: Promise<{ lang
+       },
+       {
+         question: '╬ò╬»╬╜╬▒╬╣ ╧ä╬▒ ╬║╬┐╧à╧å╧Ä╬╝╬▒╧ä╬▒ ╬║╬▒╧ä╬¼╬╗╬╗╬╖╬╗╬▒ ╬│╬╣╬▒ ╧Ç╬▒╧ü╬▒╬╕╬▒╬╗╬¼╧â╧â╬╣╬▒ ╧â╧Ç╬»╧ä╬╣╬▒ ╧â╧ä╬╖╬╜ ╬Ü╧ü╬«╧ä╬╖;',
+-        answer: '╬¥╬▒╬╣, ╬╡╧å╬▒╧ü╬╝╧î╬╢╬┐╧à╬╝╬╡ ╧Ç╬╣╧â╧ä╬┐╧Ç╬┐╬╣╬╖╬╝╬¡╬╜╬╖ ╬╡╧Ç╬╡╬╛╬╡╧ü╬│╬▒╧â╬»╬▒ ╬▒╬╜╬┐╬┤╬»╧ë╧â╬╖╧é Seaside Class, ╬╡╬╛╬▒╧â╧å╬▒╬╗╬»╬╢╬┐╬╜╧ä╬▒╧é ╬▒╧Ç╧î╬╗╧à╧ä╬╖ ╬▒╬╜╧ä╬┐╧ç╬« ╧â╧ä╬╖ ╬┤╬╣╬¼╬▓╧ü╧ë╧â╬╖ ╬▒╧Ç╧î ╧ä╬╖╬╜ ╬▒╬╗╬╝╧ì╧ü╬▒.',
++        answer: '╬¥╬▒╬╣, ╬╡╧å╬▒╧ü╬╝╧î╬╢╬┐╧à╬╝╬╡ ╧Ç╬╣╧â╧ä╬┐╧Ç╬┐╬╣╬╖╬╝╬¡╬╜╬╖ ╬╡╧Ç╬╡╬╛╬╡╧ü╬│╬▒╧â╬»╬▒ ╬▒╬╜╬┐╬┤╬»╧ë╧â╬╖╧é Seaside Class, ╬╡╬╛╬▒╧â╧å╬▒╬╗╬»╬╢╬┐╬╜╧ä╬▒╧é ╬╡╬│╬│╧à╬╖╬╝╬¡╬╜╬╖ ╬▒╬╜╧ä╬┐╧ç╬« ╧â╧ä╬╖ ╬┤╬╣╬¼╬▓╧ü╧ë╧â╬╖ ╬▒╧Ç╧î ╧ä╬╖╬╜ ╬▒╬╗╬╝╧ì╧ü╬▒.',
+         textAnswer: '╬¥╬▒╬╣, ╬╡╧å╬▒╧ü╬╝╧î╬╢╬┐╧à╬╝╬╡ ╧Ç╬╣╧â╧ä╬┐╧Ç╬┐╬╣╬╖╬╝╬¡╬╜╬╖ ╬╡╧Ç╬╡╬╛╬╡╧ü╬│╬▒╧â╬»╬▒ ╬▒╬╜╬┐╬┤╬»╧ë╧â╬╖╧é Seaside Class.'
+       }
+     ],
+@@ -297,7 +297,7 @@ export default async function KoufomataPage({ params }: { params: Promise<{ lang
+                 </li>
+               </ul>
+ 
+-              <a href="tel:2831023897" className="mt-12 inline-flex items-center gap-3 bg-red text-white px-8 py-4 rounded-full font-bold hover:bg-red-700 transition-all duration-300 shadow-xl shadow-red/25 active:scale-95">
++              <a href="tel:+302831023897" className="mt-12 inline-flex items-center gap-3 bg-red text-white px-8 py-4 rounded-full font-bold hover:bg-red-700 transition-all duration-300 shadow-xl shadow-red/25 active:scale-95">
+                 <PhoneCall size={20} />
+                 {isEn ? 'Request Technical Study & Quote' : '╬û╬╖╧ä╬«╧â╧ä╬╡ ╬ñ╬╡╧ç╬╜╬╣╬║╬« ╬£╬╡╬╗╬¡╧ä╬╖ & ╬Ü╬┐╧â╧ä╬┐╬╗╧î╬│╬╖╧â╬╖'}
+               </a>
+diff --git a/src/app/sitemap.ts b/src/app/sitemap.ts
+index ac0d785..7a47343 100644
+--- a/src/app/sitemap.ts
++++ b/src/app/sitemap.ts
+@@ -16,57 +16,48 @@ export default function sitemap(): MetadataRoute.Sitemap {
+   ]
+ 
+   const sitemapEntries: MetadataRoute.Sitemap = []
++  const staticLocales = ['el', 'en', 'de', 'fr', 'nl']
+ 
+   routes.forEach((route) => {
+-    sitemapEntries.push({
+-      url: `${baseUrl}/el${route}`,
+-      lastModified: new Date(),
+-      changeFrequency: 'monthly',
+-      priority: route === '' ? 1.0 : (route === '/blog' ? 0.9 : 0.8),
+-      alternates: {
+-        languages: route === '/blog' ? {
+-          el: `${baseUrl}/el${route}`,
+-          'x-default': `${baseUrl}/el${route}`,
+-        } : {
+-          el: `${baseUrl}/el${route}`,
+-          en: `${baseUrl}/en${route}`,
+-          'x-default': `${baseUrl}/el${route}`,
+-        },
+-      },
++    const isBlog = route === '/blog'
++    const routeLocales = isBlog ? ['el', 'en'] : staticLocales
++
++    // Create the alternates languages object dynamically
++    const languages: Record<string, string> = {
++      'x-default': `${baseUrl}/el${route}`
++    }
++    routeLocales.forEach(lang => {
++      languages[lang] = `${baseUrl}/${lang}${route}`
+     })
+-    
+-    if (route !== '/blog') {
++
++    routeLocales.forEach(lang => {
+       sitemapEntries.push({
+-        url: `${baseUrl}/en${route}`,
++        url: `${baseUrl}/${lang}${route}`,
+         lastModified: new Date(),
+         changeFrequency: 'monthly',
+-        priority: route === '' ? 0.9 : 0.8,
+-        alternates: {
+-          languages: {
+-            el: `${baseUrl}/el${route}`,
+-            en: `${baseUrl}/en${route}`,
+-            'x-default': `${baseUrl}/el${route}`,
+-          },
+-        },
++        priority: route === '' && lang === 'el' ? 1.0 : (route === '' ? 0.9 : 0.8),
++        alternates: { languages },
+       })
+-    }
++    })
+   })
+ 
+   // Add Blog Articles dynamically
+   articles.forEach((article) => {
+     const route = `/blog/${article.slug}`
++    const languages = {
++      'el': `${baseUrl}/el${route}`,
++      'en': `${baseUrl}/en${route}`,
++      'x-default': `${baseUrl}/el${route}`
++    }
+     
+-    sitemapEntries.push({
+-      url: `${baseUrl}/el${route}`,
+-      lastModified: new Date(article.date),
+-      changeFrequency: 'yearly',
+-      priority: 0.7,
+-      alternates: {
+-        languages: {
+-          el: `${baseUrl}/el${route}`,
+-          'x-default': `${baseUrl}/el${route}`,
+-        },
+-      },
++    ;['el', 'en'].forEach(lang => {
++      sitemapEntries.push({
++        url: `${baseUrl}/${lang}${route}`,
++        lastModified: new Date(article.date),
++        changeFrequency: 'yearly',
++        priority: 0.7,
++        alternates: { languages },
++      })
+     })
+   })
+ 
+diff --git a/src/components/Footer.tsx b/src/components/Footer.tsx
+index ebc6921..3001d6e 100644
+--- a/src/components/Footer.tsx
++++ b/src/components/Footer.tsx
+@@ -194,7 +194,7 @@ export default function Footer({ lang = 'el' }: { lang?: 'el' | 'en' | 'de' | 'f
+                </div>
+                <div className="pt-1">
+                  <p className="text-white font-bold mb-1">╬ñ╬╡╧ç╬╜╬╣╬║╧î ╬ñ╬╝╬«╬╝╬▒</p>
+-                 <a href="tel:2831023897" className="text-gray-400 hover:text-white transition-colors">+30 28310 23897</a>
++                 <a href="tel:+302831023897" className="text-gray-400 hover:text-white transition-colors">+30 28310 23897</a>
+                </div>
+             </li>
+             <li className="flex items-start gap-4">
+diff --git a/src/components/HomeDE.tsx b/src/components/HomeDE.tsx
+index da6efd9..e0546d7 100644
+--- a/src/components/HomeDE.tsx
++++ b/src/components/HomeDE.tsx
+@@ -74,7 +74,7 @@ export default function HomeDE() {
+         "name": "How do you guarantee project timelines and avoid delays?",
+         "acceptedAnswer": {
+           "@type": "Answer",
+-          "text": "We reduce execution risk to zero through our operational maturity. We operate our own in-house manufacturing line, employ dedicated permanent installation crews, and strictly adhere to standardized project processes. We deliver projectsΓÇöfrom single luxury villas to entire boutique hotelsΓÇöexactly on schedule, with zero compromise."
++          "text": "We reduce ╬║╬▒╬╕╧à╧â╧ä╬¡╧ü╬╖╧â╬╖ to zero through our ╧Ç╬┐╬╗╧à╬╡╧ä╬« ╬╡╬╝╧Ç╬╡╬╣╧ü╬»╬▒. We operate our own in-house manufacturing line, employ dedicated permanent installation crews, and strictly adhere to standardized project processes. We deliver projectsΓÇöfrom single luxury villas to entire boutique hotelsΓÇöexactly on schedule, with zero compromise."
+         }
+       },
+       {
+@@ -90,7 +90,7 @@ export default function HomeDE() {
+         "name": "What is the structure of your After-Sales support?",
+         "acceptedAnswer": {
+           "@type": "Answer",
+-          "text": "We are a structured construction firm, not independent handymen. Papadakis Aluminium features an organized After-Sales department providing the official Alumil manufacturer guarantee alongside dedicated long-term service. Consistent, reliable support after handover is a fundamental part of our scalable operations."
++          "text": "We are a structured construction firm, not independent handymen. Papadakis Aluminium features an organized After-Sales department providing the official Alumil manufacturer guarantee alongside dedicated long-term service. Consistent, reliable support after handover is a fundamental part of our ╧Ç╬╗╬«╧ü╧ë╧é ╬┐╧ü╬│╬▒╬╜╧ë╬╝╬¡╬╜╬╖ operations."
+         }
+       },
+       {
+@@ -239,7 +239,7 @@ export default function HomeDE() {
+                We don't just do basic installations. Our manufacturing unit in Rethymno partners with architects and developers to manufacture premium architectural systems that elevate your property's commercial and aesthetic value.
+              </p>
+              <p className="text-gray-500 text-base mt-4 leading-relaxed max-w-2xl mx-auto">
+-               As a scalable manufacturing company, we possess the operational maturity to handle demanding architectural projects. We do not execute single repairs. We focus on complete project solutions with strict timeline adherence, a premium application portfolio, and zero execution risk for investors and contractors.
++               As a ╧Ç╬╗╬«╧ü╧ë╧é ╬┐╧ü╬│╬▒╬╜╧ë╬╝╬¡╬╜╬╖ manufacturing company, we possess the ╧Ç╬┐╬╗╧à╬╡╧ä╬« ╬╡╬╝╧Ç╬╡╬╣╧ü╬»╬▒ to handle demanding architectural projects. We do not execute single repairs. We focus on complete project solutions with strict timeline adherence, a premium application portfolio, and zero ╬║╬▒╬╕╧à╧â╧ä╬¡╧ü╬╖╧â╬╖ for investors and contractors.
+              </p>
+            </motion.div>
+ 
+@@ -296,14 +296,14 @@ export default function HomeDE() {
+         >
+           <h2 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">Kein Ausf├╝hrungsrisiko</h2>
+           <p className="text-2xl text-gray-300 mb-6 font-light max-w-3xl mx-auto leading-relaxed">Absolute adherence to project timelines and Premium Aesthetics. We deliver turn-key applications that commercially elevate your property's value.</p>
+-          <p className="text-base text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed">Proven Track Record ┬╖ Scalable Workflow ┬╖ Structured After-Sales ┬╖ Alumil Warranty ┬╖ Zero Delays</p>
++          <p className="text-base text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed">Proven Track Record ┬╖ structured Workflow ┬╖ Structured After-Sales ┬╖ Alumil Warranty ┬╖ Zero Delays</p>
+           
+           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+             <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 flex flex-col justify-between hover:bg-white/10 hover:border-red/50 transition-all duration-300 rounded-2xl group cursor-pointer">
+                <PhoneCall className="text-red mb-6" size={32} />
+                <div>
+                  <p className="text-gray-400 text-sm mb-2 uppercase tracking-wide">Rufen Sie uns an</p>
+-                 <a href="tel:2831023897" className="font-bold text-2xl group-hover:text-[var(--color-red-light)] transition-colors">+30 28310 23897</a>
++                 <a href="tel:+302831023897" className="font-bold text-2xl group-hover:text-[var(--color-red-light)] transition-colors">+30 28310 23897</a>
+                </div>
+             </div>
+             <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 flex flex-col justify-between hover:bg-white/10 hover:border-red/50 transition-all duration-300 rounded-2xl group cursor-pointer">
+diff --git a/src/components/HomeEL.tsx b/src/components/HomeEL.tsx
+index f323cb3..e45209b 100644
+--- a/src/components/HomeEL.tsx
++++ b/src/components/HomeEL.tsx
+@@ -25,7 +25,7 @@ export default function HomeEL() {
+     "image": "https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.png",
+     "@id": "https://alouminia-papadakis.gr",
+     "url": "https://alouminia-papadakis.gr",
+-    "telephone": "2831023897",
++    "telephone": "+302831023897",
+     "address": {
+       "@type": "PostalAddress",
+       "streetAddress": "╬ö╧ü╬┐╧à╬╗╬»╧â╬║╬┐╧à 8",
+@@ -66,7 +66,7 @@ export default function HomeEL() {
+         "name": "╬á╧Ä╧é ╬┤╬╣╬▒╧â╧å╬▒╬╗╬»╬╢╬╡╧ä╬╡ ╧ä╬╖╬╜ ╧ä╬«╧ü╬╖╧â╬╖ ╧ä╧ë╬╜ ╧ç╧ü╬┐╬╜╬┐╬┤╬╣╬▒╬│╧ü╬▒╬╝╬╝╬¼╧ä╧ë╬╜ ╬║╬▒╬╣ ╧ä╬╖╬╜ ╬▒╧Ç╬┐╧å╧à╬│╬« ╬║╬▒╬╕╧à╧â╧ä╬╡╧ü╬«╧â╬╡╧ë╬╜;",
+         "acceptedAnswer": {
+           "@type": "Answer",
+-          "text": "╬£╬╡╬╣╧Ä╬╜╬┐╧à╬╝╬╡ ╧ä╬┐ execution risk ╧â╧ä╬┐ ╬╝╬╖╬┤╬¡╬╜ ╧ç╬¼╧ü╬╖ ╧â╧ä╬╖╬╜ operational maturity ╧ä╬╖╧é ╬╡╧ä╬▒╬╣╧ü╬╡╬»╬▒╧é ╬╝╬▒╧é. ╬ö╬╣╬▒╬╕╬¡╧ä╬┐╧à╬╝╬╡ in-house ╬│╧ü╬▒╬╝╬╝╬« ╧Ç╬▒╧ü╬▒╬│╧ë╬│╬«╧é, ╬┤╬╣╬║╬¼ ╬╝╬▒╧é ╬╡╬║╧Ç╬▒╬╣╬┤╬╡╧à╬╝╬¡╬╜╬▒ ╧â╧à╬╜╬╡╧ü╬│╬╡╬»╬▒ ╧ä╬┐╧Ç╬┐╬╕╬¡╧ä╬╖╧â╬╖╧é ╬║╬▒╬╣ ╬▒╧à╧â╧ä╬╖╧ü╬¡╧é ╬┤╬╣╬▒╬┤╬╣╬║╬▒╧â╬»╬╡╧é (processes) ╧Ç╬▒╧ü╬▒╬│╬│╬╡╬╗╬╣╬┐╬╗╬╖╧ê╬»╬▒╧é. ╬á╬▒╧ü╬▒╬┤╬»╬┤╬┐╧à╬╝╬╡ ╧ä╬▒ ╬¡╧ü╬│╬▒ (╬▒╧Ç╧î ╬╝╬»╬▒ ╬▓╬»╬╗╬▒ ╬╝╬¡╧ç╧ü╬╣ ╬┐╬╗╧î╬║╬╗╬╖╧ü╬┐ ╬╛╬╡╬╜╬┐╬┤╬┐╧ç╬╡╬»╬┐) ╬▒╬║╧ü╬╣╬▓╧Ä╧é ╧â╧ä╬┐╬╜ ╧â╧à╬╝╧å╧ë╬╜╬╖╬╝╬¡╬╜╬┐ ╧ç╧ü╧î╬╜╬┐, ╧ç╧ë╧ü╬»╧é ╬║╬▒╬╝╬»╬▒ ╬▒╧Ç╧î╬║╬╗╬╣╧â╬╖."
++          "text": "╬£╬╡╬╣╧Ä╬╜╬┐╧à╬╝╬╡ ╧ä╬┐ ╬║╬▒╬╕╧à╧â╧ä╬¡╧ü╬╖╧â╬╖ ╧â╧ä╬┐ ╬╝╬╖╬┤╬¡╬╜ ╧ç╬¼╧ü╬╖ ╧â╧ä╬╖╬╜ ╧Ç╬┐╬╗╧à╬╡╧ä╬« ╬╡╬╝╧Ç╬╡╬╣╧ü╬»╬▒ ╧ä╬╖╧é ╬╡╧ä╬▒╬╣╧ü╬╡╬»╬▒╧é ╬╝╬▒╧é. ╬ö╬╣╬▒╬╕╬¡╧ä╬┐╧à╬╝╬╡ in-house ╬│╧ü╬▒╬╝╬╝╬« ╧Ç╬▒╧ü╬▒╬│╧ë╬│╬«╧é, ╬┤╬╣╬║╬¼ ╬╝╬▒╧é ╬╡╬║╧Ç╬▒╬╣╬┤╬╡╧à╬╝╬¡╬╜╬▒ ╧â╧à╬╜╬╡╧ü╬│╬╡╬»╬▒ ╧ä╬┐╧Ç╬┐╬╕╬¡╧ä╬╖╧â╬╖╧é ╬║╬▒╬╣ ╬▒╧à╧â╧ä╬╖╧ü╬¡╧é ╬┤╬╣╬▒╬┤╬╣╬║╬▒╧â╬»╬╡╧é (processes) ╧Ç╬▒╧ü╬▒╬│╬│╬╡╬╗╬╣╬┐╬╗╬╖╧ê╬»╬▒╧é. ╬á╬▒╧ü╬▒╬┤╬»╬┤╬┐╧à╬╝╬╡ ╧ä╬▒ ╬¡╧ü╬│╬▒ (╬▒╧Ç╧î ╬╝╬»╬▒ ╬▓╬»╬╗╬▒ ╬╝╬¡╧ç╧ü╬╣ ╬┐╬╗╧î╬║╬╗╬╖╧ü╬┐ ╬╛╬╡╬╜╬┐╬┤╬┐╧ç╬╡╬»╬┐) ╬▒╬║╧ü╬╣╬▓╧Ä╧é ╧â╧ä╬┐╬╜ ╧â╧à╬╝╧å╧ë╬╜╬╖╬╝╬¡╬╜╬┐ ╧ç╧ü╧î╬╜╬┐, ╧ç╧ë╧ü╬»╧é ╬║╬▒╬╝╬»╬▒ ╬▒╧Ç╧î╬║╬╗╬╣╧â╬╖."
+         }
+       },
+       {
+@@ -152,7 +152,7 @@ export default function HomeEL() {
+                 <div className="absolute inset-0 bg-white/20 translate-y-12 group-hover:translate-y-0 transition-transform duration-300"></div>
+                 <Home size={20} className="relative z-10" /> <span className="relative z-10">╬æ╬╜╬▒╬║╬▒╬╗╧ì╧ê╧ä╬╡ ╧ä╬╣╧é ╬¢╧ì╧â╬╡╬╣╧é ╬╝╬▒╧é</span>
+               </a>
+-              <a href="tel:2831023897" className="bg-white/5 backdrop-blur-xl text-white border border-white/20 px-8 py-4 rounded-full font-bold text-center hover:bg-white/10 hover:border-white/40 transition-all duration-300 flex items-center justify-center gap-2 active:scale-95 shadow-2xl">
++              <a href="tel:+302831023897" className="bg-white/5 backdrop-blur-xl text-white border border-white/20 px-8 py-4 rounded-full font-bold text-center hover:bg-white/10 hover:border-white/40 transition-all duration-300 flex items-center justify-center gap-2 active:scale-95 shadow-2xl">
+                 <PhoneCall size={20} /> ╬ú╧à╬╝╬▓╬┐╧à╬╗╬╡╧à╧ä╬╣╬║╬« ╬£╬╡╬╗╬¡╧ä╬╖
+               </a>
+               <Link href="/el/blog" className="bg-white/5 backdrop-blur-xl text-white border border-white/20 px-8 py-4 rounded-full font-bold text-center hover:bg-white/10 hover:border-white/40 transition-all duration-300 flex items-center justify-center gap-2 active:scale-95 shadow-2xl">
+@@ -208,12 +208,12 @@ export default function HomeEL() {
+             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once:true }} transition={{ delay: 0.1 }} className="flex flex-col items-center p-4">
+               <Zap className="text-red mb-4" size={40} />
+               <h2 className="text-white font-bold text-xl mb-2">100% ╬ò╬╜╬╡╧ü╬│╬╡╬╣╬▒╬║╬« ╬æ╧à╧ä╬┐╬╜╬┐╬╝╬»╬▒</h2>
+-              <p className="text-gray-400 text-sm leading-relaxed">╬£╬╖╬┤╬╡╬╜╬»╧â╧ä╬╡ ╧ä╬┐ ╬║╧î╧â╧ä╬┐╧é ╬╕╬¡╧ü╬╝╬▒╬╜╧â╬╖╧é ╬║╬▒╬╣ ╧ê╧ì╬╛╬╖╧é. ╬ñ╬▒ ╬╕╬╡╧ü╬╝╬┐╬┤╬╣╬▒╬║╬┐╧Ç╧ä╧î╬╝╬╡╬╜╬▒ ╧Ç╧ü╬┐╧å╬»╬╗ ╬╝╬▒╧é ╬╡╧Ç╬╣╧ä╧à╬│╧ç╬¼╬╜╬┐╧à╬╜ ╬┤╬╡╬»╬║╧ä╬╖ Uw ╬¡╧ë╧é 0.9 W/m┬▓K.</p>
++              <p className="text-gray-400 text-sm leading-relaxed">╬£╬╡╬╣╧Ä╧â╧ä╬╡ ╧ä╬┐ ╬║╧î╧â╧ä╬┐╧é ╬╕╬¡╧ü╬╝╬▒╬╜╧â╬╖╧é ╬║╬▒╬╣ ╧ê╧ì╬╛╬╖╧é. ╬ñ╬▒ ╬╕╬╡╧ü╬╝╬┐╬┤╬╣╬▒╬║╬┐╧Ç╧ä╧î╬╝╬╡╬╜╬▒ ╧Ç╧ü╬┐╧å╬»╬╗ ╬╝╬▒╧é ╬╡╧Ç╬╣╧ä╧à╬│╧ç╬¼╬╜╬┐╧à╬╜ ╬┤╬╡╬»╬║╧ä╬╖ Uw ╬¡╧ë╧é 0.9 W/m┬▓K.</p>
+             </motion.div>
+             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once:true }} transition={{ delay: 0.2 }} className="flex flex-col items-center p-4">
+               <ShieldCheck className="text-red mb-4" size={40} />
+               <h2 className="text-white font-bold text-xl mb-2">╬ƒ╬╣╬║╬┐╬│╬¡╬╜╬╡╬╣╬▒ ╧â╬╡ ╬á╬╗╬«╧ü╬╖ ╬æ╧â╧å╬¼╬╗╬╡╬╣╬▒</h2>
+-              <p className="text-gray-400 text-sm leading-relaxed">╬æ╧Ç╧î╧ü╬╕╬╖╧ä╬╡╧é ╬╕╧ë╧ü╬▒╬║╬╣╧â╬╝╬¡╬╜╬╡╧é ╧Ç╧î╧ü╧ä╬╡╧é Class 4 ╬║╬▒╬╣ ╬╡╬╜╬╣╧â╧ç╧à╬╝╬¡╬╜╬▒ ╬▒╬╗╬╡╬╛╬»╧â╧å╬▒╬╣╧ü╬▒ ╧ä╬╢╬¼╬╝╬╣╬▒ ╬│╬╣╬▒ ╧ä╬╖╬╜ ╧Ç╬╗╬«╧ü╬╖ ╬╛╬╡╬│╬╜╬┐╬╣╬▒╧â╬╣╬¼ ╧â╬▒╧é.</p>
++              <p className="text-gray-400 text-sm leading-relaxed">╬æ╧â╧å╬▒╬╗╬╡╬»╧é ╬╕╧ë╧ü╬▒╬║╬╣╧â╬╝╬¡╬╜╬╡╧é ╧Ç╧î╧ü╧ä╬╡╧é Class 4 ╬║╬▒╬╣ ╬╡╬╜╬╣╧â╧ç╧à╬╝╬¡╬╜╬▒ ╬╡╬╜╬╣╧â╧ç╧à╬╝╬¡╬╜╬▒ ╧ä╬╢╬¼╬╝╬╣╬▒ ╬│╬╣╬▒ ╧ä╬╖╬╜ ╧Ç╬╗╬«╧ü╬╖ ╬╛╬╡╬│╬╜╬┐╬╣╬▒╧â╬╣╬¼ ╧â╬▒╧é.</p>
+             </motion.div>
+             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once:true }} transition={{ delay: 0.3 }} className="flex flex-col items-center p-4">
+               <CheckCircle2 className="text-red mb-4" size={40} />
+@@ -239,7 +239,7 @@ export default function HomeEL() {
+                ╬ö╬╡╬╜ ╬║╬¼╬╜╬┐╧à╬╝╬╡ ╬▒╧Ç╬╗╧Ä╧é ╧ä╬┐╧Ç╬┐╬╕╬╡╧ä╬«╧â╬╡╬╣╧é. ╬ù ╬╝╬┐╬╜╬¼╬┤╬▒ ╧Ç╬▒╧ü╬▒╬│╧ë╬│╬«╧é ╬╝╬▒╧é ╧â╧ä╬┐ ╬í╬¡╬╕╧à╬╝╬╜╬┐ ╧â╧ç╬╡╬┤╬╣╬¼╬╢╬╡╬╣, ╬║╬▒╧ä╬▒╧â╬║╬╡╧à╬¼╬╢╬╡╬╣ ╬║╬▒╬╣ ╬╡╧å╬▒╧ü╬╝╧î╬╢╬╡╬╣ ╬║╬┐╧ü╧à╧å╬▒╬»╬▒ ╬▒╧ü╧ç╬╣╧ä╬╡╬║╧ä╬┐╬╜╬╣╬║╬¼ ╧â╧à╧â╧ä╬«╬╝╬▒╧ä╬▒ ╧Ç╬┐╧à ╬▒╧à╬╛╬¼╬╜╬┐╧à╬╜ ╧ä╬╖╬╜ ╬▒╬╛╬»╬▒ ╬║╬▒╬╣ ╧ä╬╖╬╜ ╬╡╬╜╬╡╧ü╬│╬╡╬╣╬▒╬║╬« ╬▒╧Ç╧î╬┤╬┐╧â╬╖ ╧ä╬┐╧à ╬▒╬║╬╣╬╜╬«╧ä╬┐╧à ╧â╬▒╧é.
+              </p>
+              <p className="text-gray-500 text-base mt-4 leading-relaxed max-w-2xl mx-auto">
+-               ╬⌐╧é ╬┐╧ü╬│╬▒╬╜╧ë╬╝╬¡╬╜╬╖ (scalable) ╬║╬▒╧ä╬▒╧â╬║╬╡╧à╬▒╧â╧ä╬╣╬║╬« ╬╡╧ä╬▒╬╣╧ü╬╡╬»╬▒, ╬┤╬╣╬▒╬╕╬¡╧ä╬┐╧à╬╝╬╡ ╧ä╬┐ operational maturity ╬╜╬▒ ╬▒╬╜╬▒╬╗╬¼╬▓╬┐╧à╬╝╬╡ ╬▒╧Ç╬▒╬╣╧ä╬╖╧ä╬╣╬║╬¼ ╬¡╧ü╬│╬▒. ╬ö╬╡╬╜ ╬╡╬║╧ä╬╡╬╗╬┐╧ì╬╝╬╡ ╬╝╬╡╬╝╬┐╬╜╧ë╬╝╬¡╬╜╬╡╧é ╬╡╧Ç╬╣╧â╬║╬╡╧à╬¡╧é. ╬ò╧â╧ä╬╣╬¼╬╢╬┐╧à╬╝╬╡ ╧â╬╡ ╬┐╬╗╬┐╬║╬╗╬╖╧ü╧ë╬╝╬¡╬╜╬╡╧é ╬╗╧ì╧â╬╡╬╣╧é ╬╝╬╡ ╬▒╧à╧â╧ä╬╖╧ü╬« ╧ä╬«╧ü╬╖╧â╬╖ ╧ç╧ü╬┐╬╜╬┐╬┤╬╣╬▒╬│╧ü╬▒╬╝╬╝╬¼╧ä╧ë╬╜, premium portfolio ╬╡╧å╬▒╧ü╬╝╬┐╬│╧Ä╬╜ ╬║╬▒╬╣ ╬╝╬╖╬┤╬╡╬╜╬╣╬║╧î execution risk ╬│╬╣╬▒ ╧ä╬┐╬╜ ╬╣╬┤╬╣╬┐╬║╧ä╬«╧ä╬╖.
++               ╬⌐╧é ╬┐╧ü╬│╬▒╬╜╧ë╬╝╬¡╬╜╬╖ (╧Ç╬╗╬«╧ü╧ë╧é ╬┐╧ü╬│╬▒╬╜╧ë╬╝╬¡╬╜╬╖) ╬║╬▒╧ä╬▒╧â╬║╬╡╧à╬▒╧â╧ä╬╣╬║╬« ╬╡╧ä╬▒╬╣╧ü╬╡╬»╬▒, ╬┤╬╣╬▒╬╕╬¡╧ä╬┐╧à╬╝╬╡ ╧ä╬┐ ╧Ç╬┐╬╗╧à╬╡╧ä╬« ╬╡╬╝╧Ç╬╡╬╣╧ü╬»╬▒ ╬╜╬▒ ╬▒╬╜╬▒╬╗╬¼╬▓╬┐╧à╬╝╬╡ ╬▒╧Ç╬▒╬╣╧ä╬╖╧ä╬╣╬║╬¼ ╬¡╧ü╬│╬▒. ╬ö╬╡╬╜ ╬╡╬║╧ä╬╡╬╗╬┐╧ì╬╝╬╡ ╬╝╬╡╬╝╬┐╬╜╧ë╬╝╬¡╬╜╬╡╧é ╬╡╧Ç╬╣╧â╬║╬╡╧à╬¡╧é. ╬ò╧â╧ä╬╣╬¼╬╢╬┐╧à╬╝╬╡ ╧â╬╡ ╬┐╬╗╬┐╬║╬╗╬╖╧ü╧ë╬╝╬¡╬╜╬╡╧é ╬╗╧ì╧â╬╡╬╣╧é ╬╝╬╡ ╬▒╧à╧â╧ä╬╖╧ü╬« ╧ä╬«╧ü╬╖╧â╬╖ ╧ç╧ü╬┐╬╜╬┐╬┤╬╣╬▒╬│╧ü╬▒╬╝╬╝╬¼╧ä╧ë╬╜, premium portfolio ╬╡╧å╬▒╧ü╬╝╬┐╬│╧Ä╬╜ ╬║╬▒╬╣ ╬╝╬╖╬┤╬╡╬╜╬╣╬║╧î ╬║╬▒╬╕╧à╧â╧ä╬¡╧ü╬╖╧â╬╖ ╬│╬╣╬▒ ╧ä╬┐╬╜ ╬╣╬┤╬╣╬┐╬║╧ä╬«╧ä╬╖.
+              </p>
+            </motion.div>
+ 
+@@ -294,16 +294,16 @@ export default function HomeEL() {
+           viewport={{ once: true }}
+           className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"
+         >
+-          <h2 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">╬£╬╖╬┤╬╡╬╜╬╣╬║╧î Execution Risk</h2>
++          <h2 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">╬£╬╖╬┤╬╡╬╜╬╣╬║╧î delays</h2>
+           <p className="text-2xl text-gray-300 mb-6 font-light max-w-3xl mx-auto leading-relaxed">╬æ╧à╧â╧ä╬╖╧ü╬« ╧â╧à╬╜╬¡╧Ç╬╡╬╣╬▒ ╧â╧ä╬▒ ╧ç╧ü╬┐╬╜╬┐╬┤╬╣╬▒╬│╧ü╬¼╬╝╬╝╬▒╧ä╬▒ ╬║╬▒╬╣ Premium ╬æ╬╣╧â╬╕╬╖╧ä╬╣╬║╬«. ╬á╬▒╧ü╬▒╬┤╬»╬┤╬┐╧à╬╝╬╡ ╬┐╬╗╬┐╬║╬╗╬╖╧ü╧ë╬╝╬¡╬╜╬╡╧é ╬╡╧å╬▒╧ü╬╝╬┐╬│╬¡╧é ╧Ç╬┐╧à ╬▒╬╜╬▒╬▓╬▒╬╕╬╝╬»╬╢╬┐╧à╬╜ ╬╡╬╝╧Ç╬┐╧ü╬╣╬║╬¼ ╧ä╬╖╬╜ ╬▒╬╛╬»╬▒ ╧ä╬┐╧à ╬▒╬║╬╣╬╜╬«╧ä╬┐╧à ╧â╬▒╧é.</p>
+-          <p className="text-base text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed">╬æ╧Ç╬┐╬┤╬╡╬┤╬╡╬╣╬│╬╝╬¡╬╜╬┐ Portfolio ┬╖ Scalable Workflow ┬╖ ╬ƒ╧ü╬│╬▒╬╜╧ë╬╝╬¡╬╜╬┐ After-Sales ┬╖ ╬ò╬│╬│╧ì╬╖╧â╬╖ Alumil ┬╖ ╬Ü╬▒╬╝╬»╬▒ ╬Ü╬▒╬╕╧à╧â╧ä╬¡╧ü╬╖╧â╬╖</p>
++          <p className="text-base text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed">╬æ╧Ç╬┐╬┤╬╡╬┤╬╡╬╣╬│╬╝╬¡╬╜╬┐ Portfolio ┬╖ structured Workflow ┬╖ ╬ƒ╧ü╬│╬▒╬╜╧ë╬╝╬¡╬╜╬┐ After-Sales ┬╖ ╬ò╬│╬│╧ì╬╖╧â╬╖ Alumil ┬╖ ╬Ü╬▒╬╝╬»╬▒ ╬Ü╬▒╬╕╧à╧â╧ä╬¡╧ü╬╖╧â╬╖</p>
+           
+           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+             <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 flex flex-col justify-between hover:bg-white/10 hover:border-red/50 transition-all duration-300 rounded-2xl group cursor-pointer">
+                <PhoneCall className="text-red mb-6" size={32} />
+                <div>
+                  <p className="text-gray-400 text-sm mb-2 uppercase tracking-wide">╬Ü╬▒╬╗╬╡╧â╧ä╬╡ ╬£╬▒╧é</p>
+-                 <a href="tel:2831023897" className="font-bold text-2xl group-hover:text-[var(--color-red-light)] transition-colors">28310 23897</a>
++                 <a href="tel:+302831023897" className="font-bold text-2xl group-hover:text-[var(--color-red-light)] transition-colors">28310 23897</a>
+                </div>
+             </div>
+             <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 flex flex-col justify-between hover:bg-white/10 hover:border-red/50 transition-all duration-300 rounded-2xl group cursor-pointer">
+diff --git a/src/components/HomeEN.tsx b/src/components/HomeEN.tsx
+index a94db50..330dd95 100644
+--- a/src/components/HomeEN.tsx
++++ b/src/components/HomeEN.tsx
+@@ -74,7 +74,7 @@ export default function HomeEN() {
+         "name": "How do you guarantee project timelines and avoid delays?",
+         "acceptedAnswer": {
+           "@type": "Answer",
+-          "text": "We reduce execution risk to zero through our operational maturity. We operate our own in-house manufacturing line, employ dedicated permanent installation crews, and strictly adhere to standardized project processes. We deliver projectsΓÇöfrom single luxury villas to entire boutique hotelsΓÇöexactly on schedule, with zero compromise."
++          "text": "We reduce ╬║╬▒╬╕╧à╧â╧ä╬¡╧ü╬╖╧â╬╖ to zero through our ╧Ç╬┐╬╗╧à╬╡╧ä╬« ╬╡╬╝╧Ç╬╡╬╣╧ü╬»╬▒. We operate our own in-house manufacturing line, employ dedicated permanent installation crews, and strictly adhere to standardized project processes. We deliver projectsΓÇöfrom single luxury villas to entire boutique hotelsΓÇöexactly on schedule, with zero compromise."
+         }
+       },
+       {
+@@ -90,7 +90,7 @@ export default function HomeEN() {
+         "name": "What is the structure of your After-Sales support?",
+         "acceptedAnswer": {
+           "@type": "Answer",
+-          "text": "We are a structured construction firm, not independent handymen. Papadakis Aluminium features an organized After-Sales department providing the official Alumil manufacturer guarantee alongside dedicated long-term service. Consistent, reliable support after handover is a fundamental part of our scalable operations."
++          "text": "We are a structured construction firm, not independent handymen. Papadakis Aluminium features an organized After-Sales department providing the official Alumil manufacturer guarantee alongside dedicated long-term service. Consistent, reliable support after handover is a fundamental part of our ╧Ç╬╗╬«╧ü╧ë╧é ╬┐╧ü╬│╬▒╬╜╧ë╬╝╬¡╬╜╬╖ operations."
+         }
+       },
+       {
+@@ -239,7 +239,7 @@ export default function HomeEN() {
+                We don't just do basic installations. Our manufacturing unit in Rethymno partners with architects and developers to manufacture premium architectural systems that elevate your property's commercial and aesthetic value.
+              </p>
+              <p className="text-gray-500 text-base mt-4 leading-relaxed max-w-2xl mx-auto">
+-               As a scalable manufacturing company, we possess the operational maturity to handle demanding architectural projects. We do not execute single repairs. We focus on complete project solutions with strict timeline adherence, a premium application portfolio, and zero execution risk for investors and contractors.
++               As a ╧Ç╬╗╬«╧ü╧ë╧é ╬┐╧ü╬│╬▒╬╜╧ë╬╝╬¡╬╜╬╖ manufacturing company, we possess the ╧Ç╬┐╬╗╧à╬╡╧ä╬« ╬╡╬╝╧Ç╬╡╬╣╧ü╬»╬▒ to handle demanding architectural projects. We do not execute single repairs. We focus on complete project solutions with strict timeline adherence, a premium application portfolio, and zero ╬║╬▒╬╕╧à╧â╧ä╬¡╧ü╬╖╧â╬╖ for investors and contractors.
+              </p>
+            </motion.div>
+ 
+@@ -294,16 +294,16 @@ export default function HomeEN() {
+           viewport={{ once: true }}
+           className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"
+         >
+-          <h2 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">Zero Execution Risk</h2>
++          <h2 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">Zero delays</h2>
+           <p className="text-2xl text-gray-300 mb-6 font-light max-w-3xl mx-auto leading-relaxed">Absolute adherence to project timelines and Premium Aesthetics. We deliver turn-key applications that commercially elevate your property's value.</p>
+-          <p className="text-base text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed">Proven Track Record ┬╖ Scalable Workflow ┬╖ Structured After-Sales ┬╖ Alumil Warranty ┬╖ Zero Delays</p>
++          <p className="text-base text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed">Proven Track Record ┬╖ structured Workflow ┬╖ Structured After-Sales ┬╖ Alumil Warranty ┬╖ Zero Delays</p>
+           
+           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+             <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 flex flex-col justify-between hover:bg-white/10 hover:border-red/50 transition-all duration-300 rounded-2xl group cursor-pointer">
+                <PhoneCall className="text-red mb-6" size={32} />
+                <div>
+                  <p className="text-gray-400 text-sm mb-2 uppercase tracking-wide">Call Us</p>
+-                 <a href="tel:2831023897" className="font-bold text-2xl group-hover:text-[var(--color-red-light)] transition-colors">+30 28310 23897</a>
++                 <a href="tel:+302831023897" className="font-bold text-2xl group-hover:text-[var(--color-red-light)] transition-colors">+30 28310 23897</a>
+                </div>
+             </div>
+             <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 flex flex-col justify-between hover:bg-white/10 hover:border-red/50 transition-all duration-300 rounded-2xl group cursor-pointer">
+diff --git a/src/components/HomeFR.tsx b/src/components/HomeFR.tsx
+index 2d2817c..810dd6c 100644
+--- a/src/components/HomeFR.tsx
++++ b/src/components/HomeFR.tsx
+@@ -74,7 +74,7 @@ export default function HomeFR() {
+         "name": "How do you guarantee project timelines and avoid delays?",
+         "acceptedAnswer": {
+           "@type": "Answer",
+-          "text": "We reduce execution risk to zero through our operational maturity. We operate our own in-house manufacturing line, employ dedicated permanent installation crews, and strictly adhere to standardized project processes. We deliver projectsΓÇöfrom single luxury villas to entire boutique hotelsΓÇöexactly on schedule, with zero compromise."
++          "text": "We reduce ╬║╬▒╬╕╧à╧â╧ä╬¡╧ü╬╖╧â╬╖ to zero through our ╧Ç╬┐╬╗╧à╬╡╧ä╬« ╬╡╬╝╧Ç╬╡╬╣╧ü╬»╬▒. We operate our own in-house manufacturing line, employ dedicated permanent installation crews, and strictly adhere to standardized project processes. We deliver projectsΓÇöfrom single luxury villas to entire boutique hotelsΓÇöexactly on schedule, with zero compromise."
+         }
+       },
+       {
+@@ -90,7 +90,7 @@ export default function HomeFR() {
+         "name": "What is the structure of your After-Sales support?",
+         "acceptedAnswer": {
+           "@type": "Answer",
+-          "text": "We are a structured construction firm, not independent handymen. Papadakis Aluminium features an organized After-Sales department providing the official Alumil manufacturer guarantee alongside dedicated long-term service. Consistent, reliable support after handover is a fundamental part of our scalable operations."
++          "text": "We are a structured construction firm, not independent handymen. Papadakis Aluminium features an organized After-Sales department providing the official Alumil manufacturer guarantee alongside dedicated long-term service. Consistent, reliable support after handover is a fundamental part of our ╧Ç╬╗╬«╧ü╧ë╧é ╬┐╧ü╬│╬▒╬╜╧ë╬╝╬¡╬╜╬╖ operations."
+         }
+       },
+       {
+@@ -239,7 +239,7 @@ export default function HomeFR() {
+                We don't just do basic installations. Our manufacturing unit in Rethymno partners with architects and developers to manufacture premium architectural systems that elevate your property's commercial and aesthetic value.
+              </p>
+              <p className="text-gray-500 text-base mt-4 leading-relaxed max-w-2xl mx-auto">
+-               As a scalable manufacturing company, we possess the operational maturity to handle demanding architectural projects. We do not execute single repairs. We focus on complete project solutions with strict timeline adherence, a premium application portfolio, and zero execution risk for investors and contractors.
++               As a ╧Ç╬╗╬«╧ü╧ë╧é ╬┐╧ü╬│╬▒╬╜╧ë╬╝╬¡╬╜╬╖ manufacturing company, we possess the ╧Ç╬┐╬╗╧à╬╡╧ä╬« ╬╡╬╝╧Ç╬╡╬╣╧ü╬»╬▒ to handle demanding architectural projects. We do not execute single repairs. We focus on complete project solutions with strict timeline adherence, a premium application portfolio, and zero ╬║╬▒╬╕╧à╧â╧ä╬¡╧ü╬╖╧â╬╖ for investors and contractors.
+              </p>
+            </motion.div>
+ 
+@@ -296,14 +296,14 @@ export default function HomeFR() {
+         >
+           <h2 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">Z├⌐ro Risque d'Ex├⌐cution</h2>
+           <p className="text-2xl text-gray-300 mb-6 font-light max-w-3xl mx-auto leading-relaxed">Absolute adherence to project timelines and Premium Aesthetics. We deliver turn-key applications that commercially elevate your property's value.</p>
+-          <p className="text-base text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed">Proven Track Record ┬╖ Scalable Workflow ┬╖ Structured After-Sales ┬╖ Alumil Warranty ┬╖ Zero Delays</p>
++          <p className="text-base text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed">Proven Track Record ┬╖ structured Workflow ┬╖ Structured After-Sales ┬╖ Alumil Warranty ┬╖ Zero Delays</p>
+           
+           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+             <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 flex flex-col justify-between hover:bg-white/10 hover:border-red/50 transition-all duration-300 rounded-2xl group cursor-pointer">
+                <PhoneCall className="text-red mb-6" size={32} />
+                <div>
+                  <p className="text-gray-400 text-sm mb-2 uppercase tracking-wide">Appelez-nous</p>
+-                 <a href="tel:2831023897" className="font-bold text-2xl group-hover:text-[var(--color-red-light)] transition-colors">+30 28310 23897</a>
++                 <a href="tel:+302831023897" className="font-bold text-2xl group-hover:text-[var(--color-red-light)] transition-colors">+30 28310 23897</a>
+                </div>
+             </div>
+             <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 flex flex-col justify-between hover:bg-white/10 hover:border-red/50 transition-all duration-300 rounded-2xl group cursor-pointer">
+diff --git a/src/components/HomeNL.tsx b/src/components/HomeNL.tsx
+index d41ac60..1cbc13f 100644
+--- a/src/components/HomeNL.tsx
++++ b/src/components/HomeNL.tsx
+@@ -74,7 +74,7 @@ export default function HomeNL() {
+         "name": "How do you guarantee project timelines and avoid delays?",
+         "acceptedAnswer": {
+           "@type": "Answer",
+-          "text": "We reduce execution risk to zero through our operational maturity. We operate our own in-house manufacturing line, employ dedicated permanent installation crews, and strictly adhere to standardized project processes. We deliver projectsΓÇöfrom single luxury villas to entire boutique hotelsΓÇöexactly on schedule, with zero compromise."
++          "text": "We reduce ╬║╬▒╬╕╧à╧â╧ä╬¡╧ü╬╖╧â╬╖ to zero through our ╧Ç╬┐╬╗╧à╬╡╧ä╬« ╬╡╬╝╧Ç╬╡╬╣╧ü╬»╬▒. We operate our own in-house manufacturing line, employ dedicated permanent installation crews, and strictly adhere to standardized project processes. We deliver projectsΓÇöfrom single luxury villas to entire boutique hotelsΓÇöexactly on schedule, with zero compromise."
+         }
+       },
+       {
+@@ -90,7 +90,7 @@ export default function HomeNL() {
+         "name": "What is the structure of your After-Sales support?",
+         "acceptedAnswer": {
+           "@type": "Answer",
+-          "text": "We are a structured construction firm, not independent handymen. Papadakis Aluminium features an organized After-Sales department providing the official Alumil manufacturer guarantee alongside dedicated long-term service. Consistent, reliable support after handover is a fundamental part of our scalable operations."
++          "text": "We are a structured construction firm, not independent handymen. Papadakis Aluminium features an organized After-Sales department providing the official Alumil manufacturer guarantee alongside dedicated long-term service. Consistent, reliable support after handover is a fundamental part of our ╧Ç╬╗╬«╧ü╧ë╧é ╬┐╧ü╬│╬▒╬╜╧ë╬╝╬¡╬╜╬╖ operations."
+         }
+       },
+       {
+@@ -239,7 +239,7 @@ export default function HomeNL() {
+                We don't just do basic installations. Our manufacturing unit in Rethymno partners with architects and developers to manufacture premium architectural systems that elevate your property's commercial and aesthetic value.
+              </p>
+              <p className="text-gray-500 text-base mt-4 leading-relaxed max-w-2xl mx-auto">
+-               As a scalable manufacturing company, we possess the operational maturity to handle demanding architectural projects. We do not execute single repairs. We focus on complete project solutions with strict timeline adherence, a premium application portfolio, and zero execution risk for investors and contractors.
++               As a ╧Ç╬╗╬«╧ü╧ë╧é ╬┐╧ü╬│╬▒╬╜╧ë╬╝╬¡╬╜╬╖ manufacturing company, we possess the ╧Ç╬┐╬╗╧à╬╡╧ä╬« ╬╡╬╝╧Ç╬╡╬╣╧ü╬»╬▒ to handle demanding architectural projects. We do not execute single repairs. We focus on complete project solutions with strict timeline adherence, a premium application portfolio, and zero ╬║╬▒╬╕╧à╧â╧ä╬¡╧ü╬╖╧â╬╖ for investors and contractors.
+              </p>
+            </motion.div>
+ 
+@@ -296,14 +296,14 @@ export default function HomeNL() {
+         >
+           <h2 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">Geen Uitvoeringsrisico</h2>
+           <p className="text-2xl text-gray-300 mb-6 font-light max-w-3xl mx-auto leading-relaxed">Absolute adherence to project timelines and Premium Aesthetics. We deliver turn-key applications that commercially elevate your property's value.</p>
+-          <p className="text-base text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed">Proven Track Record ┬╖ Scalable Workflow ┬╖ Structured After-Sales ┬╖ Alumil Warranty ┬╖ Zero Delays</p>
++          <p className="text-base text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed">Proven Track Record ┬╖ structured Workflow ┬╖ Structured After-Sales ┬╖ Alumil Warranty ┬╖ Zero Delays</p>
+           
+           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+             <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 flex flex-col justify-between hover:bg-white/10 hover:border-red/50 transition-all duration-300 rounded-2xl group cursor-pointer">
+                <PhoneCall className="text-red mb-6" size={32} />
+                <div>
+                  <p className="text-gray-400 text-sm mb-2 uppercase tracking-wide">Bel Ons</p>
+-                 <a href="tel:2831023897" className="font-bold text-2xl group-hover:text-[var(--color-red-light)] transition-colors">+30 28310 23897</a>
++                 <a href="tel:+302831023897" className="font-bold text-2xl group-hover:text-[var(--color-red-light)] transition-colors">+30 28310 23897</a>
+                </div>
+             </div>
+             <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 flex flex-col justify-between hover:bg-white/10 hover:border-red/50 transition-all duration-300 rounded-2xl group cursor-pointer">
+diff --git a/src/components/LanguageSwitcher.tsx b/src/components/LanguageSwitcher.tsx
+index 24a4a2b..7a1305a 100644
+--- a/src/components/LanguageSwitcher.tsx
++++ b/src/components/LanguageSwitcher.tsx
+@@ -7,11 +7,11 @@ export default function LanguageSwitcher({ currentLang, isScrolled = false }: {
+   const pathname = usePathname()
+   
+   const locales = [
+-    { code: 'el', label: 'EL' },
+-    { code: 'en', label: 'EN' },
+-    { code: 'de', label: 'DE' },
+-    { code: 'fr', label: 'FR' },
+-    { code: 'nl', label: 'NL' }
++    { code: 'el', label: '╬ò╬╗╬╗╬╖╬╜╬╣╬║╬¼' },
++    { code: 'en', label: 'English' },
++    { code: 'de', label: 'Deutsch' },
++    { code: 'fr', label: 'Fran├ºais' },
++    { code: 'nl', label: 'Nederlands' }
+   ]
+ 
+   const getLocalizedHref = (targetLocale: string) => {
+@@ -33,7 +33,7 @@ export default function LanguageSwitcher({ currentLang, isScrolled = false }: {
+         <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
+       </div>
+       
+-      <div className="absolute top-full right-0 mt-4 w-20 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 flex flex-col py-2">
++      <div className="absolute top-full right-0 mt-4 w-32 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 flex flex-col py-2">
+         <div className="absolute -top-4 left-0 right-0 h-4 bg-transparent" />
+         {locales.map(l => (
+           <Link 
+diff --git a/src/components/Navbar.tsx b/src/components/Navbar.tsx
+index ad54b21..e2cb1e5 100644
+--- a/src/components/Navbar.tsx
++++ b/src/components/Navbar.tsx
+@@ -147,7 +147,7 @@ export default function Navbar({ lang = 'el' }: { lang?: 'el' | 'en' | 'de' | 'f
+               
+               <LanguageSwitcher currentLang={lang} isScrolled={isScrolled} />
+ 
+-              <a href="tel:2831023897" className="flex items-center gap-2 bg-red text-white px-6 py-3 rounded-full font-bold hover:bg-red-700 transition-colors active:scale-95 shadow-lg shadow-red/25">
++              <a href="tel:+302831023897" className="flex items-center gap-2 bg-red text-white px-6 py-3 rounded-full font-bold hover:bg-red-700 transition-colors active:scale-95 shadow-lg shadow-red/25">
+                 <Phone size={18} />
+                 <span>28310 23897</span>
+               </a>
+@@ -227,7 +227,7 @@ export default function Navbar({ lang = 'el' }: { lang?: 'el' | 'en' | 'de' | 'f
+ 
+               <div className="p-6">
+                 <a 
+-                  href="tel:2831023897" 
++                  href="tel:+302831023897" 
+                   className="flex items-center justify-center gap-3 w-full bg-red text-white py-4 rounded-full font-bold active:scale-95 transform transition-transform shadow-xl shadow-red/25"
+                 >
+                   <Phone size={20} /> {t.call}
+diff --git a/src/middleware.ts b/src/middleware.ts
+index 4d0abe3..8f879ee 100644
+--- a/src/middleware.ts
++++ b/src/middleware.ts
+@@ -16,6 +16,12 @@ export function middleware(request: NextRequest) {
+     return NextResponse.next()
+   }
+ 
++  // Redirect unsupported blog locales to /en/blog
++  if (pathname.match(/^\/(de|fr|nl)\/blog/)) {
++    request.nextUrl.pathname = pathname.replace(/^\/(de|fr|nl)\/blog/, '/en/blog')
++    return NextResponse.redirect(request.nextUrl, 308)
++  }
++
+   const pathnameHasLocale = locales.some(
+     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+   )
+@@ -23,7 +29,7 @@ export function middleware(request: NextRequest) {
+   if (pathnameHasLocale) return NextResponse.next()
+ 
+   request.nextUrl.pathname = `/${defaultLocale}${pathname}`
+-  return NextResponse.redirect(request.nextUrl)
++  return NextResponse.redirect(request.nextUrl, 308)
+ }
+ 
+ export const config = {

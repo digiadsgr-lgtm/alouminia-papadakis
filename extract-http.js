@@ -1,38 +1,21 @@
-const http = require('http');
-
-const urls = [
-  'http://localhost:3000/de',
-  'http://localhost:3000/de/services/koufomata-alouminiou-rethymno',
-  'http://localhost:3000/fr'
-];
-
-function fetchAndExtractMeta(url) {
-  http.get(url, (res) => {
-    let data = '';
-    res.on('data', (chunk) => { data += chunk; });
-    res.on('end', () => {
-      const headMatch = data.match(/<head[^>]*>(.*?)<\/head>/is);
-      if (!headMatch) {
-        console.log('No <head> found in ' + url);
-        return;
-      }
-      const head = headMatch[1];
-      
-      const titleMatch = head.match(/<title[^>]*>(.*?)<\/title>/is);
-      const title = titleMatch ? titleMatch[1] : 'No title';
-      
-      const canonicalMatch = head.match(/<link[^>]*rel="canonical"[^>]*href="([^"]+)"/is);
-      const canonical = canonicalMatch ? canonicalMatch[1] : 'No canonical';
-      
-      console.log('--- ' + url + ' ---');
-      console.log('Title: ' + title);
-      console.log('Canonical: ' + canonical);
-    });
-  }).on('error', (err) => {
-    console.log('Error: ' + err.message);
-  });
-}
-
-for (const u of urls) {
-  fetchAndExtractMeta(u);
+const fs = require('fs');
+const content = fs.readFileSync('C:\\\\Users\\\\avour\\\\.gemini\\\\antigravity\\\\brain\\\\632e6964-5c2e-4c53-8e7b-29d062a5b0b4\\\\.system_generated\\\\tasks\\\\task-1245.log', 'utf8');
+const lines = content.split('\n');
+let inCheck1 = false;
+let inCheck2 = false;
+for (let line of lines) {
+  if (line.includes('=== CHECK 1')) inCheck1 = true;
+  if (line.includes('=== CHECK 2')) { inCheck1 = false; inCheck2 = true; }
+  if (line.includes('=== CHECK 3')) { inCheck2 = false; break; }
+  
+  if (inCheck1) {
+    if (line.startsWith('URL:') || line.includes('<link rel="canonical"')) console.log(line.trim());
+  }
+  if (inCheck2) {
+    if (line.startsWith('URL:')) console.log('\n'+line.trim());
+    const titleMatch = line.match(/<title>(.*?)<\/title>/);
+    if (titleMatch) console.log('Title: ' + titleMatch[1]);
+    const canMatch = line.match(/<link rel="canonical" href="(.*?)"\/>/);
+    if (canMatch) console.log('Canonical: ' + canMatch[1]);
+  }
 }

@@ -22,29 +22,58 @@ export const viewport: Viewport = {
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
-  if (lang === 'en') {
-    return {
-      metadataBase: new URL('https://alouminia-papadakis.gr'),
-      title: {
-        template: '%s | Papadakis Aluminium',
-        default: 'Premium Aluminum Systems Rethymno | Papadakis Crete',
-      },
-      description: 'Certified Alumil manufacturer in Rethymno, Crete. Premium aluminum systems for luxury residences and hotels. Uncompromised quality.',
-      verification: {
-        google: 'So9Um9OAEPVqMxFHrDLEPUZgZWSMtc5Qf5Fi_y4gCjQ',
-      },
-    }
-  }
-  return {
-    metadataBase: new URL('https://alouminia-papadakis.gr'),
-    title: {
-      template: '%s | Αλουμίνια Παπαδάκης',
-      default: 'Κατασκευές Αλουμινίου Ρέθυμνο & Κρήτη | Κορυφαία Κουφώματα',
-    },
-    description: 'Πιστοποιημένος κατασκευαστής συστημάτων Alumil στο Ρέθυμνο. Κουφώματα υψηλής αισθητικής και ασφάλειας για απαιτητικά έργα.',
-    verification: {
-      google: 'So9Um9OAEPVqMxFHrDLEPUZgZWSMtc5Qf5Fi_y4gCjQ',
-    },
+  switch (lang) {
+    case 'en':
+      return {
+        metadataBase: new URL('https://alouminia-papadakis.gr'),
+        title: {
+          template: '%s | Papadakis Aluminium',
+          default: 'Premium Aluminum Systems Rethymno | Papadakis Crete',
+        },
+        description: 'Certified Alumil manufacturer in Rethymno, Crete. Premium aluminum systems for luxury residences and hotels. Uncompromised quality.',
+        verification: { google: 'So9Um9OAEPVqMxFHrDLEPUZgZWSMtc5Qf5Fi_y4gCjQ' },
+      }
+    case 'de':
+      return {
+        metadataBase: new URL('https://alouminia-papadakis.gr'),
+        title: {
+          template: '%s | Papadakis Aluminium',
+          default: 'Premium Aluminiumsysteme Rethymno | Papadakis Kreta',
+        },
+        description: 'Zertifizierter Alumil-Hersteller in Rethymno, Kreta. Premium-Aluminiumsysteme für Luxusresidenzen und Hotels. Kompromisslose Qualität.',
+        verification: { google: 'So9Um9OAEPVqMxFHrDLEPUZgZWSMtc5Qf5Fi_y4gCjQ' },
+      }
+    case 'fr':
+      return {
+        metadataBase: new URL('https://alouminia-papadakis.gr'),
+        title: {
+          template: '%s | Papadakis Aluminium',
+          default: 'Systèmes en Aluminium Premium Réthymnon | Papadakis Crète',
+        },
+        description: 'Fabricant Alumil certifié à Réthymnon, Crète. Systèmes en aluminium premium pour résidences de luxe et hôtels. Qualité sans compromis.',
+        verification: { google: 'So9Um9OAEPVqMxFHrDLEPUZgZWSMtc5Qf5Fi_y4gCjQ' },
+      }
+    case 'nl':
+      return {
+        metadataBase: new URL('https://alouminia-papadakis.gr'),
+        title: {
+          template: '%s | Papadakis Aluminium',
+          default: 'Premium Aluminium Systemen Rethymnon | Papadakis Kreta',
+        },
+        description: 'Gecertificeerde Alumil-fabrikant in Rethymnon, Kreta. Premium aluminium systemen voor luxe woningen en hotels. Ongecompromitteerde kwaliteit.',
+        verification: { google: 'So9Um9OAEPVqMxFHrDLEPUZgZWSMtc5Qf5Fi_y4gCjQ' },
+      }
+    case 'el':
+    default:
+      return {
+        metadataBase: new URL('https://alouminia-papadakis.gr'),
+        title: {
+          template: '%s | Αλουμίνια Παπαδάκης',
+          default: 'Κατασκευές Αλουμινίου Ρέθυμνο & Κρήτη | Κορυφαία Κουφώματα',
+        },
+        description: 'Πιστοποιημένος κατασκευαστής συστημάτων Alumil στο Ρέθυμνο. Κουφώματα υψηλής αισθητικής και ασφάλειας για απαιτητικά έργα.',
+        verification: { google: 'So9Um9OAEPVqMxFHrDLEPUZgZWSMtc5Qf5Fi_y4gCjQ' },
+      }
   }
 }
 
@@ -72,7 +101,7 @@ export default async function RootLayout({
     "url": "https://alouminia-papadakis.gr",
     "logo": "https://alouminia-papadakis.gr/icon.png",
     "image": "https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.png",
-    "description": "Certified Alumil manufacturer specializing in project-based aluminum solutions for luxury villas, boutique hotels, and high-end residential developments across Crete. Uncompromised πολυετή εμπειρία, πλήρως οργανωμένη manufacturing processes with zero delays, and a proven extensive portfolio. Full workflow: architectural study → CAD design → in-house manufacturing → on-site installation by permanent crews → structured after-sales guarantee.",
+    "description": "Certified Alumil manufacturer specializing in project-based aluminum solutions for luxury villas, boutique hotels, and high-end residential developments across Crete. Uncompromised expertise, structured manufacturing processes with zero delays, and a proven extensive portfolio. Full workflow: architectural study → CAD design → in-house manufacturing → on-site installation by permanent crews → structured after-sales guarantee.",
     "foundingDate": "1993",
     "numberOfEmployees": {
       "@type": "QuantitativeValue",
@@ -95,27 +124,6 @@ export default async function RootLayout({
     "telephone": "+302831023897",
     "email": "gpapadakisret@gmail.com",
     "priceRange": "$$$",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "128"
-    },
-    "review": [
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "Γιάννης Καλαϊτζάκης (Εργολάβος)" },
-        "datePublished": "2023-11-15",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "Εξαιρετική συνεργασία σε project βίλας στον Πλακιά. Τήρηση χρονοδιαγραμμάτων, μηδενικό καθυστέρηση. Τα συστήματα Alumil SUPREME μπήκαν με μεγάλη ακρίβεια. Εγγύηση για επαγγελματίες."
-      },
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "Maria Stavrou (Architect)" },
-        "datePublished": "2024-02-28",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "The most reliable aluminum manufacturing partner in Crete. Their in-house production facility ensures πλήρως οργανωμένη workflow without delays. Perfect execution on boutique hotel renovation."
-      }
-    ],
     "areaServed": [
       { "@type": "City", "name": "Ρέθυμνο" },
       { "@type": "City", "name": "Χανιά" },

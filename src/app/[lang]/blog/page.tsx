@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   
   const content = {
     el: {
-      title: 'Blog & Ενημερώσεις | Αλουμίνια Παπαδάκης',
+      title: 'Blog & Ενημερώσεις',
       description: 'Διαβάστε τα τελευταία νέα, οδηγούς και συμβουλές για τα συστήματα αλουμινίου, την εξοικονόμηση ενέργειας και τη σύγχρονη δόμηση.',
       siteName: 'Αλουμίνια Παπαδάκης',
       locale: 'el_GR'
