@@ -1,4 +1,5 @@
-import Link from 'next/link';
+import Link from 'next/link'
+import ProtectedEmail from '@/components/ProtectedEmail';
 
 export const metadata = {
   title: 'Πολιτική Απορρήτου & Cookies',
@@ -56,7 +57,7 @@ export default function PolitikiAporritou() {
         <p>
           Έχετε το δικαίωμα πρόσβασης, διόρθωσης, διαγραφής (δικαίωμα στη λήθη) 
           και περιορισμού της επεξεργασίας. Για την άσκηση των δικαιωμάτων σας, 
-          επικοινωνήστε στο: gpapadakisret@gmail.com
+          επικοινωνήστε στο: <ProtectedEmail />
         </p>
       </div>
     </div>

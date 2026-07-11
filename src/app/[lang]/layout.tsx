@@ -122,7 +122,6 @@ export default async function RootLayout({
       "longitude": 24.483333
     },
     "telephone": "+302831023897",
-    "email": "gpapadakisret@gmail.com",
     "priceRange": "$$$",
     "areaServed": [
       { "@type": "City", "name": "Ρέθυμνο" },

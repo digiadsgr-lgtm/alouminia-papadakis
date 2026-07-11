@@ -1,4 +1,5 @@
-import Link from 'next/link';
+import Link from 'next/link'
+import ProtectedEmail from '@/components/ProtectedEmail';
 
 export const metadata = {
   title: 'Όροι Χρήσης',
@@ -31,7 +32,7 @@ export default function OroiXrisis() {
           <li><strong>ΓΕΜΗ:</strong> 022204950000</li>
           <li><strong>Διεύθυνση:</strong> Δρουλίσκου 8, Ρέθυμνο, 74100</li>
           <li><strong>Τηλέφωνο:</strong> 28310 23897</li>
-          <li><strong>Email:</strong> gpapadakisret@gmail.com</li>
+          <li><strong>Email:</strong> <ProtectedEmail /></li>
         </ul>
 
         <h2 className="text-xl font-semibold mt-6 mb-3 text-[#2B3A4A]">2. Πνευματικά Δικαιώματα</h2>

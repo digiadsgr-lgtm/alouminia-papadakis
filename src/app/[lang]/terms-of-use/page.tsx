@@ -1,4 +1,5 @@
-import Link from 'next/link';
+import Link from 'next/link'
+import ProtectedEmail from '@/components/ProtectedEmail';
 
 export const metadata = {
   title: 'Terms of Use | Alouminia Papadakis',
@@ -31,7 +32,7 @@ export default function TermsOfUse() {
           <li><strong>GEMI (Commercial Reg.):</strong> 022204950000</li>
           <li><strong>Address:</strong> 8 Drouliskou Str., Rethymno, 74100, Crete, Greece</li>
           <li><strong>Phone:</strong> +30 28310 23897</li>
-          <li><strong>Email:</strong> gpapadakisret@gmail.com</li>
+          <li><strong>Email:</strong> <ProtectedEmail /></li>
         </ul>
 
         <h2 className="text-xl font-semibold mt-6 mb-3 text-[#2B3A4A]">2. Intellectual Property</h2>

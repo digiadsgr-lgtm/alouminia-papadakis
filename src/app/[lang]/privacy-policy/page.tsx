@@ -1,4 +1,5 @@
-import Link from 'next/link';
+import Link from 'next/link'
+import ProtectedEmail from '@/components/ProtectedEmail';
 
 export const metadata = {
   title: 'Privacy & Cookies Policy | Alouminia Papadakis',
@@ -55,7 +56,7 @@ export default function PrivacyPolicy() {
         <p>
           You have the right to access, rectify, erase (right to be forgotten), 
           and restrict processing of your data. To exercise your rights, 
-          contact us at: gpapadakisret@gmail.com
+          contact us at: <ProtectedEmail />
         </p>
       </div>
     </div>
