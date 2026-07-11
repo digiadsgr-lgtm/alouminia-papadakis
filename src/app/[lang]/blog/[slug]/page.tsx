@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { articles } from '@/data/articles'
+import { articles, getLocalizedField } from '@/data/articles'
 import PageTransition from '@/components/PageTransition'
 import { ChevronLeft, Calendar, Clock, Phone, ArrowRight, User, Folder } from 'lucide-react'
 import JsonLd from '@/components/JsonLd'
@@ -101,8 +101,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const article = articles.find(a => a.slug === slug);
   if (!article) return {};
   
-  const title = lang === 'el' ? article.titleEL : article.titleEN;
-  const description = lang === 'el' ? article.descriptionEL : article.descriptionEN;
+  const title = getLocalizedField(article, 'title', lang);
+  const description = getLocalizedField(article, 'description', lang);
   const url = `https://alouminia-papadakis.gr/${lang}/blog/${slug}`;
 
   return {
@@ -154,9 +154,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
   const article = articles.find(a => a.slug === slug);
   if (!article) notFound();
 
-  const title = isEl ? article.titleEL : article.titleEN;
-  const rawContent = (isEl ? article.contentEL : article.contentEN) || '';
-  const faqData = isEl ? article.faqEL : article.faqEN;
+  const title = getLocalizedField(article, 'title', lang);
+  const rawContent = getLocalizedField(article, 'content', lang) || '';
+  const faqData = getLocalizedField(article, 'faq', lang);
   const wordsCount = rawContent.replace(/<[^>]*>?/gm, ' ').split(/\s+/).length;
   const readTime = Math.max(1, Math.round(wordsCount / 200));
   
@@ -188,7 +188,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
   const hasEnoughH2 = h2Elements.length >= 3;
   
   // Key Takeaway block
-  const takeawayData = isEl ? article.keyTakeawayEL : article.keyTakeawayEN;
+  const takeawayData = getLocalizedField(article, 'keyTakeaway', lang);
   let takeawayHtml = '';
   if (takeawayData) {
     takeawayHtml = `
@@ -205,7 +205,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
   }
   
   // Stats block
-  const statsData = isEl ? article.statsEL : article.statsEN;
+  const statsData = getLocalizedField(article, 'stats', lang);
   let statsHtml = '';
   if (statsData && statsData.length > 0) {
     const cards = statsData.map((stat: any) => `
@@ -285,7 +285,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
     ],
     "datePublished": article.date,
     "dateModified": article.dateModified || article.date,
-    "inLanguage": isEl ? 'el-GR' : 'en-US',
+    "inLanguage": lang === 'el' ? 'el-GR' : (lang === 'de' ? 'de-DE' : (lang === 'fr' ? 'fr-FR' : (lang === 'nl' ? 'nl-NL' : 'en-US'))),
     "author": [{
         "@type": "Organization",
         "name": "Αλουμίνια Παπαδάκης",
@@ -316,7 +316,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
   const faqSchema = faqData && faqData.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": faqData.map(item => ({
+    "mainEntity": faqData.map((item: any) => ({
       "@type": "Question",
       "name": item.q,
       "acceptedAnswer": {
@@ -412,7 +412,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
                   {t.faq}
                 </h2>
                 <div className="space-y-6">
-                  {faqData.map((faq, idx) => (
+                  {faqData.map((faq: any, idx: number) => (
                     <div key={idx} className="border-b border-gray-200 pb-6 last:border-0 last:pb-0">
                       <h3 className="text-lg font-bold text-navy mb-3 leading-snug">{faq.q}</h3>
                       <p className="text-gray-600 leading-relaxed m-0 text-md">{faq.a}</p>
@@ -488,7 +488,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
                   <div className="relative w-full aspect-[16/10] overflow-hidden bg-gray-100">
                     <Image 
                       src={rel.image} 
-                      alt={isEl ? rel.titleEL : rel.titleEN} 
+                      alt={getLocalizedField(rel, 'title', lang)} 
                       fill 
                       className="object-cover group-hover:scale-105 transition-transform duration-700" 
                     />
@@ -499,7 +499,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
                       {new Date(rel.date).toLocaleDateString(isEl ? 'el-GR' : 'en-US', { month: 'short', year: 'numeric' })}
                     </span>
                     <h4 className="font-black text-navy text-xl line-clamp-2 group-hover:text-red-light transition-colors leading-snug mb-4">
-                      {isEl ? rel.titleEL : rel.titleEN}
+                      {getLocalizedField(rel, 'title', lang)}
                     </h4>
                     <div className="mt-auto text-sm font-bold text-navy group-hover:text-red-light flex items-center gap-2 transition-colors">
                       {t.readMore} <ArrowRight size={16} strokeWidth={2.5}/>

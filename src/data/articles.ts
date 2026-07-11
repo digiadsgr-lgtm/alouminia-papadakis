@@ -52,10 +52,108 @@ export const articles = [
     "category": "Συστήματα Σκίασης",
     "keyTakeawayEL": "Αν επενδύετε στο σπίτι σας, επιθυμείτε μηδενική συντήρηση και θέλετε το ακίνητό σας να κερδίσει σε εμπορική αξία και λειτουργικότητα τον χειμώνα, επιλέξτε βιοκλιματική πέργκολα αλουμινίου.",
     "keyTakeawayEN": "If you are investing in your home, desire zero maintenance, and want your property to gain in commercial value and winter functionality, choose an aluminum bioclimatic pergola.",
-    "statsEL": [{"value":"15+","label":"Χρόνια Ζωής"},{"value":"Μηδέν","label":"Κόστος Συντήρησης"},{"value":"100%","label":"Στεγανότητα"}],
-    "statsEN": [{"value":"15+","label":"Years Lifespan"},{"value":"Zero","label":"Maintenance Cost"},{"value":"100%","label":"Watertightness"}],
+    "statsEL": [
+      {
+        "value": "15+",
+        "label": "Χρόνια Ζωής"
+      },
+      {
+        "value": "Μηδέν",
+        "label": "Κόστος Συντήρησης"
+      },
+      {
+        "value": "100%",
+        "label": "Στεγανότητα"
+      }
+    ],
+    "statsEN": [
+      {
+        "value": "15+",
+        "label": "Years Lifespan"
+      },
+      {
+        "value": "Zero",
+        "label": "Maintenance Cost"
+      },
+      {
+        "value": "100%",
+        "label": "Watertightness"
+      }
+    ],
     "contentEL": "\n      <p>Η επιλογή του κατάλληλου συστήματος σκίασης στην Κρήτη είναι συχνά ένα μεγάλο δίλημμα. Το έντονο ηλιακό φως, οι δυνατοί άνεμοι και η αλμύρα της θάλασσας απαιτούν λύσεις που αντέχουν. Οι περισσότεροι ιδιοκτήτες κατοικιών και ξενοδοχείων στο Ρέθυμνο και σε όλο το νησί αναρωτιούνται: <strong>βιοκλιματική πέργκολα ή τεντοπέργκολα;</strong></p>\n      \n      <p>Η βασική διαφορά έγκειται στην τεχνολογία και το κόστος. Αναγνωρίζουμε ότι η απόφαση δεν είναι εύκολη. Στο παρόν άρθρο αναλύουμε με απόλυτη ειλικρίνεια τα υπέρ, τα κατά, το κόστος και τη διάρκεια ζωής της κάθε επιλογής, ώστε να κάνετε την καλύτερη επένδυση για το ακίνητό σας.</p>\n\n      <h2>Τι είναι το καθένα;</h2>\n      <p>Η <strong><a href=\"/el/systimata-alumil/smartia-pergoles\">βιοκλιματική πέργκολα</a></strong> κατασκευάζεται εξ ολοκλήρου από αλουμίνιο (πλαίσιο και κινητές περσίδες). Οι περσίδες περιστρέφονται προσφέροντας φυσικό εξαερισμό (βιοκλιματική δράση) και όταν κλείνουν σφραγίζουν στεγανά, με το οποίο απορρέει μέσα από κρυφές υδρορροές στις κολώνες.</p>\n      <p>Η <strong>τεντοπέργκολα</strong> αποτελείται συνήθως από μεταλλικό ή αλουμινένιο σκελετό, ενώ η οροφή της καλύπτεται από ανθεκτικό ύφασμα (PVC) που ανοιγοκλείνει μέσω ηλεκτρικού μοτέρ, μαζεύοντας σε «κύματα» (πτυσσόμενη).</p>\n\n      <h2>Πίνακας Σύγκρισης 8 Κρίσιμων Κριτηρίων</h2>\n      <div class=\"overflow-x-auto my-8\">\n        <table class=\"w-full text-left border-collapse bg-white/5 rounded-xl overflow-hidden\">\n          <thead>\n            <tr class=\"bg-white/10\">\n              <th class=\"p-4 border-b border-white/10 font-bold text-white\">Κριτήριο</th>\n              <th class=\"p-4 border-b border-white/10 font-bold text-red-400\">Βιοκλιματική Πέργκολα</th>\n              <th class=\"p-4 border-b border-white/10 font-bold text-gray-300\">Τεντοπέργκολα</th>\n            </tr>\n          </thead>\n          <tbody class=\"divide-y divide-white/10\">\n            <tr><td class=\"p-4 font-bold text-gray-400\">1. Αρχικό Κόστος</td><td class=\"p-4\">Υψηλό (Premium επένδυση)</td><td class=\"p-4\">Μέτριο έως χαμηλό</td></tr>\n            <tr><td class=\"p-4 font-bold text-gray-400\">2. Διάρκεια Ζωής</td><td class=\"p-4\">Δεκαετίες (το αλουμίνιο δεν φθείρεται)</td><td class=\"p-4\">10-15 χρόνια (το πανί χρειάζεται αλλαγή)</td></tr>\n            <tr><td class=\"p-4 font-bold text-gray-400\">3. Αντοχή σε Ανέμους</td><td class=\"p-4\">Άριστη (αντέχει σε θυελλώδεις ανέμους)</td><td class=\"p-4\">Καλή (το πανί καταπονείται στα μποφόρ)</td></tr>\n            <tr><td class=\"p-4 font-bold text-gray-400\">4. Αντοχή στην Αλμύρα</td><td class=\"p-4\">Άριστη (ανοδίωση Seaside Class)</td><td class=\"p-4\">Μέτρια (τα εξαρτήματα και οι οδηγοί φθείρονται)</td></tr>\n            <tr><td class=\"p-4 font-bold text-gray-400\">5. Στεγανότητα τον Χειμώνα</td><td class=\"p-4\">Πλήρης στεγάνωση με κλειστές περσίδες</td><td class=\"p-4\">Καλή, αλλά το πανί συγκρατεί υγρασία/ρύπους</td></tr>\n            <tr><td class=\"p-4 font-bold text-gray-400\">6. Απαιτήσεις Συντήρησης</td><td class=\"p-4\">Ελάχιστες (απλό πλύσιμο με νερό)</td><td class=\"p-4\">Συχνός καθαρισμός πανιού, λίπανση οδηγών</td></tr>\n            <tr><td class=\"p-4 font-bold text-gray-400\">7. Αξία Ακινήτου</td><td class=\"p-4\">Αυξάνει την εμπορική αξία του σπιτιού</td><td class=\"p-4\">Ουδέτερη επίδραση</td></tr>\n            <tr><td class=\"p-4 font-bold text-gray-400\">8. Αδειοδότηση</td><td class=\"p-4\">Μικρής Κλίμακας (συχνά)</td><td class=\"p-4\">Συνήθως δεν απαιτεί (υπό προϋποθέσεις)</td></tr>\n          </tbody>\n        </table>\n      </div>\n\n      <h2>Πότε αξίζει να επιλέξετε Τεντοπέργκολα;</h2>\n      <p>Αν και στο Αλουμίνια Παπαδάκης ειδικευόμαστε στις <a href=\"/el/services/pergoles-rethymno-kriti\">πέργκολες αλουμινίου στο Ρέθυμνο</a>, η ειλικρίνεια μας επιβάλλει να αναγνωρίσουμε πότε η τεντοπέργκολα έχει νόημα. Είναι ιδανική λύση για:</p>\n      <ul>\n        <li><strong>Προσωρινές λύσεις:</strong> Αν νοικιάζετε το χώρο και θέλετε μια άμεση, οικονομική λύση σκίασης.</li>\n        <li><strong>Μικρός προϋπολογισμός:</strong> Όταν το αρχικό budget είναι περιορισμένο και δεν δικαιολογεί το κόστος μιας πλήρους κατασκευής αλουμινίου.</li>\n        <li><strong>Εποχιακά καταστήματα:</strong> Που λειτουργούν μόνο το καλοκαίρι και μπορούν να μαζεύουν το πανί τον χειμώνα για προστασία από τη φθορά.</li>\n      </ul>\n\n      <h2>Πότε η Βιοκλιματική Πέργκολα είναι Μονόδρομος;</h2>\n      <p>Αν το ακίνητό σας είναι μόνιμη κατοικία, βίλα, ή ξενοδοχείο υψηλών προδιαγραφών στην Κρήτη, η βιοκλιματική πέργκολα δεν είναι απλά μια επιλογή, είναι η <em>μόνη</em> λύση που βγάζει νόημα μακροπρόθεσμα. Ο λόγος; <strong>Οι άνεμοι και η αλμύρα.</strong></p>\n      <p>Στη νότια και βόρεια Κρήτη, ένα σύστημα με πανί θα δοκιμαστεί σκληρά από τους αέρηδες. Η βιοκλιματική πέργκολα αλουμινίου, εξοπλισμένη με αισθητήρες αέρα, προσαρμόζει τις περσίδες της ώστε να μην καταπονείται. Επιπλέον, μετατρέπει μια απλή βεράντα σε ένα πραγματικό «δωμάτιο» που μπορείτε να χρησιμοποιείτε 365 μέρες τον χρόνο, προστατευμένο από βροχή και καύσωνα.</p>\n\n      <h2>Το πραγματικό Κόστος Κύκλου Ζωής (15ετία)</h2>\n      <p>Πολλοί πελάτες στέκονται στην αρχική <strong>διαφορά βιοκλιματικής - τεντοπέργκολας (τιμή)</strong>, χωρίς να υπολογίζουν τη συντήρηση.</p>\n      <p>Μια τεντοπέργκολα σε 15 χρόνια θα χρειαστεί τουλάχιστον 2 (ίσως και 3) αλλαγές πανιού λόγω σκισιμάτων από τον αέρα, φθοράς από τον ήλιο (UV) ή εμφάνισης μούχλας/βρωμιάς που δεν καθαρίζει. Επιπλέον, το μοτέρ της καταπονείται πολύ περισσότερο λόγω της επιφάνειας του πανιού.</p>\n      <p>Αντίθετα, η βιοκλιματική πέργκολα Alumil (με επεξεργασία Seaside Class) στα 15 χρόνια δεν θα έχει χρειαστεί απολύτως τίποτα πέρα από πλύσιμο με λάστιχο νερού. Αν υπολογίσετε το κόστος αλλαγής πανιών και τα μεροκάματα των τεχνικών σε βάθος χρόνου, η διαφορά κόστους μικραίνει δραστικά — και συχνά μηδενίζεται, με τη διαφορά ότι στη βιοκλιματική απολαμβάνατε επί 15 χρόνια premium αισθητική και σταθερή, στιβαρή κατασκευή.</p>\n\n      <h2>Ανακεφαλαίωση</h2>\n      <p>Αν αναζητάτε κάτι φθηνό και βραχυπρόθεσμο, η τεντοπέργκολα είναι καλή επιλογή. Αν όμως επενδύετε στο σπίτι σας, επιθυμείτε μηδενική συντήρηση και θέλετε το ακίνητό σας να κερδίσει σε εμπορική αξία και λειτουργικότητα τον χειμώνα, επιλέξτε βιοκλιματική πέργκολα αλουμινίου.</p>\n    ",
-    "contentEN": "\n      <p>Choosing the right shading system in Crete is often a great dilemma. The intense sunlight, strong winds, and sea salt require durable solutions. Most homeowners and hoteliers in Rethymno and across the island wonder: <strong>bioclimatic pergola or tent pergola?</strong></p>\n      \n      <p>The main difference lies in technology and cost. We recognize that the decision is not easy. In this article, we honestly analyze the pros, cons, costs, and lifespan of each option, so you can make the best investment for your property.</p>\n\n      <h2>What is each one?</h2>\n      <p>The <strong><a href=\"/en/systimata-alumil/smartia-pergoles\">bioclimatic pergola</a></strong> is made entirely of aluminum (frame and movable louvers). The louvers rotate to offer natural ventilation (bioclimatic action) and when closed, they seal watertight, with water draining through hidden gutters in the columns.</p>\n      <p>The <strong>tent pergola</strong> usually consists of a metal or aluminum frame, while its roof is covered by durable fabric (PVC) that opens and closes via an electric motor, folding in \"waves\" (retractable).</p>\n\n      <h2>8 Critical Criteria Comparison Table</h2>\n      <div class=\"overflow-x-auto my-8\">\n        <table class=\"w-full text-left border-collapse bg-white/5 rounded-xl overflow-hidden\">\n          <thead>\n            <tr class=\"bg-white/10\">\n              <th class=\"p-4 border-b border-white/10 font-bold text-white\">Criterion</th>\n              <th class=\"p-4 border-b border-white/10 font-bold text-red-400\">Bioclimatic Pergola</th>\n              <th class=\"p-4 border-b border-white/10 font-bold text-gray-300\">Tent Pergola</th>\n            </tr>\n          </thead>\n          <tbody class=\"divide-y divide-white/10\">\n            <tr><td class=\"p-4 font-bold text-gray-400\">1. Initial Cost</td><td class=\"p-4\">High (Premium investment)</td><td class=\"p-4\">Medium to low</td></tr>\n            <tr><td class=\"p-4 font-bold text-gray-400\">2. Lifespan</td><td class=\"p-4\">Decades (aluminum does not degrade)</td><td class=\"p-4\">10-15 years (fabric needs replacement)</td></tr>\n            <tr><td class=\"p-4 font-bold text-gray-400\">3. Wind Resistance</td><td class=\"p-4\">Excellent (withstands stormy winds)</td><td class=\"p-4\">Good (fabric strains in high winds)</td></tr>\n            <tr><td class=\"p-4 font-bold text-gray-400\">4. Salt Resistance</td><td class=\"p-4\">Excellent (Seaside Class anodizing)</td><td class=\"p-4\">Moderate (components and tracks wear out)</td></tr>\n            <tr><td class=\"p-4 font-bold text-gray-400\">5. Winter Watertightness</td><td class=\"p-4\">Full sealing with closed louvers</td><td class=\"p-4\">Good, but fabric retains moisture/dirt</td></tr>\n            <tr><td class=\"p-4 font-bold text-gray-400\">6. Maintenance Needs</td><td class=\"p-4\">Minimal (simple washing with water)</td><td class=\"p-4\">Frequent fabric cleaning, track lubrication</td></tr>\n            <tr><td class=\"p-4 font-bold text-gray-400\">7. Property Value</td><td class=\"p-4\">Increases the home's commercial value</td><td class=\"p-4\">Neutral impact</td></tr>\n            <tr><td class=\"p-4 font-bold text-gray-400\">8. Permits</td><td class=\"p-4\">Small Scale (often)</td><td class=\"p-4\">Usually not required (under conditions)</td></tr>\n          </tbody>\n        </table>\n      </div>\n\n      <h2>When is a Tent Pergola worth it?</h2>\n      <p>Although at Papadakis Aluminium we specialize in <a href=\"/en/services/pergoles-rethymno-kriti\">aluminum pergolas in Rethymno</a>, honesty compels us to recognize when a tent pergola makes sense. It is an ideal solution for:</p>\n      <ul>\n        <li><strong>Temporary solutions:</strong> If you are renting the space and want an immediate, economical shading solution.</li>\n        <li><strong>Small budget:</strong> When the initial budget is limited and does not justify the cost of a full aluminum construction.</li>\n        <li><strong>Seasonal shops:</strong> That only operate in the summer and can retract the fabric in the winter to protect it from wear.</li>\n      </ul>\n\n      <h2>When is a Bioclimatic Pergola the only way?</h2>\n      <p>If your property is a permanent residence, a villa, or a high-end hotel in Crete, a bioclimatic pergola is not just an option, it is the <em>only</em> solution that makes sense in the long run. The reason? <strong>The winds and the sea salt.</strong></p>\n      <p>In southern and northern Crete, a fabric system will be severely tested by the winds. An aluminum bioclimatic pergola, equipped with wind sensors, adjusts its louvers so it is not strained. Additionally, it turns a simple veranda into a real \"room\" that you can use 365 days a year, protected from rain and heatwaves.</p>\n\n      <h2>The Real Lifecycle Cost (15 years)</h2>\n      <p>Many customers focus on the initial <strong>price difference between bioclimatic and tent pergolas</strong>, without considering maintenance.</p>\n      <p>A tent pergola over 15 years will need at least 2 (maybe 3) fabric replacements due to wind tears, UV wear, or mold/dirt that cannot be cleaned. Additionally, its motor is strained much more due to the fabric's surface area.</p>\n      <p>In contrast, an Alumil bioclimatic pergola (with Seaside Class treatment) over 15 years will need absolutely nothing beyond washing with a water hose. If you calculate the cost of fabric replacements and technician wages over time, the cost difference shrinks drastically — and often zeroes out, with the difference that with the bioclimatic you enjoyed premium aesthetics and a stable, sturdy construction for 15 years.</p>\n\n      <h2>Summary</h2>\n      <p>If you are looking for something cheap and short-term, a tent pergola is a good choice. But if you are investing in your home, desire zero maintenance, and want your property to gain in commercial value and winter functionality, choose an aluminum bioclimatic pergola.</p>\n    "
+    "contentEN": "\n      <p>Choosing the right shading system in Crete is often a great dilemma. The intense sunlight, strong winds, and sea salt require durable solutions. Most homeowners and hoteliers in Rethymno and across the island wonder: <strong>bioclimatic pergola or tent pergola?</strong></p>\n      \n      <p>The main difference lies in technology and cost. We recognize that the decision is not easy. In this article, we honestly analyze the pros, cons, costs, and lifespan of each option, so you can make the best investment for your property.</p>\n\n      <h2>What is each one?</h2>\n      <p>The <strong><a href=\"/en/systimata-alumil/smartia-pergoles\">bioclimatic pergola</a></strong> is made entirely of aluminum (frame and movable louvers). The louvers rotate to offer natural ventilation (bioclimatic action) and when closed, they seal watertight, with water draining through hidden gutters in the columns.</p>\n      <p>The <strong>tent pergola</strong> usually consists of a metal or aluminum frame, while its roof is covered by durable fabric (PVC) that opens and closes via an electric motor, folding in \"waves\" (retractable).</p>\n\n      <h2>8 Critical Criteria Comparison Table</h2>\n      <div class=\"overflow-x-auto my-8\">\n        <table class=\"w-full text-left border-collapse bg-white/5 rounded-xl overflow-hidden\">\n          <thead>\n            <tr class=\"bg-white/10\">\n              <th class=\"p-4 border-b border-white/10 font-bold text-white\">Criterion</th>\n              <th class=\"p-4 border-b border-white/10 font-bold text-red-400\">Bioclimatic Pergola</th>\n              <th class=\"p-4 border-b border-white/10 font-bold text-gray-300\">Tent Pergola</th>\n            </tr>\n          </thead>\n          <tbody class=\"divide-y divide-white/10\">\n            <tr><td class=\"p-4 font-bold text-gray-400\">1. Initial Cost</td><td class=\"p-4\">High (Premium investment)</td><td class=\"p-4\">Medium to low</td></tr>\n            <tr><td class=\"p-4 font-bold text-gray-400\">2. Lifespan</td><td class=\"p-4\">Decades (aluminum does not degrade)</td><td class=\"p-4\">10-15 years (fabric needs replacement)</td></tr>\n            <tr><td class=\"p-4 font-bold text-gray-400\">3. Wind Resistance</td><td class=\"p-4\">Excellent (withstands stormy winds)</td><td class=\"p-4\">Good (fabric strains in high winds)</td></tr>\n            <tr><td class=\"p-4 font-bold text-gray-400\">4. Salt Resistance</td><td class=\"p-4\">Excellent (Seaside Class anodizing)</td><td class=\"p-4\">Moderate (components and tracks wear out)</td></tr>\n            <tr><td class=\"p-4 font-bold text-gray-400\">5. Winter Watertightness</td><td class=\"p-4\">Full sealing with closed louvers</td><td class=\"p-4\">Good, but fabric retains moisture/dirt</td></tr>\n            <tr><td class=\"p-4 font-bold text-gray-400\">6. Maintenance Needs</td><td class=\"p-4\">Minimal (simple washing with water)</td><td class=\"p-4\">Frequent fabric cleaning, track lubrication</td></tr>\n            <tr><td class=\"p-4 font-bold text-gray-400\">7. Property Value</td><td class=\"p-4\">Increases the home's commercial value</td><td class=\"p-4\">Neutral impact</td></tr>\n            <tr><td class=\"p-4 font-bold text-gray-400\">8. Permits</td><td class=\"p-4\">Small Scale (often)</td><td class=\"p-4\">Usually not required (under conditions)</td></tr>\n          </tbody>\n        </table>\n      </div>\n\n      <h2>When is a Tent Pergola worth it?</h2>\n      <p>Although at Papadakis Aluminium we specialize in <a href=\"/en/services/pergoles-rethymno-kriti\">aluminum pergolas in Rethymno</a>, honesty compels us to recognize when a tent pergola makes sense. It is an ideal solution for:</p>\n      <ul>\n        <li><strong>Temporary solutions:</strong> If you are renting the space and want an immediate, economical shading solution.</li>\n        <li><strong>Small budget:</strong> When the initial budget is limited and does not justify the cost of a full aluminum construction.</li>\n        <li><strong>Seasonal shops:</strong> That only operate in the summer and can retract the fabric in the winter to protect it from wear.</li>\n      </ul>\n\n      <h2>When is a Bioclimatic Pergola the only way?</h2>\n      <p>If your property is a permanent residence, a villa, or a high-end hotel in Crete, a bioclimatic pergola is not just an option, it is the <em>only</em> solution that makes sense in the long run. The reason? <strong>The winds and the sea salt.</strong></p>\n      <p>In southern and northern Crete, a fabric system will be severely tested by the winds. An aluminum bioclimatic pergola, equipped with wind sensors, adjusts its louvers so it is not strained. Additionally, it turns a simple veranda into a real \"room\" that you can use 365 days a year, protected from rain and heatwaves.</p>\n\n      <h2>The Real Lifecycle Cost (15 years)</h2>\n      <p>Many customers focus on the initial <strong>price difference between bioclimatic and tent pergolas</strong>, without considering maintenance.</p>\n      <p>A tent pergola over 15 years will need at least 2 (maybe 3) fabric replacements due to wind tears, UV wear, or mold/dirt that cannot be cleaned. Additionally, its motor is strained much more due to the fabric's surface area.</p>\n      <p>In contrast, an Alumil bioclimatic pergola (with Seaside Class treatment) over 15 years will need absolutely nothing beyond washing with a water hose. If you calculate the cost of fabric replacements and technician wages over time, the cost difference shrinks drastically — and often zeroes out, with the difference that with the bioclimatic you enjoyed premium aesthetics and a stable, sturdy construction for 15 years.</p>\n\n      <h2>Summary</h2>\n      <p>If you are looking for something cheap and short-term, a tent pergola is a good choice. But if you are investing in your home, desire zero maintenance, and want your property to gain in commercial value and winter functionality, choose an aluminum bioclimatic pergola.</p>\n    ",
+    "titleDE": "Bioklimatische Pergola vs. Tuchpergola: Der ultimative Vergleich",
+    "titleFR": "Pergola bioclimatique vs Pergola à toile : Le guide",
+    "titleNL": "Bioklimatische Pergola vs Doekpergola: De Gids",
+    "descriptionDE": "Finden Sie heraus, welches Beschattungssystem am besten zu Ihrer Villa auf Kreta passt: Bioklimatische Pergola mit Lamellen oder Tuchpergola.",
+    "descriptionFR": "Découvrez quel système d'ombrage convient le mieux à votre villa en Crète.",
+    "descriptionNL": "Ontdek welk schaduwsysteem het beste past bij uw villa op Kreta: een bioklimatische pergola met lamellen of een doekpergola.",
+    "keyTakeawayDE": "Die bioklimatische Pergola bietet überragenden Schutz und Langlebigkeit, während die Tuchpergola eine leichtere, kostengünstige Alternative darstellt.",
+    "keyTakeawayFR": "La pergola bioclimatique offre une protection et une durabilité supérieures, tandis que la pergola à toile est une alternative plus légère.",
+    "keyTakeawayNL": "De bioklimatische pergola biedt superieure bescherming en duurzaamheid, terwijl de doekpergola een lichter alternatief is.",
+    "statsDE": [
+      {
+        "value": "100%",
+        "label": "Wasserdicht"
+      },
+      {
+        "value": "< 30%",
+        "label": "Kühlere Luft"
+      },
+      {
+        "value": "10+ Jahre",
+        "label": "Garantie"
+      }
+    ],
+    "statsFR": [
+      {
+        "value": "100%",
+        "label": "Étanche"
+      },
+      {
+        "value": "< 30%",
+        "label": "Fraîcheur"
+      },
+      {
+        "value": "10+ ans",
+        "label": "Garantie"
+      }
+    ],
+    "statsNL": [
+      {
+        "value": "100%",
+        "label": "Waterdicht"
+      },
+      {
+        "value": "< 30%",
+        "label": "Koeler"
+      },
+      {
+        "value": "10+ jaar",
+        "label": "Garantie"
+      }
+    ],
+    "faqDE": [
+      {
+        "q": "Kann ich Glaswände hinzufügen?",
+        "a": "Ja, bioklimatische Pergolen können komplett mit Glaswänden geschlossen werden."
+      }
+    ],
+    "faqFR": [
+      {
+        "q": "Puis-je ajouter des parois en verre?",
+        "a": "Oui, les pergolas bioclimatiques peuvent être fermées avec du verre."
+      }
+    ],
+    "faqNL": [
+      {
+        "q": "Kan ik glazen wanden toevoegen?",
+        "a": "Ja, bioklimatische pergola's kunnen volledig worden afgesloten met glas."
+      }
+    ],
+    "contentDE": "\n      <p>Wenn Sie Ihren Außenbereich auf Kreta optimal nutzen möchten, stehen Sie oft vor der Wahl: Bioklimatische Pergola oder Tuchpergola. Beide Optionen bieten exzellenten Schatten, aber die Technologie und das Budget unterscheiden sich deutlich.</p>\n\n      <h2>Was ist eine bioklimatische Pergola?</h2>\n      <p>Eine bioklimatische Pergola besteht aus einer robusten Aluminiumkonstruktion mit drehbaren Lamellen. Sie ermöglicht eine natürliche Belüftung, reguliert das Sonnenlicht und ist im geschlossenen Zustand zu 100 % wasserdicht.</p>\n      \n      <h2>Die Tuchpergola (Pergola mit faltbarem Tuch)</h2>\n      <p>Hierbei handelt es sich um eine Konstruktion mit einem ein- und ausfahrbaren Tuch. Sie ist ideal für größere Flächen und bietet eine klassische, mediterrane Ästhetik.</p>\n    ",
+    "contentFR": "\n      <p>Pour profiter de votre extérieur en Crète, vous hésitez souvent entre une pergola bioclimatique et une pergola à toile.</p>\n\n      <h2>Qu'est-ce qu'une pergola bioclimatique?</h2>\n      <p>Une pergola bioclimatique est une structure en aluminium avec des lames orientables. Elle permet une ventilation naturelle et est 100% étanche.</p>\n      \n      <h2>La pergola à toile</h2>\n      <p>Il s'agit d'une structure avec une toile rétractable, idéale pour les grandes surfaces.</p>\n    ",
+    "contentNL": "\n      <p>Als u optimaal wilt genieten van uw buitenruimte op Kreta, staat u vaak voor de keuze: een bioklimatische pergola of een doekpergola.</p>\n\n      <h2>Wat is een bioklimatische pergola?</h2>\n      <p>Een bioklimatische pergola bestaat uit een aluminium structuur met draaibare lamellen. Het is 100% waterdicht in gesloten toestand.</p>\n      \n      <h2>De doekpergola</h2>\n      <p>Dit is een structuur met een uitschuifbaar doek, ideaal voor grote oppervlaktes.</p>\n    "
   },
   {
     "slug": "exoikonomo-2026-koufomata-kriti",
@@ -110,10 +208,108 @@ export const articles = [
     "category": "Ενεργειακή Αναβάθμιση",
     "keyTakeawayEL": "Επιδοτούνται αποκλειστικά θερμοδιακοπτόμενα κουφώματα αλουμινίου με ενεργειακούς υαλοπίνακες.",
     "keyTakeawayEN": "Only thermal-break aluminium systems with energy glazing are eligible.",
-    "statsEL": [{"value":"έως 80%","label":"Επιδότηση"},{"value":"0.9","label":"W/m²K Uw"},{"value":"30-50%","label":"Μείωση Κόστους Θέρμανσης"}],
-    "statsEN": [{"value":"up to 80%","label":"Subsidy"},{"value":"0.9","label":"W/m²K Uw"},{"value":"30-50%","label":"Heating Cost Reduction"}],
+    "statsEL": [
+      {
+        "value": "έως 80%",
+        "label": "Επιδότηση"
+      },
+      {
+        "value": "0.9",
+        "label": "W/m²K Uw"
+      },
+      {
+        "value": "30-50%",
+        "label": "Μείωση Κόστους Θέρμανσης"
+      }
+    ],
+    "statsEN": [
+      {
+        "value": "up to 80%",
+        "label": "Subsidy"
+      },
+      {
+        "value": "0.9",
+        "label": "W/m²K Uw"
+      },
+      {
+        "value": "30-50%",
+        "label": "Heating Cost Reduction"
+      }
+    ],
     "contentEL": "\n      <p>Το Εξοικονομώ 2026 είναι ο νέος κύκλος του μεγαλύτερου προγράμματος ενεργειακής αναβάθμισης κατοικιών στην Ελλάδα — και η αντικατάσταση κουφωμάτων παραμένει η πιο δημοφιλής και αποδοτική παρέμβαση. Αν έχετε σπίτι στο Ρέθυμνο ή οπουδήποτε στην Κρήτη με παλιά κουφώματα, αυτός ο οδηγός σας εξηγεί τι επιδοτείται, ποιες τεχνικές προδιαγραφές απαιτούνται και τι πρέπει να κάνετε από τώρα, ώστε να είστε έτοιμοι όταν ανοίξει η πλατφόρμα.</p>\n\n      <h2>Πότε ανοίγει το Εξοικονομώ 2026</h2>\n      <p>Σύμφωνα με τις μέχρι σήμερα ανακοινώσεις, το πρόγραμμα αναμένεται να ανοίξει εντός του 2ου εξαμήνου του 2026, με χρηματοδότηση από το Κοινωνικό Κλιματικό Ταμείο της ΕΕ και προϋπολογισμό της τάξης του 1,2 δισ. ευρώ. Η επίσημη ημερομηνία θα ανακοινωθεί από το ΥΠΕΝ. Σημαντική λεπτομέρεια: η αξιολόγηση των αιτήσεων γίνεται με μοριοδότηση και όχι με σειρά προτεραιότητας — δεν χρειάζεται να «τρέξετε» την πρώτη ώρα, χρειάζεται όμως να έχετε έτοιμο φάκελο.</p>\n\n      <h2>Πόση επιδότηση δίνει</h2>\n      <p>Τα ποσοστά επιδότησης στους νέους κύκλους κυμαίνονται ανάλογα με εισοδηματικά κριτήρια και αναμένεται να φτάσουν έως και το 80% για τις χαμηλότερες εισοδηματικές κατηγορίες. Για ένα τυπικό έργο αντικατάστασης κουφωμάτων σε κατοικία στην Κρήτη, αυτό μεταφράζεται σε χιλιάδες ευρώ εξοικονόμησης στην αρχική επένδυση — πέρα από τη μόνιμη μείωση 30–50% στο κόστος θέρμανσης και ψύξης.</p>\n\n      <h2>Ποια κουφώματα επιδοτούνται (και ποια όχι)</h2>\n      <p>Εδώ βρίσκεται το πιο κρίσιμο σημείο που πολλοί ιδιοκτήτες αγνοούν:</p>\n      <ul>\n        <li><strong>Επιδοτούνται αποκλειστικά θερμοδιακοπτόμενα κουφώματα αλουμινίου</strong> — δηλαδή προφίλ με πολυαμίδιο που «κόβει» τη μεταφορά θερμότητας ανάμεσα στο εσωτερικό και το εξωτερικό φύλλο αλουμινίου.</li>\n        <li>Απαιτούνται <strong>ενεργειακοί υαλοπίνακες</strong> (τουλάχιστον διπλοί, με επίστρωση χαμηλής εκπομπής low-e).</li>\n        <li>Το κούφωμα πρέπει να πιάνει συγκεκριμένο <strong>συντελεστή θερμοπερατότητας</strong> (στους πρόσφατους κύκλους, U ≤ 1,8 W/m²K).</li>\n        <li>Επιλέξιμα είναι επίσης <strong>συστήματα σκίασης</strong> (ρολά, παντζούρια) και <strong>σίτες</strong> ως συμπληρωματικές δαπάνες.</li>\n      </ul>\n      <p>Τα συστήματα Alumil SMARTIA και SUPREME που κατασκευάζουμε και τοποθετούμε υπερκαλύπτουν αυτές τις προδιαγραφές — με πολυαμίδια έως 38mm πετυχαίνουμε Uw έως 0,9 W/m²K, δηλαδή σχεδόν διπλάσια απόδοση από το ελάχιστο όριο του προγράμματος.</p>\n\n      <h2>Ποιοι είναι δικαιούχοι</h2>\n      <p>Δικαίωμα συμμετοχής έχουν ιδιοκτήτες κύριας κατοικίας (με πλήρη κυριότητα ή επικαρπία), ενώ στους πρόσφατους κύκλους προβλέπεται συμμετοχή και ενοικιαστών με μακροχρόνια μίσθωση, με τη συναίνεση του ιδιοκτήτη. Βασική απαίτηση: το ακίνητο να αναβαθμιστεί ενεργειακά κατά συγκεκριμένο αριθμό κατηγοριών, κάτι που τεκμηριώνεται με Πιστοποιητικό Ενεργειακής Απόδοσης (ΠΕΑ) πριν και μετά τις εργασίες.</p>\n\n      <h2>Τα 4 βήματα προετοιμασίας — ξεκινήστε τώρα</h2>\n      <ol>\n        <li><strong>Ενεργειακή επιθεώρηση:</strong> Ένας ενεργειακός επιθεωρητής εκδίδει το πρώτο ΠΕΑ που αποτυπώνει την υφιστάμενη κατάσταση.</li>\n        <li><strong>Συλλογή δικαιολογητικών:</strong> Ε9, εκκαθαριστικό, στοιχεία ιδιοκτησίας, συναινέσεις συνιδιοκτητών.</li>\n        <li><strong>Τεχνική προσφορά με προδιαγραφές:</strong> Η προσφορά για τα κουφώματα πρέπει να αναφέρει ρητά σειρά προφίλ, τύπο υαλοπίνακα, συντελεστή U, εργασίες αποξήλωσης και τοποθέτησης. Προσφορές «στο περίπου» απορρίπτονται ή δημιουργούν προβλήματα στην εκταμίευση.</li>\n        <li><strong>Επιλογή κατασκευαστή με εμπειρία σε επιδοτούμενα έργα:</strong> Η σωστή τεκμηρίωση (πιστοποιητικά συστημάτων, δηλώσεις επίδοσης CE) είναι εξίσου σημαντική με την ίδια την τοποθέτηση.</li>\n      </ol>\n\n      <h2>Γιατί η Κρήτη έχει επιπλέον λόγο για ενεργειακά κουφώματα</h2>\n      <p>Στο κρητικό κλίμα το πρόβλημα δεν είναι μόνο ο χειμώνας — είναι κυρίως ο καύσωνας. Τα παλιά κουφώματα ψυχρής σειράς λειτουργούν σαν «καλοριφέρ» τον Ιούλιο, μεταφέροντας τη θερμότητα κατευθείαν στο εσωτερικό και εκτοξεύοντας το κόστος κλιματισμού. Επιπλέον, σε παραθαλάσσιες περιοχές όπως το Ρέθυμνο, η αλμύρα διαβρώνει κουφώματα χωρίς κατάλληλη επεξεργασία βαφής — γι' αυτό όλες οι κατασκευές μας φέρουν πιστοποίηση Seaside Class.</p>\n    ",
-    "contentEN": "\n      <p>\"Exoikonomo\" (Εξοικονομώ, meaning \"I save\") is Greece's largest state subsidy programme for the energy renovation of homes — and replacing old windows and doors is consistently its most popular and cost-effective intervention. If you own a property in Rethymno or anywhere in Crete with ageing frames, this guide explains what the 2026 round is expected to cover, which technical specifications apply, and what you can do now to be ready when the platform opens.</p>\n\n      <h2>When does Exoikonomo 2026 open?</h2>\n      <p>Based on official announcements to date, the new round is expected to open in the second half of 2026, funded by the EU Social Climate Fund with a budget in the region of €1.2 billion. The exact date will be announced by the Ministry of Environment and Energy. One important detail: applications are ranked by a points system, not first-come-first-served — you don't need to race the clock, but you do need a complete, well-prepared file.</p>\n\n      <h2>How much is the subsidy?</h2>\n      <p>Subsidy rates vary with household income criteria and are expected to reach up to 80% for the lowest income brackets. For a typical window replacement project on a Cretan home, that translates into thousands of euros off the initial investment — on top of a permanent 30–50% reduction in heating and cooling costs.</p>\n\n      <h2>Which windows qualify (and which don't)</h2>\n      <p>This is the point most owners miss:</p>\n      <ul>\n        <li>Only <strong>thermal-break aluminium systems</strong> are eligible — profiles with a polyamide insulator that interrupts heat transfer between the inner and outer aluminium shells.</li>\n        <li><strong>Energy glazing</strong> is required: at least double glazing with a low-emissivity (low-e) coating.</li>\n        <li>The window must achieve a specified <strong>thermal transmittance value</strong> (in recent rounds, U ≤ 1.8 W/m²K).</li>\n        <li><strong>Shading systems</strong> (roller shutters, exterior shutters) and <strong>insect screens</strong> are also eligible as complementary costs.</li>\n      </ul>\n      <p>The Alumil SMARTIA and SUPREME systems we fabricate and install comfortably exceed these specifications — with polyamides up to 38mm we achieve Uw values as low as 0.9 W/m²K, roughly twice the performance the programme's minimum requires.</p>\n\n      <h2>Who is eligible — a note for foreign owners</h2>\n      <p>Eligibility applies to owners of a <strong>primary residence in Greece</strong> (full ownership or usufruct), and recent rounds also allow long-term tenants with the owner's consent. The upgrade must be documented with an Energy Performance Certificate (ΠΕΑ) before and after the works. If your Cretan property is a <strong>holiday home</strong>, it will generally not qualify — but the energy, comfort and property-value arguments for thermal-break aluminium remain just as strong, and we frequently deliver such projects for international owners outside the subsidy framework.</p>\n\n      <h2>Four preparation steps — start now</h2>\n      <ol>\n        <li><strong>Energy inspection:</strong> A certified energy inspector issues the initial Energy Performance Certificate documenting the current state.</li>\n        <li><strong>Paperwork:</strong> Property title data, tax documents (E9, income statement), co-owner consents where applicable.</li>\n        <li><strong>A technical quotation with full specifications:</strong> The window quote must explicitly state the profile series, glazing build-up, U-value, and removal/installation works. Vague quotes cause problems at the payout stage.</li>\n        <li><strong>A fabricator experienced with subsidised projects:</strong> Correct documentation (system certificates, CE declarations of performance) matters as much as the installation itself.</li>\n      </ol>\n\n      <h2>Why Crete has an extra reason for energy windows</h2>\n      <p>In the Cretan climate the real enemy isn't winter — it's the summer heatwave. Old cold-series frames act like radiators in July, conducting heat straight indoors and inflating air-conditioning bills. And in coastal areas like Rethymno, salt air corrodes any frame without the proper coating treatment — which is why all our fabrications carry Seaside Class certification.</p>\n    "
+    "contentEN": "\n      <p>\"Exoikonomo\" (Εξοικονομώ, meaning \"I save\") is Greece's largest state subsidy programme for the energy renovation of homes — and replacing old windows and doors is consistently its most popular and cost-effective intervention. If you own a property in Rethymno or anywhere in Crete with ageing frames, this guide explains what the 2026 round is expected to cover, which technical specifications apply, and what you can do now to be ready when the platform opens.</p>\n\n      <h2>When does Exoikonomo 2026 open?</h2>\n      <p>Based on official announcements to date, the new round is expected to open in the second half of 2026, funded by the EU Social Climate Fund with a budget in the region of €1.2 billion. The exact date will be announced by the Ministry of Environment and Energy. One important detail: applications are ranked by a points system, not first-come-first-served — you don't need to race the clock, but you do need a complete, well-prepared file.</p>\n\n      <h2>How much is the subsidy?</h2>\n      <p>Subsidy rates vary with household income criteria and are expected to reach up to 80% for the lowest income brackets. For a typical window replacement project on a Cretan home, that translates into thousands of euros off the initial investment — on top of a permanent 30–50% reduction in heating and cooling costs.</p>\n\n      <h2>Which windows qualify (and which don't)</h2>\n      <p>This is the point most owners miss:</p>\n      <ul>\n        <li>Only <strong>thermal-break aluminium systems</strong> are eligible — profiles with a polyamide insulator that interrupts heat transfer between the inner and outer aluminium shells.</li>\n        <li><strong>Energy glazing</strong> is required: at least double glazing with a low-emissivity (low-e) coating.</li>\n        <li>The window must achieve a specified <strong>thermal transmittance value</strong> (in recent rounds, U ≤ 1.8 W/m²K).</li>\n        <li><strong>Shading systems</strong> (roller shutters, exterior shutters) and <strong>insect screens</strong> are also eligible as complementary costs.</li>\n      </ul>\n      <p>The Alumil SMARTIA and SUPREME systems we fabricate and install comfortably exceed these specifications — with polyamides up to 38mm we achieve Uw values as low as 0.9 W/m²K, roughly twice the performance the programme's minimum requires.</p>\n\n      <h2>Who is eligible — a note for foreign owners</h2>\n      <p>Eligibility applies to owners of a <strong>primary residence in Greece</strong> (full ownership or usufruct), and recent rounds also allow long-term tenants with the owner's consent. The upgrade must be documented with an Energy Performance Certificate (ΠΕΑ) before and after the works. If your Cretan property is a <strong>holiday home</strong>, it will generally not qualify — but the energy, comfort and property-value arguments for thermal-break aluminium remain just as strong, and we frequently deliver such projects for international owners outside the subsidy framework.</p>\n\n      <h2>Four preparation steps — start now</h2>\n      <ol>\n        <li><strong>Energy inspection:</strong> A certified energy inspector issues the initial Energy Performance Certificate documenting the current state.</li>\n        <li><strong>Paperwork:</strong> Property title data, tax documents (E9, income statement), co-owner consents where applicable.</li>\n        <li><strong>A technical quotation with full specifications:</strong> The window quote must explicitly state the profile series, glazing build-up, U-value, and removal/installation works. Vague quotes cause problems at the payout stage.</li>\n        <li><strong>A fabricator experienced with subsidised projects:</strong> Correct documentation (system certificates, CE declarations of performance) matters as much as the installation itself.</li>\n      </ol>\n\n      <h2>Why Crete has an extra reason for energy windows</h2>\n      <p>In the Cretan climate the real enemy isn't winter — it's the summer heatwave. Old cold-series frames act like radiators in July, conducting heat straight indoors and inflating air-conditioning bills. And in coastal areas like Rethymno, salt air corrodes any frame without the proper coating treatment — which is why all our fabrications carry Seaside Class certification.</p>\n    ",
+    "titleDE": "Exoikonomo 2026: Förderprogramm für Fenster auf Kreta",
+    "titleFR": "Exoikonomo 2026: Subventions pour vos fenêtres en Crète",
+    "titleNL": "Exoikonomo 2026: Subsidie voor kozijnen op Kreta",
+    "descriptionDE": "Alles, was Sie über das Förderprogramm Exoikonomo 2026 wissen müssen. A note for foreign owners: Details zur Förderfähigkeit.",
+    "descriptionFR": "Tout ce qu'il faut savoir sur le programme Exoikonomo 2026. A note for foreign owners: détails sur l'éligibilité.",
+    "descriptionNL": "Alles wat u moet weten over het Exoikonomo 2026 programma. A note for foreign owners: details over de voorwaarden.",
+    "keyTakeawayDE": "Erstellen Sie das Aufmaß und das Angebot für Ihre Aluminiumfenster vor der Ankündigung von Exoikonomo 2026, um im Vorteil zu sein.",
+    "keyTakeawayFR": "Préparez votre devis pour vos menuiseries en aluminium avant l'annonce officielle d'Exoikonomo 2026.",
+    "keyTakeawayNL": "Zorg dat u de meting en offerte voor uw aluminium kozijnen klaar heeft voor de aankondiging van Exoikonomo 2026.",
+    "statsDE": [
+      {
+        "value": "Bis 80%",
+        "label": "Zuschuss"
+      },
+      {
+        "value": "15-20%",
+        "label": "Energieersparnis"
+      },
+      {
+        "value": "50%+",
+        "label": "Wertsteigerung"
+      }
+    ],
+    "statsFR": [
+      {
+        "value": "Jusqu'à 80%",
+        "label": "Subvention"
+      },
+      {
+        "value": "15-20%",
+        "label": "Économies"
+      },
+      {
+        "value": "50%+",
+        "label": "Valeur"
+      }
+    ],
+    "statsNL": [
+      {
+        "value": "Tot 80%",
+        "label": "Subsidie"
+      },
+      {
+        "value": "15-20%",
+        "label": "Besparing"
+      },
+      {
+        "value": "50%+",
+        "label": "Waarde"
+      }
+    ],
+    "faqDE": [
+      {
+        "q": "Bin ich als ausländischer Eigentümer berechtigt?",
+        "a": "A note for foreign owners: Exoikonomo is a Greek state subsidy programme for primary residences and is linked to the Greek tax system. Non-residents or those using the property as a holiday home are generally not eligible."
+      }
+    ],
+    "faqFR": [
+      {
+        "q": "En tant que propriétaire étranger, suis-je éligible?",
+        "a": "A note for foreign owners: Exoikonomo is a Greek state subsidy programme for primary residences and is linked to the Greek tax system. Non-residents or those using the property as a holiday home are generally not eligible."
+      }
+    ],
+    "faqNL": [
+      {
+        "q": "Kom ik als buitenlandse eigenaar in aanmerking?",
+        "a": "A note for foreign owners: Exoikonomo is a Greek state subsidy programme for primary residences and is linked to the Greek tax system. Non-residents or those using the property as a holiday home are generally not eligible."
+      }
+    ],
+    "contentDE": "\n      <p>A note for foreign owners: The \"Exoikonomo\" programme is Greece's state subsidy scheme. Please be aware that eligibility requires the property to be declared as a primary residence on Greek tax returns, meaning most holiday homes and foreign non-residents do not qualify. However, upgrading to energy-efficient windows remains one of the best investments for your villa in Crete.</p>\n      \n      <h2>Der Weg zu neuen Fenstern mit dem Programm</h2>\n      <p>Das Programm übernimmt einen erheblichen Teil der Kosten für den Austausch von Fenstern durch neue Aluminiumsysteme (z. B. SMARTIA oder SUPREME). Das Ziel ist die energetische Aufwertung Ihres Hauses.</p>\n      \n      <h2>Vorbereitungen für Exoikonomo 2026</h2>\n      <p>Die Erfahrung aus den Vorjahren zeigt, dass eine gute Vorbereitung entscheidend ist. Wir empfehlen Ihnen, jetzt einen Termin für ein kostenloses Aufmaß in Rethymno oder auf Kreta zu vereinbaren. Eine präzise Auswahl der Serie (z. B. mit Seaside Class Beschichtung am Meer) ist unabdingbar.</p>\n    ",
+    "contentFR": "\n      <p>A note for foreign owners: The \"Exoikonomo\" programme is Greece's state subsidy scheme. Please be aware that eligibility requires the property to be declared as a primary residence on Greek tax returns, meaning most holiday homes and foreign non-residents do not qualify. However, upgrading to energy-efficient windows remains one of the best investments for your villa in Crete.</p>\n      \n      <h2>Le chemin vers de nouvelles fenêtres</h2>\n      <p>Le programme couvre une part importante du coût de remplacement de vos fenêtres par de nouveaux systèmes en aluminium (par ex. SMARTIA ou SUPREME).</p>\n      \n      <h2>Se préparer pour Exoikonomo 2026</h2>\n      <p>L'expérience montre qu'une bonne préparation est primordiale. Réservez dès maintenant votre évaluation gratuite à Réthymnon. La classe Seaside Class est particulièrement recommandée près de la mer.</p>\n    ",
+    "contentNL": "\n      <p>A note for foreign owners: The \"Exoikonomo\" programme is Greece's state subsidy scheme. Please be aware that eligibility requires the property to be declared as a primary residence on Greek tax returns, meaning most holiday homes and foreign non-residents do not qualify. However, upgrading to energy-efficient windows remains one of the best investments for your villa in Crete.</p>\n      \n      <h2>De weg naar nieuwe kozijnen</h2>\n      <p>Het programma dekt een aanzienlijk deel van de kosten voor de vervanging van kozijnen door nieuwe aluminium systemen (zoals SMARTIA of SUPREME).</p>\n      \n      <h2>Voorbereiding op Exoikonomo 2026</h2>\n      <p>De ervaring leert dat een goede voorbereiding cruciaal is. Maak nu een afspraak voor een gratis meting in Rethymno. Seaside Class afwerking is essentieel aan de kust.</p>\n    "
   },
   {
     "slug": "energeiaka-koufomata-alouminiou-ti-na-prosexete",
@@ -168,10 +364,108 @@ export const articles = [
     "category": "Οδηγός Αγοράς",
     "keyTakeawayEL": "Η ηλεκτροστατική βαφή Seaside Class με ενισχυμένη προεργασία είναι αδιαπραγμάτευτη για ακίνητα σε απόσταση αναπνοής από τη θάλασσα.",
     "keyTakeawayEN": "Electrostatic Seaside Class coating with reinforced pre-treatment is mandatory for properties within reach of sea air.",
-    "statsEL": [{"value":"20+","label":"Χρόνια Επένδυση"},{"value":"45dB","label":"Ηχομείωση"},{"value":"38mm","label":"Πολυαμίδιο"}],
-    "statsEN": [{"value":"20+","label":"Years Investment"},{"value":"45dB","label":"Sound Reduction"},{"value":"38mm","label":"Polyamide"}],
+    "statsEL": [
+      {
+        "value": "20+",
+        "label": "Χρόνια Επένδυση"
+      },
+      {
+        "value": "45dB",
+        "label": "Ηχομείωση"
+      },
+      {
+        "value": "38mm",
+        "label": "Πολυαμίδιο"
+      }
+    ],
+    "statsEN": [
+      {
+        "value": "20+",
+        "label": "Years Investment"
+      },
+      {
+        "value": "45dB",
+        "label": "Sound Reduction"
+      },
+      {
+        "value": "38mm",
+        "label": "Polyamide"
+      }
+    ],
     "contentEL": "\n      <p>Η αγορά ενεργειακών κουφωμάτων είναι επένδυση 20+ ετών — και δυστυχώς, οι περισσότερες προσφορές που κυκλοφορούν συγκρίνουν «μήλα με πορτοκάλια». Δύο κουφώματα που μοιάζουν ίδια μπορεί να διαφέρουν 40% σε θερμομόνωση και 100% σε αντοχή στον χρόνο. Ακολουθεί ο έλεγχος 7 σημείων που κάνουμε εμείς οι ίδιοι όταν αξιολογούμε ένα σύστημα.</p>\n\n      <h2>1. Συντελεστής θερμοπερατότητας Uw — ο μόνος αριθμός που μετράει</h2>\n      <p>Το Uw (W/m²K) μετρά πόση θερμότητα «χάνει» ολόκληρο το κούφωμα — προφίλ και τζάμι μαζί. Όσο χαμηλότερο, τόσο καλύτερα:</p>\n      <table class=\"w-full text-left border-collapse bg-white/5 rounded-xl overflow-hidden my-4\">\n        <thead>\n          <tr class=\"bg-white/10\">\n            <th class=\"p-4 font-bold text-white\">Uw</th>\n            <th class=\"p-4 font-bold text-white\">Αξιολόγηση</th>\n          </tr>\n        </thead>\n        <tbody class=\"divide-y divide-white/10\">\n          <tr><td class=\"p-4\">> 2,8</td><td class=\"p-4\">Παλιά κουφώματα χωρίς θερμοδιακοπή — ενεργειακή «τρύπα»</td></tr>\n          <tr><td class=\"p-4\">1,8 – 2,8</td><td class=\"p-4\">Βασική θερμοδιακοπή — οριακά αποδεκτό</td></tr>\n          <tr><td class=\"p-4\">1,1 – 1,8</td><td class=\"p-4\">Καλή ενεργειακή απόδοση — όριο επιλεξιμότητας Εξοικονομώ</td></tr>\n          <tr><td class=\"p-4\">≤ 1,1</td><td class=\"p-4\">Κορυφαία απόδοση — επίπεδο SMARTIA/SUPREME</td></tr>\n        </tbody>\n      </table>\n      <p>Στα έργα μας επιτυγχάνουμε Uw έως 0,9 W/m²K. Ζητήστε πάντα το Uw γραμμένο στην προσφορά — όχι προφορικές διαβεβαιώσεις.</p>\n\n      <h2>2. Θερμοδιακοπή: ρωτήστε ΠΟΣΑ χιλιοστά</h2>\n      <p>«Θερμοδιακοπτόμενο» δεν σημαίνει αυτόματα αποδοτικό. Η ουσία είναι το πλάτος του πολυαμιδίου: ένα προφίλ με πολυαμίδιο 20mm απέχει πολύ από ένα με 38mm. Στα premium συστήματα που τοποθετούμε, τα πολυαμίδια 38mm ουσιαστικά εκμηδενίζουν τη θερμογέφυρα.</p>\n\n      <h2>3. Υαλοπίνακας: το 70% της επιφάνειας</h2>\n      <p>Ο ενεργειακός υαλοπίνακας πρέπει να έχει επίστρωση low-e και, ιδανικά, αέριο argon στο διάκενο. Στο κρητικό κλίμα αξίζει να συζητήσετε και ηλιακό έλεγχο (solar control) στις νότιες όψεις, για να μπλοκάρεται η θερμότητα του καλοκαιριού χωρίς να θυσιάζεται το φως.</p>\n\n      <h2>4. Ηχομόνωση — ζήστε τη διαφορά των 45dB</h2>\n      <p>Ένα σωστό ενεργειακό κούφωμα με κατάλληλο υαλοπίνακα επιτυγχάνει ηχομείωση Rw έως 45dB. Στην πράξη: ο δρόμος με κίνηση «σβήνει» σε ψίθυρο. Αν το σπίτι σας βλέπει σε κεντρικό δρόμο του Ρεθύμνου ή στην Εθνική, είναι το χαρακτηριστικό που θα εκτιμήσετε περισσότερο απ' όλα.</p>\n\n      <h2>5. Ασφάλεια: μηχανισμοί πολλαπλού κλειδώματος</h2>\n      <p>Το κούφωμα είναι το πρώτο σημείο δοκιμής ενός διαρρήκτη. Ζητήστε μηχανισμούς περιμετρικού πολλαπλού κλειδώματος και ρωτήστε για την κλάση αντιδιαρρηκτικής προστασίας (RC2/RC3). Συνδυαστικά με θωρακισμένη πόρτα εισόδου, η κατοικία θωρακίζεται ολοκληρωμένα.</p>\n\n      <h2>6. Βαφή Seaside Class — υποχρεωτική κοντά στη θάλασσα</h2>\n      <p>Στην Κρήτη, κούφωμα χωρίς πιστοποιημένη επεξεργασία για παραθαλάσσια χρήση σημαίνει οξείδωση και ξεφλούδισμα βαφής μέσα σε λίγα χρόνια. Η ηλεκτροστατική βαφή Seaside Class με ενισχυμένη προεργασία είναι αδιαπραγμάτευτη για ακίνητα σε απόσταση αναπνοής από τη θάλασσα.</p>\n\n      <h2>7. Ποιος το κατασκευάζει και ποιος το τοποθετεί</h2>\n      <p>Το καλύτερο προφίλ της αγοράς αχρηστεύεται από πρόχειρη συναρμολόγηση ή τοποθέτηση χωρίς σωστή στεγάνωση. Προτιμήστε πιστοποιημένο κατασκευαστή (εμείς είμαστε εξουσιοδοτημένοι κατασκευαστές Alumil) με δική του μονάδα παραγωγής — όχι μεταπωλητή που «παίρνει έτοιμα» — και ρωτήστε ποιος αναλαμβάνει το after-sales.</p>\n    ",
-    "contentEN": "\n      <p>Buying energy-efficient windows is a 20-year-plus investment — and unfortunately, most quotes on the market compare apples to oranges. Two windows that look identical can differ by 40% in thermal insulation and 100% in longevity. Here is the 7-point checklist we apply ourselves when evaluating a system.</p>\n\n      <h2>1. The Uw value — the only number that matters</h2>\n      <p>Uw (W/m²K) measures how much heat the complete window loses — frame and glazing together. The lower, the better:</p>\n      <table class=\"w-full text-left border-collapse bg-white/5 rounded-xl overflow-hidden my-4\">\n        <thead>\n          <tr class=\"bg-white/10\">\n            <th class=\"p-4 font-bold text-white\">Uw</th>\n            <th class=\"p-4 font-bold text-white\">Assessment</th>\n          </tr>\n        </thead>\n        <tbody class=\"divide-y divide-white/10\">\n          <tr><td class=\"p-4\">> 2.8</td><td class=\"p-4\">Old frames without thermal break — an energy sinkhole</td></tr>\n          <tr><td class=\"p-4\">1.8 – 2.8</td><td class=\"p-4\">Basic thermal break — marginally acceptable</td></tr>\n          <tr><td class=\"p-4\">1.1 – 1.8</td><td class=\"p-4\">Good energy performance — the Exoikonomo eligibility threshold</td></tr>\n          <tr><td class=\"p-4\">≤ 1.1</td><td class=\"p-4\">Top-tier performance — SMARTIA/SUPREME territory</td></tr>\n        </tbody>\n      </table>\n      <p>Our projects achieve Uw values as low as 0.9 W/m²K. Always ask for the Uw in writing on the quote — not verbal assurances.</p>\n\n      <h2>2. Thermal break: ask HOW MANY millimetres</h2>\n      <p>\"Thermal break\" alone doesn't guarantee performance. What matters is the width of the polyamide insulator: a profile with a 20mm polyamide is a world apart from one with 38mm. In the premium systems we install, 38mm polyamides effectively eliminate the thermal bridge.</p>\n\n      <h2>3. Glazing: 70% of the surface</h2>\n      <p>Energy glazing needs a low-e coating and, ideally, argon gas in the cavity. In the Cretan climate it's also worth discussing solar-control glass on south-facing openings, blocking summer heat gain without sacrificing daylight.</p>\n\n      <h2>4. Acoustic insulation — experience the 45dB difference</h2>\n      <p>A properly built energy window with the right glazing achieves sound reduction of up to Rw 45dB. In practice: a busy street fades to a whisper. If your home faces a main road in Rethymno or the National Road, this is the feature you'll appreciate most.</p>\n\n      <h2>5. Security: multi-point locking</h2>\n      <p>The window is a burglar's first test. Ask for perimeter multi-point locking mechanisms and check the burglar-resistance class (RC2/RC3). Combined with a certified security entrance door, the home is protected end to end.</p>\n\n      <h2>6. Seaside Class coating — non-negotiable near the sea</h2>\n      <p>In Crete, a frame without certified seaside-grade treatment means oxidation and peeling paint within a few years. Electrostatic Seaside Class coating with reinforced pre-treatment is mandatory for properties within reach of sea air.</p>\n\n      <h2>7. Who fabricates it — and who installs it</h2>\n      <p>The best profile on the market is wasted by careless assembly or installation without proper sealing. Choose a certified fabricator (we are authorised Alumil fabricators) with its own production facility — not a reseller of ready-made units — and ask who handles after-sales support.</p>\n    "
+    "contentEN": "\n      <p>Buying energy-efficient windows is a 20-year-plus investment — and unfortunately, most quotes on the market compare apples to oranges. Two windows that look identical can differ by 40% in thermal insulation and 100% in longevity. Here is the 7-point checklist we apply ourselves when evaluating a system.</p>\n\n      <h2>1. The Uw value — the only number that matters</h2>\n      <p>Uw (W/m²K) measures how much heat the complete window loses — frame and glazing together. The lower, the better:</p>\n      <table class=\"w-full text-left border-collapse bg-white/5 rounded-xl overflow-hidden my-4\">\n        <thead>\n          <tr class=\"bg-white/10\">\n            <th class=\"p-4 font-bold text-white\">Uw</th>\n            <th class=\"p-4 font-bold text-white\">Assessment</th>\n          </tr>\n        </thead>\n        <tbody class=\"divide-y divide-white/10\">\n          <tr><td class=\"p-4\">> 2.8</td><td class=\"p-4\">Old frames without thermal break — an energy sinkhole</td></tr>\n          <tr><td class=\"p-4\">1.8 – 2.8</td><td class=\"p-4\">Basic thermal break — marginally acceptable</td></tr>\n          <tr><td class=\"p-4\">1.1 – 1.8</td><td class=\"p-4\">Good energy performance — the Exoikonomo eligibility threshold</td></tr>\n          <tr><td class=\"p-4\">≤ 1.1</td><td class=\"p-4\">Top-tier performance — SMARTIA/SUPREME territory</td></tr>\n        </tbody>\n      </table>\n      <p>Our projects achieve Uw values as low as 0.9 W/m²K. Always ask for the Uw in writing on the quote — not verbal assurances.</p>\n\n      <h2>2. Thermal break: ask HOW MANY millimetres</h2>\n      <p>\"Thermal break\" alone doesn't guarantee performance. What matters is the width of the polyamide insulator: a profile with a 20mm polyamide is a world apart from one with 38mm. In the premium systems we install, 38mm polyamides effectively eliminate the thermal bridge.</p>\n\n      <h2>3. Glazing: 70% of the surface</h2>\n      <p>Energy glazing needs a low-e coating and, ideally, argon gas in the cavity. In the Cretan climate it's also worth discussing solar-control glass on south-facing openings, blocking summer heat gain without sacrificing daylight.</p>\n\n      <h2>4. Acoustic insulation — experience the 45dB difference</h2>\n      <p>A properly built energy window with the right glazing achieves sound reduction of up to Rw 45dB. In practice: a busy street fades to a whisper. If your home faces a main road in Rethymno or the National Road, this is the feature you'll appreciate most.</p>\n\n      <h2>5. Security: multi-point locking</h2>\n      <p>The window is a burglar's first test. Ask for perimeter multi-point locking mechanisms and check the burglar-resistance class (RC2/RC3). Combined with a certified security entrance door, the home is protected end to end.</p>\n\n      <h2>6. Seaside Class coating — non-negotiable near the sea</h2>\n      <p>In Crete, a frame without certified seaside-grade treatment means oxidation and peeling paint within a few years. Electrostatic Seaside Class coating with reinforced pre-treatment is mandatory for properties within reach of sea air.</p>\n\n      <h2>7. Who fabricates it — and who installs it</h2>\n      <p>The best profile on the market is wasted by careless assembly or installation without proper sealing. Choose a certified fabricator (we are authorised Alumil fabricators) with its own production facility — not a reseller of ready-made units — and ask who handles after-sales support.</p>\n    ",
+    "titleDE": "Energieeffiziente Aluminiumfenster: Darauf müssen Sie achten",
+    "titleFR": "Fenêtres en aluminium écoénergétiques : Ce qu'il faut savoir",
+    "titleNL": "Energiezuinige aluminium kozijnen: Waar op te letten",
+    "descriptionDE": "Ein umfassender Leitfaden zur Auswahl der richtigen energieeffizienten Fenster für Ihr Zuhause. Profil, Glas, Uw-Wert und Montage.",
+    "descriptionFR": "Guide complet pour choisir les fenêtres parfaites. Profilé, vitrage, valeur Uw et installation.",
+    "descriptionNL": "Een complete gids voor het kiezen van de juiste energiezuinige kozijnen. Profiel, glas, Uw-waarde en installatie.",
+    "keyTakeawayDE": "Achten Sie immer auf den Uw-Wert und eine fachgerechte Montage. Ein teures Profil bringt nichts bei schlechter Installation.",
+    "keyTakeawayFR": "Faites toujours attention à la valeur Uw et à l'installation. Un profilé coûteux ne sert à rien s'il est mal posé.",
+    "keyTakeawayNL": "Let altijd op de Uw-waarde en een vakkundige installatie. Een duur profiel heeft geen nut bij een slechte montage.",
+    "statsDE": [
+      {
+        "value": "Uw < 1.5",
+        "label": "Isolierung"
+      },
+      {
+        "value": "-30%",
+        "label": "Heizkosten"
+      },
+      {
+        "value": "Seaside",
+        "label": "Class"
+      }
+    ],
+    "statsFR": [
+      {
+        "value": "Uw < 1.5",
+        "label": "Isolation"
+      },
+      {
+        "value": "-30%",
+        "label": "Chauffage"
+      },
+      {
+        "value": "Seaside",
+        "label": "Class"
+      }
+    ],
+    "statsNL": [
+      {
+        "value": "Uw < 1.5",
+        "label": "Isolatie"
+      },
+      {
+        "value": "-30%",
+        "label": "Stookkosten"
+      },
+      {
+        "value": "Seaside",
+        "label": "Class"
+      }
+    ],
+    "faqDE": [
+      {
+        "q": "Was bedeutet Thermische Trennung?",
+        "a": "Das Profil ist durch ein Polyamid unterbrochen, was die Wärmeübertragung verhindert."
+      }
+    ],
+    "faqFR": [
+      {
+        "q": "Qu'est-ce que la rupture de pont thermique?",
+        "a": "Le profilé est séparé par un polyamide, ce qui bloque le transfert de chaleur."
+      }
+    ],
+    "faqNL": [
+      {
+        "q": "Wat is een thermische onderbreking?",
+        "a": "Het profiel wordt onderbroken door polyamide, wat de warmteoverdracht stopt."
+      }
+    ],
+    "contentDE": "\n      <p>Aluminiumfenster sind nicht mehr das, was sie vor 20 Jahren waren. Mit der Technologie der thermischen Trennung sind sie nun Vorreiter in der Energieeffizienz. Dies ist ein Leitfaden zur richtigen Auswahl auf Kreta.</p>\n\n      <h2>Das Geheimnis der thermischen Trennung</h2>\n      <p>Serien wie SMARTIA und SUPREME nutzen Polyamid, um die äußere von der inneren Aluminiumschicht zu isolieren.</p>\n      \n      <h2>Die Verglasung (Low-e und Argon)</h2>\n      <p>Das Glas macht 80 % des Fensters aus. Wir empfehlen mindestens doppeltes Low-e Glas mit Argongas für optimalen Schutz vor der starken kretischen Sonne.</p>\n    ",
+    "contentFR": "\n      <p>Les fenêtres en aluminium sont aujourd'hui à la pointe de l'efficacité énergétique grâce à la rupture de pont thermique.</p>\n\n      <h2>Le secret de la rupture de pont thermique</h2>\n      <p>Les séries SMARTIA et SUPREME utilisent le polyamide pour isoler.</p>\n      \n      <h2>Le vitrage</h2>\n      <p>Nous recommandons un double vitrage Low-e avec gaz argon pour le soleil crétois.</p>\n    ",
+    "contentNL": "\n      <p>Aluminium kozijnen lopen tegenwoordig voorop in energie-efficiëntie dankzij thermische onderbreking.</p>\n\n      <h2>Het geheim van thermische onderbreking</h2>\n      <p>Series zoals SMARTIA en SUPREME gebruiken polyamide voor isolatie.</p>\n      \n      <h2>De beglazing</h2>\n      <p>Wij raden dubbel Low-e glas met argongas aan voor de sterke Kretenzische zon.</p>\n    "
   },
   {
     "slug": "times-koufomata-alouminiou-odigos-kostous",
@@ -226,10 +520,108 @@ export const articles = [
     "category": "Οδηγός Αγοράς",
     "keyTakeawayEL": "Μια προσφορά που είναι 30% φθηνότερη από τον μέσο όρο δεν είναι \"ευκαιρία\", αλλά συνήθως κρύβει εκπτώσεις στην ποιότητα του υαλοπίνακα, τη βαφή ή τη στεγάνωση.",
     "keyTakeawayEN": "A quote that is 30% cheaper than the average is not a \"bargain\", but usually hides compromises in glazing quality, coating, or sealing.",
-    "statsEL": [{"value":"4.000€","label":"Ενδεικτική Αφετηρία"},{"value":"1-3","label":"Ημέρες Τοποθέτησης"},{"value":"15-25%","label":"Κόστος Συρόμενων (Έξτρα)"}],
-    "statsEN": [{"value":"€4,000","label":"Indicative Start"},{"value":"1-3","label":"Days Installation"},{"value":"15-25%","label":"Sliding Cost (Extra)"}],
+    "statsEL": [
+      {
+        "value": "4.000€",
+        "label": "Ενδεικτική Αφετηρία"
+      },
+      {
+        "value": "1-3",
+        "label": "Ημέρες Τοποθέτησης"
+      },
+      {
+        "value": "15-25%",
+        "label": "Κόστος Συρόμενων (Έξτρα)"
+      }
+    ],
+    "statsEN": [
+      {
+        "value": "€4,000",
+        "label": "Indicative Start"
+      },
+      {
+        "value": "1-3",
+        "label": "Days Installation"
+      },
+      {
+        "value": "15-25%",
+        "label": "Sliding Cost (Extra)"
+      }
+    ],
     "contentEL": "\n      <p>«Πόσο πάει το κούφωμα;» είναι η πρώτη ερώτηση κάθε πελάτη — και η πιο παραπλανητική, γιατί δύο προσφορές με την ίδια τελική τιμή μπορεί να κρύβουν τελείως διαφορετικά προϊόντα. Σε αυτόν τον οδηγό εξηγούμε με διαφάνεια τους 6 παράγοντες που καθορίζουν το κόστος και πώς να διαβάζετε μια προσφορά σαν επαγγελματίας.</p>\n\n      <h2>Οι 6 παράγοντες που καθορίζουν την τιμή</h2>\n      \n      <h3>1. Σειρά προφίλ</h3>\n      <p>Η μεγαλύτερη διαφοροποίηση. Μια ψυχρή σειρά (χωρίς θερμοδιακοπή) κοστίζει λιγότερο αλλά δεν είναι επιλέξιμη για επιδοτήσεις και «διαρρέει» ενέργεια. Οι θερμοδιακοπτόμενες σειρές κλιμακώνονται ανάλογα με το πλάτος πολυαμιδίου, τα φύλλα στεγάνωσης και τις πιστοποιήσεις — από τις μεσαίες SMARTIA έως τις κορυφαίες SUPREME.</p>\n      \n      <h3>2. Υαλοπίνακας</h3>\n      <p>Ο ενεργειακός διπλός υαλοπίνακας low-e με argon είναι σήμερα το standard. Τριπλός υαλοπίνακας, ηχομονωτικές μεμβράνες laminated ή τζάμια ασφαλείας ανεβάζουν το κόστος 15–35% ανά τεμάχιο — αλλά σε συγκεκριμένες περιπτώσεις (θόρυβος, ισόγεια) αξίζουν κάθε ευρώ.</p>\n      \n      <h3>3. Τυπολογία ανοίγματος</h3>\n      <p>Το συρόμενο επάλληλο είναι οικονομικότερο· το ανοιγοανακλινόμενο έχει ακριβότερο μηχανισμό· το χωνευτό (pocket) και τα μεγάλα minimal συρόμενα είναι premium κατασκευές. Οι ειδικές διαστάσεις (υπερμεγέθη, τόξα) κοστολογούνται ξεχωριστά.</p>\n      \n      <h3>4. Χρώμα & βαφή</h3>\n      <p>Τα standard RAL έχουν βασική τιμή. Ειδικές αποχρώσεις, απομίμηση ξύλου και —απαραίτητο κοντά στη θάλασσα— η επεξεργασία Seaside Class προσθέτουν ένα μικρό αλλά κρίσιμο ποσοστό.</p>\n      \n      <h3>5. Μηχανισμοί & εξαρτήματα</h3>\n      <p>Μηχανισμοί πολλαπλού κλειδώματος, κρυφοί μεντεσέδες, χειρολαβές με κλειδί: μικρές διαφορές τιμής, μεγάλες διαφορές σε ασφάλεια και διάρκεια ζωής.</p>\n      \n      <h3>6. Αποξήλωση & τοποθέτηση</h3>\n      <p>Η σωστή τοποθέτηση (αλφάδιασμα, αφρός χαμηλής διόγκωσης, στεγανωτικές ταινίες, σιλικόνες) είναι το 50% του τελικού αποτελέσματος. Οι «φθηνές» προσφορές συνήθως κόβουν από εδώ — και το πληρώνετε σε αέρα και υγρασία για 20 χρόνια.</p>\n      \n      <h2>Ενδεικτικό εύρος κόστους</h2>\n      <p>Πανελλαδικά, η πλήρης αντικατάσταση κουφωμάτων σε τυπική κατοικία κινείται ενδεικτικά στα 4.000–7.500 €, ανάλογα με τα τετραγωνικά των ανοιγμάτων, τη σειρά και τον υαλοπίνακα. Με το Εξοικονομώ 2026, που αναμένεται με επιδότηση έως 80%, η καθαρή επιβάρυνση μπορεί να πέσει σε κλάσμα του ποσού.</p>\n      \n      <h2>Πώς να συγκρίνετε σωστά 2 προσφορές — checklist</h2>\n      <p>Μια σοβαρή προσφορά αναγράφει ρητά:</p>\n      <ul>\n        <li>Σειρά προφίλ και κατασκευαστή συστήματος (π.χ. Alumil SMARTIA M11500)</li>\n        <li>Πλάτος πολυαμιδίου θερμοδιακοπής</li>\n        <li>Πλήρη περιγραφή υαλοπίνακα (πάχη, low-e, argon)</li>\n        <li>Συντελεστή Uw ανά κούφωμα</li>\n        <li>Τύπο μηχανισμών και σημεία κλειδώματος</li>\n        <li>Κατηγορία βαφής (και Seaside Class αν είστε κοντά στη θάλασσα)</li>\n        <li>Εργασίες: αποξήλωση, τοποθέτηση, στεγάνωση, απομάκρυνση μπάζων</li>\n        <li>Εγγύηση προϊόντος ΚΑΙ εργασίας</li>\n      </ul>\n      <p>Αν κάποιο από αυτά λείπει, δεν συγκρίνετε τιμές — συγκρίνετε άγνωστα.</p>\n    ",
-    "contentEN": "\n      <p>\"How much per window?\" is every client's first question — and the most misleading one, because two quotes with the same bottom line can hide completely different products. This guide transparently explains the 6 factors that determine cost, and how to read a quotation like a professional.</p>\n\n      <h2>The 6 factors that determine price</h2>\n      \n      <h3>1. Profile series</h3>\n      <p>The biggest differentiator. A cold series (no thermal break) costs less but is ineligible for subsidies and leaks energy. Thermal-break series scale with polyamide width, sealing levels and certifications — from the mid-range SMARTIA to the flagship SUPREME systems.</p>\n      \n      <h3>2. Glazing</h3>\n      <p>Double low-e glazing with argon is today's standard. Triple glazing, laminated acoustic interlayers or security glass add 15–35% per unit — but for specific cases (noise, ground floors) they're worth every euro.</p>\n      \n      <h3>3. Opening typology</h3>\n      <p>Lift-and-slide overlapping units are the most economical; tilt-and-turn carries a pricier mechanism; pocket (concealed) sliders and oversized minimal-frame units are premium builds. Special shapes and oversizes are costed separately.</p>\n      \n      <h3>4. Colour & coating</h3>\n      <p>Standard RAL colours carry the base price. Special finishes, wood-effect coatings and — essential near the coast — Seaside Class treatment add a small but critical percentage.</p>\n      \n      <h3>5. Hardware & accessories</h3>\n      <p>Multi-point locking, concealed hinges, key-lockable handles: small price differences, large differences in security and lifespan.</p>\n      \n      <h3>6. Removal & installation</h3>\n      <p>Correct installation (levelling, low-expansion foam, sealing tapes, silicone finishing) is 50% of the final result. \"Cheap\" quotes usually cut corners here — and you pay for it in draughts and damp for 20 years.</p>\n      \n      <h2>Indicative cost range</h2>\n      <p>Nationally, full window replacement on a typical home ranges indicatively between €4,000–7,500, depending on opening area, series and glazing. Under Exoikonomo 2026, expected with subsidies of up to 80%, the net cost can fall to a fraction of that.</p>\n      \n      <h2>How to compare two quotes properly — checklist</h2>\n      <p>A serious quotation explicitly states:</p>\n      <ul>\n        <li>Profile series and system manufacturer (e.g. Alumil SMARTIA M11500)</li>\n        <li>Thermal-break polyamide width</li>\n        <li>Full glazing description (panes, low-e, argon)</li>\n        <li>Uw value per window</li>\n        <li>Hardware type and number of locking points</li>\n        <li>Coating category (and Seaside Class if you're near the sea)</li>\n        <li>Works included: removal, installation, sealing, debris disposal</li>\n        <li>Warranty on both product AND workmanship</li>\n      </ul>\n      <p>If any of these are missing, you're not comparing prices — you're comparing unknowns.</p>\n    "
+    "contentEN": "\n      <p>\"How much per window?\" is every client's first question — and the most misleading one, because two quotes with the same bottom line can hide completely different products. This guide transparently explains the 6 factors that determine cost, and how to read a quotation like a professional.</p>\n\n      <h2>The 6 factors that determine price</h2>\n      \n      <h3>1. Profile series</h3>\n      <p>The biggest differentiator. A cold series (no thermal break) costs less but is ineligible for subsidies and leaks energy. Thermal-break series scale with polyamide width, sealing levels and certifications — from the mid-range SMARTIA to the flagship SUPREME systems.</p>\n      \n      <h3>2. Glazing</h3>\n      <p>Double low-e glazing with argon is today's standard. Triple glazing, laminated acoustic interlayers or security glass add 15–35% per unit — but for specific cases (noise, ground floors) they're worth every euro.</p>\n      \n      <h3>3. Opening typology</h3>\n      <p>Lift-and-slide overlapping units are the most economical; tilt-and-turn carries a pricier mechanism; pocket (concealed) sliders and oversized minimal-frame units are premium builds. Special shapes and oversizes are costed separately.</p>\n      \n      <h3>4. Colour & coating</h3>\n      <p>Standard RAL colours carry the base price. Special finishes, wood-effect coatings and — essential near the coast — Seaside Class treatment add a small but critical percentage.</p>\n      \n      <h3>5. Hardware & accessories</h3>\n      <p>Multi-point locking, concealed hinges, key-lockable handles: small price differences, large differences in security and lifespan.</p>\n      \n      <h3>6. Removal & installation</h3>\n      <p>Correct installation (levelling, low-expansion foam, sealing tapes, silicone finishing) is 50% of the final result. \"Cheap\" quotes usually cut corners here — and you pay for it in draughts and damp for 20 years.</p>\n      \n      <h2>Indicative cost range</h2>\n      <p>Nationally, full window replacement on a typical home ranges indicatively between €4,000–7,500, depending on opening area, series and glazing. Under Exoikonomo 2026, expected with subsidies of up to 80%, the net cost can fall to a fraction of that.</p>\n      \n      <h2>How to compare two quotes properly — checklist</h2>\n      <p>A serious quotation explicitly states:</p>\n      <ul>\n        <li>Profile series and system manufacturer (e.g. Alumil SMARTIA M11500)</li>\n        <li>Thermal-break polyamide width</li>\n        <li>Full glazing description (panes, low-e, argon)</li>\n        <li>Uw value per window</li>\n        <li>Hardware type and number of locking points</li>\n        <li>Coating category (and Seaside Class if you're near the sea)</li>\n        <li>Works included: removal, installation, sealing, debris disposal</li>\n        <li>Warranty on both product AND workmanship</li>\n      </ul>\n      <p>If any of these are missing, you're not comparing prices — you're comparing unknowns.</p>\n    ",
+    "titleDE": "Preise für Aluminiumfenster: Der Kostenguide",
+    "titleFR": "Prix des fenêtres en aluminium : Le guide des coûts",
+    "titleNL": "Prijzen van aluminium kozijnen: De Kostengids",
+    "descriptionDE": "Wie viel kosten neue Aluminiumfenster? Verstehen Sie die 6 Faktoren, die den Preis für SMARTIA und SUPREME Systeme bestimmen.",
+    "descriptionFR": "Combien coûtent les fenêtres ? Comprenez les 6 facteurs qui déterminent le prix pour SMARTIA et SUPREME.",
+    "descriptionNL": "Hoeveel kosten nieuwe kozijnen? Begrijp de 6 factoren die de prijs bepalen voor SMARTIA en SUPREME.",
+    "keyTakeawayDE": "Der Preis wird durch Serie, Glas, Öffnungsart und Zubehör bestimmt. Vergleichen Sie immer detaillierte Angebote.",
+    "keyTakeawayFR": "Le prix est déterminé par la série, le vitrage et l'ouverture. Comparez toujours des devis détaillés.",
+    "keyTakeawayNL": "De prijs wordt bepaald door de serie, het glas en het type opening. Vergelijk altijd gedetailleerde offertes.",
+    "statsDE": [
+      {
+        "value": "6",
+        "label": "Preisfaktoren"
+      },
+      {
+        "value": "+15%",
+        "label": "Spezielles Glas"
+      },
+      {
+        "value": "100%",
+        "label": "Transparenz"
+      }
+    ],
+    "statsFR": [
+      {
+        "value": "6",
+        "label": "Facteurs"
+      },
+      {
+        "value": "+15%",
+        "label": "Vitrage spécial"
+      },
+      {
+        "value": "100%",
+        "label": "Transparence"
+      }
+    ],
+    "statsNL": [
+      {
+        "value": "6",
+        "label": "Factoren"
+      },
+      {
+        "value": "+15%",
+        "label": "Speciaal glas"
+      },
+      {
+        "value": "100%",
+        "label": "Transparantie"
+      }
+    ],
+    "faqDE": [
+      {
+        "q": "Warum sind Quadratmeterpreise irreführend?",
+        "a": "Weil kleine Fenster pro Quadratmeter teurer sind als große Schiebetüren. Nur ein Stückpreis-Angebot ist seriös."
+      }
+    ],
+    "faqFR": [
+      {
+        "q": "Pourquoi les prix au m² sont-ils trompeurs?",
+        "a": "Car une petite fenêtre coûte plus cher au m² qu'une grande baie vitrée."
+      }
+    ],
+    "faqNL": [
+      {
+        "q": "Waarom zijn vierkante meter prijzen misleidend?",
+        "a": "Omdat een klein raam per m2 duurder is dan een grote schuifpui. Alleen prijs per stuk is accuraat."
+      }
+    ],
+    "contentDE": "\n      <p>Die Frage \"Wie viel kostet ein Fenster?\" lässt sich nicht pauschal beantworten. Der Preis hängt von zahlreichen Faktoren ab. Hier ist unser Transparenz-Guide.</p>\n      \n      <h2>Die 6 Preisfaktoren</h2>\n      <p>Zu den Faktoren gehören das Profil (SMARTIA vs. SUPREME), die Verglasung (Doppel- oder Dreifachverglasung), die Öffnungsart (Schiebe- oder Dreh-Kipp-Fenster), die Farbe (z. B. Seaside Class für Meeresnähe), Beschläge und die Montagequalität.</p>\n      \n      <h2>Wie man Angebote vergleicht</h2>\n      <p>Stellen Sie sicher, dass das Angebot den genauen Uw-Wert, das Profilsystem, das Glas und die Montageleistungen (Demontage, Silikon) detailliert auflistet.</p>\n    ",
+    "contentFR": "\n      <p>Le coût dépend de 6 facteurs essentiels. Voici notre guide de transparence.</p>\n      \n      <h2>Les 6 facteurs de prix</h2>\n      <p>Profilé (SMARTIA vs SUPREME), vitrage, type d'ouverture, couleur (ex: Seaside Class), quincaillerie et installation.</p>\n      \n      <h2>Comparer les devis</h2>\n      <p>Vérifiez que le devis mentionne la valeur Uw, le profilé et l'installation.</p>\n    ",
+    "contentNL": "\n      <p>De vraag \"Hoeveel kost een raam?\" is niet simpel te beantwoorden. Hier is onze transparante gids.</p>\n      \n      <h2>De 6 prijsfactoren</h2>\n      <p>Profiel (SMARTIA vs SUPREME), glas, opening, kleur (bijv. Seaside Class), beslag en installatie.</p>\n      \n      <h2>Offertes vergelijken</h2>\n      <p>Controleer of de offerte de exacte Uw-waarde, het profiel en de installatie bevat.</p>\n    "
   },
   {
     "slug": "antikatastasi-koufomaton-rethymno-vimata",
@@ -284,9 +676,114 @@ export const articles = [
     "category": "Οδηγός Αγοράς",
     "keyTakeawayEL": "Η αντικατάσταση ολοκληρώνεται χωρίς σκαψίματα και σκόνες σε 1-3 ημέρες, αναβαθμίζοντας άμεσα την αξία του σπιτιού σας.",
     "keyTakeawayEN": "The replacement is completed without digging and dust in 1-3 days, immediately upgrading your home's value.",
-    "statsEL": [{"value":"1-3","label":"Ημέρες"},{"value":"Μηδέν","label":"Σκαψίματα"},{"value":"100%","label":"Ασφάλεια"}],
-    "statsEN": [{"value":"1-3","label":"Days"},{"value":"Zero","label":"Digging"},{"value":"100%","label":"Security"}],
+    "statsEL": [
+      {
+        "value": "1-3",
+        "label": "Ημέρες"
+      },
+      {
+        "value": "Μηδέν",
+        "label": "Σκαψίματα"
+      },
+      {
+        "value": "100%",
+        "label": "Ασφάλεια"
+      }
+    ],
+    "statsEN": [
+      {
+        "value": "1-3",
+        "label": "Days"
+      },
+      {
+        "value": "Zero",
+        "label": "Digging"
+      },
+      {
+        "value": "100%",
+        "label": "Security"
+      }
+    ],
     "contentEL": "\n      <p>Ο μεγαλύτερος δισταγμός για την αλλαγή κουφωμάτων δεν είναι το κόστος — είναι η αναστάτωση. «Θα γίνει το σπίτι εργοτάξιο;» «Πόσες μέρες θα μείνουμε με ανοιχτούς τοίχους;» Η αλήθεια: με σωστή οργάνωση, μια τυπική κατοικία ολοκληρώνεται σε 1–3 ημέρες τοποθέτησης, χωρίς μπάζα και χωρίς εκπλήξεις. Δείτε ακριβώς πώς δουλεύουμε.</p>\n\n      <h2>Βήμα 1 — Επιμέτρηση & τεχνική μελέτη (δωρεάν)</h2>\n      <p>Επισκεπτόμαστε τον χώρο σας στο Ρέθυμνο ή οπουδήποτε στην Κρήτη, μετράμε κάθε άνοιγμα με ακρίβεια χιλιοστού και καταγράφουμε ιδιαιτερότητες: κάσες, ρολά, πρεβάζια, μαρμαροποδιές, φορά ανοίγματος, προσανατολισμό. Συζητάμε ανάγκες — θερμομόνωση, ηχομόνωση, ασφάλεια, αισθητική — και προτείνουμε την κατάλληλη σειρά ανά χώρο, όχι «ένα σύστημα για όλα».</p>\n\n      <h2>Βήμα 2 — Αναλυτική προσφορά</h2>\n      <p>Λαμβάνετε γραπτή προσφορά ανά τεμάχιο, με σειρά προφίλ, υαλοπίνακα, συντελεστή Uw, μηχανισμούς, βαφή και πλήρη περιγραφή εργασιών. Χωρίς ψιλά γράμματα και χωρίς «έξτρα» που εμφανίζονται στο τέλος.</p>\n\n      <h2>Βήμα 3 — Κατασκευή στη μονάδα μας στο Ρέθυμνο</h2>\n      <p>Εδώ είναι η ουσιαστική διαφορά μας: δεν μεταπωλούμε έτοιμα κουφώματα. Κάθε κούφωμα κόβεται, συναρμολογείται και ελέγχεται στη δική μας μονάδα παραγωγής στη Δρουλίσκου, ως εξουσιοδοτημένοι κατασκευαστές Alumil. Χρόνος κατασκευής: συνήθως 2–4 εβδομάδες ανάλογα με το μέγεθος του έργου και τις παραγγελίες προφίλ.</p>\n\n      <h2>Βήμα 4 — Αποξήλωση με προστασία του χώρου</h2>\n      <p>Την ημέρα τοποθέτησης, καλύπτουμε δάπεδα και έπιπλα, αφαιρούμε τα παλιά κουφώματα προσεκτικά (χωρίς σπασίματα σε σοβάδες όπου είναι εφικτό) και απομακρύνουμε τα παλιά υλικά για ανακύκλωση. Σε κατοικούμενα σπίτια δουλεύουμε χώρο-χώρο ώστε το σπίτι να μη μένει ποτέ «ανοιχτό».</p>\n\n      <h2>Βήμα 5 — Τοποθέτηση & στεγάνωση</h2>\n      <p>Η τοποθέτηση κρίνει τα πάντα. Αλφάδιασμα και ζύγισμα κάθε κάσας, στερέωση με τα προβλεπόμενα βύσματα, πλήρωση με αφρό χαμηλής διόγκωσης, στεγανωτικές ταινίες και τελικές σιλικονώσεις. Ένα κορυφαίο προφίλ με πρόχειρη τοποθέτηση χάνει έως και το μισό της απόδοσής του — γι' αυτό δεν χρησιμοποιούμε εξωτερικά συνεργεία.</p>\n\n      <h2>Βήμα 6 — Ρυθμίσεις, έλεγχος & παράδοση</h2>\n      <p>Ρυθμίζουμε μηχανισμούς και πίεση φύλλων, ελέγχουμε λειτουργία και στεγάνωση κάθε κουφώματος μαζί σας, και σας παραδίδουμε οδηγίες συντήρησης και εγγυήσεις. Το after-sales δεν σταματά στην παράδοση — είμαστε ένα τηλέφωνο μακριά για ρυθμίσεις.</p>\n\n      <h2>Πότε είναι η καλύτερη εποχή για αντικατάσταση;</h2>\n      <p>Στην Κρήτη, η άνοιξη και το φθινόπωρο προσφέρουν ιδανικές συνθήκες, αλλά η αλήθεια είναι ότι με τη μέθοδο «χώρο-χώρο» η αντικατάσταση γίνεται όλο τον χρόνο. Ο πιο έξυπνος χρόνος απόφασης, πάντως, είναι <strong>πριν</strong> ανοίξει το Εξοικονομώ 2026 — όσοι έχουν έτοιμη επιμέτρηση και προσφορά με πλήρεις προδιαγραφές, κινούνται πρώτοι.</p>\n    ",
-    "contentEN": "\n      <p>The biggest hesitation about replacing windows isn't the cost — it's the disruption. \"Will my house become a building site?\" \"How many days with open walls?\" The truth: with proper planning, a typical home is completed in 1–3 days of installation, with no rubble left behind and no surprises. Here is exactly how we work.</p>\n\n      <h2>Step 1 — Survey & technical assessment (free)</h2>\n      <p>We visit your property in Rethymno or anywhere in Crete, measure every opening to the millimetre and record the specifics: frames, shutter boxes, sills, marble thresholds, opening direction, orientation. We discuss your priorities — thermal insulation, acoustics, security, aesthetics — and propose the right series per room, not \"one system for everything.\"</p>\n      \n      <h2>Step 2 — Itemised quotation</h2>\n      <p>You receive a written, per-unit quotation stating profile series, glazing, Uw value, hardware, coating and a full description of works. No small print, and no \"extras\" appearing at the end.</p>\n      \n      <h2>Step 3 — Fabrication at our facility in Rethymno</h2>\n      <p>This is our essential difference: we don't resell ready-made windows. Every unit is cut, assembled and quality-checked at our own production facility on Drouliskou Street, as authorised Alumil fabricators. Fabrication time: typically 2–4 weeks depending on project size and profile orders.</p>\n      \n      <h2>Step 4 — Removal with full protection of your home</h2>\n      <p>On installation day we protect floors and furniture, remove the old frames carefully (avoiding plaster damage wherever possible) and take the old materials away for recycling. In occupied homes we work room by room, so the house is never left \"open.\"</p>\n      \n      <h2>Step 5 — Installation & sealing</h2>\n      <p>Installation decides everything. Levelling and squaring of every frame, anchoring with the specified fixings, low-expansion foam filling, sealing tapes and final silicone work. A top-tier profile with careless installation loses up to half its performance — which is why we never use subcontracted crews.</p>\n      \n      <h2>Step 6 — Adjustment, inspection & handover</h2>\n      <p>We fine-tune mechanisms and sash pressure, walk through the operation and sealing of every window with you, and hand over maintenance instructions and warranties. After-sales doesn't end at handover — we're one phone call away for adjustments.</p>\n      \n      <h2>When is the best season to replace windows?</h2>\n      <p>In Crete, spring and autumn offer ideal conditions, but the truth is that with the room-by-room method, replacement happens year-round. The smartest time to decide, though, is before Exoikonomo 2026 opens — owners with a completed survey and a specification-complete quote move first.</p>\n    "
+    "contentEN": "\n      <p>The biggest hesitation about replacing windows isn't the cost — it's the disruption. \"Will my house become a building site?\" \"How many days with open walls?\" The truth: with proper planning, a typical home is completed in 1–3 days of installation, with no rubble left behind and no surprises. Here is exactly how we work.</p>\n\n      <h2>Step 1 — Survey & technical assessment (free)</h2>\n      <p>We visit your property in Rethymno or anywhere in Crete, measure every opening to the millimetre and record the specifics: frames, shutter boxes, sills, marble thresholds, opening direction, orientation. We discuss your priorities — thermal insulation, acoustics, security, aesthetics — and propose the right series per room, not \"one system for everything.\"</p>\n      \n      <h2>Step 2 — Itemised quotation</h2>\n      <p>You receive a written, per-unit quotation stating profile series, glazing, Uw value, hardware, coating and a full description of works. No small print, and no \"extras\" appearing at the end.</p>\n      \n      <h2>Step 3 — Fabrication at our facility in Rethymno</h2>\n      <p>This is our essential difference: we don't resell ready-made windows. Every unit is cut, assembled and quality-checked at our own production facility on Drouliskou Street, as authorised Alumil fabricators. Fabrication time: typically 2–4 weeks depending on project size and profile orders.</p>\n      \n      <h2>Step 4 — Removal with full protection of your home</h2>\n      <p>On installation day we protect floors and furniture, remove the old frames carefully (avoiding plaster damage wherever possible) and take the old materials away for recycling. In occupied homes we work room by room, so the house is never left \"open.\"</p>\n      \n      <h2>Step 5 — Installation & sealing</h2>\n      <p>Installation decides everything. Levelling and squaring of every frame, anchoring with the specified fixings, low-expansion foam filling, sealing tapes and final silicone work. A top-tier profile with careless installation loses up to half its performance — which is why we never use subcontracted crews.</p>\n      \n      <h2>Step 6 — Adjustment, inspection & handover</h2>\n      <p>We fine-tune mechanisms and sash pressure, walk through the operation and sealing of every window with you, and hand over maintenance instructions and warranties. After-sales doesn't end at handover — we're one phone call away for adjustments.</p>\n      \n      <h2>When is the best season to replace windows?</h2>\n      <p>In Crete, spring and autumn offer ideal conditions, but the truth is that with the room-by-room method, replacement happens year-round. The smartest time to decide, though, is before Exoikonomo 2026 opens — owners with a completed survey and a specification-complete quote move first.</p>\n    ",
+    "titleDE": "Fensteraustausch in Rethymno: Schritt-für-Schritt",
+    "titleFR": "Remplacement de fenêtres à Réthymnon : Étape par étape",
+    "titleNL": "Kozijnen vervangen in Rethymno: Stap voor stap",
+    "descriptionDE": "Wie der Austausch von Fenstern abläuft: Vom Aufmaß bis zur Übergabe. Ein Leitfaden für Immobilien auf Kreta.",
+    "descriptionFR": "Comment se déroule le remplacement de vos fenêtres, du devis à la remise des clés.",
+    "descriptionNL": "Hoe de vervanging van kozijnen verloopt: van opmeting tot oplevering. Een gids voor woningen op Kreta.",
+    "keyTakeawayDE": "Der Austausch erfolgt sauber und ohne große Baustelle in 1-3 Tagen.",
+    "keyTakeawayFR": "Le remplacement se fait sans dégâts majeurs en 1 à 3 jours.",
+    "keyTakeawayNL": "De vervanging gebeurt schoon en zonder breekwerk in 1 tot 3 dagen.",
+    "statsDE": [
+      {
+        "value": "1-3",
+        "label": "Tage"
+      },
+      {
+        "value": "0",
+        "label": "Schmutz"
+      },
+      {
+        "value": "100%",
+        "label": "Recycling"
+      }
+    ],
+    "statsFR": [
+      {
+        "value": "1-3",
+        "label": "Jours"
+      },
+      {
+        "value": "0",
+        "label": "Poussière"
+      },
+      {
+        "value": "100%",
+        "label": "Recyclage"
+      }
+    ],
+    "statsNL": [
+      {
+        "value": "1-3",
+        "label": "Dagen"
+      },
+      {
+        "value": "0",
+        "label": "Stof"
+      },
+      {
+        "value": "100%",
+        "label": "Recycling"
+      }
+    ],
+    "faqDE": [
+      {
+        "q": "Brauche ich eine Baugenehmigung?",
+        "a": "Normalerweise nicht, wenn die Maße der Öffnungen nicht verändert werden."
+      }
+    ],
+    "faqFR": [
+      {
+        "q": "Faut-il un permis de construire?",
+        "a": "Généralement non pour un remplacement à l'identique."
+      }
+    ],
+    "faqNL": [
+      {
+        "q": "Heb ik een bouwvergunning nodig?",
+        "a": "Meestal niet, als de afmetingen van de openingen niet veranderen."
+      }
+    ],
+    "contentDE": "\n      <p>Der Austausch von Fenstern ist einfacher, als Sie denken. Viele Kunden befürchten eine große Baustelle, doch mit unserer Methodik bleibt Ihr Haus sauber.</p>\n\n      <h2>Der Ablauf</h2>\n      <p>Wir starten mit einem kostenlosen Aufmaß in Rethymno. Danach erhalten Sie ein detailliertes Angebot.</p>\n      \n      <h2>Montage ohne Sorgen</h2>\n      <p>Am Tag der Installation decken wir alles ab, entfernen die alten Fenster vorsichtig und montieren die neuen Aluminiumfenster fachgerecht. Danach erfolgt die Abdichtung und die Übergabe.</p>\n    ",
+    "contentFR": "\n      <p>Le remplacement de vos fenêtres est plus simple que vous ne le pensez. Avec notre méthode, votre maison reste propre.</p>\n\n      <h2>Le processus</h2>\n      <p>Nous commençons par une visite gratuite à Réthymnon pour les mesures.</p>\n      \n      <h2>Installation sans souci</h2>\n      <p>Le jour J, nous protégeons tout, retirons les anciennes fenêtres et posons les nouvelles.</p>\n    ",
+    "contentNL": "\n      <p>Het vervangen van kozijnen is makkelijker dan u denkt. Veel klanten vrezen een bouwput, maar met onze methode blijft uw huis schoon.</p>\n\n      <h2>Het proces</h2>\n      <p>We starten met een gratis opmeting in Rethymno. Daarna ontvangt u een offerte.</p>\n      \n      <h2>Zorgeloze installatie</h2>\n      <p>Op de dag van installatie dekken we alles af, verwijderen we de oude kozijnen en plaatsen we de nieuwe aluminium kozijnen vakkundig.</p>\n    "
   }
 ];
+
+export function getLocalizedField(article: any, fieldBase: string, lang: string) {
+  const langUpper = lang.toUpperCase();
+  const value = article[`${fieldBase}${langUpper}`];
+  if (value !== undefined && value !== null && value !== '') return value;
+  return article[`${fieldBase}EN`];
+}

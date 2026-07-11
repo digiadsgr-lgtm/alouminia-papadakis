@@ -20,8 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticLocales = ['el', 'en', 'de', 'fr', 'nl']
 
   routes.forEach((route) => {
-    const isBlog = route === '/blog'
-    const routeLocales = isBlog ? ['el', 'en'] : staticLocales
+    const routeLocales = staticLocales
 
     // Create the alternates languages object dynamically
     const languages: Record<string, string> = {
@@ -46,32 +45,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
   articles.forEach((article) => {
     const route = `/blog/${article.slug}`
     
-    // The new article is ONLY el
-    if (article.slug === 'vioklimatiki-pergola-i-tentopergola') {
+    const languages: Record<string, string> = {
+      'x-default': `${baseUrl}/el${route}`
+    }
+    staticLocales.forEach(lang => {
+      languages[lang] = `${baseUrl}/${lang}${route}`
+    })
+    
+    staticLocales.forEach(lang => {
       sitemapEntries.push({
-        url: `${baseUrl}/el${route}`,
+        url: `${baseUrl}/${lang}${route}`,
         lastModified: new Date(article.date),
         changeFrequency: 'yearly',
         priority: 0.7,
-        alternates: { languages: { 'el': `${baseUrl}/el${route}`, 'x-default': `${baseUrl}/el${route}` } },
+        alternates: { languages },
       })
-    } else {
-      const languages = {
-        'el': `${baseUrl}/el${route}`,
-        'en': `${baseUrl}/en${route}`,
-        'x-default': `${baseUrl}/el${route}`
-      }
-      
-      ;['el', 'en'].forEach(lang => {
-        sitemapEntries.push({
-          url: `${baseUrl}/${lang}${route}`,
-          lastModified: new Date(article.date),
-          changeFrequency: 'yearly',
-          priority: 0.7,
-          alternates: { languages },
-        })
-      })
-    }
+    })
   })
 
   // Add Alumil Systems (EL only)

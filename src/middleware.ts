@@ -17,13 +17,6 @@ export function middleware(request: NextRequest) {
   }
 
 
-
-  // Redirect unsupported blog locales to /en/blog
-  if (pathname.match(/^\/(de|fr|nl)\/blog/)) {
-    request.nextUrl.pathname = pathname.replace(/^\/(de|fr|nl)\/blog/, '/en/blog')
-    return NextResponse.redirect(request.nextUrl, 308)
-  }
-
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   )

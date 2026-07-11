@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import PageTransition from '@/components/PageTransition'
 import { ChevronLeft, Calendar, Clock, ArrowRight } from 'lucide-react'
-import { articles } from '@/data/articles'
+import { articles, getLocalizedField } from '@/data/articles'
 
 const translations = {
   el: {
@@ -119,7 +119,6 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 export default async function BlogIndexPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   const t = translations[lang as Locale] || translations.en;
-  const isEl = lang === 'el';
   
   // Sort articles by date descending
   const sortedArticles = [...articles].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
@@ -130,7 +129,7 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ lang
   const categories = Array.from(new Set(articles.map(a => a.category).filter(Boolean)));
 
   const getReadTime = (article: any) => {
-    const text = isEl ? article.contentEL : article.contentEN;
+    const text = getLocalizedField(article, 'content', lang);
     if (!text) return 1;
     const words = text.replace(/<[^>]*>?/gm, ' ').split(/\s+/).length;
     return Math.max(1, Math.round(words / 200));
@@ -180,7 +179,7 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ lang
               <div className="relative w-full lg:w-1/2 aspect-video lg:aspect-auto overflow-hidden">
                 <Image 
                   src={featuredArticle.image} 
-                  alt={isEl ? featuredArticle.titleEL : featuredArticle.titleEN} 
+                  alt={getLocalizedField(featuredArticle, 'title', lang)} 
                   fill 
                   className="object-cover group-hover:scale-105 transition-transform duration-700" 
                   priority
@@ -198,7 +197,7 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ lang
                   <span className="flex items-center gap-2 text-navy">
                     <Calendar size={16} className="text-red-light" />
                     <time dateTime={featuredArticle.date}>
-                      {new Date(featuredArticle.date).toLocaleDateString(isEl ? 'el-GR' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                      {new Date(featuredArticle.date).toLocaleDateString(lang === 'el' ? 'el-GR' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
                     </time>
                   </span>
                   <span className="flex items-center gap-2">
@@ -208,11 +207,11 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ lang
                 </div>
                 
                 <h2 className="text-3xl md:text-4xl font-black text-navy mb-6 leading-tight group-hover:text-red-light transition-colors line-clamp-3">
-                  {isEl ? featuredArticle.titleEL : featuredArticle.titleEN}
+                  {getLocalizedField(featuredArticle, 'title', lang)}
                 </h2>
                 
                 <p className="text-lg text-gray-600 mb-8 leading-relaxed line-clamp-3">
-                  {isEl ? featuredArticle.descriptionEL : featuredArticle.descriptionEN}
+                  {getLocalizedField(featuredArticle, 'description', lang)}
                 </p>
                 
                 <div className="mt-auto flex items-center gap-2 text-red-light font-bold uppercase tracking-wide text-sm group-hover:gap-4 transition-all">
@@ -233,7 +232,7 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ lang
                 <div className="relative w-full aspect-video overflow-hidden bg-gray-100">
                   <Image 
                     src={article.image} 
-                    alt={isEl ? article.titleEL : article.titleEN} 
+                    alt={getLocalizedField(article, 'title', lang)} 
                     fill 
                     className="object-cover group-hover:scale-105 transition-transform duration-700" 
                   />
@@ -250,7 +249,7 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ lang
                   <div className="flex items-center justify-between text-xs font-bold text-gray-400 mb-4 uppercase tracking-wider">
                     <time dateTime={article.date} className="flex items-center gap-1.5 text-navy">
                       <Calendar size={14} className="text-red-light" />
-                      {new Date(article.date).toLocaleDateString(isEl ? 'el-GR' : 'en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                      {new Date(article.date).toLocaleDateString(lang === 'el' ? 'el-GR' : 'en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
                     </time>
                     <span className="flex items-center gap-1.5">
                       <Clock size={14} />
@@ -259,11 +258,11 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ lang
                   </div>
                   
                   <h3 className="text-xl font-black text-navy mb-4 leading-snug group-hover:text-red-light transition-colors line-clamp-2">
-                    {isEl ? article.titleEL : article.titleEN}
+                    {getLocalizedField(article, 'title', lang)}
                   </h3>
                   
                   <p className="text-gray-600 mb-8 flex-1 leading-relaxed text-sm line-clamp-2">
-                    {isEl ? article.descriptionEL : article.descriptionEN}
+                    {getLocalizedField(article, 'description', lang)}
                   </p>
                   
                   <div className="flex items-center gap-2 text-navy font-bold text-sm group-hover:text-red-light group-hover:gap-3 transition-all">
