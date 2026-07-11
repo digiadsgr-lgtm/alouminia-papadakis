@@ -30,7 +30,7 @@ const dict = {
     submitting: 'Αποστολή...',
     success: 'Το μήνυμά σας εστάλη επιτυχώς! Θα επικοινωνήσουμε μαζί σας σύντομα.',
     error: 'Προέκυψε σφάλμα. Παρακαλώ δοκιμάστε ξανά ή καλέστε μας.',
-    fallbackMsg: 'Η φόρμα επικοινωνίας αναβαθμίζεται. Παρακαλώ καλέστε μας άμεσα:',
+    fallbackMsg: 'Η αποστολή δεν ήταν δυνατή αυτή τη στιγμή — καλέστε μας στο 28310 23897 ή στείλτε email',
     orCall: 'ή καλέστε μας άμεσα:'
   },
   en: {
@@ -47,7 +47,7 @@ const dict = {
     submitting: 'Sending...',
     success: 'Your message was sent successfully! We will contact you soon.',
     error: 'An error occurred. Please try again or call us.',
-    fallbackMsg: 'Our contact form is currently being upgraded. Please call us directly:',
+    fallbackMsg: 'Sending was not possible at this time — please call us at 28310 23897 or send an email',
     orCall: 'or call us directly:'
   },
   de: {
@@ -64,7 +64,7 @@ const dict = {
     submitting: 'Senden...',
     success: 'Ihre Nachricht wurde erfolgreich gesendet! Wir werden uns in Kürze bei Ihnen melden.',
     error: 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut oder rufen Sie uns an.',
-    fallbackMsg: 'Unser Kontaktformular wird derzeit aktualisiert. Bitte rufen Sie uns direkt an:',
+    fallbackMsg: 'Ein Versand war zurzeit nicht möglich — bitte rufen Sie uns unter 28310 23897 an oder senden Sie eine E-Mail',
     orCall: 'oder rufen Sie uns direkt an:'
   },
   fr: {
@@ -81,7 +81,7 @@ const dict = {
     submitting: 'Envoi...',
     success: 'Votre message a été envoyé avec succès ! Nous vous contacterons bientôt.',
     error: 'Une erreur s\'est produite. Veuillez réessayer ou nous appeler.',
-    fallbackMsg: 'Notre formulaire de contact est en cours de mise à jour. Veuillez nous appeler directement :',
+    fallbackMsg: 'L\'envoi n\'a pas été possible pour le moment — veuillez nous appeler au 28310 23897 ou envoyer un e-mail',
     orCall: 'ou appelez-nous directement :'
   },
   nl: {
@@ -98,7 +98,7 @@ const dict = {
     submitting: 'Verzenden...',
     success: 'Uw bericht is succesvol verzonden! We nemen spoedig contact met u op.',
     error: 'Er is een fout opgetreden. Probeer het opnieuw of bel ons.',
-    fallbackMsg: 'Ons contactformulier wordt momenteel bijgewerkt. Bel ons direct:',
+    fallbackMsg: 'Verzenden was op dit moment niet mogelijk — bel ons op 28310 23897 of stuur een e-mail',
     orCall: 'of bel ons direct:'
   }
 };
@@ -167,24 +167,7 @@ export default function ContactForm({ lang = 'el' }: { lang?: 'el' | 'en' | 'de'
     }
   };
 
-  if (status === 'fallback') {
-    return (
-      <div className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100 flex flex-col items-center text-center">
-        <AlertCircle className="w-16 h-16 text-red mb-6" />
-        <h3 className="text-2xl font-black text-navy mb-4">{t.fallbackMsg}</h3>
-        <div className="flex flex-col gap-4 w-full max-w-xs mt-4">
-          <a href="tel:+302831023897" className="flex items-center justify-center gap-3 bg-red text-white py-4 px-6 rounded-xl font-bold hover:bg-navy transition-colors">
-            <Phone size={20} />
-            +30 28310 23897
-          </a>
-          <div className="flex items-center justify-center gap-3 bg-gray-100 text-navy py-4 px-6 rounded-xl font-bold hover:bg-gray-200 transition-colors">
-            <Mail size={20} />
-            <ProtectedEmail />
-          </div>
-        </div>
-      </div>
-    );
-  }
+
 
   return (
     <div className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100 relative overflow-hidden">
@@ -312,6 +295,23 @@ export default function ContactForm({ lang = 'el' }: { lang?: 'el' | 'en' | 'de'
           </div>
         </div>
       </form>
+      
+      {status === 'fallback' && (
+        <div className="mt-8 p-8 md:p-10 rounded-2xl bg-gray-50 border border-red/20 flex flex-col items-center text-center">
+          <AlertCircle className="w-12 h-12 text-red mb-4" />
+          <h3 className="text-xl font-black text-navy mb-4">{t.fallbackMsg}</h3>
+          <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md mt-2">
+            <a href="tel:+302831023897" className="flex-1 flex items-center justify-center gap-3 bg-red text-white py-4 px-6 rounded-xl font-bold hover:bg-navy transition-colors">
+              <Phone size={20} />
+              +30 28310 23897
+            </a>
+            <div className="flex-1 flex items-center justify-center gap-3 bg-white border border-gray-200 text-navy py-4 px-6 rounded-xl font-bold hover:bg-gray-50 transition-colors">
+              <Mail size={20} />
+              <ProtectedEmail />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

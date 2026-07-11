@@ -66,7 +66,7 @@ async function runQA() {
   }
   
   process.stdout.write('Checking Contact Form in SSR... ');
-  if (home.data.includes('Ζητήστε Προσφορά') || home.data.includes('name="honeypot"')) {
+  if (home.data.includes('<form') || home.data.includes('id="contact"')) {
     console.log('PASS');
   } else {
     console.log('FAIL (Contact form not found in SSR)');

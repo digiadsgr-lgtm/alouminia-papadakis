@@ -3,6 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import ContactForm from './ContactForm'
 import ProtectedEmail from './ProtectedEmail'
+import ContactForm from './ContactForm'
+import ProtectedEmail from './ProtectedEmail'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { ShieldCheck, Zap, Factory, CheckCircle2, ChevronRight, PhoneCall, MapPin, Mail, Sparkles, Home, BookOpen } from 'lucide-react'
 import TrustBadges from './TrustBadges'
@@ -209,7 +211,7 @@ export default function HomeEL() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/5">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once:true }} transition={{ delay: 0.1 }} className="flex flex-col items-center p-4">
               <Zap className="text-red mb-4" size={40} />
-              <h2 className="text-white font-bold text-xl mb-2">100% Ενεργειακή Αυτονομία</h2>
+              <h2 className="text-white font-bold text-xl mb-2">Έως 50% Χαμηλότεροι Λογαριασμοί</h2>
               <p className="text-gray-400 text-sm leading-relaxed">Μειώστε το κόστος θέρμανσης και ψύξης. Τα θερμοδιακοπτόμενα προφίλ μας επιτυγχάνουν δείκτη Uw έως 0.9 W/m²K.</p>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once:true }} transition={{ delay: 0.2 }} className="flex flex-col items-center p-4">
@@ -271,7 +273,7 @@ export default function HomeEL() {
                <Link href="/el/services/portes-asfaleias-rethymno" className="glass-panel p-10 hover:border-red/30 transition-all duration-500 block group text-navy flex flex-col justify-between h-full bg-white active:scale-[0.98] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)]">
                  <div>
                    <h3 className="text-2xl font-black mb-4 group-hover:text-red transition-colors">Πόρτες Ασφαλείας</h3>
-                   <p className="text-gray-600 mb-8 text-lg">Θωράκιση Class 3/4 και κλειδαριές νέας γενιάς (Defender). Κλείστε την πόρτα του σπιτιού σας και μην φοβάστε απολύτως τίποτα.</p>
+                   <p className="text-gray-600 mb-8 text-lg">Θωράκιση Class 3/4 και κλειδαριές νέας γενιάς (Defender). Κλείστε την πόρτα του σπιτιού σας και και κοιμηθείτε ήσυχοι.</p>
                  </div>
                  <span className="text-red font-bold flex items-center gap-2 group-hover:gap-4 transition-all mt-6">Περισσότερα <ChevronRight size={20} strokeWidth={3}/></span>
                </Link>
@@ -298,7 +300,7 @@ export default function HomeEL() {
         >
           <h2 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">Άμεση Παράδοση</h2>
           <p className="text-2xl text-gray-300 mb-6 font-light max-w-3xl mx-auto leading-relaxed">Αυστηρή συνέπεια στα χρονοδιαγράμματα και Premium Αισθητική. Παραδίδουμε ολοκληρωμένες εφαρμογές που αναβαθμίζουν εμπορικά την αξία του ακινήτου σας.</p>
-          <p className="text-base text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed">Αποδεδειγμένο Portfolio · structured Workflow · Οργανωμένο After-Sales · Εγγύηση Alumil · Καμία Καθυστέρηση</p>
+          <p className="text-base text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed">Αποδεδειγμένο Portfolio · Οργανωμένη Παραγωγή · Οργανωμένο After-Sales · Εγγύηση Alumil · Καμία Καθυστέρηση</p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
             <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 flex flex-col justify-between hover:bg-white/10 hover:border-red/50 transition-all duration-300 rounded-2xl group cursor-pointer">
@@ -322,6 +324,9 @@ export default function HomeEL() {
                  <ProtectedEmail className="font-bold text-lg md:text-xl group-hover:text-[var(--color-red-light)] transition-colors break-all" />
                </div>
             </div>
+          </div>
+          <div className="mt-16 text-left relative z-20">
+            <ContactForm lang="el" />
           </div>
         </motion.div>
       </section>
