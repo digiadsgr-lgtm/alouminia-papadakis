@@ -124,7 +124,7 @@ export default function Navbar({ lang = 'el' }: { lang?: 'el' | 'en' | 'de' | 'f
           <div className="flex justify-between items-center h-16">
             <div className="flex-shrink-0 flex items-center">
               <Link href={`/${lang}`} className="text-2xl md:text-3xl font-black tracking-tight active:scale-95 transform transition-transform">
-                {lang === 'en' ? 'PAPADAKIS' : 'ΠΑΠΑΔΑΚΗΣ'}<span className="text-red">.</span>
+                {lang === 'el' ? 'ΠΑΠΑΔΑΚΗΣ' : 'PAPADAKIS'}<span className="text-red">.</span>
               </Link>
             </div>
             
