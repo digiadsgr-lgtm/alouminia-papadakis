@@ -134,6 +134,9 @@ export default function Navbar({ lang = 'el' }: { lang?: 'el' | 'en' | 'de' | 'f
                   {t.servicesTitle}
                 </button>
                 <div className="absolute top-full left-0 mt-4 w-64 bg-white rounded-2xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 p-3 flex flex-col gap-1">
+                  {lang === 'el' && (
+                    <Link href={`/${lang}/systimata-alumil`} className="block px-4 py-3 text-sm font-bold text-navy hover:bg-gray-50 hover:text-red rounded-xl transition-colors">Συστήματα Alumil</Link>
+                  )}
                   <Link href={`/${lang}/services/koufomata-alouminiou-rethymno`} className="block px-4 py-3 text-sm font-bold text-navy hover:bg-gray-50 hover:text-red rounded-xl transition-colors">{t.koufomata}</Link>
                   <Link href={`/${lang}/services/pergoles-rethymno-kriti`} className="block px-4 py-3 text-sm font-bold text-navy hover:bg-gray-50 hover:text-red rounded-xl transition-colors">{t.pergoles}</Link>
                   <Link href={`/${lang}/services/sidiros-kataskeves-rethymno`} className="block px-4 py-3 text-sm font-bold text-navy hover:bg-gray-50 hover:text-red rounded-xl transition-colors">{t.sidiros}</Link>
@@ -204,6 +207,7 @@ export default function Navbar({ lang = 'el' }: { lang?: 'el' | 'en' | 'de' | 'f
               <div className="flex-1 overflow-y-auto px-6 py-6 flex flex-col gap-4">
                 {[
                   { name: t.home, link: `/${lang}` },
+                  ...(lang === 'el' ? [{ name: 'Συστήματα Alumil', link: `/el/systimata-alumil` }] : []),
                   { name: t.koufomata, link: `/${lang}/services/koufomata-alouminiou-rethymno` },
                   { name: t.pergoles, link: `/${lang}/services/pergoles-rethymno-kriti` },
                   { name: t.sidiros, link: `/${lang}/services/sidiros-kataskeves-rethymno` },

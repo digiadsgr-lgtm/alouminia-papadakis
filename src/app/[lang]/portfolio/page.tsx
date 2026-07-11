@@ -2,7 +2,8 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import PageTransition from '@/components/PageTransition'
-import { MapPin, ChevronLeft, Calendar, ShieldCheck, Ruler } from 'lucide-react'
+import { ChevronLeft, Info } from 'lucide-react'
+import { projects } from '@/data/projects'
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -88,56 +89,70 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   }
 }
 
-const projects = [
-  {
-    titleEL: "Αρχιτεκτονική Εφαρμογή σε Luxury Βίλα",
-    titleEN: "Architectural Application for Luxury Villa",
-    location: "Πλακιάς, Νότιο Ρέθυμνο / Plakias, South Rethymno",
-    img: "/images/hero_aluminum_villa_1776110912532.png",
-    categoryEL: "Custom Κατοικία - Πλήρες Έργο",
-    categoryEN: "Custom Residence - Turn-key",
-    descEL: "Κατασκευή και εγκατάσταση θερμοδιακοπτόμενων συστημάτων Alumil SMARTIA S560 για μέγιστη κάλυψη ανοιγμάτων. Λόγω της εγγύτητας στη θάλασσα, εφαρμόστηκε βαφή Seaside Class για απόλυτη αντιδιαβρωτική προστασία. Παράδοση σε 14 εργάσιμες, με γραπτή εγγύηση Alumil.",
-    descEN: "Manufacture and installation of Alumil SMARTIA S560 thermal-break systems for maximum span coverage. Due to seaside proximity, Seaside Class coating was applied for absolute rust protection. Turn-key delivery in 14 days with Alumil guarantee.",
-    scope: "6 Windows, 4 Sliding Doors, 1 Security Door"
-  },
-  {
-    titleEL: "Ενεργειακή Αναβάθμιση Boutique Resort",
-    titleEN: "Boutique Resort Energy Upgrade",
-    location: "Μπαλί, Βόρειος Άξονας / Bali, North Coast",
-    img: "/images/pergola_crete_1776112148406.png",
-    categoryEL: "Τουριστικό Κατάλυμα & B2B",
-    categoryEN: "Tourism Hospitality B2B",
-    descEL: "Ολοκληρωμένο project αντικατάστασης κουφωμάτων για ξενοδοχειακή μονάδα με αυστηρό deadline ενόψει σεζόν. Τοποθετήθηκαν ανοιγόμενα SUPREME S77 και 3 βαρέως τύπου βιοκλιματικές πέργκολες στις σουίτες. Εφαρμογή χωρίς καμία απόκλιση στο χρονοδιάγραμμα.",
-    descEN: "Comprehensive window replacement project for a hotel under strict pre-season deadlines. Installed SUPREME S77 casements and 3 heavy-duty bioclimatic pergolas in the suites. Flawless execution with zero timeline delays.",
-    scope: "12 Rooms, 3 Pergolas, Inox Railings"
-  },
-  {
-    titleEL: "Premium Ενεργειακή Εφαρμογή (Εξοικονομώ)",
-    titleEN: "Premium Energy Application (Subsidy Run)",
-    location: "Πρινές, Ρέθυμνο / Prines, Rethymno",
-    img: "/images/aluminum_doors_patio_1776112180417.png",
-    categoryEL: "Ιδιωτική Κατοικία - Εξοικονομώ",
-    categoryEN: "Private Residence",
-    descEL: "Αντικατάσταση παλαιών κουφωμάτων με νέα, πιστοποιημένα ενεργειακά προφίλ για το πρόγραμμα Εξοικονομώ. Ο δείκτης θερμοπερατότητας μειώθηκε στο Uw 1.2 W/m²K, προσφέροντας 40% εξοικονόμηση λογαριασμού ρεύματος.",
-    descEN: "Replacement of old windows with certified energy-efficient profiles. The thermal transmittance coefficient was reduced to Uw 1.2 W/m²K, offering a 40% saving on cooling/heating operational costs.",
-    scope: "Full House Upgrade + Rollers"
-  },
-  {
-    titleEL: "Heavy Duty Βιομηχανικές Σιδηροκατασκευές",
-    titleEN: "Heavy Duty Commercial Ironworks",
-    location: "Πάνορμο / Panormo",
-    img: "/images/hero_welding_1776110934221.png",
-    categoryEL: "Commercial Space",
-    categoryEN: "Commercial Space",
-    descEL: "Βαριές σιδηροκατασκευές (Heavy Ironworks), custom inox σκάλες και τοποθέτηση θωρακισμένων πορτών ασφαλείας RC3 για εμπορική αποθήκη. Σχεδιασμός CAD in-house πριν την έναρξη του project.",
-    descEN: "Heavy ironworks, custom inox staircases, and installation of RC3 armored security doors for a commercial warehouse facility. In-house CAD design validation prior to manufacturing.",
-    scope: "Security Doors, Staircases, Roofing"
-  }
-]
-
 export default async function PortfolioPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
-  const isEn = lang !== 'el';
+  
+  const ui = {
+    el: {
+      back: 'Επιστροφή στην Αρχική',
+      title1: 'Τα Έργα Μας στην',
+      title2: 'Κρήτη',
+      subtitle: 'Η απόδειξη της αξιοπιστίας μας. Δείτε αναλυτικά case studies από έργα εφαρμογής συστημάτων υψηλής αισθητικής.',
+      badge: 'Φωτορεαλιστική απεικόνιση',
+      b2bTitle: 'Αναλαμβάνετε κάποιο μεγάλο Project;',
+      b2bDesc: 'Μηδενικές καθυστερήσεις. Εγγυημένη τήρηση παραδόσεων, ειδικές B2B τιμές και άμεση προτεραιότητα σε μεγάλα κατασκευαστικά έργα.',
+      b2bBtn: 'Επικοινωνία με τμήμα B2B'
+    },
+    en: {
+      back: 'Back to Home',
+      title1: 'Our Work in',
+      title2: 'Crete',
+      subtitle: 'Proof of flawless execution. Explore our detailed case studies of premium aluminum installations.',
+      badge: 'Photorealistic visualization',
+      b2bTitle: 'Structured B2B Project Operations',
+      b2bDesc: 'We provide structural solutions, structured timeline execution, and direct architectural collaboration for demanding hospitality or residential developments.',
+      b2bBtn: 'Contact B2B Department'
+    },
+    de: {
+      back: 'Zurück zur Startseite',
+      title1: 'Unsere Arbeit auf',
+      title2: 'Kreta',
+      subtitle: 'Beweis für fehlerfreie Ausführung. Entdecken Sie unsere detaillierten Fallstudien zu hochwertigen Aluminiuminstallationen.',
+      badge: 'Fotorealistische Darstellung',
+      b2bTitle: 'Strukturierte B2B-Projektabläufe',
+      b2bDesc: 'Wir bieten strukturelle Lösungen, strukturierte Zeitplanausführung und direkte architektonische Zusammenarbeit für anspruchsvolle Entwicklungen im Gastgewerbe oder Wohnungsbau.',
+      b2bBtn: 'Kontakt B2B-Abteilung'
+    },
+    fr: {
+      back: 'Retour à l\'accueil',
+      title1: 'Notre Travail en',
+      title2: 'Crète',
+      subtitle: 'Preuve d\'une exécution sans faille. Découvrez nos études de cas détaillées sur les installations en aluminium premium.',
+      badge: 'Visualisation photoréaliste',
+      b2bTitle: 'Opérations Structurées de Projets B2B',
+      b2bDesc: 'Nous fournissons des solutions structurelles, une exécution structurée du calendrier et une collaboration architecturale directe pour les développements hôteliers ou résidentiels exigeants.',
+      b2bBtn: 'Contacter le Département B2B'
+    },
+    nl: {
+      back: 'Terug naar Home',
+      title1: 'Ons Werk op',
+      title2: 'Kreta',
+      subtitle: 'Bewijs van een vlekkeloze uitvoering. Ontdek onze gedetailleerde casestudies van premium aluminium installaties.',
+      badge: 'Fotorealistische weergave',
+      b2bTitle: 'Gestructureerde B2B Projectoperaties',
+      b2bDesc: 'Wij bieden structurele oplossingen, een gestructureerde uitvoering van de planning en directe architectonische samenwerking voor veeleisende horeca- of woningbouwprojecten.',
+      b2bBtn: 'Contacteer de B2B Afdeling'
+    }
+  }
+
+  const t = ui[lang as keyof typeof ui] || ui['en'];
+
+  // Sort real first, then render
+  const sortedProjects = [...projects].sort((a, b) => {
+    if (a.type === 'real' && b.type === 'render') return -1;
+    if (a.type === 'render' && b.type === 'real') return 1;
+    return 0;
+  });
 
   return (
     <PageTransition>
@@ -145,13 +160,13 @@ export default async function PortfolioPage({ params }: { params: Promise<{ lang
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Link href={`/${lang}`} className="inline-flex items-center text-gray-300 hover:text-white transition-colors mb-8 font-medium">
-            <ChevronLeft size={20} /> {isEn ? 'Back to Home' : 'Επιστροφή στην Αρχική'}
+            <ChevronLeft size={20} /> {t.back}
           </Link>
           <h1 className="text-4xl md:text-6xl font-black mb-6 tracking-tight">
-            {isEn ? 'Our Work in' : 'Τα Έργα Μας στην'} <span className="text-red">{isEn ? 'Crete' : 'Κρήτη'}</span>
+            {t.title1} <span className="text-red">{t.title2}</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            {isEn ? 'Proof of πολυετή εμπειρία and flawless execution. Explore our detailed case studies of premium aluminum installations.' : 'Η απόδειξη της αξιοπιστίας μας. Δείτε αναλυτικά case studies από έργα εφαρμογής συστημάτων υψηλής αισθητικής και αυστηρών απαιτήσεων.'}
+            {t.subtitle}
           </p>
         </div>
       </section>
@@ -159,43 +174,49 @@ export default async function PortfolioPage({ params }: { params: Promise<{ lang
       <section className="py-24 bg-offwhite">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-             {projects.map((p, idx) => (
-                <article key={idx} className="group relative rounded-3xl overflow-hidden shadow-2xl bg-white border border-gray-100 flex flex-col hover:border-red/30 transition-colors">
-                  <div className="relative h-72 w-full overflow-hidden">
-                    <Image 
-                      src={p.img} 
-                      alt={isEn ? p.titleEN : p.titleEL} 
-                      fill 
-                      className="object-cover group-hover:scale-105 transition-transform duration-700" 
-                    />
-                    <div className="absolute top-4 left-4 bg-red text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg tracking-wider uppercase">
-                      {isEn ? p.categoryEN : p.categoryEL}
+             {sortedProjects.map((p, idx) => {
+                const title = p[`title${lang.toUpperCase() as 'EL'|'EN'|'DE'|'FR'|'NL'}` as keyof typeof p] as string || p.titleEN;
+                const desc = p[`desc${lang.toUpperCase() as 'EL'|'EN'|'DE'|'FR'|'NL'}` as keyof typeof p] as string || p.descEN;
+                
+                return (
+                  <Link href={`/${lang}/portfolio/${p.slug}`} key={idx} className="group relative rounded-3xl overflow-hidden shadow-2xl bg-white border border-gray-100 flex flex-col hover:border-red/30 transition-colors">
+                    <div className="relative h-72 w-full overflow-hidden">
+                      <Image 
+                        src={`/projects/${p.slug}/01.webp`}
+                        alt={title} 
+                        fill 
+                        className="object-cover group-hover:scale-105 transition-transform duration-700" 
+                      />
+                      <div className="absolute top-4 left-4 bg-red text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg tracking-wider uppercase">
+                        {p.category}
+                      </div>
+                      {p.type === 'render' && (
+                        <div className="absolute bottom-4 left-4 bg-navy/80 backdrop-blur-sm text-white text-xs px-3 py-1.5 rounded-lg shadow-lg flex items-center gap-1.5 border border-white/10">
+                          <Info size={12} /> {t.badge}
+                        </div>
+                      )}
                     </div>
-                  </div>
-                  <div className="p-8 flex flex-col flex-1">
-                    <h3 className="text-2xl font-black text-navy mb-4 leading-tight">{isEn ? p.titleEN : p.titleEL}</h3>
-                    
-                    <p className="text-gray-600 mb-6 flex-1 leading-relaxed text-sm">
-                      {isEn ? p.descEN : p.descEL}
-                    </p>
-
-                    <div className="flex flex-wrap items-center gap-4 text-xs font-bold text-gray-500 pt-6 border-t border-gray-100">
-                      <div className="flex items-center gap-1.5"><MapPin className="text-red" size={16} />{isEn ? p.location.split(' / ')[1] : p.location.split(' / ')[0]}</div>
-                      <div className="flex items-center gap-1.5"><Ruler className="text-red" size={16} />{p.scope}</div>
-                      <div className="flex items-center gap-1.5"><ShieldCheck className="text-red" size={16} />{isEn ? 'Guaranteed' : 'Με Εγγύηση'}</div>
+                    <div className="p-8 flex flex-col flex-1">
+                      <h3 className="text-2xl font-black text-navy mb-4 leading-tight group-hover:text-red transition-colors">{title}</h3>
+                      <p className="text-gray-600 mb-6 flex-1 leading-relaxed text-sm">
+                        {desc.substring(0, 150)}...
+                      </p>
+                      <div className="font-bold text-red flex items-center gap-2">
+                        View details →
+                      </div>
                     </div>
-                  </div>
-                </article>
-             ))}
+                  </Link>
+                )
+             })}
           </div>
 
           <div className="mt-24 text-center">
              <div className="inline-block bg-white border border-gray-200 p-10 md:px-16 rounded-3xl shadow-xl relative overflow-hidden">
                <div className="absolute left-0 top-0 w-2 h-full bg-red"></div>
-               <h3 className="text-3xl font-black text-navy mb-4 tracking-tight">{isEn ? 'structured B2B Project Operations' : 'Αναλαμβάνετε κάποιο μεγάλο Project;'}</h3>
-               <p className="text-gray-600 mb-8 max-w-xl mx-auto text-lg leading-relaxed">{isEn ? 'We provide structural solutions, structured timeline execution, and direct architectural collaboration for demanding hospitality or residential developments.' : 'Μηδενικές καθυστερήσεις. Εγγυημένη τήρηση παραδόσεων, ειδικές B2B τιμές και άμεση προτεραιότητα σε μεγάλα κατασκευαστικά έργα.'}</p>
+               <h3 className="text-3xl font-black text-navy mb-4 tracking-tight">{t.b2bTitle}</h3>
+               <p className="text-gray-600 mb-8 max-w-xl mx-auto text-lg leading-relaxed">{t.b2bDesc}</p>
                <a href={`/${lang}#contact`} className="inline-block bg-navy hover:bg-red text-white px-10 py-4 rounded-full font-bold shadow-lg transition-all duration-300">
-                 {isEn ? 'Contact B2B Departement' : 'Επικοινωνία με τμήμα B2B'}
+                 {t.b2bBtn}
                </a>
              </div>
           </div>

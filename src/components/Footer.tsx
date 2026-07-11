@@ -129,6 +129,12 @@ export default function Footer({ lang = 'el' }: { lang?: 'el' | 'en' | 'de' | 'f
               <ChevronRight size={14} className="text-red group-hover:translate-x-1 transition-transform" /> 
               <Link href={`/${lang}/services/koufomata-alouminiou-rethymno`} className="group-hover:text-white transition-colors">{t.exp1}</Link>
             </li>
+            {lang === 'el' && (
+              <li className="flex items-center gap-2 group cursor-pointer">
+                <ChevronRight size={14} className="text-red group-hover:translate-x-1 transition-transform" /> 
+                <Link href={`/${lang}/systimata-alumil`} className="group-hover:text-white transition-colors">Συστήματα Alumil</Link>
+              </li>
+            )}
             <li className="flex items-center gap-2 group cursor-pointer">
               <ChevronRight size={14} className="text-red group-hover:translate-x-1 transition-transform" /> 
               <Link href={`/${lang}/services/pergoles-rethymno-kriti`} className="group-hover:text-white transition-colors">{t.exp2}</Link>

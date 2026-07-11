@@ -309,7 +309,7 @@ export default function HomeFR() {
             <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 flex flex-col justify-between hover:bg-white/10 hover:border-red/50 transition-all duration-300 rounded-2xl group cursor-pointer">
                <MapPin className="text-red mb-6" size={32} />
                <div>
-                 <p className="text-gray-400 text-sm mb-2 uppercase tracking-wide">Facility Address</p>
+                 <p className="text-gray-400 text-sm mb-2 uppercase tracking-wide">Adresse de l'Usine</p>
                  <p className="font-bold text-xl">Drouliskou 8, Rethymno</p>
                </div>
             </div>
