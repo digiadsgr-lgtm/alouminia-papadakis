@@ -151,7 +151,7 @@ export default async function PortfolioPage({ params }: { params: Promise<{ lang
             {isEn ? 'Our Work in' : 'Τα Έργα Μας στην'} <span className="text-red">{isEn ? 'Crete' : 'Κρήτη'}</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            {isEn ? 'Proof of operational maturity and flawless execution. Explore our detailed case studies of premium aluminum installations.' : 'Η απόδειξη της αξιοπιστίας μας. Δείτε αναλυτικά case studies από έργα εφαρμογής συστημάτων υψηλής αισθητικής και αυστηρών απαιτήσεων.'}
+            {isEn ? 'Proof of πολυετή εμπειρία and flawless execution. Explore our detailed case studies of premium aluminum installations.' : 'Η απόδειξη της αξιοπιστίας μας. Δείτε αναλυτικά case studies από έργα εφαρμογής συστημάτων υψηλής αισθητικής και αυστηρών απαιτήσεων.'}
           </p>
         </div>
       </section>
@@ -192,8 +192,8 @@ export default async function PortfolioPage({ params }: { params: Promise<{ lang
           <div className="mt-24 text-center">
              <div className="inline-block bg-white border border-gray-200 p-10 md:px-16 rounded-3xl shadow-xl relative overflow-hidden">
                <div className="absolute left-0 top-0 w-2 h-full bg-red"></div>
-               <h3 className="text-3xl font-black text-navy mb-4 tracking-tight">{isEn ? 'Scalable B2B Project Operations' : 'Αναλαμβάνετε κάποιο μεγάλο Project;'}</h3>
-               <p className="text-gray-600 mb-8 max-w-xl mx-auto text-lg leading-relaxed">{isEn ? 'We provide structural solutions, scalable timeline execution, and direct architectural collaboration for demanding hospitality or residential developments.' : 'Μηδενικό execution risk. Εγγυημένη τήρηση παραδόσεων, ειδικές B2B τιμές και απόλυτη προτεραιότητα σε μεγάλα κατασκευαστικά έργα.'}</p>
+               <h3 className="text-3xl font-black text-navy mb-4 tracking-tight">{isEn ? 'structured B2B Project Operations' : 'Αναλαμβάνετε κάποιο μεγάλο Project;'}</h3>
+               <p className="text-gray-600 mb-8 max-w-xl mx-auto text-lg leading-relaxed">{isEn ? 'We provide structural solutions, πλήρως οργανωμένη timeline execution, and direct architectural collaboration for demanding hospitality or residential developments.' : 'Μηδενικό καθυστέρηση. Εγγυημένη τήρηση παραδόσεων, ειδικές B2B τιμές και άμεση προτεραιότητα σε μεγάλα κατασκευαστικά έργα.'}</p>
                <a href={`/${lang}#contact`} className="inline-block bg-navy hover:bg-red text-white px-10 py-4 rounded-full font-bold shadow-lg transition-all duration-300">
                  {isEn ? 'Contact B2B Departement' : 'Επικοινωνία με τμήμα B2B'}
                </a>

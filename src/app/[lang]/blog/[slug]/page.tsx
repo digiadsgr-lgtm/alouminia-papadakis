@@ -36,9 +36,6 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       languages: {
         'el': `https://alouminia-papadakis.gr/el/blog/${slug}`,
         'en': `https://alouminia-papadakis.gr/en/blog/${slug}`,
-        'de': `https://alouminia-papadakis.gr/de/blog/${slug}`,
-        'fr': `https://alouminia-papadakis.gr/fr/blog/${slug}`,
-        'nl': `https://alouminia-papadakis.gr/nl/blog/${slug}`,
         'x-default': `https://alouminia-papadakis.gr/el/blog/${slug}`,
       },
     },
@@ -87,6 +84,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
     ],
     "datePublished": article.date,
     "dateModified": article.date,
+    "inLanguage": lang === 'en' ? 'en-US' : 'el-GR',
     "author": [{
         "@type": "Organization",
         "name": "Αλουμίνια Παπαδάκης",

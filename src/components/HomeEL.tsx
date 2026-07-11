@@ -25,7 +25,7 @@ export default function HomeEL() {
     "image": "https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.png",
     "@id": "https://alouminia-papadakis.gr",
     "url": "https://alouminia-papadakis.gr",
-    "telephone": "2831023897",
+    "telephone": "+302831023897",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Δρουλίσκου 8",
@@ -66,7 +66,7 @@ export default function HomeEL() {
         "name": "Πώς διασφαλίζετε την τήρηση των χρονοδιαγραμμάτων και την αποφυγή καθυστερήσεων;",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Μειώνουμε το execution risk στο μηδέν χάρη στην operational maturity της εταιρείας μας. Διαθέτουμε in-house γραμμή παραγωγής, δικά μας εκπαιδευμένα συνεργεία τοποθέτησης και αυστηρές διαδικασίες (processes) παραγγελιοληψίας. Παραδίδουμε τα έργα (από μία βίλα μέχρι ολόκληρο ξενοδοχείο) ακριβώς στον συμφωνημένο χρόνο, χωρίς καμία απόκλιση."
+          "text": "Μειώνουμε το καθυστέρηση στο μηδέν χάρη στην πολυετή εμπειρία της εταιρείας μας. Διαθέτουμε in-house γραμμή παραγωγής, δικά μας εκπαιδευμένα συνεργεία τοποθέτησης και αυστηρές διαδικασίες (processes) παραγγελιοληψίας. Παραδίδουμε τα έργα (από μία βίλα μέχρι ολόκληρο ξενοδοχείο) ακριβώς στον συμφωνημένο χρόνο, χωρίς καμία απόκλιση."
         }
       },
       {
@@ -152,7 +152,7 @@ export default function HomeEL() {
                 <div className="absolute inset-0 bg-white/20 translate-y-12 group-hover:translate-y-0 transition-transform duration-300"></div>
                 <Home size={20} className="relative z-10" /> <span className="relative z-10">Ανακαλύψτε τις Λύσεις μας</span>
               </a>
-              <a href="tel:2831023897" className="bg-white/5 backdrop-blur-xl text-white border border-white/20 px-8 py-4 rounded-full font-bold text-center hover:bg-white/10 hover:border-white/40 transition-all duration-300 flex items-center justify-center gap-2 active:scale-95 shadow-2xl">
+              <a href="tel:+302831023897" className="bg-white/5 backdrop-blur-xl text-white border border-white/20 px-8 py-4 rounded-full font-bold text-center hover:bg-white/10 hover:border-white/40 transition-all duration-300 flex items-center justify-center gap-2 active:scale-95 shadow-2xl">
                 <PhoneCall size={20} /> Συμβουλευτική Μελέτη
               </a>
               <Link href="/el/blog" className="bg-white/5 backdrop-blur-xl text-white border border-white/20 px-8 py-4 rounded-full font-bold text-center hover:bg-white/10 hover:border-white/40 transition-all duration-300 flex items-center justify-center gap-2 active:scale-95 shadow-2xl">
@@ -208,12 +208,12 @@ export default function HomeEL() {
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once:true }} transition={{ delay: 0.1 }} className="flex flex-col items-center p-4">
               <Zap className="text-red mb-4" size={40} />
               <h2 className="text-white font-bold text-xl mb-2">100% Ενεργειακή Αυτονομία</h2>
-              <p className="text-gray-400 text-sm leading-relaxed">Μηδενίστε το κόστος θέρμανσης και ψύξης. Τα θερμοδιακοπτόμενα προφίλ μας επιτυγχάνουν δείκτη Uw έως 0.9 W/m²K.</p>
+              <p className="text-gray-400 text-sm leading-relaxed">Μειώστε το κόστος θέρμανσης και ψύξης. Τα θερμοδιακοπτόμενα προφίλ μας επιτυγχάνουν δείκτη Uw έως 0.9 W/m²K.</p>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once:true }} transition={{ delay: 0.2 }} className="flex flex-col items-center p-4">
               <ShieldCheck className="text-red mb-4" size={40} />
               <h2 className="text-white font-bold text-xl mb-2">Οικογένεια σε Πλήρη Ασφάλεια</h2>
-              <p className="text-gray-400 text-sm leading-relaxed">Απόρθητες θωρακισμένες πόρτες Class 4 και ενισχυμένα αλεξίσφαιρα τζάμια για την πλήρη ξεγνοιασιά σας.</p>
+              <p className="text-gray-400 text-sm leading-relaxed">Ασφαλείς θωρακισμένες πόρτες Class 4 και ενισχυμένα ενισχυμένα τζάμια για την πλήρη ξεγνοιασιά σας.</p>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once:true }} transition={{ delay: 0.3 }} className="flex flex-col items-center p-4">
               <CheckCircle2 className="text-red mb-4" size={40} />
@@ -239,7 +239,7 @@ export default function HomeEL() {
                Δεν κάνουμε απλώς τοποθετήσεις. Η μονάδα παραγωγής μας στο Ρέθυμνο σχεδιάζει, κατασκευάζει και εφαρμόζει κορυφαία αρχιτεκτονικά συστήματα που αυξάνουν την αξία και την ενεργειακή απόδοση του ακινήτου σας.
              </p>
              <p className="text-gray-500 text-base mt-4 leading-relaxed max-w-2xl mx-auto">
-               Ως οργανωμένη (scalable) κατασκευαστική εταιρεία, διαθέτουμε το operational maturity να αναλάβουμε απαιτητικά έργα. Δεν εκτελούμε μεμονωμένες επισκευές. Εστιάζουμε σε ολοκληρωμένες λύσεις με αυστηρή τήρηση χρονοδιαγραμμάτων, premium portfolio εφαρμογών και μηδενικό execution risk για τον ιδιοκτήτη.
+               Ως οργανωμένη (πλήρως οργανωμένη) κατασκευαστική εταιρεία, διαθέτουμε το πολυετή εμπειρία να αναλάβουμε απαιτητικά έργα. Δεν εκτελούμε μεμονωμένες επισκευές. Εστιάζουμε σε ολοκληρωμένες λύσεις με αυστηρή τήρηση χρονοδιαγραμμάτων, premium portfolio εφαρμογών και μηδενικό καθυστέρηση για τον ιδιοκτήτη.
              </p>
            </motion.div>
 
@@ -294,16 +294,16 @@ export default function HomeEL() {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"
         >
-          <h2 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">Μηδενικό Execution Risk</h2>
+          <h2 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">Μηδενικό delays</h2>
           <p className="text-2xl text-gray-300 mb-6 font-light max-w-3xl mx-auto leading-relaxed">Αυστηρή συνέπεια στα χρονοδιαγράμματα και Premium Αισθητική. Παραδίδουμε ολοκληρωμένες εφαρμογές που αναβαθμίζουν εμπορικά την αξία του ακινήτου σας.</p>
-          <p className="text-base text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed">Αποδεδειγμένο Portfolio · Scalable Workflow · Οργανωμένο After-Sales · Εγγύηση Alumil · Καμία Καθυστέρηση</p>
+          <p className="text-base text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed">Αποδεδειγμένο Portfolio · structured Workflow · Οργανωμένο After-Sales · Εγγύηση Alumil · Καμία Καθυστέρηση</p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
             <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 flex flex-col justify-between hover:bg-white/10 hover:border-red/50 transition-all duration-300 rounded-2xl group cursor-pointer">
                <PhoneCall className="text-red mb-6" size={32} />
                <div>
                  <p className="text-gray-400 text-sm mb-2 uppercase tracking-wide">Καλεστε Μας</p>
-                 <a href="tel:2831023897" className="font-bold text-2xl group-hover:text-[var(--color-red-light)] transition-colors">28310 23897</a>
+                 <a href="tel:+302831023897" className="font-bold text-2xl group-hover:text-[var(--color-red-light)] transition-colors">28310 23897</a>
                </div>
             </div>
             <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 flex flex-col justify-between hover:bg-white/10 hover:border-red/50 transition-all duration-300 rounded-2xl group cursor-pointer">

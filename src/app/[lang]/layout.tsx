@@ -72,7 +72,7 @@ export default async function RootLayout({
     "url": "https://alouminia-papadakis.gr",
     "logo": "https://alouminia-papadakis.gr/icon.png",
     "image": "https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.png",
-    "description": "Certified Alumil manufacturer specializing in project-based aluminum solutions for luxury villas, boutique hotels, and high-end residential developments across Crete. Uncompromised operational maturity, scalable manufacturing processes with zero delays, and a proven extensive portfolio. Full workflow: architectural study → CAD design → in-house manufacturing → on-site installation by permanent crews → structured after-sales guarantee.",
+    "description": "Certified Alumil manufacturer specializing in project-based aluminum solutions for luxury villas, boutique hotels, and high-end residential developments across Crete. Uncompromised πολυετή εμπειρία, πλήρως οργανωμένη manufacturing processes with zero delays, and a proven extensive portfolio. Full workflow: architectural study → CAD design → in-house manufacturing → on-site installation by permanent crews → structured after-sales guarantee.",
     "foundingDate": "1993",
     "numberOfEmployees": {
       "@type": "QuantitativeValue",
@@ -106,14 +106,14 @@ export default async function RootLayout({
         "author": { "@type": "Person", "name": "Γιάννης Καλαϊτζάκης (Εργολάβος)" },
         "datePublished": "2023-11-15",
         "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "Εξαιρετική συνεργασία σε project βίλας στον Πλακιά. Τήρηση χρονοδιαγραμμάτων, μηδενικό execution risk. Τα συστήματα Alumil SUPREME μπήκαν με απόλυτη ακρίβεια. Εγγύηση για επαγγελματίες."
+        "reviewBody": "Εξαιρετική συνεργασία σε project βίλας στον Πλακιά. Τήρηση χρονοδιαγραμμάτων, μηδενικό καθυστέρηση. Τα συστήματα Alumil SUPREME μπήκαν με μεγάλη ακρίβεια. Εγγύηση για επαγγελματίες."
       },
       {
         "@type": "Review",
         "author": { "@type": "Person", "name": "Maria Stavrou (Architect)" },
         "datePublished": "2024-02-28",
         "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "The most reliable aluminum manufacturing partner in Crete. Their in-house production facility ensures scalable workflow without delays. Perfect execution on boutique hotel renovation."
+        "reviewBody": "The most reliable aluminum manufacturing partner in Crete. Their in-house production facility ensures πλήρως οργανωμένη workflow without delays. Perfect execution on boutique hotel renovation."
       }
     ],
     "areaServed": [
@@ -202,6 +202,20 @@ export default async function RootLayout({
     <html lang={lang} className="scroll-smooth">
       <head>
         <link rel="alternate" type="text/markdown" href="/llms.txt" title="Alouminia Papadakis AI Context" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('consent', 'default', {
+                'ad_storage': 'denied',
+                'analytics_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied'
+              });
+            `
+          }}
+        />
         <Script id="google-tag-manager" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

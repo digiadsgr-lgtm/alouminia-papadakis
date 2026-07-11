@@ -147,7 +147,7 @@ export default function Navbar({ lang = 'el' }: { lang?: 'el' | 'en' | 'de' | 'f
               
               <LanguageSwitcher currentLang={lang} isScrolled={isScrolled} />
 
-              <a href="tel:2831023897" className="flex items-center gap-2 bg-red text-white px-6 py-3 rounded-full font-bold hover:bg-red-700 transition-colors active:scale-95 shadow-lg shadow-red/25">
+              <a href="tel:+302831023897" className="flex items-center gap-2 bg-red text-white px-6 py-3 rounded-full font-bold hover:bg-red-700 transition-colors active:scale-95 shadow-lg shadow-red/25">
                 <Phone size={18} />
                 <span>28310 23897</span>
               </a>
@@ -227,7 +227,7 @@ export default function Navbar({ lang = 'el' }: { lang?: 'el' | 'en' | 'de' | 'f
 
               <div className="p-6">
                 <a 
-                  href="tel:2831023897" 
+                  href="tel:+302831023897" 
                   className="flex items-center justify-center gap-3 w-full bg-red text-white py-4 rounded-full font-bold active:scale-95 transform transition-transform shadow-xl shadow-red/25"
                 >
                   <Phone size={20} /> {t.call}

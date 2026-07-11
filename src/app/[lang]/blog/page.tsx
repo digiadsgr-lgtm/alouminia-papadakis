@@ -53,9 +53,6 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       languages: {
         'el': 'https://alouminia-papadakis.gr/el/blog',
         'en': 'https://alouminia-papadakis.gr/en/blog',
-        'de': 'https://alouminia-papadakis.gr/de/blog',
-        'fr': 'https://alouminia-papadakis.gr/fr/blog',
-        'nl': 'https://alouminia-papadakis.gr/nl/blog',
         'x-default': 'https://alouminia-papadakis.gr/el/blog',
       },
     },

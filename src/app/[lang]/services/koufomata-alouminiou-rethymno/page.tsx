@@ -102,8 +102,8 @@ export default async function KoufomataPage({ params }: { params: Promise<{ lang
     el: [
       {
         question: 'Πόσο κοστίζουν τα κουφώματα αλουμινίου στο Ρέθυμνο;',
-        answer: 'Το κόστος εξαρτάται από τη σειρά προφίλ, τον υαλοπίνακα και τις διαστάσεις. Ενδεικτικά, μια ενεργειακή μπαλκονόπορτα με θερμοδιακοπή ξεκινά από τα επίπεδα των μεσαίων σειρών Alumil και κλιμακώνεται στις premium SUPREME. Κάθε έργο κοστολογείται μετά από δωρεάν επιμέτρηση.',
-        textAnswer: 'Το κόστος εξαρτάται από τη σειρά προφίλ, τον υαλοπίνακα και τις διαστάσεις.'
+        answer: 'Το κόστος εξαρτάται από τη σειρά προφίλ (π.χ. προσθήκη πολυαμιδίου για θερμοδιακοπή), τον υαλοπίνακα και τις διαστάσεις. Ενδεικτικά, μια ενεργειακή μπαλκονόπορτα με θερμοδιακοπή (ειδικό πολυαμίδιο) ξεκινά από τα επίπεδα των μεσαίων σειρών Alumil και κλιμακώνεται στις premium SUPREME. Κάθε έργο κοστολογείται μετά από δωρεάν επιμέτρηση.',
+        textAnswer: 'Το κόστος εξαρτάται από τη σειρά προφίλ (πολυαμίδιο θερμοδιακοπής), τον υαλοπίνακα και τις διαστάσεις.'
       },
       {
         question: 'Ποιος είναι ο δείκτης θερμοπερατότητας (Uw) των κουφωμάτων;',
@@ -112,7 +112,7 @@ export default async function KoufomataPage({ params }: { params: Promise<{ lang
       },
       {
         question: 'Είναι τα κουφώματα κατάλληλα για παραθαλάσσια σπίτια στην Κρήτη;',
-        answer: 'Ναι, εφαρμόζουμε πιστοποιημένη επεξεργασία ανοδίωσης Seaside Class, εξασφαλίζοντας απόλυτη αντοχή στη διάβρωση από την αλμύρα.',
+        answer: 'Ναι, εφαρμόζουμε πιστοποιημένη επεξεργασία ανοδίωσης Seaside Class, εξασφαλίζοντας εγγυημένη αντοχή στη διάβρωση από την αλμύρα.',
         textAnswer: 'Ναι, εφαρμόζουμε πιστοποιημένη επεξεργασία ανοδίωσης Seaside Class.'
       }
     ],
@@ -297,7 +297,7 @@ export default async function KoufomataPage({ params }: { params: Promise<{ lang
                 </li>
               </ul>
 
-              <a href="tel:2831023897" className="mt-12 inline-flex items-center gap-3 bg-red text-white px-8 py-4 rounded-full font-bold hover:bg-red-700 transition-all duration-300 shadow-xl shadow-red/25 active:scale-95">
+              <a href="tel:+302831023897" className="mt-12 inline-flex items-center gap-3 bg-red text-white px-8 py-4 rounded-full font-bold hover:bg-red-700 transition-all duration-300 shadow-xl shadow-red/25 active:scale-95">
                 <PhoneCall size={20} />
                 {isEn ? 'Request Technical Study & Quote' : 'Ζητήστε Τεχνική Μελέτη & Κοστολόγηση'}
               </a>

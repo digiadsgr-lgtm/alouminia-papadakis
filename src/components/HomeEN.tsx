@@ -74,7 +74,7 @@ export default function HomeEN() {
         "name": "How do you guarantee project timelines and avoid delays?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We reduce execution risk to zero through our operational maturity. We operate our own in-house manufacturing line, employ dedicated permanent installation crews, and strictly adhere to standardized project processes. We deliver projects—from single luxury villas to entire boutique hotels—exactly on schedule, with zero compromise."
+          "text": "We reduce καθυστέρηση to zero through our πολυετή εμπειρία. We operate our own in-house manufacturing line, employ dedicated permanent installation crews, and strictly adhere to standardized project processes. We deliver projects—from single luxury villas to entire boutique hotels—exactly on schedule, with zero compromise."
         }
       },
       {
@@ -90,7 +90,7 @@ export default function HomeEN() {
         "name": "What is the structure of your After-Sales support?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We are a structured construction firm, not independent handymen. Papadakis Aluminium features an organized After-Sales department providing the official Alumil manufacturer guarantee alongside dedicated long-term service. Consistent, reliable support after handover is a fundamental part of our scalable operations."
+          "text": "We are a structured construction firm, not independent handymen. Papadakis Aluminium features an organized After-Sales department providing the official Alumil manufacturer guarantee alongside dedicated long-term service. Consistent, reliable support after handover is a fundamental part of our πλήρως οργανωμένη operations."
         }
       },
       {
@@ -239,7 +239,7 @@ export default function HomeEN() {
                We don't just do basic installations. Our manufacturing unit in Rethymno partners with architects and developers to manufacture premium architectural systems that elevate your property's commercial and aesthetic value.
              </p>
              <p className="text-gray-500 text-base mt-4 leading-relaxed max-w-2xl mx-auto">
-               As a scalable manufacturing company, we possess the operational maturity to handle demanding architectural projects. We do not execute single repairs. We focus on complete project solutions with strict timeline adherence, a premium application portfolio, and zero execution risk for investors and contractors.
+               As a πλήρως οργανωμένη manufacturing company, we possess the πολυετή εμπειρία to handle demanding architectural projects. We do not execute single repairs. We focus on complete project solutions with strict timeline adherence, a premium application portfolio, and zero καθυστέρηση for investors and contractors.
              </p>
            </motion.div>
 
@@ -294,16 +294,16 @@ export default function HomeEN() {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"
         >
-          <h2 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">Zero Execution Risk</h2>
+          <h2 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">Zero delays</h2>
           <p className="text-2xl text-gray-300 mb-6 font-light max-w-3xl mx-auto leading-relaxed">Absolute adherence to project timelines and Premium Aesthetics. We deliver turn-key applications that commercially elevate your property's value.</p>
-          <p className="text-base text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed">Proven Track Record · Scalable Workflow · Structured After-Sales · Alumil Warranty · Zero Delays</p>
+          <p className="text-base text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed">Proven Track Record · structured Workflow · Structured After-Sales · Alumil Warranty · Zero Delays</p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
             <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 flex flex-col justify-between hover:bg-white/10 hover:border-red/50 transition-all duration-300 rounded-2xl group cursor-pointer">
                <PhoneCall className="text-red mb-6" size={32} />
                <div>
                  <p className="text-gray-400 text-sm mb-2 uppercase tracking-wide">Call Us</p>
-                 <a href="tel:2831023897" className="font-bold text-2xl group-hover:text-[var(--color-red-light)] transition-colors">+30 28310 23897</a>
+                 <a href="tel:+302831023897" className="font-bold text-2xl group-hover:text-[var(--color-red-light)] transition-colors">+30 28310 23897</a>
                </div>
             </div>
             <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 flex flex-col justify-between hover:bg-white/10 hover:border-red/50 transition-all duration-300 rounded-2xl group cursor-pointer">

@@ -194,7 +194,7 @@ export default function Footer({ lang = 'el' }: { lang?: 'el' | 'en' | 'de' | 'f
                </div>
                <div className="pt-1">
                  <p className="text-white font-bold mb-1">Τεχνικό Τμήμα</p>
-                 <a href="tel:2831023897" className="text-gray-400 hover:text-white transition-colors">+30 28310 23897</a>
+                 <a href="tel:+302831023897" className="text-gray-400 hover:text-white transition-colors">+30 28310 23897</a>
                </div>
             </li>
             <li className="flex items-start gap-4">

@@ -16,57 +16,48 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   const sitemapEntries: MetadataRoute.Sitemap = []
+  const staticLocales = ['el', 'en', 'de', 'fr', 'nl']
 
   routes.forEach((route) => {
-    sitemapEntries.push({
-      url: `${baseUrl}/el${route}`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: route === '' ? 1.0 : (route === '/blog' ? 0.9 : 0.8),
-      alternates: {
-        languages: route === '/blog' ? {
-          el: `${baseUrl}/el${route}`,
-          'x-default': `${baseUrl}/el${route}`,
-        } : {
-          el: `${baseUrl}/el${route}`,
-          en: `${baseUrl}/en${route}`,
-          'x-default': `${baseUrl}/el${route}`,
-        },
-      },
+    const isBlog = route === '/blog'
+    const routeLocales = isBlog ? ['el', 'en'] : staticLocales
+
+    // Create the alternates languages object dynamically
+    const languages: Record<string, string> = {
+      'x-default': `${baseUrl}/el${route}`
+    }
+    routeLocales.forEach(lang => {
+      languages[lang] = `${baseUrl}/${lang}${route}`
     })
-    
-    if (route !== '/blog') {
+
+    routeLocales.forEach(lang => {
       sitemapEntries.push({
-        url: `${baseUrl}/en${route}`,
+        url: `${baseUrl}/${lang}${route}`,
         lastModified: new Date(),
         changeFrequency: 'monthly',
-        priority: route === '' ? 0.9 : 0.8,
-        alternates: {
-          languages: {
-            el: `${baseUrl}/el${route}`,
-            en: `${baseUrl}/en${route}`,
-            'x-default': `${baseUrl}/el${route}`,
-          },
-        },
+        priority: route === '' && lang === 'el' ? 1.0 : (route === '' ? 0.9 : 0.8),
+        alternates: { languages },
       })
-    }
+    })
   })
 
   // Add Blog Articles dynamically
   articles.forEach((article) => {
     const route = `/blog/${article.slug}`
+    const languages = {
+      'el': `${baseUrl}/el${route}`,
+      'en': `${baseUrl}/en${route}`,
+      'x-default': `${baseUrl}/el${route}`
+    }
     
-    sitemapEntries.push({
-      url: `${baseUrl}/el${route}`,
-      lastModified: new Date(article.date),
-      changeFrequency: 'yearly',
-      priority: 0.7,
-      alternates: {
-        languages: {
-          el: `${baseUrl}/el${route}`,
-          'x-default': `${baseUrl}/el${route}`,
-        },
-      },
+    ;['el', 'en'].forEach(lang => {
+      sitemapEntries.push({
+        url: `${baseUrl}/${lang}${route}`,
+        lastModified: new Date(article.date),
+        changeFrequency: 'yearly',
+        priority: 0.7,
+        alternates: { languages },
+      })
     })
   })
 

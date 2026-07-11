@@ -7,11 +7,11 @@ export default function LanguageSwitcher({ currentLang, isScrolled = false }: { 
   const pathname = usePathname()
   
   const locales = [
-    { code: 'el', label: 'EL' },
-    { code: 'en', label: 'EN' },
-    { code: 'de', label: 'DE' },
-    { code: 'fr', label: 'FR' },
-    { code: 'nl', label: 'NL' }
+    { code: 'el', label: 'Ελληνικά' },
+    { code: 'en', label: 'English' },
+    { code: 'de', label: 'Deutsch' },
+    { code: 'fr', label: 'Français' },
+    { code: 'nl', label: 'Nederlands' }
   ]
 
   const getLocalizedHref = (targetLocale: string) => {
@@ -33,7 +33,7 @@ export default function LanguageSwitcher({ currentLang, isScrolled = false }: { 
         <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
       </div>
       
-      <div className="absolute top-full right-0 mt-4 w-20 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 flex flex-col py-2">
+      <div className="absolute top-full right-0 mt-4 w-32 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 flex flex-col py-2">
         <div className="absolute -top-4 left-0 right-0 h-4 bg-transparent" />
         {locales.map(l => (
           <Link 

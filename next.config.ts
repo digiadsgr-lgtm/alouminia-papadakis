@@ -17,18 +17,7 @@ const nextConfig: NextConfig = {
     formats: ['image/avif', 'image/webp'],
   },
   async redirects() {
-    return [
-      {
-        source: '/en/blog',
-        destination: '/en',
-        permanent: true,
-      },
-      {
-        source: '/en/blog/:slug*',
-        destination: '/en',
-        permanent: true,
-      },
-    ];
+    return [];
   },
   async headers() {
     return [
