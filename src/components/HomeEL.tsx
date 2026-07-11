@@ -1,6 +1,8 @@
 "use client"
 import Image from 'next/image'
 import Link from 'next/link'
+import ContactForm from './ContactForm'
+import ProtectedEmail from './ProtectedEmail'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { ShieldCheck, Zap, Factory, CheckCircle2, ChevronRight, PhoneCall, MapPin, Mail, Sparkles, Home, BookOpen } from 'lucide-react'
 import TrustBadges from './TrustBadges'
@@ -22,7 +24,7 @@ export default function HomeEL() {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
     "name": "Αλουμίνια Παπαδάκης",
-    "image": "https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.png",
+    "image": "https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.webp",
     "@id": "https://alouminia-papadakis.gr",
     "url": "https://alouminia-papadakis.gr",
     "telephone": "+302831023897",
@@ -111,7 +113,7 @@ export default function HomeEL() {
       <article ref={heroRef} className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden" aria-label="Κατασκευή και Τοποθέτηση Κουφωμάτων και Συστημάτων Αλουμινίου στο Ρέθυμνο, Κρήτη">
         <motion.div style={{ y: yImage }} className="absolute inset-0 z-0">
           <Image 
-            src="/images/hero_aluminum_villa_1776110912532.png" 
+            src="/images/hero_aluminum_villa_1776110912532.webp" 
             alt="Εγκατάσταση θερμοδιακοπτόμενων κουφωμάτων αλουμινίου σε βίλα, Ρέθυμνο" 
             fill 
             className="object-cover scale-110"
@@ -137,7 +139,7 @@ export default function HomeEL() {
             
             <h1 className="text-[11vw] sm:text-7xl lg:text-8xl font-black mb-6 leading-[1.05] tracking-tighter drop-shadow-2xl">
               <span className="block text-xl md:text-2xl uppercase tracking-widest text-gray-400 font-bold mb-4 drop-shadow-md">Κατασκευές Αλουμινίου Ρέθυμνο</span>
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-gray-400">Η Απόλυτη Ασφάλεια</span> <br />
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-gray-400">Κορυφαία Ασφάλεια</span> <br />
               <span className="text-red">Στο Νέο Σας Σπίτι</span>
             </h1>
             
@@ -294,7 +296,7 @@ export default function HomeEL() {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"
         >
-          <h2 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">Μηδενικό delays</h2>
+          <h2 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">Άμεση Παράδοση</h2>
           <p className="text-2xl text-gray-300 mb-6 font-light max-w-3xl mx-auto leading-relaxed">Αυστηρή συνέπεια στα χρονοδιαγράμματα και Premium Αισθητική. Παραδίδουμε ολοκληρωμένες εφαρμογές που αναβαθμίζουν εμπορικά την αξία του ακινήτου σας.</p>
           <p className="text-base text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed">Αποδεδειγμένο Portfolio · structured Workflow · Οργανωμένο After-Sales · Εγγύηση Alumil · Καμία Καθυστέρηση</p>
           
@@ -317,7 +319,7 @@ export default function HomeEL() {
                <Mail className="text-red mb-6" size={32} />
                <div>
                  <p className="text-gray-400 text-sm mb-2 uppercase tracking-wide">Email Επικοινωνιας</p>
-                 <a href="mailto:gpapadakisret@gmail.com" className="font-bold text-lg md:text-xl group-hover:text-[var(--color-red-light)] transition-colors break-all">gpapadakisret@gmail.com</a>
+                 <ProtectedEmail className="font-bold text-lg md:text-xl group-hover:text-[var(--color-red-light)] transition-colors break-all" />
                </div>
             </div>
           </div>

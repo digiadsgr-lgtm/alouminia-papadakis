@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import Breadcrumbs from '@/components/Breadcrumbs'
 import JsonLd from '@/components/JsonLd'
 import FaqAccordion from '@/components/FaqAccordion'
 import PageTransition from '@/components/PageTransition'
@@ -50,7 +51,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
   const l = content[lang as keyof typeof content] || content['en'];
   const url = `https://alouminia-papadakis.gr/${lang}/services/portes-asfaleias-rethymno`;
-  const imageUrl = 'https://alouminia-papadakis.gr/images/security_door_armored_1776183382427.png';
+  const imageUrl = 'https://alouminia-papadakis.gr/images/security_door_armored_1776183382427.webp';
 
   return {
     title: l.title,
@@ -186,13 +187,15 @@ export default async function SecurityDoorsPage({ params }: { params: Promise<{ 
 
   return (
     <PageTransition>
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-32 lg:mt-40 mb-[-3rem] relative z-20"><Breadcrumbs lang={lang as string} items={[{label: lang === 'el' ? 'Υπηρεσίες' : 'Services', href: '#'}, {label: "{isEn ? 'Armored Security' : 'Θωρακισμένες Πόρτες'}  {isEn ? 'Doors' : 'Ασφαλείας'}", href: '#'}]} /></div>
+
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={serviceSchema} />
       <JsonLd data={faqSchema} />
       <article className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-navy border-b-[6px] border-red">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/images/security_door_armored_1776183382427.png" 
+            src="/images/security_door_armored_1776183382427.webp" 
             alt="Θωρακισμένες Πόρτες Ασφαλείας Ρέθυμνο" 
             fill 
             className="object-cover opacity-20 filter blur-sm scale-105" 
@@ -220,7 +223,7 @@ export default async function SecurityDoorsPage({ params }: { params: Promise<{ 
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div className="h-full relative min-h-[500px] rounded-[32px] overflow-hidden group shadow-2xl">
                <Image 
-                 src="/images/security_door_armored_1776183382427.png"
+                 src="/images/security_door_armored_1776183382427.webp"
                  alt="Security Doors"
                  fill
                  className="object-cover group-hover:scale-105 transition-transform duration-700"

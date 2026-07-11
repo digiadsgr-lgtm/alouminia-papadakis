@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import Breadcrumbs from '@/components/Breadcrumbs'
 import JsonLd from '@/components/JsonLd'
 import FaqAccordion from '@/components/FaqAccordion'
 import PageTransition from '@/components/PageTransition'
@@ -50,7 +51,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
   const l = content[lang as keyof typeof content] || content['en'];
   const url = `https://alouminia-papadakis.gr/${lang}/services/pergoles-rethymno-kriti`;
-  const imageUrl = 'https://alouminia-papadakis.gr/images/pergola_crete_1776112148406.png';
+  const imageUrl = 'https://alouminia-papadakis.gr/images/pergola_crete_1776112148406.webp';
 
   return {
     title: l.title,
@@ -99,8 +100,8 @@ export default async function PergolesPage({ params }: { params: Promise<{ lang:
     el: [
       {
         question: "Αντέχουν οι πέργκολες στους δυνατούς αέρηδες της Κρήτης;",
-        answer: "Απόλυτα. Οι βιοκλιματικές πέργκολες βαρέως τύπου που κατασκευάζουμε είναι μελετημένες για ακραίες ανεμοπιέσεις, διασφαλίζοντας απόλυτη σταθερότητα.",
-        textAnswer: "Απόλυτα. Οι βιοκλιματικές πέργκολες βαρέως τύπου που κατασκευάζουμε είναι μελετημένες για ακραίες ανεμοπιέσεις, διασφαλίζοντας απόλυτη σταθερότητα."
+        answer: "Βεβαίως. Οι βιοκλιματικές πέργκολες βαρέως τύπου που κατασκευάζουμε είναι μελετημένες για ακραίες ανεμοπιέσεις, διασφαλίζοντας μέγιστη σταθερότητα.",
+        textAnswer: "Βεβαίως. Οι βιοκλιματικές πέργκολες βαρέως τύπου που κατασκευάζουμε είναι μελετημένες για ακραίες ανεμοπιέσεις, διασφαλίζοντας μέγιστη σταθερότητα."
       },
       {
         question: "Μπορώ να προσθέσω φωτισμό ή θέρμανση;",
@@ -190,12 +191,14 @@ export default async function PergolesPage({ params }: { params: Promise<{ lang:
 
   return (
     <PageTransition>
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-32 lg:mt-40 mb-[-3rem] relative z-20"><Breadcrumbs lang={lang as string} items={[{label: lang === 'el' ? 'Υπηρεσίες' : 'Services', href: '#'}, {label: "{isEn ? 'Bioclimatic' : 'Βιοκλιματικές'} {isEn ? 'Pergolas' : 'Πέργκολες'}  {isEn ? '& Shading Systems' : '& Συστήματα Σκίασης'}", href: '#'}]} /></div>
+
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={serviceSchema} />
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-navy border-b-[6px] border-red">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/images/pergola_crete_1776112148406.png" 
+            src="/images/pergola_crete_1776112148406.webp" 
             alt="Pergolas" 
             fill 
             className="object-cover opacity-30 filter blur-sm scale-105" 
@@ -223,7 +226,7 @@ export default async function PergolesPage({ params }: { params: Promise<{ lang:
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div className="h-full relative min-h-[500px] rounded-[32px] overflow-hidden shadow-2xl group">
                <Image 
-                 src="/images/pergola_crete_1776112148406.png"
+                 src="/images/pergola_crete_1776112148406.webp"
                  alt="Pergola"
                  fill
                  className="object-cover group-hover:scale-105 transition-transform duration-700"

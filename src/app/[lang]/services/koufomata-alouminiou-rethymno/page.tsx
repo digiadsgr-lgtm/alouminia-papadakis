@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import FaqAccordion from '@/components/FaqAccordion'
 import Image from 'next/image'
 import Link from 'next/link'
+import Breadcrumbs from '@/components/Breadcrumbs'
 import JsonLd from '@/components/JsonLd'
 import PageTransition from '@/components/PageTransition'
 import TrustBadges from '@/components/TrustBadges'
@@ -53,7 +54,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
   const l = content[lang as keyof typeof content] || content['en'];
   const url = `https://alouminia-papadakis.gr/${lang}/services/koufomata-alouminiou-rethymno`;
-  const imageUrl = 'https://alouminia-papadakis.gr/images/modern_aluminum_windows_1776183397754.png';
+  const imageUrl = 'https://alouminia-papadakis.gr/images/modern_aluminum_windows_1776183397754.webp';
 
   return {
     title: l.title,
@@ -217,13 +218,15 @@ export default async function KoufomataPage({ params }: { params: Promise<{ lang
 
   return (
     <PageTransition>
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-32 lg:mt-40 mb-[-3rem] relative z-20"><Breadcrumbs lang={lang as string} items={[{label: lang === 'el' ? 'Υπηρεσίες' : 'Services', href: '#'}, {label: "{isEn ? 'Energy Efficient Windows' : 'Ενεργειακά Κουφώματα'}  {isEn ? 'in Crete' : 'στο Ρέθυμνο'}", href: '#'}]} /></div>
+
       <JsonLd data={productSchema} />
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={serviceSchema} />
       <article className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-navy border-b-[6px] border-red">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/images/modern_aluminum_windows_1776183397754.png" 
+            src="/images/modern_aluminum_windows_1776183397754.webp" 
             alt="Κουφώματα Αλουμινίου Ρέθυμνο" 
             fill 
             className="object-cover opacity-20 filter blur-sm scale-105" 
@@ -275,7 +278,7 @@ export default async function KoufomataPage({ params }: { params: Promise<{ lang
       <section className="py-24 bg-white text-navy">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
-              <h2 className="text-3xl md:text-4xl font-black mb-6 tracking-tight">{isEn ? 'The Ultimate Upgrade Choice' : 'Η Απόλυτη Επιλογή Αναβάθμισης'}</h2>
+              <h2 className="text-3xl md:text-4xl font-black mb-6 tracking-tight">{isEn ? 'The Ultimate Upgrade Choice' : 'Η Κορυφαία Επιλογή Αναβάθμισης'}</h2>
               <div className="w-20 h-1.5 bg-red mb-8 rounded-full"></div>
               <p className="text-gray-600 text-lg mb-6 leading-relaxed">
                  {isEn ? 'At Papadakis, we specialize in heavy-duty modern windows in Rethymno, ensuring extreme resistance to Crete\'s humidity and winds while maximizing thermal efficiency.' : 'Ειδικευόμαστε στην κατασκευή και τοποθέτηση σύγχρονων κουφωμάτων βαρέως τύπου στο Ρέθυμνο.'}
@@ -305,7 +308,7 @@ export default async function KoufomataPage({ params }: { params: Promise<{ lang
             
             <div className="h-full relative min-h-[500px] rounded-[32px] overflow-hidden group shadow-2xl">
                <Image 
-                 src="/images/aluminum_doors_patio_1776112180417.png"
+                 src="/images/aluminum_doors_patio_1776112180417.webp"
                  alt="Windows"
                  fill
                  className="object-cover group-hover:scale-105 transition-transform duration-700"

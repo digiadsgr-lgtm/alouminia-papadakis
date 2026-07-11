@@ -1,6 +1,8 @@
 "use client"
 import Image from 'next/image'
 import Link from 'next/link'
+import ContactForm from './ContactForm'
+import ProtectedEmail from './ProtectedEmail'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { ShieldCheck, Zap, CheckCircle2, ChevronRight, PhoneCall, MapPin, Mail, Sparkles, Home, BookOpen } from 'lucide-react'
 import TrustBadges from './TrustBadges'
@@ -22,7 +24,7 @@ export default function HomeNL() {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
     "name": "Papadakis Aluminium",
-    "image": "https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.png",
+    "image": "https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.webp",
     "@id": "https://alouminia-papadakis.gr/en",
     "url": "https://alouminia-papadakis.gr/en",
     "telephone": "+302831023897",
@@ -111,7 +113,7 @@ export default function HomeNL() {
       <article ref={heroRef} className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden" aria-label="Manufacturing and Installation of Aluminum Systems in Rethymno, Crete">
         <motion.div style={{ y: yImage }} className="absolute inset-0 z-0">
           <Image 
-            src="/images/hero_aluminum_villa_1776110912532.png" 
+            src="/images/hero_aluminum_villa_1776110912532.webp" 
             alt="Installation of thermal break aluminum windows in a luxury villa, Crete" 
             fill 
             className="object-cover scale-110"
@@ -317,9 +319,12 @@ export default function HomeNL() {
                <Mail className="text-red mb-6" size={32} />
                <div>
                  <p className="text-gray-400 text-sm mb-2 uppercase tracking-wide">E-mail Aanvragen</p>
-                 <a href="mailto:gpapadakisret@gmail.com" className="font-bold text-lg md:text-xl group-hover:text-[var(--color-red-light)] transition-colors break-all">gpapadakisret@gmail.com</a>
+                 <ProtectedEmail className="font-bold text-lg md:text-xl group-hover:text-[var(--color-red-light)] transition-colors break-all" />
                </div>
             </div>
+          </div>
+          <div className="mt-16 text-left">
+            <ContactForm lang="nl" />
           </div>
         </motion.div>
       </section>

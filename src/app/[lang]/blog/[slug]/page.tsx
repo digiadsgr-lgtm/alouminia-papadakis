@@ -179,7 +179,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
     firstP.setAttribute('class', 'text-xl md:text-2xl font-medium text-navy mb-12 leading-relaxed tracking-tight');
     const imageHtml = `
       <figure class="my-14 relative w-full aspect-video rounded-3xl overflow-hidden shadow-2xl border border-gray-100 group">
-        <img src="${article.image}" alt="${title}" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-1000" />
+        <img src="${article.image}" alt="${title}" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-1000" fetchpriority="high" sizes="(max-width: 1024px) 100vw, 1024px" />
       </figure>
     `;
     firstP.insertAdjacentHTML('afterend', imageHtml);

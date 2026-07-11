@@ -71,7 +71,7 @@ export const projects: Project[] = [
     titleFR: 'Systèmes Coulissants Minimalistes',
     titleNL: 'Minimalistische Schuifsystemen',
     
-    descEL: 'Υπερμεγέθη minimal συρόμενα συστήματα αλουμινίου που προσφέρουν απρόσκοπτη θέα και ενοποιούν απόλυτα τον εσωτερικό με τον εξωτερικό χώρο, ιδανικά για βίλες.',
+    descEL: 'Υπερμεγέθη minimal συρόμενα συστήματα αλουμινίου που προσφέρουν απρόσκοπτη θέα και ενοποιούν πλήρως τον εσωτερικό με τον εξωτερικό χώρο, ιδανικά για βίλες.',
     descEN: 'Oversized minimal aluminum sliding systems offering unobstructed views and perfectly unifying the interior with the exterior space, ideal for villas.',
     descDE: 'Übergroße minimalistische Aluminium-Schiebesysteme, die einen ungehinderten Blick bieten und den Innen- mit dem Außenbereich perfekt verbinden.',
     descFR: 'Systèmes coulissants minimalistes surdimensionnés offrant des vues imprenables et unifiant parfaitement l\'intérieur et l\'extérieur.',

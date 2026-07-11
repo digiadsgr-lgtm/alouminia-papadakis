@@ -2,6 +2,7 @@ import { alumilSystems } from '@/data/systems'
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Breadcrumbs from '@/components/Breadcrumbs'
 import { Check, Shield, Info, ArrowRight } from 'lucide-react'
 import JsonLd from '@/components/JsonLd'
 

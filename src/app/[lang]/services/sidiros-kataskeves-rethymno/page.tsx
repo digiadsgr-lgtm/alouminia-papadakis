@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import Breadcrumbs from '@/components/Breadcrumbs'
 import JsonLd from '@/components/JsonLd'
 import FaqAccordion from '@/components/FaqAccordion'
 import PageTransition from '@/components/PageTransition'
@@ -190,12 +191,14 @@ export default async function SidirosPage({ params }: { params: Promise<{ lang: 
 
   return (
     <PageTransition>
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-32 lg:mt-40 mb-[-3rem] relative z-20"><Breadcrumbs lang={lang as string} items={[{label: lang === 'el' ? 'Υπηρεσίες' : 'Services', href: '#'}, {label: "{isEn ? 'Industrial' : 'Βιομηχανικές'}  {isEn ? 'Ironworks' : 'Σιδηροκατασκευές'}", href: '#'}]} /></div>
+
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={serviceSchema} />
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-navy border-b-[6px] border-red">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/images/industrial_ironworks_1776183414837.png" 
+            src="/images/industrial_ironworks_1776183414837.webp" 
             alt="Ironworks" 
             fill 
             className="object-cover opacity-20 filter blur-sm scale-105" 
@@ -222,7 +225,7 @@ export default async function SidirosPage({ params }: { params: Promise<{ lang: 
       <section className="py-24 bg-white text-navy">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
-              <h2 className="text-3xl md:text-4xl font-black mb-6 tracking-tight">{isEn ? 'Absolute Mechanical Supremacy' : 'Η Απόλυτη Μηχανική Υπεροχή'}</h2>
+              <h2 className="text-3xl md:text-4xl font-black mb-6 tracking-tight">{isEn ? 'Top Mechanical Supremacy' : 'Κορυφαία Μηχανική Υπεροχή'}</h2>
               <div className="w-20 h-1.5 bg-red mb-8 rounded-full"></div>
               <ul className="space-y-8 mt-12">
                 <li className="flex items-start gap-5 p-6 rounded-3xl hover:bg-gray-50 border border-transparent hover:border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group cursor-pointer active:scale-[0.98]">
@@ -244,7 +247,7 @@ export default async function SidirosPage({ params }: { params: Promise<{ lang: 
             
             <div className="h-full relative min-h-[500px] rounded-[32px] overflow-hidden shadow-2xl group">
                <Image 
-                 src="/images/industrial_ironworks_1776183414837.png"
+                 src="/images/industrial_ironworks_1776183414837.webp"
                  alt="Iron Works"
                  fill
                  className="object-cover group-hover:scale-105 transition-transform duration-700"

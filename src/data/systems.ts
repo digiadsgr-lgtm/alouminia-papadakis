@@ -94,7 +94,7 @@ export const alumilSystems: SystemSpec[] = [
       { label: 'Vleugelgewicht', value: 'Tot 180 Kg' },
     ],
 
-    idealForEL: 'Ιδανικό για νέες κατοικίες και ενεργειακές αναβαθμίσεις (π.χ. Εξοικονομώ) όπου απαιτείται υψηλή απόδοση, χωρίς το premium κόστος της σειράς Supreme. Καλύπτει απόλυτα τις απαιτήσεις της Κρήτης σε αιολικά φορτία και ζέστη.',
+    idealForEL: 'Ιδανικό για νέες κατοικίες και ενεργειακές αναβαθμίσεις (π.χ. Εξοικονομώ) όπου απαιτείται υψηλή απόδοση, χωρίς το premium κόστος της σειράς Supreme. Καλύπτει πλήρως τις απαιτήσεις της Κρήτης σε αιολικά φορτία και ζέστη.',
     idealForEN: 'Ideal for new residences and energy upgrades where high performance is required, without the premium cost of the Supreme series. Perfectly covers the requirements of Crete in wind loads and heat.',
     idealForDE: 'Ideal für neue Wohnsitze und Energieaufrüstungen, bei denen hohe Leistung ohne die Premiumkosten der Supreme-Serie erforderlich ist. Erfüllt die Anforderungen Kretas bei Wind- und Hitzelasten.',
     idealForFR: 'Idéal pour les nouvelles résidences et les mises à niveau énergétiques où de hautes performances sont requises, sans le coût premium de la série Supreme. Couvre les exigences de la Crète en charges de vent.',
@@ -106,7 +106,7 @@ export const alumilSystems: SystemSpec[] = [
     whyUsFR: 'En tant que fabricants certifiés Alumil à Réthymnon, nous disposons d\'une ligne de production de haute précision. L\'installation est réalisée avec des matériaux isolants pour atteindre le Uw laboratoire en pratique.',
     whyUsNL: 'Als gecertificeerde Alumil-fabrikanten in Rethymnon hebben we een uiterst precieze productielijn. De installatie gebeurt met gecertificeerde isolatiematerialen om de laboratorium-Uw in de praktijk te bereiken.',
 
-    imageUrl: '/images/modern_aluminum_windows_1776183397754.png'
+    imageUrl: '/images/modern_aluminum_windows_1776183397754.webp'
   },
   {
     slug: 'smartia-m9660',
@@ -175,7 +175,7 @@ export const alumilSystems: SystemSpec[] = [
     whyUsFR: 'Nous assurons le retrait rapide de vos anciens cadres et l\'installation le jour même du nouveau système.',
     whyUsNL: 'Wij bieden snelle en schone verwijdering van uw oude kozijnen en installatie van het nieuwe systeem op dezelfde dag.',
 
-    imageUrl: '/images/modern_aluminum_windows_1776183397754.png'
+    imageUrl: '/images/modern_aluminum_windows_1776183397754.webp'
   },
   {
     slug: 'smartia-s560',
@@ -238,13 +238,13 @@ export const alumilSystems: SystemSpec[] = [
     idealForFR: 'La solution idéale pour les salons face aux vérandas, car le mécanisme levant permet de rouler facilement des vantaux lourds avec une étanchéité parfaite.',
     idealForNL: 'De ideale oplossing voor woonkamers gericht op veranda\'s, aangezien het hefmechanisme zware vleugels gemakkelijk laat rollen met perfecte afdichting.',
 
-    whyUsEL: 'Η σωστή λειτουργία ενός ανασυρόμενου 300 κιλών απαιτεί απόλυτη αλφαδιά και τεχνογνωσία στην τοποθέτηση των οδηγών. Εγγυόμαστε μηδενική τριβή και αντοχή στο χρόνο.',
+    whyUsEL: 'Η σωστή λειτουργία ενός ανασυρόμενου 300 κιλών απαιτεί άριστη αλφαδιά και τεχνογνωσία στην τοποθέτηση των οδηγών. Εγγυόμαστε μηδενική τριβή και αντοχή στο χρόνο.',
     whyUsEN: 'Proper operation of a 300kg lift-slide requires absolute leveling and expertise in installing the tracks. We guarantee zero friction and long-lasting durability.',
     whyUsDE: 'Der korrekte Betrieb einer 300-kg-Hebeschiebetür erfordert absolute Nivellierung und Fachkenntnis. Wir garantieren null Reibung und lange Lebensdauer.',
     whyUsFR: 'Le fonctionnement correct nécessite un nivellement absolu. Nous garantissons zéro frottement et une durabilité à long terme.',
     whyUsNL: 'De juiste werking van een hefschuifpui van 300 kg vereist absolute waterpasstelling. Wij garanderen wrijvingsloze werking en duurzaamheid.',
 
-    imageUrl: '/images/hero_aluminum_villa_1776110912532.png'
+    imageUrl: '/images/hero_aluminum_villa_1776110912532.webp'
   },
   {
     slug: 'supreme-s700',
@@ -301,7 +301,7 @@ export const alumilSystems: SystemSpec[] = [
       { label: 'Onderrail', value: 'Vlak' },
     ],
 
-    idealForEL: 'Βίλες, πολυτελείς κατοικίες και ξενοδοχεία υψηλών προδιαγραφών. Δημιουργεί την απόλυτη ενοποίηση εσωτερικού και εξωτερικού χώρου με επίπεδο κατωκάσι και ασύγκριτη λειτουργικότητα.',
+    idealForEL: 'Βίλες, πολυτελείς κατοικίες και ξενοδοχεία υψηλών προδιαγραφών. Δημιουργεί την πλήρη ενοποίηση εσωτερικού και εξωτερικού χώρου με επίπεδο κατωκάσι και ασύγκριτη λειτουργικότητα.',
     idealForEN: 'Villas, luxury residences, and high-end hotels. Creates the ultimate integration of indoor and outdoor space with a flat threshold and incomparable functionality.',
     idealForDE: 'Villen, Luxusresidenzen und High-End-Hotels. Schafft die ultimative Integration von Innen- und Außenbereich mit einer flachen Schwelle.',
     idealForFR: 'Villas, résidences de luxe et hôtels haut de gamme. Crée l\'intégration ultime de l\'espace intérieur et extérieur avec un seuil plat.',
@@ -313,7 +313,7 @@ export const alumilSystems: SystemSpec[] = [
     whyUsFR: 'Nous entreprenons l\'étude complète de construction pour les systèmes de grandes dimensions, assurant l\'intégration du seuil dans le sol.',
     whyUsNL: 'Wij verzorgen de complete bouwstudie voor grote systemen en zorgen voor de integratie van de drempel in de vloer.',
 
-    imageUrl: '/images/hero_aluminum_villa_1776110912532.png'
+    imageUrl: '/images/hero_aluminum_villa_1776110912532.webp'
   },
   {
     slug: 'supreme-s650',
@@ -325,7 +325,7 @@ export const alumilSystems: SystemSpec[] = [
     categoryFR: 'Coulissant Minimaliste',
     categoryNL: 'Minimalistische Schuifdeuren',
 
-    shortDescEL: 'Αόρατο αλουμίνιο, μέγιστη θέα. Το απόλυτο minimal σύστημα.',
+    shortDescEL: 'Αόρατο αλουμίνιο, μέγιστη θέα. Το κορυφαίο minimal σύστημα.',
     shortDescEN: 'Invisible aluminum, maximum view. The ultimate minimal system.',
     shortDescDE: 'Unsichtbares Aluminium, maximale Sicht. Das ultimative Minimal-System.',
     shortDescFR: 'Aluminium invisible, vue maximale. Le système minimal ultime.',
@@ -382,7 +382,7 @@ export const alumilSystems: SystemSpec[] = [
     whyUsFR: 'L\'installation nécessite une collaboration avec l\'entrepreneur dès l\'étape du béton. Nous fournissons des conseils techniques complets.',
     whyUsNL: 'De installatie vereist samenwerking met de aannemer vanaf de betonfase. Wij bieden volledige technische begeleiding.',
 
-    imageUrl: '/images/hero_aluminum_villa_1776110912532.png'
+    imageUrl: '/images/hero_aluminum_villa_1776110912532.webp'
   },
   {
     slug: 'smartia-pergoles',
@@ -451,6 +451,6 @@ export const alumilSystems: SystemSpec[] = [
     whyUsFR: 'Nous étudions les pressions du vent dans votre région et proposons le modèle approprié. Nous intégrons l\'éclairage et les automatisations.',
     whyUsNL: 'Wij bestuderen de winddruk in uw regio en stellen het juiste model voor. Wij integreren verlichting en automatisering.',
 
-    imageUrl: '/images/hero_aluminum_villa_1776110912532.png'
+    imageUrl: '/images/hero_aluminum_villa_1776110912532.webp'
   }
 ];

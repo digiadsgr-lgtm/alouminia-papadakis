@@ -75,7 +75,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const t = translations[lang as Locale] || translations.en;
   
   const url = `https://alouminia-papadakis.gr/${lang}/blog`;
-  const imageUrl = 'https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.png';
+  const imageUrl = 'https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.webp';
 
   return {
     title: t.title,
@@ -196,8 +196,9 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ lang
                 <div className="flex items-center gap-6 text-sm font-bold text-gray-500 mb-6 uppercase tracking-widest">
                   <span className="flex items-center gap-2 text-navy">
                     <Calendar size={16} className="text-red-light" />
-                    <time dateTime={featuredArticle.date}>
-                      {new Date(featuredArticle.date).toLocaleDateString(lang === 'el' ? 'el-GR' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                    <time dateTime={featuredArticle.dateModified || featuredArticle.date}>
+                      {featuredArticle.dateModified && new Date(featuredArticle.dateModified).getTime() > new Date(featuredArticle.date).getTime() ? (lang === 'el' ? 'Ενημερώθηκε ' : 'Updated ') : ''}
+                      {new Date(featuredArticle.dateModified || featuredArticle.date).toLocaleDateString(lang === 'el' ? 'el-GR' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
                     </time>
                   </span>
                   <span className="flex items-center gap-2">
@@ -247,9 +248,10 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ lang
                 
                 <div className="p-8 flex flex-col flex-1">
                   <div className="flex items-center justify-between text-xs font-bold text-gray-400 mb-4 uppercase tracking-wider">
-                    <time dateTime={article.date} className="flex items-center gap-1.5 text-navy">
+                    <time dateTime={article.dateModified || article.date} className="flex items-center gap-1.5 text-navy">
                       <Calendar size={14} className="text-red-light" />
-                      {new Date(article.date).toLocaleDateString(lang === 'el' ? 'el-GR' : 'en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                      {article.dateModified && new Date(article.dateModified).getTime() > new Date(article.date).getTime() ? (lang === 'el' ? 'Ενημερώθηκε ' : 'Updated ') : ''}
+                      {new Date(article.dateModified || article.date).toLocaleDateString(lang === 'el' ? 'el-GR' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
                     </time>
                     <span className="flex items-center gap-1.5">
                       <Clock size={14} />

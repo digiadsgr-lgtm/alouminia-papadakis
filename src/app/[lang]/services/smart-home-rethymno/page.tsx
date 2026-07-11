@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import Breadcrumbs from '@/components/Breadcrumbs'
 import JsonLd from '@/components/JsonLd'
 import FaqAccordion from '@/components/FaqAccordion'
 import PageTransition from '@/components/PageTransition'
@@ -104,8 +105,8 @@ export default async function SmartHomePage({ params }: { params: Promise<{ lang
       },
       {
         question: "Είναι δύσκολο στη χρήση;",
-        answer: "Καθόλου. Τα συστήματα έχουν σχεδιαστεί για να είναι απόλυτα φιλικά προς τον χρήστη. Μπορείτε να ελέγχετε τα πάντα από το κινητό, το tablet ή με φωνητικές εντολές μέσω Google Assistant / Alexa.",
-        textAnswer: "Καθόλου. Τα συστήματα έχουν σχεδιαστεί για να είναι απόλυτα φιλικά προς τον χρήστη. Μπορείτε να ελέγχετε τα πάντα από το κινητό, το tablet ή με φωνητικές εντολές μέσω Google Assistant / Alexa."
+        answer: "Καθόλου. Τα συστήματα έχουν σχεδιαστεί για να είναι εξαιρετικά φιλικά προς τον χρήστη. Μπορείτε να ελέγχετε τα πάντα από το κινητό, το tablet ή με φωνητικές εντολές μέσω Google Assistant / Alexa.",
+        textAnswer: "Καθόλου. Τα συστήματα έχουν σχεδιαστεί για να είναι εξαιρετικά φιλικά προς τον χρήστη. Μπορείτε να ελέγχετε τα πάντα από το κινητό, το tablet ή με φωνητικές εντολές μέσω Google Assistant / Alexa."
       }
     ],
     en: [
@@ -190,12 +191,14 @@ export default async function SmartHomePage({ params }: { params: Promise<{ lang
 
   return (
     <PageTransition>
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-32 lg:mt-40 mb-[-3rem] relative z-20"><Breadcrumbs lang={lang as string} items={[{label: lang === 'el' ? 'Υπηρεσίες' : 'Services', href: '#'}, {label: "{isEn ? 'Smart Home &' : 'Έξυπνο Σπίτι &'} {isEn ? 'Automations' : 'Αυτοματισμοί'}", href: '#'}]} /></div>
+
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={serviceSchema} />
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-navy border-b-[6px] border-red">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/images/smart_home_automation_1776183365365.png" 
+            src="/images/smart_home_automation_1776183365365.webp" 
             alt="Smart Home Automations Rethymno" 
             fill 
             className="object-cover opacity-30 filter blur-sm scale-105" 
@@ -223,7 +226,7 @@ export default async function SmartHomePage({ params }: { params: Promise<{ lang
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div className="h-full relative min-h-[500px] rounded-[32px] overflow-hidden shadow-2xl group">
                <Image 
-                 src="/images/smart_home_automation_1776183365365.png"
+                 src="/images/smart_home_automation_1776183365365.webp"
                  alt="Somfy Smart Home"
                  fill
                  className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -232,7 +235,7 @@ export default async function SmartHomePage({ params }: { params: Promise<{ lang
             </div>
             
             <div className="flex flex-col justify-center">
-              <h2 className="text-3xl md:text-4xl font-black mb-6 tracking-tight">{isEn ? 'Total Control Architecture' : 'Απόλυτος Έλεγχος & Ασφάλεια'}</h2>
+              <h2 className="text-3xl md:text-4xl font-black mb-6 tracking-tight">{isEn ? 'Total Control Architecture' : 'Πλήρης Έλεγχος & Ασφάλεια'}</h2>
               <div className="w-20 h-1.5 bg-red mb-8 rounded-full"></div>
               <ul className="space-y-8 mt-12">
                 <li className="flex items-start gap-5">

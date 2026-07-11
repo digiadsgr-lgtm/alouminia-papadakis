@@ -144,7 +144,7 @@ export default function InsulationSimulator({ isEn }: { isEn?: boolean }) {
                    <div className="font-black text-3xl text-white font-mono transition-all duration-300">
                       {isClosed ? '35 dB' : '85 dB'}
                    </div>
-                   <div className="text-gray-500 text-sm mb-1 font-medium">{isClosed ? (isEn ? 'Silent' : 'Απόλυτη Ησυχία') : (isEn ? 'Traffic' : 'Ισχυρός Θόρυβος')}</div>
+                   <div className="text-gray-500 text-sm mb-1 font-medium">{isClosed ? (isEn ? 'Silent' : 'Πλήρης Ησυχία') : (isEn ? 'Traffic' : 'Ισχυρός Θόρυβος')}</div>
                  </div>
               </div>
            </div>

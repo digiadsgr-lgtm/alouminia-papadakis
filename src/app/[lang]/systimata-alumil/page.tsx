@@ -1,5 +1,6 @@
 import { alumilSystems } from '@/data/systems'
 import Link from 'next/link'
+import Breadcrumbs from '@/components/Breadcrumbs'
 import { Metadata } from 'next'
 import { ChevronRight, Check } from 'lucide-react'
 
@@ -23,7 +24,7 @@ const getUi = (lang: string) => {
       newTitle: 'Νέες Κατοικίες & Εξοικονομώ',
       newDesc: 'Η SMARTIA S67 και η S560 υπερκαλύπτουν τις απαιτήσεις του ΚΕΝΑΚ προσφέροντας υψηλή ασφάλεια.',
       luxuryTitle: 'Πολυτελείς Βίλες & Ξενοδοχεία',
-      luxuryDesc: 'Η σειρά SUPREME προσφέρει αόρατα πλαίσια και την απόλυτη ενοποίηση του χώρου.'
+      luxuryDesc: 'Η σειρά SUPREME προσφέρει αόρατα πλαίσια και την πλήρη ενοποίηση του χώρου.'
     }
     case 'de': return {
       title: 'Systeme',
@@ -234,7 +235,7 @@ export default async function SystimataAlumilHub({ params }: { params: Promise<{
           </div>
           <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-white/10">
             <img 
-              src="/images/hero_aluminum_villa_1776110912532.png" 
+              src="/images/hero_aluminum_villa_1776110912532.webp" 
               alt="Alumil Systems"
               className="w-full h-full object-cover"
             />

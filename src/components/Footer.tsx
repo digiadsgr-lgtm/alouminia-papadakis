@@ -1,11 +1,12 @@
 import Link from 'next/link'
 import { MapPin, Phone, Mail, ChevronRight } from 'lucide-react'
+import ProtectedEmail from './ProtectedEmail'
 
 const dict = {
   el: {
     title: "ΑΛΟΥΜΙΝΙΑ",
     surname: "ΠΑΠΑΔΑΚΗΣ",
-    desc: "Η επιτομή της σύγχρονης αρχιτεκτονικής. Πιστοποιημένα συστήματα αλουμινίου Alumil, με εστίαση στην απόλυτη ασφάλεια, θερμομόνωση και minimal αισθητική για την πολυτελή κατοικία σας.",
+    desc: "Πιστοποιημένος κατασκευαστής Alumil με μονάδα παραγωγής στο Ρέθυμνο. Ενεργειακά κουφώματα, πόρτες ασφαλείας και πέργκολες για κατοικίες σε όλη την Κρήτη — με τεκμηριωμένες προδιαγραφές και παράδοση στην ώρα μας.",
     contact: "ΕΠΙΚΟΙΝΩΝΙΑ ΣΗΜΕΡΑ",
     address: "Διεύθυνση",
     expertise: "ΒΑΣΙΚΕΣ ΥΠΗΡΕΣΙΕΣ",
@@ -25,7 +26,7 @@ const dict = {
   en: {
     title: "PAPADAKIS",
     surname: "ALUMINIUM",
-    desc: "The pinnacle of modern architecture. Certified Alumil aluminum systems, focusing on absolute security, thermal insulation, and minimal aesthetics for your luxury residence.",
+    desc: "Certified Alumil fabricator with a production unit in Rethymno. Energy-efficient windows, security doors, and pergolas for residences across Crete — with documented specifications and on-time delivery.",
     contact: "CONTACT US TODAY",
     address: "Address",
     expertise: "CORE SERVICES",
@@ -45,7 +46,7 @@ const dict = {
   de: {
     title: "PAPADAKIS",
     surname: "ALUMINIUM",
-    desc: "Der Inbegriff moderner Architektur. Zertifizierte Alumil-Aluminiumsysteme mit Fokus auf absolute Sicherheit, Wärmedämmung und minimalistische Ästhetik für Ihre Luxusresidenz.",
+    desc: "Zertifizierter Alumil-Hersteller mit einer Produktionsstätte in Rethymno. Energieeffiziente Fenster, Sicherheitstüren und Pergolen für Häuser auf ganz Kreta — mit dokumentierten Spezifikationen und pünktlicher Lieferung.",
     contact: "HEUTE KONTAKTIEREN",
     address: "Adresse",
     expertise: "KERNLEISTUNGEN",
@@ -65,7 +66,7 @@ const dict = {
   fr: {
     title: "PAPADAKIS",
     surname: "ALUMINIUM",
-    desc: "Le summum de l'architecture moderne. Systèmes en aluminium certifiés Alumil, axés sur la sécurité absolue, l'isolation thermique et l'esthétique minimaliste pour votre résidence de luxe.",
+    desc: "Fabricant certifié Alumil avec une unité de production à Réthymnon. Fenêtres écoénergétiques, portes de sécurité et pergolas pour les résidences à travers la Crète — avec des spécifications documentées et une livraison à temps.",
     contact: "NOUS CONTACTER",
     address: "Adresse",
     expertise: "SERVICES CLÉS",
@@ -85,7 +86,7 @@ const dict = {
   nl: {
     title: "PAPADAKIS",
     surname: "ALUMINIUM",
-    desc: "Het toppunt van moderne architectuur. Gecertificeerde Alumil aluminiumsystemen, met focus op absolute veiligheid, thermische isolatie en minimalistische esthetiek voor uw luxe residentie.",
+    desc: "Gecertificeerde Alumil fabrikant met een productie-eenheid in Rethymno. Energiezuinige ramen, veiligheidsdeuren en pergola's voor woningen in heel Kreta — met gedocumenteerde specificaties en tijdige levering.",
     contact: "NEEM CONTACT OP",
     address: "Adres",
     expertise: "KERN DIENSTEN",
@@ -209,7 +210,7 @@ export default function Footer({ lang = 'el' }: { lang?: 'el' | 'en' | 'de' | 'f
                </div>
                <div className="pt-1">
                  <p className="text-white font-bold mb-1">Email</p>
-                 <a href="mailto:gpapadakisret@gmail.com" className="text-gray-400 hover:text-white transition-colors">gpapadakisret@gmail.com</a>
+                 <ProtectedEmail className="text-gray-400 hover:text-white transition-colors" />
                </div>
             </li>
           </ul>

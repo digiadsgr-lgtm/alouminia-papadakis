@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
   const l = content[lang as keyof typeof content] || content['en']
   const url = `https://alouminia-papadakis.gr/${lang}`
-  const imageUrl = 'https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.png'
+  const imageUrl = 'https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.webp'
 
   return {
     title: l.title,

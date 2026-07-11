@@ -1,0 +1,85 @@
+commit 43d60456149155e4a172856368e31d542c6dcd40
+Author: digiadsgr-lgtm <digiadsgr@gmail.com>
+Date:   Sat Jul 11 13:23:17 2026 +0300
+
+    Fix text regressions and layout JSON-LD reviews, remove duplicate title suffixes
+
+diff --git a/src/app/[lang]/oroi-xrisis/page.tsx b/src/app/[lang]/oroi-xrisis/page.tsx
+index 8ca7908..7285b56 100644
+--- a/src/app/[lang]/oroi-xrisis/page.tsx
++++ b/src/app/[lang]/oroi-xrisis/page.tsx
+@@ -1,7 +1,7 @@
+ import Link from 'next/link';
+ 
+ export const metadata = {
+-  title: 'Όροι Χρήσης | Αλουμίνια Παπαδάκης',
++  title: 'Όροι Χρήσης',
+   description: 'Όροι χρήσης της ιστοσελίδας alouminia-papadakis.gr',
+   alternates: {
+     canonical: 'https://alouminia-papadakis.gr/el/oroi-xrisis',
+
+commit 6a415c07fbbadb3e2114599ae9fe75a3e136ab6b
+Author: digiadsgr-lgtm <digiadsgr@gmail.com>
+Date:   Fri Jul 10 18:49:34 2026 +0300
+
+    feat: Add EN blog articles, Legal Pages and Cookie Banner
+
+diff --git a/src/app/[lang]/oroi-xrisis/page.tsx b/src/app/[lang]/oroi-xrisis/page.tsx
+new file mode 100644
+index 0000000..8ca7908
+--- /dev/null
++++ b/src/app/[lang]/oroi-xrisis/page.tsx
+@@ -0,0 +1,53 @@
++import Link from 'next/link';
++
++export const metadata = {
++  title: 'Όροι Χρήσης | Αλουμίνια Παπαδάκης',
++  description: 'Όροι χρήσης της ιστοσελίδας alouminia-papadakis.gr',
++  alternates: {
++    canonical: 'https://alouminia-papadakis.gr/el/oroi-xrisis',
++    languages: {
++      'el': 'https://alouminia-papadakis.gr/el/oroi-xrisis',
++      'en': 'https://alouminia-papadakis.gr/en/terms-of-use',
++    },
++  },
++};
++
++export default function OroiXrisis() {
++  return (
++    <div className="container mx-auto px-4 py-12 max-w-4xl">
++      <h1 className="text-3xl font-bold mb-8 text-[#2B3A4A]">Όροι Χρήσης</h1>
++      <div className="prose prose-lg text-gray-700">
++        <p>
++          Η χρήση του ιστότοπου alouminia-papadakis.gr (εφεξής «Ιστότοπος») υπόκειται
++          στους παρόντες όρους χρήσης. Με την πλοήγηση στον Ιστότοπο τεκμαίρεται ότι
++          αποδέχεστε πλήρως αυτούς τους όρους.
++        </p>
++        
++        <h2 className="text-xl font-semibold mt-6 mb-3 text-[#2B3A4A]">1. Στοιχεία Επιχείρησης</h2>
++        <p>Ο Ιστότοπος ανήκει στην επιχείρηση:</p>
++        <ul className="list-disc pl-6 mb-4">
++          <li><strong>Επωνυμία:</strong> ΠΑΠΑΔΑΚΗΣ ΓΕΩΡΓΙΟΣ του ΙΩΣΗΦ (Αλουμίνια Παπαδάκης)</li>
++          <li><strong>ΑΦΜ:</strong> 066536190</li>
++          <li><strong>ΓΕΜΗ:</strong> 022204950000</li>
++          <li><strong>Διεύθυνση:</strong> Δρουλίσκου 8, Ρέθυμνο, 74100</li>
++          <li><strong>Τηλέφωνο:</strong> 28310 23897</li>
++          <li><strong>Email:</strong> gpapadakisret@gmail.com</li>
++        </ul>
++
++        <h2 className="text-xl font-semibold mt-6 mb-3 text-[#2B3A4A]">2. Πνευματικά Δικαιώματα</h2>
++        <p>
++          Το σύνολο του περιεχομένου του Ιστότοπου (κείμενα, γραφικά, εικόνες,
++          λογότυπα) αποτελεί πνευματική ιδιοκτησία της επιχείρησης και
++          προστατεύεται από την ελληνική και διεθνή νομοθεσία.
++        </p>
++
++        <h2 className="text-xl font-semibold mt-6 mb-3 text-[#2B3A4A]">3. Περιορισμός Ευθύνης</h2>
++        <p>
++          Η επιχείρηση καταβάλλει κάθε δυνατή προσπάθεια για την ακρίβεια των
++          πληροφοριών που παρέχονται, ωστόσο δεν φέρει ευθύνη για τυχόν τυπογραφικά
++          λάθη ή παραλείψεις.
++        </p>
++      </div>
++    </div>
++  );
++}

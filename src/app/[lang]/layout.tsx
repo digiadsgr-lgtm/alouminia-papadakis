@@ -100,7 +100,7 @@ export default async function RootLayout({
     "legalName": "Κατασκευές Αλουμινίου Παπαδάκης Ι. Γεώργιος",
     "url": "https://alouminia-papadakis.gr",
     "logo": "https://alouminia-papadakis.gr/icon.png",
-    "image": "https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.png",
+    "image": "https://alouminia-papadakis.gr/images/hero_aluminum_villa_1776110912532.webp",
     "description": "Certified Alumil manufacturer specializing in project-based aluminum solutions for luxury villas, boutique hotels, and high-end residential developments across Crete. Uncompromised expertise, structured manufacturing processes with zero delays, and a proven extensive portfolio. Full workflow: architectural study → CAD design → in-house manufacturing → on-site installation by permanent crews → structured after-sales guarantee.",
     "foundingDate": "1993",
     "numberOfEmployees": {
