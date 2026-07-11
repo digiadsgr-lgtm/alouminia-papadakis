@@ -41,64 +41,64 @@ export default function HomeNL() {
     "priceRange": "$$$"
   };
 
-  const faqSchemaEN = {
+  const faqSchemaNL = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What is the project workflow when working with Papadakis Aluminium in Crete?",
+        "name": "Wat is de projectworkflow bij Papadakis Aluminium op Kreta?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We operate as a structured construction company, not a repair service. Our workflow: 1) On-site survey & architectural consultation, 2) CAD technical drawings & detailed quote, 3) In-house manufacturing in our own 300m² facility in Rethymno, 4) Professional installation by our permanent crews, 5) Turn-key handover, 6) After-sales service & guarantee. We manage the entire project lifecycle from design to delivery."
+          "text": "Wij opereren als een gestructureerd bouwbedrijf, niet als een reparatiedienst. Onze workflow: 1) Inspectie ter plaatse & architecturaal advies, 2) CAD technische tekeningen & gedetailleerde offerte, 3) Eigen productie in onze 300m² faciliteit in Rethymnon, 4) Professionele installatie door onze vaste teams, 5) Turn-key oplevering, 6) Dienst na verkoop & garantie."
         }
       },
       {
         "@type": "Question",
-        "name": "What types of projects does Papadakis Aluminium specialize in?",
+        "name": "In welke soorten projecten is Papadakis Aluminium gespecialiseerd?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We specialize in premium project-based work: luxury villas, boutique hotels, high-end residential developments, and commercial properties across Crete. We partner at project level with architects, civil engineers, and general contractors — we do not handle individual repairs. Our focus is architectural precision and design-driven aluminum solutions for developments that demand villa-level execution quality."
+          "text": "Wij zijn gespecialiseerd in premium projectmatig werk: luxe villa&apos;s, boetiekhotels, hoogwaardige residentiële ontwikkelingen en commercieel vastgoed op heel Kreta. Wij werken op projectniveau samen met architecten, civiel ingenieurs en hoofdaannemers — wij doen geen individuele reparaties."
         }
       },
       {
         "@type": "Question",
-        "name": "Do you work with architects and contractors on large developments in Crete?",
+        "name": "Werkt u samen met architecten en aannemers aan grote ontwikkelingen op Kreta?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. A significant portion of our work comes from repeat partnerships with architects, civil engineers, and construction companies across Crete. We integrate seamlessly into larger construction timelines, providing high-precision manufacturing and on-schedule installation. For foreign investors, we also offer complete remote project management with digital progress reports and CAD documentation."
+          "text": "Ja. Een groot deel van ons werk komt voort uit terugkerende partnerschappen met architecten, civiel ingenieurs en bouwbedrijven op heel Kreta. Wij integreren naadloos in grotere bouwplanningen en bieden uiterst nauwkeurige productie en tijdige installatie. Voor buitenlandse investeerders bieden wij ook compleet remote projectbeheer aan."
         }
       },
       {
         "@type": "Question",
-        "name": "How do you guarantee project timelines and avoid delays?",
+        "name": "Hoe garandeert u de projectplanningen en voorkomt u vertragingen?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We reduce καθυστέρηση to zero through our πολυετή εμπειρία. We operate our own in-house manufacturing line, employ dedicated permanent installation crews, and strictly adhere to standardized project processes. We deliver projects—from single luxury villas to entire boutique hotels—exactly on schedule, with zero compromise."
+          "text": "We reduceren vertragingen tot nul dankzij onze uitgebreide expertise. We beheren onze eigen productielijn, hebben toegewijde vaste installatieteams in dienst en houden ons strikt aan gestandaardiseerde projectprocessen. We leveren projecten — van enkele luxe villa&apos;s tot volledige boetiekhotels — exact op schema, zonder compromissen."
         }
       },
       {
         "@type": "Question",
-        "name": "Do you have a proven portfolio for high-end architectural projects?",
+        "name": "Heeft u een bewezen portfolio voor hoogwaardige architecturale projecten?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Absolutely. Our extensive portfolio is heavily focused on villa-level aesthetics and complex commercial requirements, not isolated window replacements. We integrate seamlessly with architectural firms and general contractors to provide turn-key, premium solutions (aluminum systems, custom inox ironworks, bioclimatic pergolas) that ensure a unified brand fit and uncompromising performance."
+          "text": "Absoluut. Ons uitgebreide portfolio is sterk gericht op esthetiek op villaniveau en complexe commerciële eisen, niet op geïsoleerde raamvervangingen. Wij integreren naadloos met architectenbureaus en hoofdaannemers om premium turn-key oplossingen (aluminium systemen, op maat gemaakt inox smeedwerk, bioklimatische pergola's) te bieden."
         }
       },
       {
         "@type": "Question",
-        "name": "What is the structure of your After-Sales support?",
+        "name": "Hoe is uw After-Sales support gestructureerd?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We are a structured construction firm, not independent handymen. Papadakis Aluminium features an organized After-Sales department providing the official Alumil manufacturer guarantee alongside dedicated long-term service. Consistent, reliable support after handover is a fundamental part of our structured operations."
+          "text": "Wij zijn een gestructureerd bouwbedrijf, geen onafhankelijke klusjesmannen. Papadakis Aluminium beschikt over een georganiseerde After-Sales afdeling die de officiële Alumil-fabrieksgarantie biedt, samen met toegewijde langetermijnservice. Consistente, betrouwbare ondersteuning na oplevering is een fundamenteel onderdeel van onze gestructureerde activiteiten."
         }
       },
       {
         "@type": "Question",
-        "name": "Why choose Papadakis over independent aluminum installers in Rethymno?",
+        "name": "Waarom kiezen voor Papadakis in plaats van onafhankelijke aluminium installateurs in Rethymnon?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The difference is structural: we are a certified manufacturing company with our own production facility, dedicated engineering department, permanent installation crews, and 30+ years of continuous operation. We hold direct Alumil certification, use Seaside Class anti-corrosion coatings for coastal properties, and have completed hundreds of villa and hotel projects across Crete. We are a project partner, not a handyman."
+          "text": "Het verschil is structureel: wij zijn een gecertificeerd productiebedrijf met een eigen productiefaciliteit, een toegewijde engineeringsafdeling, vaste installatieteams en meer dan 30 jaar ononderbroken activiteit. Wij bezitten de directe Alumil-certificering, gebruiken Seaside Class anti-corrosie coatings en hebben honderden villa- en hotelprojecten afgerond."
         }
       }
     ]
@@ -107,7 +107,7 @@ export default function HomeNL() {
   return (
     <div className="flex flex-col w-full bg-offwhite">
       <JsonLd data={localBusinessSchema} />
-      <JsonLd data={faqSchemaEN} />
+      <JsonLd data={faqSchemaNL} />
       <article ref={heroRef} className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden" aria-label="Manufacturing and Installation of Aluminum Systems in Rethymno, Crete">
         <motion.div style={{ y: yImage }} className="absolute inset-0 z-0">
           <Image 
@@ -132,31 +132,31 @@ export default function HomeNL() {
           >
             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md text-white mb-8 shadow-2xl">
               <CheckCircle2 size={16} className="text-red" />
-              <span className="text-sm font-bold tracking-wider uppercase">Certified Alumil Manufacturers • Crete</span>
+              <span className="text-sm font-bold tracking-wider uppercase">Gecertificeerde Alumil-fabrikanten &bull; Kreta</span>
             </div>
             
             <h1 className="text-[11vw] sm:text-7xl lg:text-8xl font-black mb-6 leading-[1.05] tracking-tighter drop-shadow-2xl">
-              <span className="block text-xl md:text-2xl uppercase tracking-widest text-gray-400 font-bold mb-4 drop-shadow-md">Aluminum Systems Rethymno</span>
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-gray-400">Architectural Solutions</span> <br />
-              <span className="text-red">For Luxury Developments</span>
+              <span className="block text-xl md:text-2xl uppercase tracking-widest text-gray-400 font-bold mb-4 drop-shadow-md">Aluminiumsystemen Rethymnon</span>
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-gray-400">Architecturale oplossingen</span> <br />
+              <span className="text-red">Voor luxe ontwikkelingen</span>
             </h1>
             
             <section className="mb-10 text-xl text-gray-300 max-w-2xl leading-relaxed">
               <p className="mb-4">
-                Engineering, manufacturing, and installation of premium certified <strong>Alumil Systems</strong>. As the leading provider of <strong>Aluminum Systems in Rethymno</strong>, we deliver zero-compromise <strong>architectural solutions for luxury developments</strong> across Crete.
+                Engineering, fabricage en installatie van premium gecertificeerde <strong>Alumil-systemen</strong>. Als de toonaangevende leverancier van <strong>Aluminiumsystemen in Rethymnon</strong>, leveren we compromisloze <strong>architecturale oplossingen voor luxe ontwikkelingen</strong> op heel Kreta.
               </p>
             </section>
 
             <nav className="flex flex-col sm:flex-row flex-wrap gap-5" aria-label="Hero Actions">
               <a href="#services" className="bg-gradient-to-r from-red to-red-700 text-white px-8 py-4 rounded-full font-bold text-center hover:shadow-[0_0_30px_rgba(200,20,20,0.4)] transition-all duration-300 border border-red-500/50 active:scale-95 flex items-center justify-center gap-2 relative overflow-hidden group">
                 <div className="absolute inset-0 bg-white/20 translate-y-12 group-hover:translate-y-0 transition-transform duration-300"></div>
-                <Home size={20} className="relative z-10" /> <span className="relative z-10">Discover Capabilities</span>
+                <Home size={20} className="relative z-10" /> <span className="relative z-10">Ontdek onze mogelijkheden</span>
               </a>
               <a href="mailto:gpapadakisret@gmail.com" className="bg-white/5 backdrop-blur-xl text-white border border-white/20 px-8 py-4 rounded-full font-bold text-center hover:bg-white/10 hover:border-white/40 transition-all duration-300 flex items-center justify-center gap-2 active:scale-95 shadow-2xl">
-                <Sparkles size={20} /> Send Architectural Plans
+                <Sparkles size={20} /> Stuur architectonische plannen
               </a>
               <Link href="/en/blog" className="bg-white/5 backdrop-blur-xl text-white border border-white/20 px-8 py-4 rounded-full font-bold text-center hover:bg-white/10 hover:border-white/40 transition-all duration-300 flex items-center justify-center gap-2 active:scale-95 shadow-2xl">
-                <BookOpen size={20} /> Read our Blog
+                <BookOpen size={20} /> Lees onze blog
               </Link>
             </nav>
 
@@ -168,15 +168,15 @@ export default function HomeNL() {
             >
                <div className="flex items-center gap-3 bg-white/5 border border-white/10 backdrop-blur-xl px-5 py-3 rounded-2xl shadow-2xl">
                  <span className="font-black text-2xl text-red">A+</span>
-                 <span className="text-xs uppercase tracking-widest text-gray-300 font-bold leading-tight">Energy<br/>Class</span>
+                 <span className="text-xs uppercase tracking-widest text-gray-300 font-bold leading-tight">Energie<br/>Klasse</span>
                </div>
                <div className="flex items-center gap-3 bg-white/5 border border-white/10 backdrop-blur-xl px-5 py-3 rounded-2xl shadow-2xl">
                  <span className="font-black text-2xl text-red">100%</span>
-                 <span className="text-xs uppercase tracking-widest text-gray-300 font-bold leading-tight">Remote<br/>Management</span>
+                 <span className="text-xs uppercase tracking-widest text-gray-300 font-bold leading-tight">Beheer<br/>op afstand</span>
                </div>
                <div className="flex items-center gap-3 bg-white/5 border border-white/10 backdrop-blur-xl px-5 py-3 rounded-2xl shadow-2xl">
                  <span className="font-black text-2xl text-red">B2B</span>
-                 <span className="text-xs uppercase tracking-widest text-gray-300 font-bold leading-tight">Turn-Key<br/>Partner</span>
+                 <span className="text-xs uppercase tracking-widest text-gray-300 font-bold leading-tight">Turn-key<br/>Partner</span>
                </div>
             </motion.div>
           </motion.header>
@@ -207,18 +207,18 @@ export default function HomeNL() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/5">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once:true }} transition={{ delay: 0.1 }} className="flex flex-col items-center p-4">
               <Sparkles className="text-red mb-4" size={40} />
-              <h2 className="text-white font-bold text-xl mb-2">Remote Project Management</h2>
-              <p className="text-gray-400 text-sm leading-relaxed">No local presence required. We provide full digital CAD studies, progress reports, and turn-key delivery for international investors building in Crete.</p>
+              <h2 className="text-white font-bold text-xl mb-2">Projectbeheer op afstand</h2>
+              <p className="text-gray-400 text-sm leading-relaxed">Geen lokale aanwezigheid vereist. Wij bieden volledige digitale CAD-studies, voortgangsrapporten en turn-key levering voor internationale investeerders die op Kreta bouwen.</p>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once:true }} transition={{ delay: 0.2 }} className="flex flex-col items-center p-4">
               <Zap className="text-red mb-4" size={40} />
-              <h2 className="text-white font-bold text-xl mb-2">A+ Energy Autonomy</h2>
-              <p className="text-gray-400 text-sm leading-relaxed">Equip your commercial or residential development with thermal break profiles achieving a Uw value of up to 0.9 W/m²K, minimizing operational costs.</p>
+              <h2 className="text-white font-bold text-xl mb-2">A+ Energie-autonomie</h2>
+              <p className="text-gray-400 text-sm leading-relaxed">Rust uw commerci&euml;le of residenti&euml;le ontwikkeling uit met thermisch onderbroken profielen die een Uw-waarde tot 0,9 W/m&sup2;K bereiken, waardoor de operationele kosten worden geminimaliseerd.</p>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once:true }} transition={{ delay: 0.3 }} className="flex flex-col items-center p-4">
               <CheckCircle2 className="text-red mb-4" size={40} />
-              <h2 className="text-white font-bold text-xl mb-2">Seaside Class Durability</h2>
-              <p className="text-gray-400 text-sm leading-relaxed">Hotels and beachfront villas require absolute rust protection. Our aluminum systems come with Seaside Class electro-coating for absolute endurance.</p>
+              <h2 className="text-white font-bold text-xl mb-2">Seaside Class duurzaamheid</h2>
+              <p className="text-gray-400 text-sm leading-relaxed">Hotels en villa&apos;s aan het strand vereisen absolute roestbescherming. Onze aluminium systemen zijn voorzien van Seaside Class elektrocoating voor absolute uithoudingsvermogen.</p>
             </motion.div>
           </div>
         </div>
@@ -233,13 +233,13 @@ export default function HomeNL() {
              viewport={{ once: true }}
              className="text-center mb-20 max-w-4xl mx-auto"
            >
-             <h2 className="text-navy font-black text-4xl md:text-5xl lg:text-6xl mb-6 tracking-tight">Your Manufacturing Partner <br/>in Crete, Greece</h2>
+             <h2 className="text-navy font-black text-4xl md:text-5xl lg:text-6xl mb-6 tracking-tight">Uw Productiepartner <br/>op Kreta, Griekenland</h2>
              <div className="w-24 h-2 bg-red mx-auto rounded-full mb-8"></div>
              <p className="text-gray-600 text-xl leading-relaxed">
-               We don't just do basic installations. Our manufacturing unit in Rethymno partners with architects and developers to manufacture premium architectural systems that elevate your property's commercial and aesthetic value.
+               Wij doen niet alleen basisinstallaties. Onze productie-eenheid in Rethymnon werkt samen met architecten en projectontwikkelaars om premium architecturale systemen te vervaardigen die de commerci&euml;le en esthetische waarde van uw eigendom verhogen.
              </p>
              <p className="text-gray-500 text-base mt-4 leading-relaxed max-w-2xl mx-auto">
-               As a structured manufacturing company, we possess the proven expertise to handle demanding architectural projects. We do not execute single repairs. We focus on complete project solutions with strict timeline adherence, a premium application portfolio, and zero delays for investors and contractors.
+               Als gestructureerd productiebedrijf beschikken wij over de bewezen expertise om veeleisende architecturale projecten aan te pakken. Wij voeren geen losse reparaties uit. Onze focus ligt op complete projectoplossingen met strikte naleving van de planning en zonder vertragingen voor investeerders en aannemers.
              </p>
            </motion.div>
 
@@ -248,9 +248,9 @@ export default function HomeNL() {
                <Link href="/en/services/koufomata-alouminiou-rethymno" className="glass-panel p-10 lg:p-14 relative overflow-hidden group hover:border-red/30 transition-all duration-500 block text-navy h-full active:scale-[0.98] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)]">
                  <div className="relative z-10">
                    <div className="bg-red/10 text-red w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"><Home size={32} /></div>
-                   <h3 className="text-3xl font-black mb-4 group-hover:text-red transition-colors">Energy Efficient Windows</h3>
-                   <p className="text-gray-600 mb-8 max-w-lg text-lg leading-relaxed">Absolute sound and thermal insulation. As certified Alumil manufacturers, we install the cutting-edge SMARTIA & SUPREME systems ensuring a perfectly sealed home.</p>
-                   <span className="text-red font-bold flex items-center gap-2 group-hover:gap-4 transition-all">View Systems <ChevronRight size={20} strokeWidth={3}/></span>
+                   <h3 className="text-3xl font-black mb-4 group-hover:text-red transition-colors">Energiezuinige ramen</h3>
+                   <p className="text-gray-600 mb-8 max-w-lg text-lg leading-relaxed">Absolute geluids- en warmte-isolatie. Als gecertificeerde Alumil-fabrikanten installeren we de geavanceerde SMARTIA- en SUPREME-systemen om een perfect afgesloten huis te garanderen.</p>
+                   <span className="text-red font-bold flex items-center gap-2 group-hover:gap-4 transition-all">Bekijk systemen <ChevronRight size={20} strokeWidth={3}/></span>
                  </div>
                </Link>
              </motion.div>
@@ -258,28 +258,28 @@ export default function HomeNL() {
              <motion.div initial={{ opacity: 0, y: 40, filter: "blur(10px)" }} whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.8, delay: 0.1 }}>
                <Link href="/en/services/pergoles-rethymno-kriti" className="glass-panel p-10 hover:border-red/30 transition-all duration-500 block group text-navy flex flex-col justify-between h-full bg-white active:scale-[0.98] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)]">
                  <div>
-                   <h3 className="text-2xl font-black mb-4 group-hover:text-red transition-colors">Pergolas & Shading</h3>
-                   <p className="text-gray-600 mb-8 text-lg">Bioclimatic pergolas, modern shutters, and insect screens for smart natural light control.</p>
+                   <h3 className="text-2xl font-black mb-4 group-hover:text-red transition-colors">Pergola&apos;s en zonwering</h3>
+                   <p className="text-gray-600 mb-8 text-lg">Bioklimatische pergola's, moderne rolluiken en insectenhorren voor slimme controle van natuurlijk licht.</p>
                  </div>
-                 <span className="text-red font-bold flex items-center gap-2 group-hover:gap-4 transition-all mt-6">Learn More <ChevronRight size={20} strokeWidth={3}/></span>
+                 <span className="text-red font-bold flex items-center gap-2 group-hover:gap-4 transition-all mt-6">Meer informatie <ChevronRight size={20} strokeWidth={3}/></span>
                </Link>
              </motion.div>
 
              <motion.div initial={{ opacity: 0, y: 40, filter: "blur(10px)" }} whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.8, delay: 0.2 }}>
                <Link href="/en/services/portes-asfaleias-rethymno" className="glass-panel p-10 hover:border-red/30 transition-all duration-500 block group text-navy flex flex-col justify-between h-full bg-white active:scale-[0.98] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)]">
                  <div>
-                   <h3 className="text-2xl font-black mb-4 group-hover:text-red transition-colors">Security Armored Doors</h3>
-                   <p className="text-gray-600 mb-8 text-lg">Class 3/4 armoring and next-generation Defender locks ensuring zero intrusion possibilities.</p>
+                   <h3 className="text-2xl font-black mb-4 group-hover:text-red transition-colors">Gepantserde veiligheidsdeuren</h3>
+                   <p className="text-gray-600 mb-8 text-lg">Klasse 3/4 bepantsering en Defender-sloten van de volgende generatie die nul inbraakmogelijkheden garanderen.</p>
                  </div>
-                 <span className="text-red font-bold flex items-center gap-2 group-hover:gap-4 transition-all mt-6">Learn More <ChevronRight size={20} strokeWidth={3}/></span>
+                 <span className="text-red font-bold flex items-center gap-2 group-hover:gap-4 transition-all mt-6">Meer informatie <ChevronRight size={20} strokeWidth={3}/></span>
                </Link>
              </motion.div>
 
              <motion.div initial={{ opacity: 0, y: 40, filter: "blur(10px)" }} whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.8, delay: 0.3 }} className="md:col-span-2">
                <Link href="/en/services/sidiros-kataskeves-rethymno" className="glass-panel p-10 lg:p-14 hover:border-red/30 transition-all duration-500 block group text-navy bg-white active:scale-[0.98] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)]">
-                 <h3 className="text-3xl font-black mb-4 group-hover:text-red transition-colors">Custom Ironworks & Design</h3>
-                 <p className="text-gray-600 mb-8 max-w-xl text-lg leading-relaxed">From imposing Inox gates to minimal interior stairs. Electrostatic painting preventing oxidation and elevating your home's design without future maintenance costs.</p>
-                 <span className="text-red font-bold flex items-center gap-2 group-hover:gap-4 transition-all mt-6">View Applications <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" strokeWidth={3}/></span>
+                 <h3 className="text-3xl font-black mb-4 group-hover:text-red transition-colors">Aangepast smeedwerk en design</h3>
+                 <p className="text-gray-600 mb-8 max-w-xl text-lg leading-relaxed">Van imposante Inox-poorten tot minimalistische binnentrappen. Elektrostatisch schilderwerk voorkomt oxidatie en verbetert het ontwerp van uw huis zonder toekomstige onderhoudskosten.</p>
+                 <span className="text-red font-bold flex items-center gap-2 group-hover:gap-4 transition-all mt-6">Bekijk toepassingen <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" strokeWidth={3}/></span>
                </Link>
              </motion.div>
            </div>
@@ -295,8 +295,8 @@ export default function HomeNL() {
           className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"
         >
           <h2 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">Geen Uitvoeringsrisico</h2>
-          <p className="text-2xl text-gray-300 mb-6 font-light max-w-3xl mx-auto leading-relaxed">Absolute adherence to project timelines and Premium Aesthetics. We deliver turn-key applications that commercially elevate your property's value.</p>
-          <p className="text-base text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed">Proven Track Record · structured Workflow · Structured After-Sales · Alumil Warranty · Zero Delays</p>
+          <p className="text-2xl text-gray-300 mb-6 font-light max-w-3xl mx-auto leading-relaxed">Absolute naleving van projectplanningen en premium esthetiek. Wij leveren turn-key toepassingen die de commerci&euml;le waarde van uw eigendom verhogen.</p>
+          <p className="text-base text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed">Bewezen staat van dienst &middot; Gestructureerde workflow &middot; Gestructureerde After-Sales &middot; Alumil garantie &middot; Geen vertragingen</p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
             <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 flex flex-col justify-between hover:bg-white/10 hover:border-red/50 transition-all duration-300 rounded-2xl group cursor-pointer">

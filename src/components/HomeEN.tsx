@@ -236,7 +236,7 @@ export default function HomeEN() {
              <h2 className="text-navy font-black text-4xl md:text-5xl lg:text-6xl mb-6 tracking-tight">Your Manufacturing Partner <br/>in Crete, Greece</h2>
              <div className="w-24 h-2 bg-red mx-auto rounded-full mb-8"></div>
              <p className="text-gray-600 text-xl leading-relaxed">
-               We don't just do basic installations. Our manufacturing unit in Rethymno partners with architects and developers to manufacture premium architectural systems that elevate your property's commercial and aesthetic value.
+               We don&apos;t just do basic installations. Our manufacturing unit in Rethymno partners with architects and developers to manufacture premium architectural systems that elevate your property&apos;s commercial and aesthetic value.
              </p>
              <p className="text-gray-500 text-base mt-4 leading-relaxed max-w-2xl mx-auto">
                As a structured manufacturing company, we possess the proven expertise to handle demanding architectural projects. We do not execute single repairs. We focus on complete project solutions with strict timeline adherence, a premium application portfolio, and zero delays for investors and contractors.
@@ -278,7 +278,7 @@ export default function HomeEN() {
              <motion.div initial={{ opacity: 0, y: 40, filter: "blur(10px)" }} whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.8, delay: 0.3 }} className="md:col-span-2">
                <Link href="/en/services/sidiros-kataskeves-rethymno" className="glass-panel p-10 lg:p-14 hover:border-red/30 transition-all duration-500 block group text-navy bg-white active:scale-[0.98] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)]">
                  <h3 className="text-3xl font-black mb-4 group-hover:text-red transition-colors">Custom Ironworks & Design</h3>
-                 <p className="text-gray-600 mb-8 max-w-xl text-lg leading-relaxed">From imposing Inox gates to minimal interior stairs. Electrostatic painting preventing oxidation and elevating your home's design without future maintenance costs.</p>
+                 <p className="text-gray-600 mb-8 max-w-xl text-lg leading-relaxed">From imposing Inox gates to minimal interior stairs. Electrostatic painting preventing oxidation and elevating your home&apos;s design without future maintenance costs.</p>
                  <span className="text-red font-bold flex items-center gap-2 group-hover:gap-4 transition-all mt-6">View Applications <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" strokeWidth={3}/></span>
                </Link>
              </motion.div>
@@ -295,7 +295,7 @@ export default function HomeEN() {
           className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"
         >
           <h2 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">Zero delays</h2>
-          <p className="text-2xl text-gray-300 mb-6 font-light max-w-3xl mx-auto leading-relaxed">Absolute adherence to project timelines and Premium Aesthetics. We deliver turn-key applications that commercially elevate your property's value.</p>
+          <p className="text-2xl text-gray-300 mb-6 font-light max-w-3xl mx-auto leading-relaxed">Absolute adherence to project timelines and Premium Aesthetics. We deliver turn-key applications that commercially elevate your property&apos;s value.</p>
           <p className="text-base text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed">Proven Track Record · structured Workflow · Structured After-Sales · Alumil Warranty · Zero Delays</p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
